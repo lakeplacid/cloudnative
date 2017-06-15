@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-08"
+lastupdated: "2017-06-12"
 
 ---
 {:new_window: target="_blank"}
@@ -14,17 +14,22 @@ lastupdated: "2017-05-08"
 # End-to-end tutorial of the BFF Basic Starter
 {: #tutorial}
 
-The following end-to-end tutorial walks through the steps to create a project from the BFF Basic Starter, including the tools that you must have installed, and subsequently, the steps to run the project code.
+The following end-to-end tutorial walks through the steps to create a project from the BFF Basic Starter. Steps include installing prerequisite tools, and the steps to run the project code.
 
-You have the option to create a project using either the web-based [{{site.data.keyword.dev_console}}](#create-devex) or through the command-driven [{{site.data.keyword.dev_cli_notm}}](#create-cli).
 
 ## Installing developer tools
 {: #dev_tools}
 
-Ensure that you have installed the [prerequisite developer tools ![External link icon](../icons/launch-glyph.svg "External link icon")](get_code.html#prereq-dev-tools){: new_window}.
+Ensure that you install the [prerequisite developer tools ![External link icon](../icons/launch-glyph.svg "External link icon")](get_code.html#prereq-dev-tools){: new_window}.
 
 
-## Creating a project using the {{site.data.keyword.dev_console}}
+## Choose how to create your project
+{: #choose_how}
+
+Create a project by using either the web-based [{{site.data.keyword.dev_console}}](#create-devex) or through the command-driven [{{site.data.keyword.dev_cli_notm}}](#create-cli). Once the project is created, you can then [run the project](#running-bff).
+
+
+## Creating a project by using the {{site.data.keyword.dev_console}}
 {: #create-devex}
 
 1. Create a project in the {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}}.
@@ -39,7 +44,11 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 
 	4. Enter your project name. For this tutorial, use `BFFProject`.   
 
-	5. Enter a unique hostname. For this tutorial, use `devhost` 
+	5. Enter a unique hostname, such as your initials plus `-devhost`. For example:
+	
+	 ```
+	 abc-devhost
+	 ``` 
 
 	6. Select your language platform. For this tutorial, use `Node`.
    
@@ -74,10 +83,10 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 5. Optional: [Update your project](project_overview_page.html#update_language) to generate a new language.
 
 
-## Creating a project using the {{site.data.keyword.dev_cli_notm}}
+## Creating a project by using the {{site.data.keyword.dev_cli_notm}}
 {: #create-cli}
 
-1. Ensure that you have installed the [{{site.data.keyword.dev_cli_short}}](dev_cli.html).
+1. Ensure that you install the [{{site.data.keyword.dev_cli_short}}](dev_cli.html).
 
 2. In your Terminal prompt, navigate to a local directory of your choice and run the following command.
   
@@ -92,15 +101,25 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 	* Select a starter: 1 (for Basic Backend)
 	* Select a language: 1 (for Node)
 	* Enter a name for your project: `BFFProjectCLI`
-	* Enter a hostname for your project: `myhost`
+	* Enter a hostname for your project: `abc-devhost`
+	  * Enter a unique hostname, such as your initials plus `-devhost`. For example:
+	
+	     ```
+	     abc-devhost
+	     ```
+	  
+4. After your `BFFProjectCLI` is saved, navigate to the `BFFProjectCLI` folder.
 
-4. If you want to add services to your project, type `y` at the question prompt and answer the remaining questions.
-
-5. When your `BFFProjectCLI` has been successfully saved, navigate to the `BFFProjectCLI` folder.
-
-6. Add your own code, and run the project.
+5. Add your own code, build, and run the project.
  
-	1. Run your project with the following command:
+	1. Build your project with the following command:
+
+		```
+		bx dev build
+		```
+		{: codeblock}
+		 
+	2. Run your project with the following command:
 
  		```
 		bx dev run
@@ -111,25 +130,28 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 ## Running a BFF project
 {: #running-bff}
 
-### Locally
-{: #bff-local}
+You can run the application locally on your host system if you install the necessary build tools, or by using the available container support in the {site.data.keyword.dev_cli_notm}}.
 
-1. Build your server:
+
+### Using the Bluemix Plugin
+{: #using-blumix}
+
+1. To build the project in your current project directory, enter the following command:
 
    ```
-   npm install
+   bx dev build
    ```
    {: codeblock}
 
-2. Run your application:
+2. To run the project in your current project directory, enter the following command:
 
    ```
-   npm start 
+   bx dev run
    ```
    {: codeblock}
 
 3. You can run curl on your server with:
-
+  
    ```
    curl http://localhost:8080
    ```
@@ -143,37 +165,6 @@ Ensure that you have installed the [prerequisite developer tools ![External link
    {: codeblock}
 
 5. You can explore the API on your server at: 
-
-   ```
-   http://localhost:8080/explorer
-   ```
-   {: codeblock}
-
-### Using the Bluemix Plugin
-{: #using-blumix}
-
-1. Run compilation:
-
-   ```
-   bx dev run
-   ```
-   {: codeblock}
-
-2. You can run curl on your server with:
-  
-   ```
-   curl http://localhost:8080
-   ```
-   {: codeblock}
-
-3. You can view the API document on your server at: 
-
-   ```
-   http://localhost:8080/swagger/api
-   ```
-   {: codeblock}
-
-4. You can explore the API on your server at: 
 
    ```
    http://localhost:8080/explorer

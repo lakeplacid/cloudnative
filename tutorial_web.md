@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-06-12"
 
 ---
 {:new_window: target="_blank"}
@@ -14,15 +14,19 @@ lastupdated: "2017-04-18"
 # End-to-end tutorial of the Web Basic Starter
 {: #tutorial}
 
-The following end-to-end tutorial walks you through the steps to create a project from the Web Basic Starter. This includes installing prerequisite tools and the steps to run the project code.
-
-You can create a project by using either the web-based [{{site.data.keyword.dev_console}}](#create-devex) or through the command-driven [{{site.data.keyword.dev_cli_notm}}](#create-cli).
+The following end-to-end tutorial walks you through the steps to create a project from the Web Basic Starter. Steps include installing prerequisite tools and how to run the project code.
 
 
 ## Installing developer tools
 {: #dev_tools}
 
 Ensure that you install the [prerequisite developer tools ![External link icon](../icons/launch-glyph.svg "External link icon")](get_code.html#prereq-dev-tools){: new_window}.
+
+
+## Choose how to create your project
+{: #choose_how}
+
+You can create a project by using either the web-based [{{site.data.keyword.dev_console}}](#create-devex) or through the command-driven [{{site.data.keyword.dev_cli_notm}}](#create-cli). Once the project is created, you can then [run the project](#run).
 
 
 ## Creating a project by using the {{site.data.keyword.dev_console}}
@@ -40,7 +44,11 @@ Ensure that you install the [prerequisite developer tools ![External link icon](
 
 	4. Enter your project name. For this tutorial, use `WebBasicProject`.   
 
-	5. Enter a unique hostname. For this tutorial, use `devhost` 
+	5. Enter a unique hostname, such as your initials plus `-devhost`. For example:
+	
+	 ```
+	 abc-devhost
+	 ```
 
 	6. Select your language platform. For this tutorial, use `Swift`.
    
@@ -87,22 +95,31 @@ Ensure that you install the [prerequisite developer tools ![External link icon](
 	```
 	{: codeblock}
 
-
 3. Provide the following values when prompted:
 
 	* Select a pattern: 1 (for Web)
 	* Select a starter: 1 (for Basic Web)
 	* Select a language: 2 (for Swift)
 	* Enter a name for your project: `WebBasicProjectCLI`
-	* Enter a hostname for your project: `myhost`
+	* Enter a hostname for your project: `abc-devhost`
+	  * Enter a unique hostname, such as your initials plus `-devhost`. For example:
+	
+	     ```
+	     abc-devhost
+	     ```
 
-4. If you want to add services to your project, type `y` at the question prompt and answer the remaining questions.
+4. When your `WebBasicProjectCLI` project is successfully saved, navigate to the `WebBasicProjectCLI` folder.
 
-5. When your `WebBasicProjectCLI` project is successfully saved, navigate to the `WebBasicProjectCLI` folder.
-
-6. Add your own code, and run the project.
+5. Add your own code, build, and run the project.
+	
+	1. Build the project with the following command:
  
-	1. Run the project with the following command:
+		```
+		bx dev build
+		```
+		{: codeblock}
+	 
+	2. Run the project with the following command:
  
 		```
 		bx dev run
@@ -113,38 +130,7 @@ Ensure that you install the [prerequisite developer tools ![External link icon](
 ## Running a web project
 {: #run}
 
-### Locally
-{: #local notoc}
-
-1. Install your node dependencies:
-
-  ```
-  npm install
-  ```
-  {: codeblock}
-
-2. Bundle your frontend code into a module:
-
-  ```
-  node_modules/.bin/gulp
-  ```
-  {: codeblock}
-
-3. Compile your server:
-
-  ```
-  swift build
-  ```
-  {: codeblock}
-
-4. Run your application:
-
-  ```
-  .build/debug/WebBasicProjectCLI
-  ```
-  {: codeblock}
-
-5. Open your browser to `http://localhost:8080`.
+You can run the application locally on your host system if you install the necessary build tools, or by using the available container support in the {site.data.keyword.dev_cli_notm}}.
 
 
 ### Using the {{site.data.keyword.dev_cli_short}}
@@ -164,14 +150,21 @@ Ensure that you install the [prerequisite developer tools ![External link icon](
   ```
   {: codeblock}
 
-3. Run compilation:
+3. To build the project in your current project directory, enter the following command:
+
+  ```
+  bx dev build
+  ```
+  {: codeblock}
+
+4. To run the project in your current project directory, enter the following command:
 
   ```
   bx dev run
   ```
   {: codeblock}
 
-4. Open your browser to `http://localhost:8080`.
+5. Open your browser to `http://localhost:8080`.
 
 
 ## Running your project in Xcode
@@ -188,7 +181,7 @@ Ensure that you install the [prerequisite developer tools ![External link icon](
 
 2. Change your active target to the executable:
 
-	Next, open your project in Xcode and make sure that your active target is the executable. You can hold down the option key while clicking the drop down menu to select the desired active executable.
+	Next, open your project in Xcode and make sure that your active target is the executable. You can hold down the option key and click the drop-down menu to select the desired active executable.
 
 3. Press **run**.
 

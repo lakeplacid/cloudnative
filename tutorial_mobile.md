@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-05-18"
 
 ---
 {:new_window: target="_blank"}
@@ -14,14 +14,19 @@ lastupdated: "2017-04-18"
 # End-to-end tutorial of the Mobile Basic Starter
 {: #tutorial}
 
-The following end-to-end tutorial walks you through the steps to create a project from the Mobile Basic Starter. This includes installing prerequisite tools and the steps to run the project in Xcode and Android Studio.
+The following end-to-end tutorial walks you through the steps to create a project from the Mobile Basic Starter. This guide includes installing prerequisite tools, and the steps to run the project in Xcode and Android Studio.
 
-You can create a project using either the web-based [{{site.data.keyword.dev_console}}](#create-devex) or through the command-driven [{{site.data.keyword.dev_cli_notm}}](#create-cli).
 
 ## Installing developer tools
 {: #dev_tools}
 
 Ensure that you install the [prerequisite developer tools ![External link icon](../icons/launch-glyph.svg "External link icon")](get_code.html#prereq-dev-tools){: new_window}.
+
+
+## Choose how to create your project
+{: #choose_how}
+
+You can create a project by using either the web-based [{{site.data.keyword.dev_console}}](#create-devex) or through the command-driven [{{site.data.keyword.dev_cli_notm}}](#create-cli).
 
 
 ## Creating a project by using the {{site.data.keyword.dev_console}}
@@ -55,8 +60,8 @@ Ensure that you install the [prerequisite developer tools ![External link icon](
    
    4. Select your identity provider and enter the information to configure it. You can enable only one identity provider.
    
-   5. See [Configuring identity providers} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/appid/identity-providers.html){: new_window} for more information about configuring Authentication.
-
+   5. For more information about configuring Authentication, see [Configuring identity providers} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/appid/identity-providers.html){: new_window}.
+   
 3. Optional: Add the Analytics capability.
 
    1. Click **Add** for **Analytics** in the **Project Overview** page.
@@ -67,7 +72,7 @@ Ensure that you install the [prerequisite developer tools ![External link icon](
    
    3. Toggle off **Demo Mode** to see your analytics data after you run your app.
    
-   4. See [Getting started with {{site.data.keyword.mobileanalytics_short}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/mobileanalytics/index.html){: new_window} for more information about configuring Analytics.
+   4. For more information about configuring Analytics, see [Getting started with {{site.data.keyword.mobileanalytics_short}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/mobileanalytics/index.html){: new_window}.
 
 4. Optional: Add the {{site.data.keyword.mobilepushshort}} capability.
 
@@ -91,9 +96,9 @@ Ensure that you install the [prerequisite developer tools ![External link icon](
 
    3. Enter your service name and click **Create**.
 
-   4. See [Getting started with {{site.data.keyword.cloudant_short_notm}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/Cloudant/index.html){: new_window} for more information about configuring {{site.data.keyword.cloudant_short_notm}}.
+   4. For more information about configuring {{site.data.keyword.cloudant_short_notm}}, see [Getting started with {{site.data.keyword.cloudant_short_notm}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/Cloudant/index.html){: new_window}.
 
-   5. See [Getting started with {{site.data.keyword.objectstorageshort}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/ObjectStorage/index.html){: new_window} for more information about configuring {{site.data.keyword.objectstorageshort}}.
+   5. For more information about configuring {{site.data.keyword.objectstorageshort}}, see [Getting started with {{site.data.keyword.objectstorageshort}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/ObjectStorage/index.html){: new_window}.
 
 6. Generate your project code:
 
@@ -153,7 +158,7 @@ Ensure that you install the [prerequisite developer tools ![External link icon](
       
       2. Run `pod update` if you need to update you update your existing pods.
       
-      3. Run `pod install` to install the pods that are required for your project.
+      3. Run `pod install` to install the pods for your project.
       
    3. Open your `BasicProject.xcworkspace` Xcode workspace.
       
