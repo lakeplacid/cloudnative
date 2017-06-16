@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-04-10"
+lastupdated: "2017-06-12"
 
 ---
 
@@ -27,7 +27,7 @@ Some known issues with the {{site.data.keyword.dev_cli_notm}} are documented, al
 The following sections describe known issues and possible resolutions.
 
 
-### Hostname is taken error while creating a project with a non-mobile pattern
+### Hostname is taken error when you create a project with a non-mobile pattern
 {: #hostname}
 
 You might see the following error if you use the {{site.data.keyword.dev_cli_short}} to create a project from the Web App, BFF, or Microservice patterns:
@@ -83,7 +83,49 @@ bx login
 {: codeblock}
 
 
-### Service broker error while adding {{site.data.keyword.objectstorageshort}} capability
+### Error: No such image when you run a new project
+{: #nosuchimage}
+
+You might see the following error when you run a project without building it first.
+
+```
+$ bx dev run testProject
+The run-cmd option was not specified
+Stopping the 'testProject' container...
+The 'testProject' container was not found
+Creating image bx-dev-testProject based on Dockerfile...
+OK                    
+Creating a container named 'testProject' from that image...
+FAILED
+Container 'testProject' could not be created:
+Error: No such image: bx-dev-testProject
+```
+
+
+#### Cause
+{: #nosuchimage-cause}
+
+You must build a project before you run it. 
+
+
+#### Resolution
+{: #nosuchimage-resolution}
+
+Run the following command in your current project directory to build your application:
+
+```
+bx dev build
+```
+{: codeblock}
+
+Run the following command in your current project directory to start your application:
+
+```
+bx dev run
+```
+
+
+### Service broker error when you add the {{site.data.keyword.objectstorageshort}} capability
 {: #os}
 
 You might see the following error if you use the {{site.data.keyword.dev_cli_short}} to create two projects with the {{site.data.keyword.objectstorageshort}} capability:
@@ -98,7 +140,7 @@ Service broker error: {"description"=>"You can not create this Object Storage in
 #### Cause
 {: #os-cause}
    
-This error is due to the {{site.data.keyword.objectstorageshort}} service which provides only one instance of the Free {{site.data.keyword.objectstorageshort}} plan.
+This error is due to the {{site.data.keyword.objectstorageshort}} service, which provides only one instance of the Free {{site.data.keyword.objectstorageshort}} plan.
 
 
 #### Resolution
@@ -178,7 +220,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 #### Cause
 {: #node-cause}
    
-This error is caused by the `appmetrics` module being installed on a different architecture. Native npm modules that are installed on one architecture do not work on another. The included Docker images are based on the Linux kernel.
+This error occurs when the `appmetrics` module is installed on a different architecture. Native npm modules that are installed on one architecture do not work on another. The included Docker images are based on the Linux kernel.
 
 
 #### Resolution
@@ -198,9 +240,9 @@ Delete `node_modules` folder and run `bx dev run` again.
 ## Getting help and support
 {: #gettinghelp}
 
-If you have problems or questions about the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} or the {{site.data.keyword.dev_cli_notm}}, you can get help by searching for information or by asking questions through a forum. You can also open a support ticket.
+If you have problems or questions about the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} or the {{site.data.keyword.dev_cli_notm}}, get help by searching for information or by asking questions through a forum. You can also open a support ticket.
 
-When asking a question in the forums, tag your question so that it is seen by the {{site.data.keyword.Bluemix_notm}} development teams.
+When you post in the forums, you can tag your questions so that the {{site.data.keyword.Bluemix_notm}} development teams are notified.
 
 <!--Insert the appropriate Stack Overflow tag for your service for <service_keyword> in URL and text below:  -->
 

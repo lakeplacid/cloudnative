@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-06-12"
 
 ---
 {:new_window: target="_blank"}
@@ -14,14 +14,19 @@ lastupdated: "2017-04-18"
 # End-to-end tutorial of the Microservice Basic Starter
 {: #tutorial}
 
-The following end-to-end tutorial walks you through the steps to create a project from the Microservice Basic Starter. This includes installing prerequisite tools and the steps to run the project code.
+The following end-to-end tutorial walks you through the steps to create a project from the Microservice Basic Starter. Steps include installing prerequisite tools, and the steps to run the project code.
 
-You can create a project by using either the web-based [{{site.data.keyword.dev_console}}](#create-devex) or through the command-driven [{{site.data.keyword.dev_cli_notm}}](#create-cli).
 
 ## Installing developer tools
 {: #dev_tools}
 
 Ensure that you install the [prerequisite developer tools ![External link icon](../icons/launch-glyph.svg "External link icon")](get_code.html#prereq-dev-tools){: new_window}.
+
+
+## Choose how to create your project
+{: #choose_how}
+
+You can create a project by using either the web-based [{{site.data.keyword.dev_console}}](#create-devex) or through the command-driven [{{site.data.keyword.dev_cli_notm}}](#create-cli). Once the project is created, you can then [run the project](#running-dev-plugin).
 
 
 ## Creating a project by using the {{site.data.keyword.dev_console}}
@@ -39,8 +44,12 @@ Ensure that you install the [prerequisite developer tools ![External link icon](
 
 	4. Enter your project name. For this tutorial, use `MicroserviceProject`.   
 
-	5. Enter a unique hostname. For this tutorial, use `devhost` 
-   
+	5. Enter a unique hostname, such as your initials plus `-devhost`. For example:
+	
+	 ```
+	 abc-devhost
+	 ```
+	   
 	6. Click **Create**.
 
 2. Optional: Add the Data capability.
@@ -88,14 +97,18 @@ Ensure that you install the [prerequisite developer tools ![External link icon](
 
 	* Select a pattern: 4 (for Microservices)
 	* Select a starter: 1 (for Basic)
-	* Select a platform: 3 (for Java)
+	* Select a platform: 1 (for Java)
 	* Enter a name for your project: `MicroserviceProjectCLI`
+	* Enter a hostname for your project: `abc-devhost`
+	  * Enter a unique hostname, such as your initials plus `-devhost`. For example:
+	
+	     ```
+	     abc-devhost
+	     ```
 
-4. If you want to add services to your project, type `y` at the question prompt and answer the remaining questions.
+4. When your `MicroserviceProjectCLI` is successfully saved, navigate to the `MicroserviceProjectCLI` folder.
 
-5. When your `MicroserviceProjectCLI` is successfully saved, navigate to the `MicroserviceProjectCLI` folder.
-
-6. Now you may add your own code, build, or run the project.
+5. Now you can add your own code, build, or run the project.
  
  
 ## Running the project by using the {{site.data.keyword.dev_cli_notm}}
@@ -108,7 +121,7 @@ Ensure that you install the [prerequisite developer tools ![External link icon](
 	```     
 	{: codeblock}
 
-2. To build and run the project in your current project directory, enter the following command:
+2. To run the project in your current project directory, enter the following command:
 
 	```
 	bx dev run
