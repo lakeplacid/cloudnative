@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-04-10"
+lastupdated: "2016-06-23"
 
 ---
 {:new_window: target="_blank"}
@@ -15,9 +15,9 @@ lastupdated: "2016-04-10"
 # Building cloud native projects
 {: #web-mobile}
 
-You can manage cloud native apps through the concept of {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} [Projects](projects.html). You can create a project by using the [{{site.data.keyword.dev_console}}](devex.html) or the [{{site.data.keyword.dev_cli_notm}}](dev_cli.html) for the {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} CLI. The {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} brings the most common service capabilities that are required for a cloud native application developer into a single, connected experience that has been optimized for the developer.
+You can manage cloud native apps through the concept of {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} *Projects*. You can create a project by using the [{{site.data.keyword.dev_console}}](devex.html) or the [{{site.data.keyword.dev_cli_notm}}](dev_cli.html) for the {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} CLI. The {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} brings the most common service capabilities that are required for a cloud native application developer into a single, connected experience that has been optimized for the developer.
 
-The {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} enables a cloud native application developer to create a project from a variety of [pattern types](patterns.html) and [Starters](starters.html), create and connect key {{site.data.keyword.Bluemix_notm}} optimized services to your project, and quickly download working code with SDKs. The SDKs are fully integrated with capability credentials or dependencies that enable you to have it running in minutes. When your application is running and you have set up and configured capabilities, you can return to your project to monitor and manage engagement with your application users. You can also configure and manage your services through the {{site.data.keyword.dev_console}}.
+The {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} enables a cloud native application developer to create a project from a variety of pattern types and starters, create and connect key {{site.data.keyword.Bluemix_notm}} optimized services to your project, and quickly download working code with SDKs. The SDKs are fully integrated with capability credentials or dependencies that enable you to have it running in minutes. When your application is running and you have set up and configured capabilities, you can return to your project to monitor and manage engagement with your application users. You can also configure and manage your services through the {{site.data.keyword.dev_console}}.
 
 <!--
 While the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} provides an integrated development experience, some developers might still want to have finer-grained control and wire services together manually. If this is your preferred approach, you might want to consider using the [{{site.data.keyword.mobilefirstbp}} Starter boilerplate](try_mobile.html).
@@ -34,9 +34,7 @@ The Mobile dashboard provides an integrated experience on {{site.data.keyword.Bl
 
 The {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} combines the app user interface, data, and services in a complete *project*. By creating a project, all of the required parts of your app and the added capabilities are maintained on the {{site.data.keyword.Bluemix_notm}} server. You can download your app code and the required credentials and initializers if the services are configured into your project. You can view all of your projects by selecting **Projects**.  
 
-You can view additional information about a single project by selecting it on the **Projects** page. This displays the **Project Overview** page, which includes the services that are configured and available for the project. Services are separate capabilities that extend your app by adding a function. Because they are added individually, you can add the services that you need, like push services, authentication, data and storage, or other services. When you add a service to your project on the **Project Overview** page and follow the instructions to configure it, it is automatically associated with your app. For more information about the Project Overview page, see [Project Overview page](project_overview_page.html).
-
-To create your project, you must select a [pattern](patterns.html), followed by a [starter](starters.html).
+You can view additional information about a single project by selecting it on the **Projects** page. This displays the **Project Overview** page, which includes the services that are configured and available for the project. Services are separate capabilities that extend your app by adding a function. Because they are added individually, you can add the services that you need, like push services, authentication, data and storage, or other services. When you add a service to your project on the **Project Overview** page and follow the instructions to configure it, it is automatically associated with your app.
 
 
 ### Project Overview page
