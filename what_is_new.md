@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-05-18"
 
 ---
 {:new_window: target="_blank"}
@@ -25,7 +25,7 @@ The March 2017 update of the {{site.data.keyword.Bluemix}} {{site.data.keyword.d
    * Project creation is redesigned to include Web App, BFF, and Microservice server pattern types with support for Node.js, Java, and Swift.
    * Integration with the new and improved {{site.data.keyword.appid_full}} service gives authenentication for Mobile and Web projects.
    * You can now generate SDKs for your projects by using the [SDK Generator plug-in](sdk_cli.html). SDK generation in the {{site.data.keyword.dev_console}} is available only for Mobile projects.
-   * You can now create projects using the [{{site.data.keyword.dev_cli_short}}](dev_cli.html).
+   * You can now create projects by using the [{{site.data.keyword.dev_cli_short}}](dev_cli.html).
 
 
 ## New as of January 2017
@@ -70,7 +70,7 @@ The November 2016 update of the {{site.data.keyword.Bluemix_notm}} Mobile dashbo
 The October 2016 update of the {{site.data.keyword.Bluemix_notm}} Mobile dashboard introduced the following changes:
 
    * You can now add {{site.data.keyword.mobilepushshort}} and Analytics capabilities to your project directly from the dashboard.
-   * [Code Starters](starters.html#Code_Starter) are now available.
+   * Code Starters are now available.
    * You can add Authentication to your projects that you created from a Code Starter.
    * Swift is now supported.
 
@@ -92,6 +92,6 @@ The October 2016 update of the {{site.data.keyword.Bluemix_notm}} Mobile dashboa
 ### Code
 {: #code notoc}
 
-   * The generated Objective-C and Swift code for iOS now uses CocoaPods to manage dependencies. This means that you need to install CocoaPods. To install it, run `sudo gem install cocoapods`. After CocoaPods is installed, run `pod setup` to configure it (if not configured already). Finally, run `pod install` to download and install the project dependencies prior to opening your `.xcworkspace` file in Xcode. Further details are available in the `README.md` file in the downloaded code archive. Read about [Prerequisite Developer Tools](get_code.html#prereq-dev-tools) for more information.
+   * The generated Objective-C and Swift code for iOS now uses CocoaPods to manage dependencies, so you must install it. To install CocoaPods, run `sudo gem install cocoapods`. After CocoaPods is installed, run `pod setup` to configure it (if not configured already). Finally, run `pod install` to download and install the project dependencies prior to opening your `.xcworkspace` file in Xcode. Further details are available in the `README.md` file in the downloaded code archive. Read about [Prerequisite Developer Tools](get_code.html#prereq-dev-tools) for more information.
 
 Check back often to stay current with new updates.
