@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-18"
+lastupdated: "2017-06-27"
 
 ---
 {:new_window: target="_blank"}
@@ -16,10 +16,18 @@ lastupdated: "2017-05-18"
 {: #what-is-new}
 
 
+## New as of June 2017
+{: #june-2017}
+
+The June 2017 update of the {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} introduced the following changes:
+
+   * The Mobile starters now handle creating the required {{site.data.keyword.ibmwatson}} services and injecting your service credentials into the project.
+   * The {{site.data.keyword.dev_cli_long}} was updated with new features. For more information, see [What’s included in the {{site.data.keyword.Bluemix_notm}} CLI {{site.data.keyword.dev_cli_short}} version 0.1.12 ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/06/whats-included-bluemix-cli-developer-plug-version-0-1-12/).
+
 ## New as of March 2017
 {: #mar-2017}
 
-The March 2017 update of the {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} introduced the following changes:
+The March 2017 update of the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} introduced the following changes:
 
    * The {{site.data.keyword.Bluemix_notm}} Mobile dashboard is now the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}.
    * Project creation is redesigned to include Web App, BFF, and Microservice server pattern types with support for Node.js, Java, and Swift.
