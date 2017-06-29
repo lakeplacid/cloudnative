@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-25"
 
 ---
 {:new_window: target="_blank"}
@@ -26,6 +26,13 @@ The following table depicts the {{site.data.keyword.Bluemix_notm}} Web and Mobil
 <caption>Table 1. {{site.data.keyword.Bluemix_notm}} Web and Mobile services</caption>
 <th>{{site.data.keyword.Bluemix_notm}} Web and Mobile service</th>
 <th>Description</th>
+<tr>
+<td> <img src="images/app_id_icon.png" alt="{{site.data.keyword.appid_short}} icon"><br/>{{site.data.keyword.app_id_short}}
+</td>
+<td valign="top">Use the {{site.data.keyword.app_id_full}} service to add authentication to your web and mobile apps and protect your back-end systems.<br/><br/>
+Read more about operating this service in the <a href="/docs/services/appid/index.html" alt="{{site.data.keyword.app_id_short}} documentation link">{{site.data.keyword.app_id_short}} documentation</a>.
+</td>
+</tr>
 <tr>
 <td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}} icon"><br/>{{site.data.keyword.mobileanalytics_short}}</td>
 <td valign="top">Use the {{site.data.keyword.mobileanalytics_full}} service to gain insight into how your mobile apps are performing and how they are being used.<br/><br/>
