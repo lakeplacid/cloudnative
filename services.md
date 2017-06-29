@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-25"
+lastupdated: "2017-06-29"
 
 ---
 {:new_window: target="_blank"}
@@ -27,10 +27,10 @@ The following table depicts the {{site.data.keyword.Bluemix_notm}} Web and Mobil
 <th>{{site.data.keyword.Bluemix_notm}} Web and Mobile service</th>
 <th>Description</th>
 <tr>
-<td> <img src="images/app_id_icon.png" alt="{{site.data.keyword.appid_short}} icon"><br/>{{site.data.keyword.app_id_short}}
+<td> <img src="images/app_id_icon.png" alt="{{site.data.keyword.appid_short}} icon"><br/>{{site.data.keyword.appid_short}}
 </td>
-<td valign="top">Use the {{site.data.keyword.app_id_full}} service to add authentication to your web and mobile apps and protect your back-end systems.<br/><br/>
-Read more about operating this service in the <a href="/docs/services/appid/index.html" alt="{{site.data.keyword.app_id_short}} documentation link">{{site.data.keyword.app_id_short}} documentation</a>.
+<td valign="top">Use the {{site.data.keyword.appid_full}} service to add authentication to your web and mobile apps and protect your back-end systems.<br/><br/>
+Read more about operating this service in the <a href="/docs/services/appid/index.html" alt="{{site.data.keyword.appid_short}} documentation link">{{site.data.keyword.appid_short}} documentation</a>.
 </td>
 </tr>
 <tr>
