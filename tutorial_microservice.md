@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-06-12"
+lastupdated: "2017-07-11"
 
 ---
 {:new_window: target="_blank"}
@@ -131,6 +131,6 @@ You can create a project by using either the web-based [{{site.data.keyword.dev_
 3. You can access the application by using `curl` on your server:
 
 	```
-	curl http://localhost:8080	
+	curl http://localhost:9080	
 	```
 	{: codeblock}
