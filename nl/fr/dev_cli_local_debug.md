@@ -1,8 +1,8 @@
----
+﻿---
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-05-18"
 
 ---
 {:new_window: target="_blank"}
@@ -24,7 +24,7 @@ Les instructions de débogage d'une application locale sont fournies pour les la
 ## Débogage d'une application Java
 {: #java}
 
-Procédez comme suit pour activer le débogage pour une application Java :
+Procédez comme suit afin d'activer le débogage pour une application Java :
 
 1. Depuis le répertoire racine de votre projet d'application, exécutez la commande suivante :
 
@@ -34,8 +34,8 @@ Procédez comme suit pour activer le débogage pour une application Java :
 2. Connectez le débogueur à votre application :
 
 	* Eclipse
-      1. Importez le projet maven existant dans Eclipse.
-      2. Créez une configuration de débogage d'[application Java distante![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm).
+      1. Importez le **projet maven existant** dans Eclipse.
+      2. Créez une configuration de débogage d'[application distante Java ![External link icon](../icons/launch-glyph.svg "External link icon")](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm). 
       		1. Entrez l'adresse IP ou `localhost:<port>`  
       		2. Entrez `7777` comme numéro de port.
       		3. Spécifiez le nom du projet java que vous avez importé.
@@ -43,15 +43,15 @@ Procédez comme suit pour activer le débogage pour une application Java :
       7. Exécutez la configuration de débogage.
       8. Accédez au noeud final avec un navigateur pour recréer le problème.  
 	   **Remarque** : le port par défaut est 9080 pour le noeud final de base Microservices Java.
-	* [IntelliJ ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html)
-	* [VSCode ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugge)
-	* Ligne de commande JDK : `jdb -attach <hôte:port>`
+	* [IntelliJ ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html)
+	* [VSCode ![External link icon](../icons/launch-glyph.svg "External link icon")](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugge)
+	* Ligne de commande du kit JDK : `jdb -attach <host:port>`
 
 ## Débogage d'une application Node.js
 
 {: #node}
 
-Procédez comme suit pour activer le débogage pour une application Node.js :
+Procédez comme suit afin d'activer le débogage pour une application Node.js :
 
 1. Depuis le répertoire racine de votre projet d'application, exécutez la commande suivante :
 
@@ -59,8 +59,8 @@ Procédez comme suit pour activer le débogage pour une application Node.js :
 `
 
 2. Connectez le débogueur à votre application :
-	* [VSCode ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://blog.docker.com/2016/07/live-debugging-docker/)
-	* [WebStorm ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://blog.alexseifert.com/2016/10/25/debugging-node-js-in-a-docker-container-with-webstorm/)
+	* [VSCode ![External link icon](../icons/launch-glyph.svg "External link icon")](https://blog.docker.com/2016/07/live-debugging-docker/)
+	* [WebStorm ![External link icon](../icons/launch-glyph.svg "External link icon")](https://blog.alexseifert.com/2016/10/25/debugging-node-js-in-a-docker-container-with-webstorm/)
 
 
 <!--

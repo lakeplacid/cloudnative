@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-05-19"
 
 ---
 {:new_window: target="_blank"}
@@ -14,9 +14,9 @@ lastupdated: "2017-03-17"
 # SDK Generator プラグイン
 {: #sdk-cli}
 
-{{site.data.keyword.IBM}} SDK Generator プラグインは、[{{site.data.keyword.Bluemix_notm}} CLI ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/cli/reference/bluemix_cli/index.html) にインストールできます。
+{{site.data.keyword.IBM}} SDK Generator プラグインは、[{{site.data.keyword.Bluemix_notm}} CLI ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/cli/reference/bluemix_cli/index.html "外部リンク・アイコン") にインストールできます。
 
-{{site.data.keyword.Bluemix_notm}} の開発者は、このプラグインを使用して [Open API 仕様 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.openapis.org/) 準拠の REST API 定義から SDK を生成することができます。REST API 定義を変更する際は、プロジェクト全体を再生成するのではなく、このプラグインを使用して SDK だけを再生成することができます。
+{{site.data.keyword.Bluemix_notm}} の開発者は、このプラグインを使用して [Open API 仕様 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.openapis.org/ "外部リンク・アイコン") 準拠の REST API 定義から SDK を生成することができます。REST API 定義を変更する際は、プロジェクト全体を再生成するのではなく、このプラグインを使用して SDK だけを再生成することができます。
 
 また、特定のスペース内の Cloud Foundry アプリが、SDK 生成に有効な REST API 定義を持っているかどうかも確認することができます。最後に、{{site.data.keyword.IBM_notm}} SDK Generator プラグインを使用して REST API 定義を検証し、それらが SDK 生成プログラムの要件に従っていることを確認できます。
 
@@ -30,16 +30,16 @@ REST API 定義は、有効でなければならず、稼働中のサーバー�
 
 以下の要件を満たしていることを確認してください。
 
-* [{{site.data.keyword.Bluemix_notm}} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://bluemix.net) アカウントを持っている
-* [Open API ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.openapis.org/) 仕様に準拠した有効な API 定義
+* [{{site.data.keyword.Bluemix_notm}} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://bluemix.net "外部リンク・アイコン") アカウントを持っている
+* [Open API ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.openapis.org/ "外部リンク・アイコン") 仕様に準拠した有効な API 定義
 
 
 ## インストール
 {: #installation}
 
-1. [{{site.data.keyword.Bluemix}} CLI ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://clis.ng.bluemix.net/ui/home.html) をインストールします。
+1. [{{site.data.keyword.Bluemix}} CLI ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://clis.ng.bluemix.net/ui/home.html "外部リンク・アイコン") をインストールします。
 
-2. [プラグイン ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in) をインストールします。
+2. [プラグイン ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in "外部リンク・アイコン") をインストールします。
 
 	```
 	bx plugin install sdk-gen -r Bluemix
@@ -56,7 +56,7 @@ REST API 定義は、有効でなければならず、稼働中のサーバー�
 ### SDK の生成
 {: #gen}
 
-`bluemix sdk generate [arguments...][command options]` を使用します。
+`bluemix sdk generate [arguments...] [command options]` を使用します。
 
 
 #### 引数
@@ -74,6 +74,12 @@ REST API 定義は、有効でなければならず、稼働中のサーバー�
    * `--android` - Android SDK を生成する
    * `--ios` - iOS Swift SDK を生成する
    * `--swift` - Swift サーバー SDK を生成する
+   * `--js` - JavaScript SDK を生成する
+* `LOCATION` (必須) - `OPENAPI_DOC_LOCATION` のタイプを指定する
+   * `-r` - リモート URL
+   * `-f` - ファイル
+   * `-a` - {{site.data.keyword.Bluemix_notm}} で実行されるアプリ
+   * `-l` - ローカル・ホスト URL
 * `--output "YOUR_RELATIVE_PATH"` (オプション) - 生成された SDK を、`YOUR_RELATIVE_PATH` によって指定されたディレクトリー内に配置する (既存の SDK がある場合は上書きする)
 * `--unzip` (オプション) - 生成された SDK を解凍する (既存の SDK 成果物がある場合は上書きする)
 
@@ -84,14 +90,14 @@ REST API 定義は、有効でなければならず、稼働中のサーバー�
 {{site.data.keyword.Bluemix_notm}} で稼働中の Cloud Foundry アプリから SDK を生成するには、そのアプリの名前を CLI のパラメーターとして使用することができます。以下のコマンドは、アプリの名前を `SDK_Name` として使用しています。
 
 ```
-bluemix sdk generate [APP_NAME] [PLATFORM]
+bluemix sdk generate [APP_NAME] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
 Open API 定義ファイルの URL、あるいはローカルの JSON ファイルまたは Yaml ファイルから SDK を生成するには、以下のコマンドを使用します。
 
 ```
-bluemix sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [Platform]
+bluemix sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
@@ -115,14 +121,14 @@ bluemix sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [Platform]
 {{site.data.keyword.Bluemix_notm}} で稼働中の Cloud Foundry アプリの API 仕様を検証するには、そのアプリの名前を CLI のパラメーターとして使用することができます。
 
 ```
-bluemix sdk validate [APP_NAME]
+bluemix sdk validate [APP_NAME] [LOCATION]
 ```
 {: codeblock}
 
 API 仕様文書の URL、あるいはローカルの JSON ファイルまたは Yaml ファイルから SDK を検証するには、以下のコマンドを使用します。
 
 ```
-bluemix sdk validate [OPENAPI_DOC_LOCATION]
+bluemix sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ```
 {: codeblock}
 
@@ -131,7 +137,7 @@ bluemix sdk validate [OPENAPI_DOC_LOCATION]
 ### アプリのリスト (Cloud Foundry)
 {: #list-apps}
 
-`bluemix sdk list [argument][option]` を使用して、アプリをリストし、API 仕様を検証します。`OPENAPI_SPEC` 環境変数を、仕様をホストしている相対 URL パスに設定する必要があります。
+`bluemix sdk list [argument] [option]` を使用して、アプリをリストし、API 仕様を検証します。`OPENAPI_SPEC` 環境変数を、仕様をホストしている相対 URL パスに設定する必要があります。
 
 
 #### 引数

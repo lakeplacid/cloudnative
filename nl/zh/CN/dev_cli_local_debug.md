@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-05-18"
 
 ---
 {:new_window: target="_blank"}
@@ -33,8 +33,8 @@ lastupdated: "2017-04-18"
 2. 将调试器连接到应用程序：
 
 	* Eclipse
-      1. 将“现有 Maven 项目”项目导入到 Eclipse。
-      2. 创建 [Java 远程应用程序 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm) 调试配置。
+      1. 将**现有 Maven 项目**导入到 Eclipse。
+      2. 创建 [Java 远程应用程序 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm "外部链接图标") 调试配置。
       		1. 输入 IP 地址或 `localhost:<port>`  
       		2. 输入 `7777` 作为端口号。
       		3. 指定所导入 Java 项目的名称。
@@ -42,8 +42,8 @@ lastupdated: "2017-04-18"
       7. 运行调试配置。
       8. 使用浏览器访问端点，以重现问题。  
 	   **注**：Java 基本微服务端点的缺省端口是 9080。
-	* [IntelliJ ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html)
-	* [VSCode ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugge)
+	* [IntelliJ ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html "外部链接图标")
+	* [VSCode ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugge "外部链接图标")
 	* JDK 命令行：`jdb -attach <host:port>`
 
 ## Node.js 应用程序调试
@@ -57,8 +57,8 @@ lastupdated: "2017-04-18"
 	`bx dev debug`
 
 2. 将调试器连接到应用程序：
-	* [VSCode ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://blog.docker.com/2016/07/live-debugging-docker/)
-	* [WebStorm ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://blog.alexseifert.com/2016/10/25/debugging-node-js-in-a-docker-container-with-webstorm/)
+	* [VSCode ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://blog.docker.com/2016/07/live-debugging-docker/ "外部链接图标")
+	* [WebStorm ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://blog.alexseifert.com/2016/10/25/debugging-node-js-in-a-docker-container-with-webstorm/ "外部链接图标")
 
 
 <!--

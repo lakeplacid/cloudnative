@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-06-13"
 
 ---
 {:new_window: target="_blank"}  
@@ -14,13 +14,13 @@ lastupdated: "2017-04-18"
 # {{site.data.keyword.dev_cli_short}}
 {: #developercli}	
 
-{{site.data.keyword.dev_cli_long}} fornisce un approccio guidato al comando estensibile per la creazione, lo sviluppo e la distribuzione di un progetto web con il plugin `dev`. Ideale per gli sviluppatori che desiderano utilizzare il controllo della riga comandi durante lo sviluppo di applicazioni del microservizio end-to-end.
+{{site.data.keyword.dev_cli_long}} fornisce un approccio guidato al comando estensibile per la creazione, lo sviluppo e la distribuzione di un progetto web con il plugin `dev`. Ideale per gli sviluppatori che desiderano utilizzare il controllo della riga comandi per sviluppare le applicazioni del microservizio end-to-end. 
 
 {: shortdesc}
 
-{{site.data.keyword.dev_cli_notm}} utilizza due contenitori per facilitare la creazione e la verifica della tua applicazione. Il primo è il contenitore degli strumenti, che contiene i programmi di utilità necessari per creare e verificare la tua applicazione. Il Dockerfile per questo contenitore è definito dal parametro [dockerfile-tools](#command-parameters). Puoi pensare ad esso come a un contenitore di sviluppo poiché contiene gli strumenti normalmente utili per lo sviluppo di uno specifico runtime.
+{{site.data.keyword.dev_cli_notm}} utilizza due contenitori per facilitare la creazione e la verifica della tua applicazione. Il primo è il contenitore degli strumenti, che contiene i programmi di utilità necessari per creare e verificare la tua applicazione. Il Dockerfile per questo contenitore è definito dal parametro [`dockerfile-tools`](#command-parameters). Puoi pensare ad esso come a un contenitore di sviluppo poiché contiene gli strumenti normalmente utili per lo sviluppo di uno specifico runtime.
 
-Il secondo contenitore è il contenitore di esecuzione. Questo contenitore è di un formato adeguato per essere distribuito per l'utilizzo, ad esempio, in {{site.data.keyword.Bluemix}}. Di conseguenza, questo contenitore ha generalmente un punto di ingresso definito che avvia la tua applicazione. Quando selezioni di eseguire la tua applicazione tramite {{site.data.keyword.dev_cli_short}}, utilizza questo contenitore. Il Dockerfile per questo contenitore è definito dal parametro [dockerfile-run](#run-parameters).
+Il secondo contenitore è il contenitore di esecuzione. Questo contenitore è di un formato adeguato per essere distribuito per l'utilizzo, ad esempio, in {{site.data.keyword.Bluemix}}. Di conseguenza, viene definito un punto di ingresso che avvia la tua applicazione. Quando selezioni di eseguire la tua applicazione tramite {{site.data.keyword.dev_cli_short}}, utilizza questo contenitore. Il Dockerfile per questo contenitore è definito dal parametro [`dockerfile-run`](#run-parameters).
 
 
 ## Aggiunta di {{site.data.keyword.dev_cli_notm}}
@@ -30,15 +30,15 @@ Il secondo contenitore è il contenitore di esecuzione. Questo contenitore è di
 ### Prerequisiti
 {: #prereq}
 
-Ci sono alcuni prerequisiti che ti consentono di esplorare a fondo e utilizzare correttamente la {{site.data.keyword.dev_cli_short}}, in quanto è estremamente estensibile e ti permette di sfruttare le tecnologie più complementari.
+Devi ottenere alcuni prerequisiti che ti consentono di esplorare a fondo e utilizzare correttamente la {{site.data.keyword.dev_cli_short}}, poiché è altamente estendibile per l'utilizzo di tecnologie complementari.
 
-1. Installa la CLI [Cloud Foundry ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://github.com/cloudfoundry/cli#getting-started).
+<!--1. Install the [Cloud Foundry CLI ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/cli#getting-started "External link icon").-->
 
-2. Installa la CLI [{{site.data.keyword.Bluemix}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://clis.ng.bluemix.net/ui/home.html).
+1. Installa la CLI [{{site.data.keyword.Bluemix}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://clis.ng.bluemix.net/ui/home.html "Icona link esterno").
 
-3. Ottieni un ID [{{site.data.keyword.Bluemix_notm}}](https://www.bluemix.net).
+2. Ottieni un ID [{{site.data.keyword.Bluemix_notm}}](https://www.bluemix.net).
 
-4. Se prevedi di utilizzare ed eseguire il debug di applicazioni in locale, devi installare anche [Docker ![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://www.docker.com/get-docker). L'installazione di Docker è richiesta solo per i progetti non mobili.
+3. Se prevedi di utilizzare ed eseguire il debug di applicazioni in locale, devi installare anche [Docker ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://www.docker.com/get-docker "Icona link esterno").
 
 
 ### Prima di iniziare
@@ -65,7 +65,7 @@ Ci sono alcuni prerequisiti che ti consentono di esplorare a fondo e utilizzare 
 	
 	This link does not work in production yet --> 
 	
-	1. Accedi a [{{site.data.keyword.iamshort}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://www.bluemix.net/iam/#/apikeys){: new_window}.
+	1. Accedi a [{{site.data.keyword.iamshort}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://www.bluemix.net/iam/#/apikeys "Icona link esterno"){: new_window}.
 	2. Seleziona **Crea chiave API**.
 		* Immetti un nome e una descrizione per apiKey
 	3. Scarica la tua apiKey.
@@ -81,14 +81,14 @@ Ci sono alcuni prerequisiti che ti consentono di esplorare a fondo e utilizzare 
 ### installazione
 {: #installation}
 
-1. Installa la [{{site.data.keyword.dev_cli_short}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in){: new_window} eseguendo il seguente comando:
+1. Installa la [{{site.data.keyword.dev_cli_short}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in "Icona link esterno"){: new_window} eseguendo il seguente comando:
  
 	```
 	bx plugin install dev -r Bluemix
 	```
 	{: codeblock}
 
-2. 	Convalida la validità dell'installazione eseguendo il seguente comando:  
+2. 	Convalida la validità dell'installazione del plugin eseguendo il seguente comando:   
  
 	```
 	bx dev
@@ -104,7 +104,7 @@ Utilizzare i seguenti comandi per creare un progetto, distribuirlo, eseguirne il
 ### Creazione
 {: #build}
 
-Puoi creare la tua applicazione utilizzando il comando `build`. L'elemento di configurazione `build-cmd-run` viene utilizzato per creare l'applicazione. Tutti e tre i comandi `test`, `debug` e `run` eseguono automaticamente una build, pertanto non è sempre necessario eseguire esplicitamente il comando di build in anticipo.
+Puoi creare la tua applicazione utilizzando il comando `build`. L'elemento di configurazione `build-cmd-run` viene utilizzato per creare l'applicazione. I comandi `test`, `debug` e `run` prevedono di trovare un progetto compilato in modo che puoi prima eseguire un'operazione di build almeno una volta.
 
 Esegui il seguente comando nella tua directory del progetto corrente per creare la tua applicazione:  
 
@@ -133,9 +133,9 @@ bx dev code <projectName>
 ### Creazione
 {: #create}
 
-Crea un nuovo progetto richiedendo tutte le informazioni, tra cui il linguaggio, il nome progetto e il tipo di modello applicazione. Il progetto viene creato nella directory corrente. 
+Crea un progetto richiedendo tutte le informazioni, tra cui il linguaggio, il nome progetto e il tipo di modello applicazione. Il progetto viene creato nella directory corrente. 
 
-Per creare un nuovo progetto nella directory corrente e associare dei servizi ad esso, esegui il seguente comando:
+Per creare un progetto nella directory corrente e associare dei servizi ad esso, esegui il seguente comando: 
 
 ```
 bx dev create
@@ -146,9 +146,16 @@ bx dev create
 ### Debug
 {: #debug}
 
-Puoi eseguire il debug della tua applicazione tramite il comando `debug`. Viene prima completata una build nel progetto utilizzando l'elemento di configurazione `build-cmd-debug` come istruzione di build. Viene quindi avviato un contenitore che fornisce una o più porte di debug come definito in `container-port-map-debug`. Collegando il tuo strumento di debug preferito alla porta o alle porte puoi eseguire il debug della tua applicazione come normale.
+Puoi eseguire il debug della tua applicazione tramite il comando `debug`. Deve prima essere completata una build nel progetto utilizzando il comando di build. Quando richiami il comando `debug`, viene avviato un contenitore che fornisce una o più porte di debug come definito dal valore `container-port-map-debug`. Collegando il tuo strumento di debug preferito alla porta o alle porte puoi eseguire il debug della tua applicazione come normale.
 
 **Limitazione**: i progetti Swift non sono disponibili per il debug.
+
+Per prima cosa, compila il tuo progetto:
+
+```
+bx dev build
+```
+{: codeblock}
 
 Esegui il seguente comando nella tua directory del progetto corrente per eseguire il debug della tua applicazione:
 
@@ -170,19 +177,19 @@ con il debug di un'applicazione.
 {: #port-map-debug}
 
 * Le associazioni di porta per la porta di debug. Il primo valore è la porta da utilizzare nel sistema operativo host, il secondo è la porta nel contenitore [host-port:container-port].
-* Utilizzo: `bx dev debug container-port-map-debug [7777:7777]`
+* Utilizzo: `bx dev debug --container-port-map-debug [7777:7777]`
 
 ##### `build-cmd-debug`
 {: #build-cmd-debug}
 
-* Utilizzato per creare il codice per DEBUG.
-* Utilizzo: `bx dev debug build-cmd-debug build.command.sh`
+* Il parametro che viene utilizzato per creare il codice per DEBUG. 
+* Utilizzo: `bx dev debug --build-cmd-debug build.command.sh`
 
 ##### `debug-cmd`
 {: #debug-cmd}
 
-* Utilizzato per eseguire il debug del codice nel contenitore degli strumenti. Questo parametro è facoltativo se `build-cmd-debug` avvia la tua applicazione in fase di debug.
-* Utilizzo: `bx dev debug debug-cmd /the/debug/command`
+* Il parametro che viene utilizzato per specificare un comando per richiamare il debug nel contenitore degli strumenti. Utilizzare questo parametro se `build-cmd-debug` avvia la tua applicazione in debug.
+* Utilizzo: `bx dev debug --debug-cmd /the/debug/command`
 
 #### Debug dell'applicazione locale:
 {: #local-app-dev}
@@ -204,6 +211,26 @@ bx dev delete <projectName>
  
 
 **Nota:** i servizi {{site.data.keyword.Bluemix}} **non** vengono rimossi.
+
+
+### Distribuzione 
+{: #deploy}
+
+Puoi distribuire un'applicazione a {{site.data.keyword.Bluemix}} tramite il comando `deploy` quando è presente un file `manifest.yml` nella directory root del tuo progetto.
+
+Esegui il seguente comando nella tua directory del progetto corrente per creare la tua applicazione:  
+
+```
+bx dev build
+```
+{: codeblock}
+
+Esegui il seguente comando per distribuire il tuo progetto a {{site.data.keyword.Bluemix}}:
+
+```
+bx dev deploy
+```
+{: codeblock}
 
 
 ### Guida
@@ -248,7 +275,14 @@ bx dev edit
 ### Esecuzione
 {: #run}
 
-Puoi eseguire la tua applicazione tramite il comando `run`. Viene prima completata una build nel progetto utilizzando l'elemento di configurazione `build-cmd-run` come istruzione di build. Il contenitore di esecuzione viene quindi avviato ed espone le porte come definite in `container-port-map`. `run-cmd` può essere utilizzato per richiamare l'applicazione se il contenitore di esecuzione non contiene un punto di ingresso per completare questa fase. 
+Puoi eseguire la tua applicazione tramite il comando `run`. Deve prima essere completata una build nel progetto utilizzando il comando `build`. Quando richiami il comando run, viene avviato il contenitore di esecuzione che espone le porte come definito dal parametro `container-port-map`. Il parametro `run-cmd` può essere utilizzato per richiamare l'applicazione se il contenitore di esecuzione Dockerfile non contiene un punto di ingresso per completare questa fase. 
+
+Per prima cosa, compila il tuo progetto:
+
+```
+bx dev build
+```
+{: codeblock}
 
 Esegui il seguente comando nella tua directory del progetto corrente per avviare la tua applicazione:
 
@@ -270,37 +304,37 @@ nella gestione della tua applicazione nel contenitore di esecuzione.
 {: #container-name-run}
 	
 * Il nome del contenitore per il tuo contenitore di esecuzione.
-* Utilizzo: `bx dev run container-name-run <projectName>`
+* Utilizzo: `bx dev run --container-name-run [<projectName>]`
 
 ##### `container-path-run`
 {: #container-path-run}
 
 * L'ubicazione nel contenitore da condividere nell'esecuzione.
-* Utilizzo: `bx dev run container-path-run [/path/to/app]`
+* Utilizzo: `bx dev run --container-path-run [/path/to/app]`
 
 ##### `host-path-run`
 {: #host-path-run}
 
-* L'ubicazione del sistema host da condividere nel contenitore nell'esecuzione.
-* Utilizzo: `bx dev run host-path-run [/path/to/app/bin]`
+* L'ubicazione del sistema host da condividere nel contenitore nell'esecuzione. 
+* Utilizzo: `bx dev run --host-path-run [/path/to/app/bin]`
 
 ##### `dockerfile-run`
 {: #dockerfile-run}
 
-* Il Dockerfile per il contenitore di esecuzione.
-* Utilizzo: `bx dev run dockerfile-run [/path/to/Dockerfile.yml]`
+* Il Dockerfile per il contenitore di esecuzione. 
+* Utilizzo: `bx dev run --dockerfile-run [/path/to/Dockerfile.yml]`
 
 ##### `image-name-run`
 {: #image-name-run}
 
-* L'immagine da creare da dockerfile-run.
-* Utilizzo: `bx dev run image-name-run [/path/to/image-name]`
+* L'immagine da creare da `dockerfile-run`.
+* Utilizzo: `bx dev run --image-name-run [/path/to/image-name]`
 
 ##### `run-cmd`
 {: #run-cmd}
 
-* Parametro utilizzato per eseguire il codice nel contenitore di esecuzione. Questo parametro è facoltativo se la tua immagine avvia l'applicazione.
-* Utilizzo: `bx dev run run-cmd [/the/run/command]`
+* Parametro utilizzato per eseguire il codice nel contenitore di esecuzione. Utilizza questo parametro se la tua immagine avvia la tua applicazione.
+* Utilizzo: `bx dev run --run-cmd [/the/run/command]`
 	
 ### Stato
 {: #status}
@@ -321,29 +355,29 @@ bx dev status
 ### Arresto
 {: #stop}
 
-Puoi arrestare un contenitore tramite il comando `stop`. Utilizza il parametro `container-name` per specificare l'arresto di un contenitore. Se questo parametro non viene specificato, il comando stop arresta il contenitore di esecuzione come definito dal parametro `container-name-run`. 
+Puoi arrestare i tuoi contenitori tramite il comando `stop`. 
 
-Esegui il seguente comando nella tua directory del progetto corrente per arrestare un contenitore:
+Per arrestare gli strumenti ed eseguire i contenitori come definito nel tuo file `cli-config.yml`, esegui:
 
 ```
 bx dev stop
 ```
 {: codeblock}
 
+Per arrestare un contenitore non definito nel file `cli-config.yml`, puoi specificare un ulteriore parametro della riga di comando per sovrascriverlo. Per il contenitore degli strumenti, utilizza il parametro [`--container-name-tools`](#container-name-tools) e per il contenitore in esecuzione utilizza [`--container-name-run`](#container-name-run). Se non viene specificato alcun contenitore nel file `cli-config.yml` e nella riga di comando, il comando stop viene semplicemente restituito.
 
-#### Ulteriori parametri di arresto: 
-{: #stop-parameter}
-
-##### `container-name`
-{: #container-name}
-
-* Il nome del contenitore per il tuo contenitore degli strumenti.
-* Utilizzo: `bx dev stop container-name <demo-tools>` 
 
 ### Verifica
 {: #test}
 
-Puoi verificare la tua applicazione tramite il comando `test`. Viene prima completata una build nel progetto utilizzando l'elemento di configurazione `build-cmd-run` come istruzione di build. Il contenitore degli strumenti viene quindi utilizzato per richiamare `test-cmd` per l'applicazione.
+Puoi verificare la tua applicazione tramite il comando `test`. Deve prima essere completata una build nel progetto utilizzando il comando `build`. Il contenitore degli strumenti viene quindi utilizzato per richiamare `test-cmd` per l'applicazione.
+
+Per prima cosa, compila il tuo progetto:
+
+```
+bx dev build
+```
+{: codeblock}
 
 Esegui il seguente comando per verificare la tua applicazione: 
 
@@ -359,7 +393,7 @@ bx dev test
 ## I parametri per la creazione, il debug, l'esecuzione e la verifica
 {: #command-parameters}
 
-I seguenti parametri possono essere utilizzati con i comandi `build|debug|run|test` oppure aggiornando direttamente il file `cli-config.yml` del progetto. Sono disponibili ulteriori parametri per i comandi [`debug`](#debug-parameters) e [`run`](#run-parameters).
+I seguenti parametri possono essere utilizzati con i comandi `build|debug|run|test` oppure aggiornando direttamente il file `cli-config.yml` del progetto. Sono disponibili ulteriori parametri per i comandi [`debug`](#debug-parameters) e [`run`](#run-parameters). 
 
 **Nota**: i parametri di comando immessi sulla riga comandi hanno la precedenza sulla configurazione `cli-config.yml`.
 
@@ -367,47 +401,54 @@ I seguenti parametri possono essere utilizzati con i comandi `build|debug|run|te
 {: #container-name-tools}
 
 * Il nome del contenitore per il tuo contenitore degli strumenti.
-* Utilizzo: `bx dev <build|debug|run|test> container-name-tools [<demo-tools>]`
+* Utilizzo: `bx dev <build|debug|run|stop|test> --container-name-tools [<projectName>]`
 
 ### `host-path-tools`
 {: #host-path-tools}
 
 * L'ubicazione sull'host da condividere per la creazione, il debug e la verifica.
-* Utilizzo: `bx dev <build|debug|run|test> host-path-tools [/path/to/build/tools]`
+* Utilizzo: `bx dev <build|debug|run|test> --host-path-tools [/path/to/build/tools]`
 
 ### `container-path-tools`
 {: #container-path-tools}
 
 * L'ubicazione nel contenitore da condividere per la creazione, il debug e la verifica.
-* Utilizzo: `bx dev <build|debug|run|test> container-path-tools [/path/for/build]`
+* Utilizzo: `bx dev <build|debug|run|test> --container-path-tools [/path/for/build]`
 
 ### `container-port-map`
 {: #container-port-map}
 
 * Le associazioni di porta per il contenitore. Il primo valore è la porta da utilizzare nel sistema operativo host, il secondo è la porta nel contenitore [host-port:container-port].
-* Utilizzo: `bx dev <build|debug|run|test> container-port-map [8090:8090,9090,9090]`
+* Utilizzo: `bx dev <build|debug|run|test> --container-port-map [8090:8090,9090,9090]`
 
 ### `dockerfile-tools`
 {: #dockerfile-tools}
 
-* Il Dockerfile per il contenitore degli strumenti.
-* Utilizzo: `bx dev <build|debug|run|test> dockerfile-tools [path/to/dockerfile]`
+* Il Dockerfile per il contenitore degli strumenti. 
+* Utilizzo: `bx dev <build|debug|run|test> --dockerfile-tools [path/to/dockerfile]`
 
 ### `image-name-tools`
 {: #image-name-tools}
 
-* L'immagine da creare da dockerfile-tools.
-* Utilizzo: `bx dev <build|debug|run|test> image-name-tools [path/to/image-name]`
+* L'immagine da creare da `dockerfile-tools`.
+* Utilizzo: `bx dev <build|debug|run|test> --image-name-tools [path/to/image-name]`
 
 ### `build-cmd-run`
 {: #build-cmd-run}
 
-* Il comando per creare il codice per tutti gli utilizzi di DEBUG.
-* Utilizzo: `bx dev <build|debug|run|test> build-cmd-run [some.build.command]`
+* Il parametro che viene utilizzato per specificare un comando per creare il codice per tutti gli utilizzi di DEBUG.
+* Utilizzo: `bx dev <build|debug|run|test> --build-cmd-run [some.build.command]`
 
 ### `test-cmd`
 {: #test-cmd}
 
-* Il comando per verificare il codice nel contenitore degli strumenti.
-* Utilizzo: `bx dev <build|debug|run|test> test-cmd [/the/test/command]`
+* Il parametro che viene utilizzato per specificare un comando per verificare il codice nel contenitore degli strumenti. 
+* Utilizzo: `bx dev <build|debug|run|test> --test-cmd [/the/test/command]`
+
+### `trace`
+{: #trace}
+
+* Utilizzare questo parametro per fornire l'output dettagliato. 
+* Utilizzo: `bx dev <build|debug|run|test> --trace`
+
 

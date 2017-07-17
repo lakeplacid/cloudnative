@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-06-12"
 
 ---
 {:new_window: target="_blank"}
@@ -14,15 +14,19 @@ lastupdated: "2017-04-18"
 # Guía de aprendizaje del iniciador Web Basic
 {: #tutorial}
 
-En la siguiente guía de aprendizaje encontrará los pasos a seguir para crear un proyecto desde el iniciador Web Basic. Incluye la instalación de las herramientas necesarias y los pasos a seguir para ejecutar el código del proyecto. 
-
-Puede crear un proyecto utilizando la [{{site.data.keyword.dev_console}}](#create-devex) basada en la web o la [{{site.data.keyword.dev_cli_notm}}](#create-cli) de mandatos.
+En la siguiente guía de aprendizaje encontrará los pasos a seguir para crear un proyecto desde el iniciador Web Basic. Las instrucciones incluyen la instalación de las herramientas necesarias y una explicación de cómo ejecutar el código del proyecto. 
 
 
 ## Instalación de herramientas del desarrollador
 {: #dev_tools}
 
-Asegúrese de instalar las [herramientas de desarrollador necesarias ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](get_code.html#prereq-dev-tools){: new_window}.
+Asegúrese de instalar las [herramientas de desarrollador necesarias ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](get_code.html#prereq-dev-tools "Icono de enlace externo"){: new_window}.
+
+
+## Elija cómo desea crear su proyecto
+{: #choose_how}
+
+Puede crear un proyecto utilizando la [{{site.data.keyword.dev_console}}](#create-devex) basada en la web o la [{{site.data.keyword.dev_cli_notm}}](#create-cli) de mandatos. Una vez creado el proyecto, podrá [ejecutar el proyecto](#run).
 
 
 ## Creación de un proyecto mediante la {{site.data.keyword.dev_console}}
@@ -30,7 +34,7 @@ Asegúrese de instalar las [herramientas de desarrollador necesarias ![Icono de 
 
 1. Cree un proyecto en la {{site.data.keyword.dev_console}} de {{site.data.keyword.Bluemix}}:
 
-	1. En la página [**Iniciación** ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://console.ng.bluemix.net/developer/getting-started/) de la {{site.data.keyword.dev_console}}, pulse **Crear proyecto**.
+	1. En la página [**Iniciación** ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://console.ng.bluemix.net/developer/getting-started/ "Icono de enlace externo") de la {{site.data.keyword.dev_console}}, pulse **Crear proyecto**.
 
 		De forma alternativa, puede pulsar **Crear proyecto** desde la página **Proyectos**.
 
@@ -40,7 +44,11 @@ Asegúrese de instalar las [herramientas de desarrollador necesarias ![Icono de 
 
 	4. Especifique el nombre del proyecto. En esta guía de aprendizaje, utilizaremos `WebBasicProject`.   
 
-	5. Especifique un nombre de host exclusivo. En esta guía de aprendizaje, utilizaremos `devhost` 
+	5. Escriba un nombre de host exclusivo, como por ejemplo sus iniciales seguidas de `-devhost`. Por ejemplo:
+	
+	 ```
+	 abc-devhost
+	 ```
 
 	6. Seleccione el lenguaje de la plataforma. En esta guía de aprendizaje, utilizaremos `Swift`.
    
@@ -64,13 +72,13 @@ Asegúrese de instalar las [herramientas de desarrollador necesarias ![Icono de 
    
 	3. Cuando se haya generado el código, pulse **Descargar código** para descargar el archivo del proyecto.
 
-4. Empiece a trabajar con el proyecto descargado: 
+4. Empiece a trabajar con el proyecto descargado:
 
-	1. Expanda el archivo archivado. 
+	1. Expanda el archivo archivado.
 	
-	2. Vaya al directorio del nuevo proyecto. 
+	2. Vaya al directorio del nuevo proyecto.
 	
-	3. Utilice {{site.data.keyword.dev_cli_notm}} para continuar. 
+	3. Utilice {{site.data.keyword.dev_cli_notm}} para continuar.
 
 5. Opcional: [Actualización del proyecto](project_overview_page.html#update_language) para generar un nuevo lenguaje.
 
@@ -87,22 +95,31 @@ Asegúrese de instalar las [herramientas de desarrollador necesarias ![Icono de 
 	```
 	{: codeblock}
 
-
 3. Proporcione los siguientes valores cuando se le solicite:
 
 	* Seleccione un patrón: 1 (para web)
 	* Seleccione un iniciador: 1 (para Basic Web)
 	* Seleccione un lenguaje: 2 (para Swift)
 	* Especifique un nombre para el proyecto: `WebBasicProjectCLI`
-	* Especifique un nombre de host para el proyecto: `myhost`
+	* Especifique un nombre de host para el proyecto: `abc-devhost`
+	  * Escriba un nombre de host exclusivo, como por ejemplo sus iniciales seguidas de `-devhost`. Por ejemplo:
+	
+	     ```
+	     abc-devhost
+	     ```
 
-4. Si desea añadir servicios al proyecto, escriba `y` en la solicitud de preguntas y responda el resto de las preguntas.
+4. Cuando `WebBasicProjectCLI` se haya guardado correctamente, vaya a la carpeta `WebBasicProjectCLI`.
 
-5. Cuando `WebBasicProjectCLI` se haya guardado correctamente, vaya a la carpeta `WebBasicProjectCLI`.
-
-6. Añada su propio código y ejecute el proyecto.
+5. Añada su propio código, compile y ejecute el proyecto.
+	
+	1. Compile el proyecto con el siguiente mandato: 
  
-	1. Ejecute el proyecto con el siguiente mandato:
+		```
+		bx dev build
+		```
+		{: codeblock}
+	 
+	2. Ejecute el proyecto con el siguiente mandato:
  
 		```
 		bx dev run
@@ -113,38 +130,10 @@ Asegúrese de instalar las [herramientas de desarrollador necesarias ![Icono de 
 ## Ejecución de un proyecto web
 {: #run}
 
-### Localmente
-{: #local notoc}
+Puede ejecutar la aplicación localmente en el sistema host si instala las herramientas de compilación necesarias, o bien utilizando el soporte de contenedor disponible en {site.data.keyword.dev_cli_notm}}.
 
-1. Instale las dependencias del nodo:
 
-  ```
-  npm install
-  ```
-  {: codeblock}
 
-2. Empaquete el código frontal en un módulo:
-
-  ```
-  node_modules/.bin/gulp
-  ```
-  {: codeblock}
-
-3. Compile el servidor:
-
-  ```
-  swift build
-  ```
-  {: codeblock}
-
-4. Ejecute la aplicación:
-
-  ```
-  .build/debug/WebBasicProjectCLI
-  ```
-  {: codeblock}
-
-5. Abra el navegador en `http://localhost:8080`.
 
 
 ### Utilización de {{site.data.keyword.dev_cli_short}}
@@ -164,14 +153,21 @@ Asegúrese de instalar las [herramientas de desarrollador necesarias ![Icono de 
   ```
   {: codeblock}
 
-3. Ejecute la compilación:
+3. Para crear el proyecto en el directorio de proyecto actual, escriba el siguiente mandato:
+
+  ```
+  bx dev build
+  ```
+  {: codeblock}
+
+4. Para ejecutar el proyecto en el directorio de proyecto actual, escriba el siguiente mandato:
 
   ```
   bx dev run
   ```
   {: codeblock}
 
-4. Abra el navegador en `http://localhost:8080`.
+5. Abra el navegador en `http://localhost:8080`.
 
 
 ## Ejecución del proyecto en Xcode
@@ -188,7 +184,7 @@ Asegúrese de instalar las [herramientas de desarrollador necesarias ![Icono de 
 
 2. Cambie el destino activo por el ejecutable:
 
-	A continuación, abra el proyecto en Xcode y asegúrese de que el destino activo sea el ejecutable. Puede mantener pulsada la tecla de opción mientras pulsa el menú desplegable para seleccionar el ejecutable activo deseado.
+	A continuación, abra el proyecto en Xcode y asegúrese de que el destino activo sea el ejecutable. Puede mantener pulsada la tecla de opción y pulsar el menú desplegable para seleccionar el ejecutable activo deseado.
 
 3. Pulse **ejecutar**.
 

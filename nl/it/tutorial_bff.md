@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-06-12"
 
 ---
 {:new_window: target="_blank"}
@@ -14,14 +14,19 @@ lastupdated: "2017-04-18"
 # Esercitazione end-to-end dello starter di base BFF
 {: #tutorial}
 
-La seguente esercitazione end-to-end spiega i passi per creare un progetto da uno starter di base BFF, inclusi gli strumenti che devi avere installato e, successivamente, i passi per eseguire il codice del progetto.
+La seguente esercitazione end-to-end ti guida attraverso i passaggi per creare un progetto dallo starter di base BFF. I passaggi includono l'installazione degli strumenti prerequisiti e la procedura per eseguire il codice del progetto. 
 
-Hai la possibilità di creare un progetto utilizzando la [{{site.data.keyword.dev_console}}](#create-devex) basata su web o la [{{site.data.keyword.dev_cli_notm}}](#create-cli) controllata dai comandi.
 
 ## Installazione degli strumenti per sviluppatori
 {: #dev_tools}
 
-Assicurati di aver installato gli [strumenti per sviluppatori prerequisiti ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](get_code.html#prereq-dev-tools){: new_window}.
+Assicurati di installare gli [strumenti per sviluppatori prerequisiti ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](get_code.html#prereq-dev-tools "Icona link esterno"){: new_window}.
+
+
+## Scegli come creare il tuo progetto
+{: #choose_how}
+
+Crea un progetto utilizzando la [{{site.data.keyword.dev_console}}](#create-devex) basata su web o la [{{site.data.keyword.dev_cli_notm}}](#create-cli) controllata dai comandi. Dopo aver creato il progetto, puoi quindi [eseguire il progetto](#running-bff).
 
 
 ## Creazione di un progetto utilizzando la {{site.data.keyword.dev_console}}
@@ -29,7 +34,7 @@ Assicurati di aver installato gli [strumenti per sviluppatori prerequisiti ![Ico
 
 1. Crea un progetto nella {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}}.
 
-	1. Dalla pagina [**Introduzione** ![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/developer/getting-started/) della {{site.data.keyword.dev_console}}, fai clic su **Crea progetto**.
+	1. Dalla pagina [**Introduzione** ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://console.ng.bluemix.net/developer/getting-started/ "Icona link esterno") della {{site.data.keyword.dev_console}}, fai clic su **Crea progetto**.
 
 		In alternativa puoi fare clic su **Crea progetto** dalla pagina **Progetti**.
 
@@ -39,7 +44,12 @@ Assicurati di aver installato gli [strumenti per sviluppatori prerequisiti ![Ico
 
 	4. Immetti il nome del tuo progetto. Per questa esercitazione, utilizza `BFFProject`.   
 
-	5. Immetti un nome host univoco. Per questa esercitazione, utilizza `devhost` 
+	5. Immetti un nome host univoco, come le tue iniziali più `-devhost`. Ad
+esempio:
+	
+	 ```
+	 abc-devhost
+	 ``` 
 
 	6. Seleziona la tua piattaforma di linguaggio. Per questa esercitazione, utilizza `Node`.
    
@@ -77,7 +87,7 @@ Assicurati di aver installato gli [strumenti per sviluppatori prerequisiti ![Ico
 ## Creazione di un progetto utilizzando la {{site.data.keyword.dev_cli_notm}}
 {: #create-cli}
 
-1. Assicurati di aver installato la [{{site.data.keyword.dev_cli_short}}](dev_cli.html).
+1. Assicurati di installare la [{{site.data.keyword.dev_cli_short}}](dev_cli.html).
 
 2. Nella tua finestra del terminale, passa a una directory locale di tua scelta ed esegui il seguente comando.
   
@@ -92,15 +102,26 @@ Assicurati di aver installato gli [strumenti per sviluppatori prerequisiti ![Ico
 	* Seleziona uno starter: 1 (per Backend di base)
 	* Seleziona un linguaggio: 1 (per Node)
 	* Immetti un nome per il tuo progetto: `BFFProjectCLI`
-	* Immetti un nome host per il tuo progetto: `myhost`
+	* Immetti un nome host per il tuo progetto: `abc-devhost`
+	  * Immetti un nome host univoco, come le tue iniziali più `-devhost`. Ad
+esempio:
+	
+	     ```
+	     abc-devhost
+	     ```
+	  
+4. Dopo aver salvato `BFFProjectCLI`, passa alla cartella `BFFProjectCLI`.
 
-4. Se desideri aggiungere servizi al tuo progetto, immetti `y` quando ti viene domandato e rispondi alle rimanenti domande.
-
-5. Quando `BFFProjectCLI` è stato correttamente salvato, passa alla cartella `BFFProjectCLI`.
-
-6. Aggiungi il tuo proprio codice ed esegui il progetto.
+5. Aggiungi il tuo proprio codice, crea ed esegui il progetto. 
  
-	1. Esegui il tuo progetto con il seguente comando:
+	1. Crea il tuo progetto con il seguente comando:
+
+		```
+		bx dev build
+		```
+		{: codeblock}
+		 
+	2. Esegui il tuo progetto con il seguente comando:
 
  		```
 		bx dev run
@@ -111,39 +132,43 @@ Assicurati di aver installato gli [strumenti per sviluppatori prerequisiti ![Ico
 ## Esecuzione di un progetto BFF
 {: #running-bff}
 
-### Localmente
-{: #bff-local}
-
-1. Compila il tuo server:
-
-  ```
-  swift build
-  ```
-  {: codeblock}
-
-2. Esegui la tua applicazione. Ad esempio, assumendo che la tua applicazione di chiama `MyServer`:
-
-  ```
-  .build/debug/MyServer
-  ```
-  {: codeblock}
-
-3. Puoi eseguire curl sul tuo server con `curl http://localhost:8080`.
+Puoi eseguire l'applicazione localmente sul tuo sistema host se installi gli strumenti di build necessari o utilizzando il supporto del contenitore disponibile in {site.data.keyword.dev_cli_notm}}.
 
 
 ### Utilizzo del plugin Bluemix
 {: #using-blumix}
 
-1. Esegui la compilazione:
+1. Per creare il progetto nella tua directory del progetto corrente, immetti il seguente comando:
 
-	```
-	bx dev run
-	```
-	{: codeblock}
+   ```
+   bx dev build
+   ```
+   {: codeblock}
 
-2. Puoi eseguire curl sul tuo server con:
-  
-	```
-	curl http://localhost:8080
-	```
-	{: codeblock}
+2. Per eseguire il progetto nella tua directory del progetto corrente, immetti il seguente comando:
+
+   ```
+   bx dev run
+   ```
+   {: codeblock}
+
+3. Puoi eseguire curl sul tuo server con:
+
+   ```
+   curl http://localhost:8080
+   ```
+   {: codeblock}
+
+4. Puoi visualizzare il documento API nel tuo server all'indirizzo:
+
+   ```
+   http://localhost:8080/swagger/api
+   ```
+   {: codeblock}
+
+5. Puoi esplorare l'API nel tuo server all'indirizzo:
+
+   ```
+   http://localhost:8080/explorer
+   ```
+   {: codeblock}

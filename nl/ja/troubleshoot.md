@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-04-10"
+lastupdated: "2017-06-12"
 
 ---
 
@@ -27,7 +27,7 @@ lastupdated: "2017-04-10"
 以下のセクションでは、既知の問題と、考えられる解決策について説明します。
 
 
-### 非モバイル・パターンでプロジェクトを作成中に、ホスト名が使用されているというエラーが発生する
+### 非モバイル・パターンでプロジェクトを作成するときに、ホスト名が使用されているというエラーが発生する
 {: #hostname}
 
 {{site.data.keyword.dev_cli_short}} を使用して Web アプリ、BFF、またはマイクロサービスのパターンからプロジェクトを作成する場合に、以下のエラーが発生することがあります。
@@ -81,6 +81,48 @@ Failed to <command> project.
 bx login
 ```
 {: codeblock}
+
+
+### エラー: 新規プロジェクトの実行時にそのようなイメージがない
+{: #nosuchimage}
+
+先にプロジェクトをビルドせずに、プロジェクトを実行すると、以下のエラーが発生することがあります。
+
+```
+$ bx dev run testProject
+The run-cmd option was not specified
+Stopping the 'testProject' container...
+The 'testProject' container was not found
+Creating image bx-dev-testProject based on Dockerfile...
+OK                    
+Creating a container named 'testProject' from that image...
+FAILED
+Container 'testProject' could not be created:
+Error: No such image: bx-dev-testProject
+```
+
+
+#### 原因
+{: #nosuchimage-cause}
+
+プロジェクトを実行する前に、そのプロジェクトをビルドする必要があります。 
+
+
+#### 解決策
+{: #nosuchimage-resolution}
+
+アプリケーションをビルドするには、現行プロジェクト・ディレクトリーで以下のコマンドを実行します。
+
+```
+bx dev build
+```
+{: codeblock}
+
+アプリケーションを開始するには、現行プロジェクト・ディレクトリーで以下のコマンドを実行します。
+
+```
+bx dev run
+```
 
 
 ### {{site.data.keyword.objectstorageshort}} 機能を追加する際にサービス・ブローカー・エラーが発生する
@@ -142,7 +184,7 @@ bx dev code <your-project-name>
 
 * {{site.data.keyword.dev_console}} を使用します。
 
-	1. {{site.data.keyword.dev_console}} で[プロジェクト ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.{DomainName}/developer/projects) を選択して、**「コードの取得 (Get the Code)」**をクリックします。
+	1. {{site.data.keyword.dev_console}} で[プロジェクト ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.{DomainName}/developer/projects "外部リンク・アイコン") を選択して、**「コードの取得 (Get the Code)」**をクリックします。
 
 	2. **「コードの生成 (Generate Code)」**をクリックします。
 
@@ -178,7 +220,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 #### 原因
 {: #node-cause}
    
-このエラーは、`appmetrics` モジュールが別のアーキテクチャーでインストールされていることが原因です。あるアーキテクチャーでインストールされたネイティブ npm モジュールは、別のアーキテクチャーで動作しません。組み込まれた Docker イメージは、Linux カーネルをベースとしています。
+このエラーは、`appmetrics` モジュールが別のアーキテクチャーでインストールされている場合に発生します。あるアーキテクチャーでインストールされたネイティブ npm モジュールは、別のアーキテクチャーで動作しません。組み込まれた Docker イメージは、Linux カーネルをベースとしています。
 
 
 #### 解決策
@@ -198,16 +240,16 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 ## ヘルプおよびサポートの利用
 {: #gettinghelp}
 
-{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} または {{site.data.keyword.dev_cli_notm}} に関する問題または質問がある場合、情報を検索するか、フォーラムを通して質問することによって、ヘルプを利用できます。また、サポート・チケットをオープンすることも可能です。
+{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} または {{site.data.keyword.dev_cli_notm}} に関する問題または質問がある場合、情報を検索するか、フォーラムを通して質問することによって、ヘルプを利用します。また、サポート・チケットをオープンすることも可能です。
 
-フォーラムで質問するときは、{{site.data.keyword.Bluemix_notm}} 開発チームの目に止まるように、質問にタグを付けてください。
+フォーラムで投稿するときに、{{site.data.keyword.Bluemix_notm}} 開発チームに通知されるように、自分の質問にタグを付けることができます。
 
 <!--Insert the appropriate Stack Overflow tag for your service for <service_keyword> in URL and text below:  -->
 
 {{site.data.keyword.dev_console}} または {{site.data.keyword.dev_cli_notm}} でのアプリの開発またはデプロイについて技術的な質問がある場合は、以下を行ってください。
 
-* [スタック・オーバーフロー ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix) で質問を投稿し、`bluemix-dev-services` と `ibm-bluemix` のタグを付けます。
-* [Slack ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://ibm-cloud-tech.slack.com/) の `bluemix-dev-services` チャネルで質問を投稿します。今すぐ[ご登録ください![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://ibm.biz/IBMCloudNativeSlack)。
+* [スタック・オーバーフロー ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix "外部リンク・アイコン") で質問を投稿し、`bluemix-dev-services` と `ibm-bluemix` のタグを付けます。
+* [Slack ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://ibm-cloud-tech.slack.com/ "外部リンク・アイコン") の `bluemix-dev-services` チャネルで質問を投稿します。今すぐ[ご登録ください![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://ibm.biz/IBMCloudNativeSlack "外部リンク・アイコン")。
 
 
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
@@ -215,9 +257,9 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 * For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers ![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/bluemix-dev-services/?smartspace=bluemix) forum. Include the  "bluemix-dev-services" and "bluemix" tags.
 * -->
 
-フォーラムの使用について詳しくは、[ヘルプの利用 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/support/index.html#getting-help) を参照してください。
+フォーラムの使用について詳しくは、[ヘルプの利用 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/support/index.html#getting-help "外部リンク・アイコン") を参照してください。
 
-{{site.data.keyword.IBM}} サポート・チケットのオープン、またはサポート・レベルとチケットの重大度については、[サポートへのお問い合わせ ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/support/index.html#contacting-support) を参照してください。
+{{site.data.keyword.IBM}} サポート・チケットのオープン、またはサポート・レベルとチケットの重大度については、[サポートへのお問い合わせ ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/support/index.html#contacting-support "外部リンク・アイコン") を参照してください。
 
 <!--Add a heading and content for how to get help. (Support not available for experimental.) Use this template for experimental services:  -->
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-06-12"
 
 ---
 {:new_window: target="_blank"}
@@ -14,14 +14,19 @@ lastupdated: "2017-04-18"
 # Microservice Basic Starter 的完整指導教學
 {: #tutorial}
 
-下列完整指導教學逐步執行從 Microservice Basic Starter 建立專案的步驟。這包括安裝必備工具，以及執行專案程式碼的步驟。
+下列完整指導教學逐步執行從 Microservice Basic Starter 建立專案的步驟。步驟包括安裝必備工具，以及執行專案程式碼的步驟。
 
-您可以使用 Web 型 [{{site.data.keyword.dev_console}}](#create-devex) 或透過指令驅動的 [{{site.data.keyword.dev_cli_notm}}](#create-cli) 來建立專案。
 
 ## 安裝開發人員工具
 {: #dev_tools}
 
-請確定您已安裝[必備開發人員工具 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](get_code.html#prereq-dev-tools){: new_window}。
+請確定您已安裝[必備開發人員工具 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](get_code.html#prereq-dev-tools "外部鏈結圖示"){: new_window}。
+
+
+## 選擇如何建立您的專案
+{: #choose_how}
+
+您可以使用 Web 型 [{{site.data.keyword.dev_console}}](#create-devex) 或透過指令驅動的 [{{site.data.keyword.dev_cli_notm}}](#create-cli) 來建立專案。建立專案之後，便可以[執行專案](#running-dev-plugin)。
 
 
 ## 使用 {{site.data.keyword.dev_console}} 建立專案
@@ -29,7 +34,7 @@ lastupdated: "2017-04-18"
 
 1. 在 {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} 中建立專案。
 
-	1. 從 {{site.data.keyword.dev_console}} 的[**開始使用** ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/developer/getting-started/) 頁面中，按一下**建立專案**。
+	1. 從 {{site.data.keyword.dev_console}} 的[**開始使用** ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/developer/getting-started/ "外部鏈結圖示") 頁面中，按一下**建立專案**。
 
 		您也可以按一下**專案**頁面中的**建立專案**。
 
@@ -39,8 +44,12 @@ lastupdated: "2017-04-18"
 
 	4. 輸入專案名稱。對於此指導教學，使用 `MicroserviceProject`。   
 
-	5. 輸入唯一的主機名稱。對於此指導教學，使用 `devhost`。 
-   
+	5. 輸入唯一的主機名稱，例如您的起始名稱加上 `-devhost`。例如：
+	
+	 ```
+	 abc-devhost
+	 ```
+	   
 	6. 按一下**建立**。
 
 2. 選用項目：新增「資料」功能。
@@ -88,14 +97,18 @@ lastupdated: "2017-04-18"
 
 	* 選取型樣：4（適用於 Microservice）
 	* 選取入門範本：1（適用於 Basic）
-	* 選取平台：3（適用於 Java）
+	* 選取平台：1（適用於 Java）
 	* 輸入專案的名稱：`MicroserviceProjectCLI`
+	* 輸入專案的主機名稱：`abc-devhost`
+	  * 輸入唯一的主機名稱，例如您的起始名稱加上 `-devhost`。例如：
+	
+	     ```
+	     abc-devhost
+	     ```
 
-4. 如果您要將服務新增至專案，請在問題提示字元中鍵入 `y`，並回答其餘的問題。
+4. 順利儲存 `MicroserviceProjectCLI` 後，請導覽至 `MicroserviceProjectCLI` 資料夾。
 
-5. 順利儲存 `MicroserviceProjectCLI` 後，請導覽至 `MicroserviceProjectCLI` 資料夾。
-
-6. 現在，您可以新增自己的程式碼、建置或執行專案。
+5. 現在，您可以新增自己的程式碼、建置或執行專案。
  
  
 ## 使用 {{site.data.keyword.dev_cli_notm}} 執行專案
@@ -108,7 +121,7 @@ lastupdated: "2017-04-18"
 	```     
 	{: codeblock}
 
-2. 若要在現行專案目錄中建置及執行專案，請輸入下列指令：
+2. 若要在現行專案目錄中執行專案，請輸入下列指令：
 
 	```
 	bx dev run

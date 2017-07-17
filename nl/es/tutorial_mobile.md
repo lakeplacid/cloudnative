@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-05-18"
 
 ---
 {:new_window: target="_blank"}
@@ -14,14 +14,19 @@ lastupdated: "2017-04-18"
 # Guía de aprendizaje del iniciador Mobile Basic
 {: #tutorial}
 
-En la siguiente guía de aprendizaje encontrará los pasos a seguir para crear un proyecto desde el iniciador Mobile Basic. Incluye la instalación de las herramientas necesarias y los pasos a seguir para ejecutar el proyecto en Xcode y Android Studio. 
+En la siguiente guía de aprendizaje encontrará los pasos a seguir para crear un proyecto desde el iniciador Mobile Basic. Esta guía incluye instrucciones de instalación de las herramientas necesarias y pasos a seguir para ejecutar el proyecto en Xcode y Android Studio. 
 
-Puede crear un proyecto utilizando la [{{site.data.keyword.dev_console}}](#create-devex) basada en la web o la [{{site.data.keyword.dev_cli_notm}}](#create-cli) de mandatos.
 
 ## Instalación de herramientas del desarrollador
 {: #dev_tools}
 
-Asegúrese de instalar las [herramientas de desarrollador necesarias ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](get_code.html#prereq-dev-tools){: new_window}.
+Asegúrese de instalar las [herramientas de desarrollador necesarias ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](get_code.html#prereq-dev-tools "Icono de enlace externo"){: new_window}.
+
+
+## Elija cómo desea crear su proyecto
+{: #choose_how}
+
+Puede crear un proyecto utilizando la [{{site.data.keyword.dev_console}}](#create-devex) basada en la web o la [{{site.data.keyword.dev_cli_notm}}](#create-cli) de mandatos.
 
 
 ## Creación de un proyecto mediante la {{site.data.keyword.dev_console}}
@@ -29,7 +34,7 @@ Asegúrese de instalar las [herramientas de desarrollador necesarias ![Icono de 
 
 1. Cree un proyecto de {{site.data.keyword.dev_console}} en {{site.data.keyword.Bluemix}}.
 
-   1. En la página [**Iniciación** ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://console.ng.bluemix.net/developer/getting-started/) de la {{site.data.keyword.dev_console}}, pulse **Crear proyecto**.
+   1. En la página [**Iniciación** ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://console.ng.bluemix.net/developer/getting-started/ "Icono de enlace externo") de la {{site.data.keyword.dev_console}}, pulse **Crear proyecto**.
 
       De forma alternativa, puede pulsar **Crear proyecto** desde la página **Proyectos**.
 
@@ -55,8 +60,8 @@ Asegúrese de instalar las [herramientas de desarrollador necesarias ![Icono de 
    
    4. Seleccione su proveedor de identidad y especifique la información para configurarlo. Solo puede habilitar un proveedor de identidad.
    
-   5. Consulte [Configuración de los proveedores de identidad} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/appid/identity-providers.html){: new_window} para obtener más información sobre cómo configurar Authentication.
-
+   5. Para obtener más información sobre cómo configurar la autenticación, consulte [Configuración de proveedores de identidad} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/appid/identity-providers.html "Icono de enlace externo"){: new_window}.
+   
 3. Opcional: Añada capacidad de análisis.
 
    1. Pulse **Añadir** para **Análisis** en la página **Visión general del proyecto**.
@@ -67,7 +72,7 @@ Asegúrese de instalar las [herramientas de desarrollador necesarias ![Icono de 
    
    3. Desactive la **Modalidad de demostración** para ver los datos del análisis después de ejecutar la app.
    
-   4. Consulte [Iniciación a {{site.data.keyword.mobileanalytics_short}} ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](/docs/services/mobileanalytics/index.html){: new_window} para obtener más información sobre cómo configurar Analytics.
+   4. Para obtener más información sobre cómo configurar el módulo Analytics, consulte [Iniciación a {{site.data.keyword.mobileanalytics_short}} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/mobileanalytics/index.html "Icono de enlace externo"){: new_window}.
 
 4. Opcional: Añada la función de {{site.data.keyword.mobilepushshort}}.
 
@@ -77,9 +82,9 @@ Asegúrese de instalar las [herramientas de desarrollador necesarias ![Icono de 
 
    2. Especifique el nombre del servicio y pulse **Crear**.
 
-   3. Para iOS, [configure el servicio de notificación Push de Apple ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}.
+   3. Para iOS, [configure el servicio de notificación Push de Apple ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](/docs/services/mobilepush/t_push_provider_ios.html "icono de enlace externo"){: new_window}.
 
-   4. Para Android, [configure Firebase Cloud Messaging ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
+   4. Para Android, [configure Firebase Cloud Messaging ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](/docs/services/mobilepush/t_push_provider_android.html "icono de enlace externo"){: new_window}.
 
 5. Opcional: Añada la capacidad de Datos.
 
@@ -91,9 +96,9 @@ Asegúrese de instalar las [herramientas de desarrollador necesarias ![Icono de 
 
    3. Especifique el nombre del servicio y pulse **Crear**.
 
-   4. Consulte [Iniciación a {{site.data.keyword.cloudant_short_notm}} ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](/docs/services/Cloudant/index.html){: new_window} para obtener más información sobre cómo configurar {{site.data.keyword.cloudant_short_notm}}.
+   4. Para obtener más información sobre cómo configurar {{site.data.keyword.cloudant_short_notm}}, consulte [Iniciación a {{site.data.keyword.cloudant_short_notm}} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/Cloudant/index.html "Icono de enlace externo"){: new_window}.
 
-   5. Consulte [Iniciación a {{site.data.keyword.objectstorageshort}} ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](/docs/services/ObjectStorage/index.html){: new_window} para obtener más información sobre cómo configurar {{site.data.keyword.objectstorageshort}}.
+   5. Para obtener más información sobre cómo configurar {{site.data.keyword.objectstorageshort}}, consulte [Iniciación a {{site.data.keyword.objectstorageshort}} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/ObjectStorage/index.html "Icono de enlace externo"){: new_window}.
 
 6. Genere el código del proyecto:
 
@@ -105,13 +110,13 @@ Asegúrese de instalar las [herramientas de desarrollador necesarias ![Icono de 
    
    3. Cuando se haya generado el código, pulse **Descargar Swift** para descargar el archivo del proyecto.
 
-7. Empiece a trabajar con el proyecto descargado: 
+7. Empiece a trabajar con el proyecto descargado:
 
-	1. Expanda el archivo archivado. 
+	1. Expanda el archivo archivado.
 	
-	2. Vaya al directorio del nuevo proyecto. 
+	2. Vaya al directorio del nuevo proyecto.
 	
-	3. Utilice {{site.data.keyword.dev_cli_notm}} para continuar. 
+	3. Utilice {{site.data.keyword.dev_cli_notm}} para continuar.
 
 8. Opcional: [Actualización del proyecto](project_overview_page.html#update_language) para generar un nuevo lenguaje.
 
@@ -153,7 +158,7 @@ Asegúrese de instalar las [herramientas de desarrollador necesarias ![Icono de 
       
       2. Ejecute `pod update` si tiene que actualizar los pods existentes.
       
-      3. Ejecute `pod install` para instalar los pods necesarios para el proyecto.
+      3. Ejecute `pod install` para instalar los pods correspondientes al proyecto. 
       
    3. Abra el espacio de trabajo Xcode `BasicProject.xcworkspace`.
       

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-27"
 
 ---
 {:new_window: target="_blank"}
@@ -22,23 +22,30 @@ lastupdated: "2017-03-17"
 	
 2. ネットワーク要求を行います。
 
-	```
-	public void makeGetCall() {
-		Thread thread = new Thread(new Runnable() {
-			@Override
-			public void run() {
-				try  {
-					Request request = new Request("http://httpbin.org/get", "GET");
-					request.send(null, null);
-				} catch (Exception e) {
-					// Handle failure here.
-				}
-			}
-		});
-		thread.start();
-	}
+	```Java
+	String customResourceURL = "<your resource URL>";
+	Request request = new Request(customResourceURL, "GET");
+
+	ResponseListener listener = new ResponseListener() {
+		@Override
+		public void onSuccess(Response response) {
+			Log.i("MyApp", "Response: " + response.getResponseText());
+		}
+
+		@Override
+		public void onFailure(Response response, Throwable t, JSONObject extendedInfo) {
+			Log.i("MyApp", "Request failed. Response: " + response.getResponseText() + ". Error: " + t.getLocalizedMessage());
+		}
+	};
+        
+	request.send(getApplicationContext(), listener);
 	```
 	{: codeblock}
+
+`Request` クラスは、HTTP 要求を行い、要求が完了した後に応答を取得するためのシンプルな方法です。サイズの大きいファイルまたは大規模なデータをダウンロードまたはアップロードする場合、`Request` `download` または `upload` メソッドを使用できます。ダウンロードまたはアップロードの進行をモニターするには、カスタム `ProgressListener` を作成し、それを `download` メソッドまたは `upload` メソッドに渡します。
+
+<!--For complete usage examples, see the `BMSCore` GitHub [README](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core).-->
+
 
 ## iOS
 {: #request-ios}
@@ -51,17 +58,16 @@ lastupdated: "2017-03-17"
 	{: #ios-swift3 notoc}
 	
 	```Swift
-	 	// Make a network request
-		let customResourceURL = "<your resource URL>"
-		let request = Request(url: customResourceURL, method: HttpMethod.GET)
+	let customResourceURL = "<your resource URL>"
+	let request = Request(url: customResourceURL, method: HttpMethod.GET)
 	
-		let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
-	   	if error == nil {
-	       	    print ("response:\(response?.responseText), no error")
-	    	  } else {
-	       	    print ("error: \(error)")
-	    	}
+	let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
+		if error == nil {
+			print ("Response: \(response?.responseText), no error")
+		} else {
+			print ("Error: \(error)")
 		}
+	}
 		request.send(completionHandler: callBack)
 	```
 	{: codeblock}
@@ -70,24 +76,25 @@ lastupdated: "2017-03-17"
 	{: #ios-swift22 notoc}
 	
 	```Swift
-	 	// Make a network request
-		let customResourceURL = "<your resource URL>"
-		let request = Request(url: customResourceURL, method: HttpMethod.GET)
+	let customResourceURL = "<your resource URL>"
+	let request = Request(url: customResourceURL, method: HttpMethod.GET)
 	
-		let callBack:BMSCompletionHandler = {(response: Response?, error: NSError?) in
-	   	if error == nil {
-	       	    print ("response:\(response?.responseText), no error")
-	    	  } else {
-	       	    print ("error: \(error)")
-	    	}
+	let callBack:BMSCompletionHandler = {(response: Response?, error: NSError?) in
+		if error == nil {
+			print ("Response: \(response?.responseText), no error")
+		} else {
+			print ("Error: \(error)")
 		}
+	}
 		request.send(completionHandler: callBack)
 	```
 	{: codeblock}
 
 `Request` クラスは、HTTP 要求を行い、要求が完了した後に応答を取得するためのシンプルな方法です。`Request` クラスよりも高い柔軟性と制御性が必要な場合は、`BMSURLSession` クラスを使用できます。`BMSURLSession` クラスのフィーチャーとしては、アップロードの進行状態のモニター、および要求の一時停止やキャンセルなどがあります。応答を取得するには、完了ハンドラーか代行のいずれかを選択するというオプションがあります。
 
-`BMSURLSession` クラスは iOS でのみ使用可能です。`BMSURLSession` について詳しくは、`BMSCore` SDK の [README](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core) を参照してください。
+`BMSURLSession` クラスは iOS でのみ使用可能です。
+
+使用法の完全な例については、`BMSCore` GitHub [README](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core) を参照してください。
 
 
 ## Cordova
@@ -97,7 +104,7 @@ lastupdated: "2017-03-17"
 
 2. ネットワーク要求を作成します。
 
-	```
+	```Javascript
 	var success = function(data) {
 		console.log("success", data);
 	}
@@ -109,13 +116,3 @@ lastupdated: "2017-03-17"
 	```
 	{: codeblock}
 
-
-# 関連リンク
-{: #rellinks notoc}
-
-## 関連リンク
-{: #general notoc}
-
-* [BMSCore Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
-* [BMSCore iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
-* [BMSCore Cordova Plugin](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}

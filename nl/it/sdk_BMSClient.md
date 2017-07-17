@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-28"
 
 ---
 {:new_window: target="_blank"}
@@ -13,7 +13,7 @@ lastupdated: "2017-03-17"
 # Inizializzazione di BMSClient
 {: #sdk_BMSClient}
 
-`BMSCore` fornisce l'infrastruttura HTTP che le altre SDK client dei servizi {{site.data.keyword.Bluemix}} Mobile utilizzano per comunicare con i loro servizi {{site.data.keyword.Bluemix_notm}} corrispondenti.
+`BMSCore` ornisce l'infrastruttura HTTP che le altre SDK client dei servizi {{site.data.keyword.Bluemix}} Web e Mobile utilizzano per comunicare con i loro servizi {{site.data.keyword.Bluemix_notm}} corrispondenti.
 
 
 ## Inizializzazione della tua applicazione Android
@@ -31,7 +31,7 @@ Puoi sia scaricare che importare il pacchetto `BMSCore` del tuo progetto Android
 2. Inizializza l'SDK `BMSClient` nella tua applicazione Android aggiungendo il codice di inizializzazione nel metodo `onCreate` dell'attività principale nell'applicazione Android o in un'ubicazione che ritieni più adatta per il tuo progetto.
 
   ```Java
-	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_US_SOUTH); // Assicurati che punti alla tua regione
+  BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_US_SOUTH); // Assicurati che punti alla tua regione
   ```
   {: codeblock}
 
@@ -56,9 +56,9 @@ Puoi utilizzare [CocoaPods](https://cocoapods.org){: new_window} o [Carthage](ht
 
   Quindi esegui il comando `pod install` e apri il file `.xcworkspace` generato. Per l'aggiornamento a una release più recente di `BMSCore`, utilizza `pod update BMSCore`.
 
-  Per ulteriori informazioni sull'utilizzo di CocoaPods, consulta [CocoaPods Guides ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://guides.cocoapods.org/using/index.html){: new_window}.
+  Per ulteriori informazioni sull'utilizzo di CocoaPods, consulta [CocoaPods Guides ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://guides.cocoapods.org/using/index.html "Icona link esterno"){: new_window}.
 
-2. Per installare `BMSCore` utilizzando Carthage, segui queste [istruzioni ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://github.com/Carthage/Carthage#getting-started){: new_window}.
+2. Per installare `BMSCore` utilizzando Carthage, segui queste [istruzioni ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://github.com/Carthage/Carthage#getting-started "Icona link esterno"){: new_window}.
 
   1. Aggiungi la seguente linea al tuo Cartfile:
 
@@ -69,7 +69,7 @@ Puoi utilizzare [CocoaPods](https://cocoapods.org){: new_window} o [Carthage](ht
 
   2. Esegui il comando `carthage update`.
 
-  3. Dopo aver terminato la build, aggiungi `BMSCore.framework` al tuo progetto seguendo il [Passo 3 ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://github.com/Carthage/Carthage#getting-started) nelle istruzioni Carthage.
+  3. Dopo aver terminato la build, aggiungi `BMSCore.framework` al tuo progetto seguendo il [Passo 3 ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://github.com/Carthage/Carthage#getting-started "Icona link esterno") nelle istruzioni Carthage.
 
       Per le applicazioni che sono generate con Swift 2.3, utilizza il comando `carthage update --toolchain com.apple.dt.toolchain.Swift_2_3`. Altrimenti, utilizza il comando `carthage update`.
 
@@ -85,7 +85,7 @@ Puoi utilizzare [CocoaPods](https://cocoapods.org){: new_window} o [Carthage](ht
   Posiziona il codice di inizializzazione nel metodo `application(_:didFinishLaunchingWithOptions:)` nel tuo delegato dell'applicazione o in un'ubicazione che ritieni più adatta per il tuo progetto.
 
   ```Swift
-    BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth) // Assicurati che punti alla tua regione
+  BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth) // Assicurati che punti alla tua regione
   ```
   {: codeblock}
 

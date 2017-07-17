@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-05-18"
 
 ---
 {:new_window: target="_blank"}
@@ -14,14 +14,19 @@ lastupdated: "2017-04-18"
 # Mobile Basic Starter 的完整指導教學
 {: #tutorial}
 
-下列完整指導教學逐步執行從 Mobile Basic Starter 建立專案的步驟。這包括安裝必備工具，以及在 Xcode 及 Android Studio 中執行專案的步驟。
+下列完整指導教學逐步執行從 Mobile Basic Starter 建立專案的步驟。本手冊包含安裝必備工具，以及在 Xcode 及 Android Studio 中執行專案的步驟。
 
-您可以使用 Web 型 [{{site.data.keyword.dev_console}}](#create-devex) 或透過指令驅動的 [{{site.data.keyword.dev_cli_notm}}](#create-cli) 來建立專案。
 
 ## 安裝開發人員工具
 {: #dev_tools}
 
-請確定您已安裝[必備開發人員工具 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](get_code.html#prereq-dev-tools){: new_window}。
+請確定您已安裝[必備開發人員工具 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](get_code.html#prereq-dev-tools "外部鏈結圖示"){: new_window}。
+
+
+## 選擇如何建立您的專案
+{: #choose_how}
+
+您可以使用 Web 型 [{{site.data.keyword.dev_console}}](#create-devex) 或透過指令驅動的 [{{site.data.keyword.dev_cli_notm}}](#create-cli) 來建立專案。
 
 
 ## 使用 {{site.data.keyword.dev_console}} 建立專案
@@ -29,7 +34,7 @@ lastupdated: "2017-04-18"
 
 1. 在 {{site.data.keyword.Bluemix}} 中，建立 {{site.data.keyword.dev_console}} 專案。
 
-   1. 從 {{site.data.keyword.dev_console}} 的[**開始使用** ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/developer/getting-started/) 頁面中，按一下**建立專案**。
+   1. 從 {{site.data.keyword.dev_console}} 的[**開始使用** ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/developer/getting-started/ "外部鏈結圖示") 頁面中，按一下**建立專案**。
 
       您也可以按一下**專案**頁面中的**建立專案**。
 
@@ -55,8 +60,8 @@ lastupdated: "2017-04-18"
    
    4. 選取您的身分提供者，並且輸入資訊以進行配置。您只能啟用一個身分提供者。
    
-   5. 如需配置「鑑別」的相關資訊，請參閱[配置身分提供者 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/appid/identity-providers.html){: new_window}。
-
+   5. 如需配置鑑別的相關資訊，請參閱[配置身分提供者 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/appid/identity-providers.html "外部鏈結圖示"){: new_window}。
+   
 3. 選用項目：新增分析功能。
 
    1. 在**專案概觀**頁面中，針對**分析**按一下**新增**。
@@ -67,7 +72,7 @@ lastupdated: "2017-04-18"
    
    3. 在您執行應用程式之後，即可關閉**展示模式**來查看分析資料。
    
-   4. 如需配置分析的相關資訊，請參閱[開始使用 {{site.data.keyword.mobileanalytics_short}} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/mobileanalytics/index.html){: new_window}。
+   4. 如需配置分析的相關資訊，請參閱[開始使用 {{site.data.keyword.mobileanalytics_short}} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/mobileanalytics/index.html "外部鏈結圖示"){: new_window}。
 
 4. 選用項目：新增 {{site.data.keyword.mobilepushshort}} 功能。
 
@@ -77,9 +82,9 @@ lastupdated: "2017-04-18"
 
    2. 輸入服務名稱，然後按一下**建立**。
 
-   3. 若為 iOS，請[配置 Apple Push Notification Service ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}。
+   3. 若為 iOS，請[配置 Apple Push Notification Service ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/mobilepush/t_push_provider_ios.html "外部鏈結圖示"){: new_window}。
 
-   4. 若為 Android，請[配置 Firebase Cloud Messaging ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/mobilepush/t_push_provider_android.html){: new_window}。
+   4. 若為 Android，請[配置 Firebase Cloud Messaging ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/mobilepush/t_push_provider_android.html "外部鏈結圖示"){: new_window}。
 
 5. 選用項目：新增資料功能。
 
@@ -91,9 +96,9 @@ lastupdated: "2017-04-18"
 
    3. 輸入服務名稱，然後按一下**建立**。
 
-   4. 如需配置 {{site.data.keyword.cloudant_short_notm}} 的相關資訊，請參閱[開始使用 {{site.data.keyword.cloudant_short_notm}} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/Cloudant/index.html){: new_window}。
+   4. 如需配置 {{site.data.keyword.cloudant_short_notm}} 的相關資訊，請參閱[開始使用 {{site.data.keyword.cloudant_short_notm}} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/Cloudant/index.html "外部鏈結圖示"){: new_window}。
 
-   5. 如需配置 {{site.data.keyword.objectstorageshort}} 的相關資訊，請參閱[開始使用 {{site.data.keyword.objectstorageshort}} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/ObjectStorage/index.html){: new_window}。
+   5. 如需配置 {{site.data.keyword.objectstorageshort}} 的相關資訊，請參閱[開始使用 {{site.data.keyword.objectstorageshort}} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/ObjectStorage/index.html "外部鏈結圖示"){: new_window}。
 
 6. 產生專案程式碼：
 
@@ -153,7 +158,7 @@ lastupdated: "2017-04-18"
       
       2. 如果您需要更新現有 Pods，請執行 `pod update`。
       
-      3. 執行 `pod install`，以安裝您專案所需的 Pods。
+      3. 執行 `pod install`，以安裝您專案的 Pod。
       
    3. 開啟 `BasicProject.xcworkspace` Xcode 工作區。
       

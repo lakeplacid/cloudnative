@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-27"
 
 ---
 {:new_window: target="_blank"}
@@ -22,23 +22,30 @@ lastupdated: "2017-03-17"
 	
 2. 发起网络请求。
 
-	```
-	public void makeGetCall() {
-		Thread thread = new Thread(new Runnable() {
-			@Override
-			public void run() {
-				try  {
-					Request request = new Request("http://httpbin.org/get", "GET");
-					request.send(null, null);
-				} catch (Exception e) {
-					// Handle failure here.
-				}
-			}
-		});
-		thread.start();
-	}
+	```Java
+	String customResourceURL = "<your resource URL>";
+	Request request = new Request(customResourceURL, "GET");
+
+	ResponseListener listener = new ResponseListener() {
+		@Override
+		public void onSuccess(Response response) {
+			Log.i("MyApp", "Response: " + response.getResponseText());
+		}
+
+		@Override
+		public void onFailure(Response response, Throwable t, JSONObject extendedInfo) {
+			Log.i("MyApp", "Request failed. Response: " + response.getResponseText() + ". Error: " + t.getLocalizedMessage());
+		}
+	};
+        
+	request.send(getApplicationContext(), listener);
 	```
 	{: codeblock}
+
+`Request` 类是发起 HTTP 请求的简单方法，在请求完成之后可获得响应。如果您在下载或上传大型文件或数据的大型主体，那么您可以使用 `Request` `download` 或 `upload` 方法。要监视下载或上传的进度，请创建定制 `ProgressListener` 并将其传递给 `download` 或 `upload` 方法。
+
+<!--For complete usage examples, see the `BMSCore` GitHub [README](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core).-->
+
 
 ## iOS
 {: #request-ios}
@@ -51,17 +58,16 @@ lastupdated: "2017-03-17"
 	{: #ios-swift3 notoc}
 	
 	```Swift
-	 	// Make a network request
-		let customResourceURL = "<your resource URL>"
-		let request = Request(url: customResourceURL, method: HttpMethod.GET)
+	let customResourceURL = "<your resource URL>"
+	let request = Request(url: customResourceURL, method: HttpMethod.GET)
 	
-		let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
-	   	if error == nil {
-	       	    print ("response:\(response?.responseText), no error")
-	    	  } else {
-	       	    print ("error: \(error)")
-	    	}
+	let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
+		if error == nil {
+			print ("Response: \(response?.responseText), no error")
+		} else {
+			print ("Error: \(error)")
 		}
+	}
 		request.send(completionHandler: callBack)
 	```
 	{: codeblock}
@@ -70,24 +76,25 @@ lastupdated: "2017-03-17"
 	{: #ios-swift22 notoc}
 	
 	```Swift
-	 	// Make a network request
-		let customResourceURL = "<your resource URL>"
-		let request = Request(url: customResourceURL, method: HttpMethod.GET)
+	let customResourceURL = "<your resource URL>"
+	let request = Request(url: customResourceURL, method: HttpMethod.GET)
 	
-		let callBack:BMSCompletionHandler = {(response: Response?, error: NSError?) in
-	   	if error == nil {
-	       	    print ("response:\(response?.responseText), no error")
-	    	  } else {
-	       	    print ("error: \(error)")
-	    	}
+	let callBack:BMSCompletionHandler = {(response: Response?, error: NSError?) in
+		if error == nil {
+			print ("Response: \(response?.responseText), no error")
+		} else {
+			print ("Error: \(error)")
 		}
+	}
 		request.send(completionHandler: callBack)
 	```
 	{: codeblock}
 
 `Request` 类是发起 HTTP 请求的简单方法，在请求完成之后可获得响应。如果想要采用比 `Request` 类更灵活且更具有控制性的方法，您可以使用 `BMSURLSession` 类。`BMSURLSession` 类的部分功能包括监视上传进度以及暂停或取消请求。要获得响应，您可以选择使用完成处理程序或代理。
 
-`BMSURLSession` 类仅可用于 iOS。有关 `BMSURLSession` 的更多信息，请参阅 `BMSCore` SDK [自述文件](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core)。
+`BMSURLSession` 类仅可用于 iOS。
+
+有关完整用法示例，请参阅 `BMSCore` GitHub [自述文件](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core)。
 
 
 ## Cordova
@@ -97,7 +104,7 @@ lastupdated: "2017-03-17"
 
 2. 创建网络请求。
 
-	```
+	```Javascript
 	var success = function(data) {
 		console.log("success", data);
 	}
@@ -109,13 +116,3 @@ lastupdated: "2017-03-17"
 	```
 	{: codeblock}
 
-
-# 相关链接
-{: #rellinks notoc}
-
-## 相关链接
-{: #general notoc}
-
-* [BMSCore Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
-* [BMSCore iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
-* [BMSCore Cordova 插件](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}

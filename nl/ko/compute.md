@@ -154,7 +154,7 @@ bluemix sdk list --url
 ```
 {: codeblock}
 
-SDK를 생성하는 데 사용될 수 있는지 판별하기 위해 `<AppName>`의 Open API 정의 파일의 유효성을 검증하려면 다음 명령을 사용하십시오. 명령은 현재 영역에서 `<AppName>`을 찾고 유효성 검증에 대한 스펙을 찾는 데 `OPENAPI_SPEC` 환경 변수의 상대 경로를 사용합니다. 
+SDK를 생성하는 데 사용될 수 있는지 판별하기 위해 `<AppName>`의 Open API 정의 파일의 유효성 검증을 하려면 다음 명령을 사용하십시오. 명령은 현재 영역에서 `<AppName>`을 찾고 유효성 검증에 대한 스펙을 찾는 데 `OPENAPI_SPEC` 환경 변수에서 상대 경로를 사용합니다. 
 
 ```
 bluemix sdk validate <AppName>

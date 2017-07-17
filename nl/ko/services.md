@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-25"
 
 ---
 {:new_window: target="_blank"}
@@ -26,6 +26,13 @@ lastupdated: "2017-03-17"
 <caption>표 1. {{site.data.keyword.Bluemix_notm}} 웹 및 모바일 서비스</caption>
 <th>{{site.data.keyword.Bluemix_notm}} 웹 및 모바일 서비스</th>
 <th>설명</th>
+<tr>
+<td> <img src="images/app_id_icon.png" alt="{{site.data.keyword.appid_short}} 아이콘"><br/>{{site.data.keyword.app_id_short}}
+</td>
+<td valign="top">{{site.data.keyword.app_id_full}} 서비스를 사용하여 사용자의 웹과 모바일 앱에 인증을 추가하고 백엔드 시스템을 보호합니다. <br/><br/>
+이 서비스 운영에 대한 자세한 정보는 <a href="/docs/services/appid/index.html" alt="{{site.data.keyword.app_id_short}} 문서 링크">{{site.data.keyword.app_id_short}} 문서</a>를 살펴보십시오.
+</td>
+</tr>
 <tr>
 <td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}} 아이콘"><br/>{{site.data.keyword.mobileanalytics_short}}</td>
 <td valign="top">{{site.data.keyword.mobileanalytics_full}} 서비스를 사용하여 모바일 앱의 성능과 사용 방법에 대한 인사이트를 얻을 수 있습니다. <br/><br/>

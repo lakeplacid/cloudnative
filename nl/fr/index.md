@@ -1,8 +1,8 @@
----
+﻿---
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-04-10"
+lastupdated: "2016-06-23"
 
 ---
 {:new_window: target="_blank"}
@@ -15,9 +15,9 @@ lastupdated: "2016-04-10"
 # Génération de projets de cloud natifs
 {: #web-mobile}
 
-Vous pouvez gérer des applications de cloud natives via le concept des [projets](projects.html) {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}}. La création d'un projet est possible en utilisant la console [{{site.data.keyword.dev_console}}](devex.html) ou le plug-in  [{{site.data.keyword.dev_cli_notm}}](dev_cli.html) pour l'interface de ligne de commande {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}}. La console {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} regroupe les fonctionnalités de service les plus courantes nécessaires à un développeur d'applications de cloud natives, dans un endroit unique et connecté, qui a été optimisé pour ce développeur.
+Vous pouvez gérer des applications de cloud natives dans des *projets* dans la console {{site.data.keyword.dev_console}} de {{site.data.keyword.Bluemix}}. Vous pouvez créer un projet dans la console [{{site.data.keyword.dev_console}}](devex.html) ou le plug-in [{{site.data.keyword.dev_cli_notm}}](dev_cli.html) pour l'interface de ligne de commande {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}}. La console {{site.data.keyword.dev_console}} de {{site.data.keyword.Bluemix_notm}} regroupe les fonctionnalités de service les plus courantes nécessaires à un développeur d'applications de cloud natives, dans un endroit unique et connecté, qui a été optimisé pour ce développeur.
 
-La console {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} permet à un développeur d'applications de cloud natives de créer un projet à partir de différents [types de modèle](patterns.html) et [modules de démarrage](starters.html), de créer et de connecter des services clé {{site.data.keyword.Bluemix_notm}} optimisés dans votre projet et de télécharger rapidement du code d'exécution avec des SDK. Ces derniers sont complètement intégrés avec des données d'identification de fonctionnalités ou des dépendances qui vous permettent  d'activer la fonction correspondante sur votre périphérique en quelques minutes. Quand votre application s'exécute et que vous avez défini et configuré les fonctionnalités, vous pouvez revenir à votre projet pour surveiller et gérer l'engagement des utilisateurs de l'application. Vous pouvez aussi configurer et gérer vos services via la console {{site.data.keyword.dev_console}}.
+La console {{site.data.keyword.dev_console}} de {{site.data.keyword.Bluemix_notm}} permet à un développeur d'applications de cloud natif de créer un projet à partir de divers types de modèle et modules de démarrage, de créer et de connecter des services {{site.data.keyword.Bluemix_notm}} optimisés essentiels à votre projet, et de télécharger rapidement le code opérationnel avec des SDK. Ces derniers sont complètement intégrés avec des données d'identification de fonctionnalités ou des dépendances qui vous permettent d'activer la fonction correspondante sur votre périphérique en quelques minutes. Quand votre application s'exécute et que vous avez défini et configuré les fonctionnalités, vous pouvez revenir à votre projet pour surveiller et gérer l'engagement des utilisateurs de l'application. Vous pouvez aussi configurer et gérer vos services via la console {{site.data.keyword.dev_console}}.
 
 <!--
 While the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} provides an integrated development experience, some developers might still want to have finer-grained control and wire services together manually. If this is your preferred approach, you might want to consider using the [{{site.data.keyword.mobilefirstbp}} Starter boilerplate](try_mobile.html).
@@ -32,41 +32,38 @@ The Mobile dashboard provides an integrated experience on {{site.data.keyword.Bl
 ## Projets
 {: #projects}
 
-La console {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} combine l'interface utilisateur, les données et les services d'une application au sein d'un *projet* complet. Lorsque vous créez un projet, tous les composants requis de votre application, ainsi que les fonctions ajoutées sont gérées sur le serveur {{site.data.keyword.Bluemix_notm}}. Vous pouvez télécharger le code de votre application ainsi que les données d'identification et les initialiseurs requis si les services sont configurés dans votre projet. Vous pouvez afficher tous vos projets en sélectionnant **Projets**.  
+La console {{site.data.keyword.dev_console}} de {{site.data.keyword.Bluemix}} combine l'interface utilisateur, les données et les services d'une application au sein d'un *projet* complet. Lorsque vous créez un projet, tous les composants requis de votre application, ainsi que les fonctions ajoutées sont gérées sur le serveur {{site.data.keyword.Bluemix_notm}}. Vous pouvez télécharger le code de votre application ainsi que les données d'identification et les initialiseurs requis si les services sont configurés dans votre projet. Vous pouvez afficher tous vos projets en sélectionnant **Projets**.  
 
-Vous pouvez afficher des informations supplémentaires sur un projet unique en le sélectionnant dans la page **Projets**. La page relative à la présentation du projet qui s'affiche comprend les services configurés et disponibles pour le projet. Les services sont des fonctions distinctes qui étendent la fonctionnalité de votre application. Etant donné qu'il s'agit d'un ajout individuel, vous pouvez ajouter les services dont vous avez besoin, comme les services de notifications push, d'authentification, de données et de stockage ou d'autres services. Quand vous ajoutez un service à votre projet sur la page relative à la présentation du projet puis suivez les instructions pour le configurer, il est automatiquement associé à votre application. Pour
-plus d'informations sur la page Présentation du projet, voir [Page présentation du projet](project_overview_page.html).
-
-Pour créer votre projet, vous devez sélectionner un [modèle](patterns.html) puis un [module de démarrage](starters.html).
+Vous pouvez afficher des informations supplémentaires sur un projet unique en le sélectionnant dans la page **Projets**. La page **Présentation du projet** qui s'affiche comprend les services configurés et disponibles pour le projet. Les services sont des fonctions distinctes qui étendent la fonctionnalité de votre application. Etant donné qu'il s'agit d'un ajout individuel, vous pouvez ajouter les services dont vous avez besoin, comme les services de notifications push, d'authentification, de données et de stockage ou d'autres services. Lorsque vous ajoutez un service à votre projet dans la page **Présentation du projet**, puis suivez les instructions pour le configurer, il est automatiquement associé à votre application.
 
 
-### Page de présentation du projet
+### Page Présentation du projet
 {: #project_overview}
 
-Vous pouvez afficher et utiliser un seul projet {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} en sélectionnant ce projet sur la page **Projets**, ce qui ouvre la page relative à la présentation du projet. 
+Vous pouvez afficher et utiliser un seul projet de la console {{site.data.keyword.dev_console}} de {{site.data.keyword.Bluemix}} en sélectionnant ce projet sur la page **Projets**, ce qui ouvre la page Présentation du projet.
 {: shortdesc}
 
-La page relative à la présentation du projet affiche une vignette pour chaque fonctionnalité qui est configurée ou disponible pour configuration avec le projet sélectionné. La vignette, qui indique le type de fonctionnalité, comporte un bouton *actions* avec trois boutons verticaux. Les fonctionnalités disponibles incluent, par exemple, les services {{site.data.keyword.mobilepushshort}}, Analytics ou Data et Storage. Les fonctionnalités compatibles dépendant du type de projet et des fonctionnalités disponibles dans la région concernée, il est possible que toutes les fonctionnalités ne soient pas disponibles avec tous les projets. 
+La page **Présentation du projet** affiche une vignette pour chaque fonctionnalité qui est configurée ou disponible pour configuration avec le projet sélectionné. La vignette, qui indique le type de fonctionnalité, comporte un bouton *actions* avec trois boutons verticaux. Les fonctionnalités disponibles incluent, par exemple, les services {{site.data.keyword.mobilepushshort}}, Analytics ou Data et Storage. Les fonctionnalités compatibles dépendant du type de projet et des fonctionnalités disponibles dans la région concernée, il est possible que toutes les fonctionnalités ne soient pas disponibles avec tous les projets. 
 
-Quand un type de fonctionnalité n'est pas encore associé au projet, un bouton **Créer**  est affiché sur la vignette. Les options du bouton
-d'actions permettent de créer une instance du service ou d'ajouter une instance de service existante si la fonctionnalité n'est pas encore associée. La sélection de l'option d'ajout d'une instance de service existante fournit une liste des instances de service de ce type au sein de votre espace.
+Quand un type de fonctionnalité n'est pas encore associé au projet, un bouton **Créer** est affiché sur la vignette. Les options du bouton
+d'actions permettent de créer une instance du service ou d'ajouter une instance de service existante si la fonctionnalité n'est pas encore associée. Sélectionnez **Ajouter des instances existantes** pour afficher la liste des instances de service de ce type au sein de votre espace.
 
 Si la fonctionnalité est déjà associée à ce projet, le nom de l'instance de service associée est affiché sur la vignette après le type de
-fonctionnalité, ce qui facilite l'identification de l'instance de service associée à votre projet sur votre console {{site.data.keyword.dev_console}}. Les
-actions disponibles sur le bouton d'action sont les suivantes : **Afficher** et **Retirer** quand la fonctionnalité est déjà associée au projet. Le retrait d'une instance de service efface seulement l'association à ce projet et ne supprime pas l'instance de service de votre console {{site.data.keyword.dev_console}}. Pour supprimer une instance de service, cliquez sur la page accessible en sélectionnant les options relatives aux services Web et mobiles pour afficher et supprimer les instances de service voulues.
+fonctionnalité, ce qui facilite l'identification de l'instance de service associée à votre projet dans votre console {{site.data.keyword.dev_console}}. Les
+actions disponibles sur le bouton d'action sont les suivantes : **Afficher** et **Retirer** quand la fonctionnalité est déjà associée au projet. Le retrait d'une instance de service efface seulement l'association à ce projet et ne supprime pas l'instance de service dans votre console {{site.data.keyword.dev_console}}. Pour supprimer une instance de service, cliquez sur la page **Web et mobile > Services** pour afficher et supprimer vos instances de service. 
 
-Sélectionnez la commande relative à l'obtention du code sur la vignette **Code** pour télécharger le code pour votre projet. Pour plus d'informations sur le
+Sélectionnez **Obtenir le code** sur la vignette **Code** afin de télécharger le code pour votre projet. Pour plus d'informations sur le
 téléchargement du code, voir [Obtention du code](get_code.html).
 
 
 ### Mise à jour de votre projet pour utiliser un nouveau module de démarrage
 {: #update-starter}
 
-1. Depuis la page relative aux projets ou à la présentation du projet, cliquez sur l'icône du menu déroulant dynamique et sélectionnez le module de démarrage de la mise à jour.
+1. Depuis la page **Projets** ou **Présentation du projet**, cliquez sur l'icône **Menu déroulant dynamique** et sélectionnez **Mettre à jour le module de démarrage**.
 
-2. Choisissez un nouveau module de démarrage puis cliquez sur **Mettre à jour**.
+2. Choisissez un nouveau module de démarrage, puis cliquez sur **Mettre à jour**.
 
-3. Cliquez sur  la commande relative à l'obtention du code sur la page de présentation du projet pour sélectionner votre langue.
+3. Cliquez sur **Obtenir le code** dans la page **Présentation du projet** pour sélectionner votre langue. 
 
    Vous pouvez également cliquer sur la page **Code**.
 
@@ -74,11 +71,11 @@ téléchargement du code, voir [Obtention du code](get_code.html).
 ### Mise à jour de votre projet pour générer un nouveau langage
 {: #update-language}
 
-1. Depuis la page relative au projet ou à la présentation du projet, cliquez sur l'icône du menu déroulant dynamique et sélectionnez le module de démarrage de la mise à jour.
+1. Depuis la page **Projets** ou **Présentation du projet**, cliquez sur l'icône **Menu déroulant dynamique** et sélectionnez **Mettre à jour le module de démarrage**.
 
 2. Sélectionnez un nouveau langage et cliquez sur **Mettre à jour**.
 
-3. Cliquez sur  la commande relative à l'obtention du code sur la page de présentation du projet pour sélectionner votre langue.
+3. Cliquez sur **Obtenir le code** dans la page **Présentation du projet** pour sélectionner votre langue. 
 
 
 ## Types de modèle
@@ -102,8 +99,8 @@ Les modules de démarrage Web suivants sont disponibles :
 ### Application mobile
 {: #mobile}
 
-Les modèles d'application mobile vous aident à gérer des applications mobiles qui se connectent directement aux services de backend, comme {{site.data.keyword.mobilepushshort}}, {{site.data.keyword.mobileanalytics_short}},
-{{site.data.keyword.appid_short}}, etc. Des projets peuvent également être ajoutés via sdkGen, comme BFF, et Microservices.
+Les modèles d'application mobile vous aident à gérer des applications mobiles qui se connectent directement aux services de back end, comme {{site.data.keyword.mobilepushshort}}, {{site.data.keyword.mobileanalytics_short}},
+{{site.data.keyword.appid_short}}, etc. Des projets peuvent également être ajoutés via sdkGen, comme les projets BFF et de microservice.
 
 Vous pouvez choisir dans une liste de modules de démarrage, comme {{site.data.keyword.watson}} Conversation, {{site.data.keyword.visualrecognitionshort}}, {{site.data.keyword.openwhisk_short}}, etc.
 
@@ -113,7 +110,7 @@ Vous pouvez générer des applications mobiles dans Swift, Android ou Cordova.
 ### BFF (Backend for Frontend)
 {: #bff}
 
-Les modèles BFF vous permettent de vous concentrer efficacement sur l'exposition des données et services métier sous une forme qui répond aux besoins d'interaction de l'utilisateur. Pour optimiser la démarche utilisateur vers votre solution de cloud, il peut s'avérer nécessaire de mettre en place une démarche utilisateur différente pour l'application mobile et une démarche plus détaillée et plus riche pour l'application Web. Avec l'introduction de périphériques pilotés par la voix comme le service [{{site.data.keyword.conversationfull}} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/watson/developercloud/conversation.html), l'interaction avec l'utilisateur peut être contrôlée par la voix. Ce canal numérique nécessite une architecture BFF très différente pour gérer ces interactions vocales.
+Les modèles BFF vous permettent de vous concentrer efficacement sur l'exposition des données et services métier sous une forme qui répond aux besoins d'interaction de l'utilisateur. Pour optimiser la démarche utilisateur vers votre solution de cloud, il peut s'avérer nécessaire de mettre en place une démarche utilisateur différente pour l'application mobile et une démarche plus détaillée et plus riche pour l'application Web. Avec l'introduction de périphériques pilotés par la voix comme le service [{{site.data.keyword.conversationfull}} ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/conversation.html), l'interaction avec l'utilisateur peut être contrôlée par la voix. Ce canal numérique nécessite une architecture BFF très différente pour gérer ces interactions vocales.
 
 Avec {{site.data.keyword.Bluemix_notm}}, vous pouvez générer une architecture BFF en mettant en oeuvre une approche de programmation polyglotte pour procéder à sa définition. IBM recommande d'utiliser Node.js, Swift ou Java, en les exécutant dans un environnement de cloud natif, avec les services Cloud Foundry, Container ou sans serveur.
 
@@ -127,7 +124,7 @@ Un module de démarrage BFF Basic est disponible via Node.js ou Swift.
 ### Microservice
 {: #microservice}
 
-Les projets Microservice constituent le fondement de la génération de microservices de backend, incluant un noeud final de santé de base, une API REST. Les projets générés contiendront toutes les dépendances requises pour les microservices eux-mêmes ainsi que pour tout service de cloud attaché.
+Les projets Microservice constituent le fondement de la génération de microservices de back end, incluant un noeud final de santé de base, une API REST. Les projets générés contiendront toutes les dépendances requises pour les microservices eux-mêmes ainsi que pour tout service de cloud attaché.
 
 Un module de démarrage Microservice Basic est disponible en utilisant Java.
 
@@ -146,9 +143,9 @@ Content to be provided by Karl Bishop.
 
 Les langages pris en charge sont :
 
-   * [Java ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](../runtimes/liberty/getting-started.html){: new_window}
-   * [Node.js ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](../runtimes/nodejs/getting-started.html){: new_window}
-   * [Swift ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](../runtimes/swift/getting-started.html){: new_window}
+   * [Java ![External link icon](../icons/launch-glyph.svg "External link icon")](../runtimes/liberty/getting-started.html){: new_window}
+   * [Node.js ![External link icon](../icons/launch-glyph.svg "External link icon")](../runtimes/nodejs/getting-started.html){: new_window}
+   * [Swift ![External link icon](../icons/launch-glyph.svg "External link icon")](../runtimes/swift/getting-started.html){: new_window}
 
 
 #### Java
@@ -172,10 +169,10 @@ Swift est un langage de programmation moderne créé par Apple en 2014 qui a ét
 ## Modules de démarrage
 {: #starters}
 
-Avec la console {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}}, vous pouvez choisir parmi différents modules de démarrage pour chaque type de modèle.
+Avec la console {{site.data.keyword.dev_console}} de {{site.data.keyword.Bluemix}}, vous pouvez choisir parmi différents modules de démarrage pour chaque type de modèle.
 
 Les modules de démarrage sont optimisés pour constituer du code de démarrage prêt pour la production présentant une intégration {{site.data.keyword.Bluemix_notm}} clé avec un service à valeur élevée. Chaque module de démarrage se concentre sur un service et illustre
-l'intégration des logiciels SDK de ce service dans le code. Dans certains cas,
+l'intégration des SDK de ce service dans le code. Dans certains cas,
 les modules de démarrage proposent une expérience
 utilisateur simple qui met en évidence l'intégration des données du service ou les
 interactions avec l'utilisateur. Chaque module de démarrage est configuré pour être activé avec les services d'authentification ou de données et éventuellement d'autres fonctionnalités, si vous décidez de les configurer pour votre projet.

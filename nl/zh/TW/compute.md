@@ -105,13 +105,13 @@ Open API 規格中唯一未完全支援的部分是檔案結構。此規格容�
 
 您可以使用此 BFF 型樣，快速開始將完全運作的 BFF 佈建至 {{site.data.keyword.Bluemix_notm}}，以及使用它協助瞭解將 BFF 整合至行動專案並分別以 Swift 及 Java 產生適用於 iOS 及 Android 的原生 SDK 是多麼簡單。
 
-請遵循 [README ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/backend-for-frontend-node) 指示來建立並安裝專案。
+請遵循 [README ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/backend-for-frontend-node "外部鏈結圖示") 指示來建立並安裝專案。
 
 
 ## 搭配使用 Backend for Frontend 與開發人員體驗專案
 {: #bff-devex}
 
-「{{site.data.keyword.Bluemix_notm}} 行動開發人員體驗」的設計目的是要簡化定義具有許多相關聯雲端服務的行動專案。您可以輕鬆地新增 [{{site.data.keyword.mobilepushshort}} ![外部鏈結圖示](../icons/launch-glyph.svg)](/docs/services/mobilepush/index.html)、[分析 ![外部鏈結圖示](../icons/launch-glyph.svg)](/docs/services/mobileanalytics/index.html)，以及資料或儲存空間服務。
+「{{site.data.keyword.Bluemix_notm}} 行動開發人員體驗」的設計目的是要簡化定義具有許多相關聯雲端服務的行動專案。您可以輕鬆地新增 [{{site.data.keyword.mobilepushshort}} ![外部鏈結圖示](../icons/launch-glyph.svg)](/docs/services/mobilepush/index.html)、[Analytics ![外部鏈結圖示](../icons/launch-glyph.svg)](/docs/services/mobileanalytics/index.html)，以及「資料」或「儲存空間」服務。
 
 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} 引進在**運算**頁面中將 BFF 整合至行動專案的能力。您可以將現有「運算」服務實例新增至行動專案。新增之後，即可針對您選擇的語言來產生原生 SDK，也可以產生完整專案，以及在**程式碼**頁面中，將 SDK 整合至專案的來源套件。這特別適用於與已明確定義之 BFF 的整合。
 

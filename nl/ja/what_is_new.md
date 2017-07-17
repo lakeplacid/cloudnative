@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-06-27"
 
 ---
 {:new_window: target="_blank"}
@@ -16,10 +16,18 @@ lastupdated: "2017-04-18"
 {: #what-is-new}
 
 
+## 最新情報: 2017 年 6 月
+{: #june-2017}
+
+2017 年 6 月の {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} の更新で、以下の変更が導入されました。
+
+   * モバイル・スターターが、必要な {{site.data.keyword.ibmwatson}} サービスの作成と、プロジェクトへのサービス資格情報の挿入を処理するようになりました。
+   * {{site.data.keyword.dev_cli_long}} が、新機能によって更新されました。詳しくは、「[What’s included in the {{site.data.keyword.Bluemix_notm}} CLI {{site.data.keyword.dev_cli_short}} version 0.1.12 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/blogs/bluemix/2017/06/whats-included-bluemix-cli-developer-plug-version-0-1-12/ "外部リンク・アイコン")」を参照してください。
+
 ## 最新情報: 2017 年 3 月
 {: #mar-2017}
 
-2017 年 3 月の {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} の更新で、以下の変更が導入されました。
+2017 年 3 月の {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} の更新で、以下の変更が導入されました。
 
    * {{site.data.keyword.Bluemix_notm}} モバイル・ダッシュボードが {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} になりました。
    * プロジェクト作成の設計が変更され、Node.js、Java、および Swift のサポートとともに、Web アプリ、BFF、およびマイクロサービスのサーバー・パターン・タイプが組み込まれました。
@@ -33,7 +41,7 @@ lastupdated: "2017-04-18"
 
 2017 年 1 月の {{site.data.keyword.Bluemix_notm}} モバイル・ダッシュボードの更新で、以下の変更が導入されました。
 
-   * 1 月 31 日時点で、UI スターターは非推奨になりました。UI スターターから作成された既存のプロジェクトは、2017 年 4 月 30 日まで使用できます。マイグレーション・ステップと削除の日付について詳しくは、[非推奨の告知に関するブログ投稿![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/blogs/bluemix/2017/01/bluemix-mobile-dashboard-update/) を参照してください。
+   * 1 月 31 日時点で、UI スターターは非推奨になりました。UI スターターから作成された既存のプロジェクトは、2017 年 4 月 30 日まで使用できます。マイグレーション・ステップと削除の日付について詳しくは、[非推奨の告知に関するブログ投稿![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/blogs/bluemix/2017/01/bluemix-mobile-dashboard-update/ "外部リンク・アイコン") を参照してください。
 {: deprecated}
    * プロジェクトを削除して新しいプロジェクトを作成する代わりに、プロジェクト・スターター・タイプを更新できるようになりました。
    * [Watson Conversation](tutorial_conversation.html) コード・スターターを使用してプロジェクトを作成できるようになりました。
@@ -60,8 +68,8 @@ lastupdated: "2017-04-18"
 
    * **「コード」**ページからプロジェクトの SDK 成果物を生成できるようになりました。
    * ベーシック・コード・スターターで Cordova がサポートされるようになりました。
-   * {{site.data.keyword.mobileanalytics_short}} コンソールの**「ネットワーク要求」**ページで[ネットワーク・イベントの報告 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/mobileanalytics/sdk.html#network-requests){: new_window} と[ネットワーク要求のモニター ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/mobileanalytics/app-monitoring.html#monitor-network-requests){: new_window} を行えるようになりました。
-   * {{site.data.keyword.mobileanalytics_short}} コンソールで[データを dashDB にエクスポート ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/mobileanalytics/app-monitoring.html#dashdb){: new_window} できるようになりました。
+   * {{site.data.keyword.mobileanalytics_short}} コンソールの**「ネットワーク要求」**ページで[ネットワーク・イベントの報告 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/mobileanalytics/sdk.html#network-requests "外部リンク・アイコン"){: new_window} と[ネットワーク要求のモニター ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/mobileanalytics/app-monitoring.html#monitor-network-requests "外部リンク・アイコン"){: new_window} を行えるようになりました。
+   * {{site.data.keyword.mobileanalytics_short}} コンソールで[データを dashDB にエクスポート ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/mobileanalytics/app-monitoring.html#dashdb "外部リンク・アイコン"){: new_window} できるようになりました。
 
 
 ## 最新情報: 2016 年 10 月
@@ -70,7 +78,7 @@ lastupdated: "2017-04-18"
 2016 年 10 月の {{site.data.keyword.Bluemix_notm}} モバイル・ダッシュボードの更新で、以下の変更が導入されました。
 
    * {{site.data.keyword.mobilepushshort}} 機能と Analytics 機能をダッシュボードから直接プロジェクトに追加できるようになりました。
-   * [コード・スターター](starters.html#Code_Starter)が使用可能になりました。
+   * コード・スターターが使用可能になりました。
    * コード・スターターから作成したプロジェクトに Authentication (認証) を追加できます。
    * Swift がサポートされるようになりました。
 
@@ -92,6 +100,6 @@ lastupdated: "2017-04-18"
 ### コード
 {: #code notoc}
 
-   * iOS 向けの生成された Objective-C コードおよび Swift コードは、依存関係を管理するために CocoaPods を使用するようになりました。これは、CocoaPods をインストールする必要があることを意味します。インストールするには、`sudo gem install cocoapods` を実行します。CocoaPods がインストールされた後、`pod setup` を実行して構成します (まだ構成されていない場合)。最後に、`.xcworkspace` ファイルを Xcode で開く前に、`pod install` を実行して、プロジェクト依存関係をダウンロードしてインストールします。詳しい追加情報は、ダウンロードされたコード・アーカイブ内の `README.md` ファイルに入っています。詳しくは、[前提条件開発者ツール](get_code.html#prereq-dev-tools)をお読みください。
+   * iOS 向けに生成された Objective-C コードおよび Swift コードが、依存関係を管理するために CocoaPods を使用するようになったため、CocoaPods をインストールする必要があります。CocoaPods をインストールするには、`sudo gem install cocoapods` を実行します。CocoaPods がインストールされた後、`pod setup` を実行して構成します (まだ構成されていない場合)。最後に、`.xcworkspace` ファイルを Xcode で開く前に、`pod install` を実行して、プロジェクト依存関係をダウンロードしてインストールします。詳しい追加情報は、ダウンロードされたコード・アーカイブ内の `README.md` ファイルに入っています。詳しくは、[前提条件開発者ツール](get_code.html#prereq-dev-tools)をお読みください。
 
 絶えず新しい更新を適用できるように、たびたび確認し直してください。

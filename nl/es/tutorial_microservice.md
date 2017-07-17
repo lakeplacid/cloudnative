@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-06-12"
 
 ---
 {:new_window: target="_blank"}
@@ -14,14 +14,19 @@ lastupdated: "2017-04-18"
 # Guía de aprendizaje del iniciador Microservice Basic
 {: #tutorial}
 
-En la siguiente guía de aprendizaje encontrará los pasos a seguir para crear un proyecto desde el iniciador Microservice Basic. Incluye la instalación de las herramientas necesarias y los pasos a seguir para ejecutar el código del proyecto. 
+En la siguiente guía de aprendizaje encontrará los pasos a seguir para crear un proyecto desde el iniciador Microservice Basic. Las instrucciones incluyen la instalación de las herramientas necesarias y los pasos a seguir para ejecutar el código del proyecto. 
 
-Puede crear un proyecto utilizando la [{{site.data.keyword.dev_console}}](#create-devex) basada en la web o la [{{site.data.keyword.dev_cli_notm}}](#create-cli) de mandatos.
 
 ## Instalación de herramientas del desarrollador
 {: #dev_tools}
 
-Asegúrese de instalar las [herramientas de desarrollador necesarias ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](get_code.html#prereq-dev-tools){: new_window}.
+Asegúrese de instalar las [herramientas de desarrollador necesarias ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](get_code.html#prereq-dev-tools "Icono de enlace externo"){: new_window}.
+
+
+## Elija cómo desea crear su proyecto
+{: #choose_how}
+
+Puede crear un proyecto utilizando la [{{site.data.keyword.dev_console}}](#create-devex) basada en la web o la [{{site.data.keyword.dev_cli_notm}}](#create-cli) de mandatos. Una vez creado el proyecto, podrá [ejecutar el proyecto](#running-dev-plugin).
 
 
 ## Creación de un proyecto mediante la {{site.data.keyword.dev_console}}
@@ -29,7 +34,7 @@ Asegúrese de instalar las [herramientas de desarrollador necesarias ![Icono de 
 
 1. Cree un proyecto en la {{site.data.keyword.dev_console}} de {{site.data.keyword.Bluemix}}.
 
-	1. En la página [**Iniciación** ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://console.ng.bluemix.net/developer/getting-started/) de la {{site.data.keyword.dev_console}}, pulse **Crear proyecto**.
+	1. En la página [**Iniciación** ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://console.ng.bluemix.net/developer/getting-started/ "Icono de enlace externo") de la {{site.data.keyword.dev_console}}, pulse **Crear proyecto**.
 
 		De forma alternativa, puede pulsar **Crear proyecto** desde la página **Proyectos**.
 
@@ -39,8 +44,12 @@ Asegúrese de instalar las [herramientas de desarrollador necesarias ![Icono de 
 
 	4. Especifique el nombre del proyecto. En esta guía de aprendizaje, utilizaremos `MicroserviceProject`.   
 
-	5. Especifique un nombre de host exclusivo. En esta guía de aprendizaje, utilizaremos `devhost` 
-   
+	5. Escriba un nombre de host exclusivo, como por ejemplo sus iniciales seguidas de `-devhost`. Por ejemplo:
+	
+	 ```
+	 abc-devhost
+	 ```
+	   
 	6. Pulse **Crear**.
 
 2. Opcional: Añada la capacidad de Datos.
@@ -61,13 +70,13 @@ Asegúrese de instalar las [herramientas de desarrollador necesarias ![Icono de 
    
 	3. Cuando se haya generado el código, pulse **Descargar código** para descargar el archivo del proyecto.
 
-4. Empiece a trabajar con el proyecto descargado: 
+4. Empiece a trabajar con el proyecto descargado:
 
-	1. Expanda el archivo archivado. 
+	1. Expanda el archivo archivado.
 	
-	2. Vaya al directorio del nuevo proyecto. 
+	2. Vaya al directorio del nuevo proyecto.
 	
-	3. Utilice {{site.data.keyword.dev_cli_notm}} para continuar. 
+	3. Utilice {{site.data.keyword.dev_cli_notm}} para continuar.
 
 5. Opcional: [Actualización del proyecto](project_overview_page.html#update_language) para generar un nuevo lenguaje.
 
@@ -88,14 +97,18 @@ Asegúrese de instalar las [herramientas de desarrollador necesarias ![Icono de 
 
 	* Seleccione un patrón: 4 (para Microservicios)
 	* Seleccione un iniciador: 1 (para Basic)
-	* Seleccione una plataforma: 3 (para Java)
+	* Seleccione una plataforma: 1 (para Java)
 	* Especifique un nombre para el proyecto: `MicroserviceProjectCLI`
+	* Especifique un nombre de host para el proyecto: `abc-devhost`
+	  * Escriba un nombre de host exclusivo, como por ejemplo sus iniciales seguidas de `-devhost`. Por ejemplo:
+	
+	     ```
+	     abc-devhost
+	     ```
 
-4. Si desea añadir servicios al proyecto, escriba `y` en la solicitud de preguntas y responda el resto de las preguntas.
+4. Cuando `MicroserviceProjectCLI` se haya guardado correctamente, vaya a la carpeta `MicroserviceProjectCLI`.
 
-5. Cuando `MicroserviceProjectCLI` se haya guardado correctamente, vaya a la carpeta `MicroserviceProjectCLI`.
-
-6. Ahora puede añadir su propio código o ejecutar el proyecto.
+5. Ahora puede añadir su propio código o ejecutar el proyecto.
  
  
 ## Ejecución del proyecto utilizando {{site.data.keyword.dev_cli_notm}}
@@ -108,7 +121,7 @@ Asegúrese de instalar las [herramientas de desarrollador necesarias ![Icono de 
 	```     
 	{: codeblock}
 
-2. Para crear y ejecutar el proyecto en el directorio de proyecto actual, escriba el siguiente mandato:
+2. Para ejecutar el proyecto en el directorio de proyecto actual, escriba el siguiente mandato:
 
 	```
 	bx dev run

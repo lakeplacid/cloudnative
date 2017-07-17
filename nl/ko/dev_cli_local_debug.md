@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-05-18"
 
 ---
 {:new_window: target="_blank"}
@@ -33,9 +33,9 @@ Java 애플리케이션 디버깅을 사용하기 위한 단계:
 2. 디버거를 애플리케이션에 연결하십시오. 
 
 	* Eclipse
-      1. “Existing maven project” 프로젝트를 Eclipse로 가져오십시오. 
-      2. [Java 원격 애플리케이션 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm)” 디버그 구성을 작성하십시오. 
-      		1. IP 주소 또는 `localhost:<port>`를 입력하십시오.   
+      1. **기존 maven 프로젝트**를 Eclipse로 가져오십시오.
+      2. [Java 원격 애플리케이션 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm) 디버그 구성을 작성하십시오.
+      		1. IP 주소 또는 `localhost:<port>`를 입력하십시오.  
       		2. 포트 번호에 `7777`을 입력하십시오. 
       		3. 가져온 Java 프로젝트의 이름을 지정하십시오. 
       6. IDE의 중단점을 설정하십시오. 

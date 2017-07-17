@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-28"
 
 ---
 {:new_window: target="_blank"}
@@ -13,7 +13,7 @@ lastupdated: "2017-03-17"
 # BMSClient initialisieren
 {: #sdk_BMSClient}
 
-`BMSCore` stellt die HTTP-Infrastruktur bereit, die die anderen {{site.data.keyword.Bluemix}} Mobile-Services-Client-SDKs zur Kommunikation mit ihren entsprechenden {{site.data.keyword.Bluemix_notm}}-Services verwenden.
+`BMSCore` stellt die HTTP-Infrastruktur bereit, die die anderen {{site.data.keyword.Bluemix}} Web and Mobile-Services-Client-SDKs zur Kommunikation mit ihren entsprechenden {{site.data.keyword.Bluemix_notm}}-Services verwenden.
 
 
 ## Eigene Android-Anwendung initialisieren
@@ -31,7 +31,7 @@ Sie können das `BMSCore`-Paket entweder in Ihr Android Studio-Projekt herunterl
 2. Initialisieren Sie das `BMSClient`-SDK in Ihrer Android-Anwendung, indem Sie den Initialisierungscode in der Methode `onCreate` der Hauptaktivität in Ihrer Android-Anwendung oder an einer Position hinzufügen, die für Ihr Projekt am geeignetsten ist.
 
   ```Java
-	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_US_SOUTH); // Make sure that you point to your region
+  BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_US_SOUTH); // Vergewissern Sie sich, dass auf Ihre Region verwiesen wird
   ```
   {: codeblock}
 
@@ -56,9 +56,9 @@ Sie können mithilfe von [CocoaPods](https://cocoapods.org){: new_window} oder [
 
   Führen Sie anschließend den Befehl `pod install` aus und öffnen Sie die generierte Datei des Typs `.xcworkspace`. Zur Aktualisierung auf ein neueres Release von `BMSCore` müssen Sie den Befehl `pod update BMSCore` verwenden.
 
-  Weitere Informationen zur Verwendung von CocoaPods finden Sie auf der Seite [CocoaPods Guides ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://guides.cocoapods.org/using/index.html){: new_window}.
+  Weitere Informationen zur Verwendung von CocoaPods finden Sie auf der Seite [CocoaPods Guides ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://guides.cocoapods.org/using/index.html "Symbol für externen Link"){: new_window}. 
 
-2. Befolgen Sie zur Installation von `BMSCore` mithilfe von Carthage diese [Anweisungen ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/Carthage/Carthage#getting-started){: new_window}.
+2. Befolgen Sie zur Installation von `BMSCore` mithilfe von Carthage diese [Anweisungen ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/Carthage/Carthage#getting-started "Symbol für externen Link"){: new_window}. 
 
   1. Fügen Sie die folgende Zeile zu Ihrer Cartfile hinzu:
 
@@ -69,7 +69,7 @@ Sie können mithilfe von [CocoaPods](https://cocoapods.org){: new_window} oder [
 
   2. Führen Sie den Befehl `carthage update` aus.
 
-  3. Fügen Sie nach Fertigstellung des Builds `BMSCore.framework` zu Ihrem Projekt hinzu. Führen Sie dazu [Schritt 3 ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/Carthage/Carthage#getting-started) in den Carthage-Anweisungen durch.
+  3. Fügen Sie nach Fertigstellung des Builds `BMSCore.framework` zu Ihrem Projekt hinzu. Führen Sie dazu [Schritt 3 ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/Carthage/Carthage#getting-started "Symbol für externen Link") in den Carthage-Anweisungen durch. 
 
       Verwenden Sie für Anwendungen, die mit Swift 2.3 aufgebaut sind, den Befehl `carthage update --toolchain com.apple.dt.toolchain.Swift_2_3`. Verwenden Sie andernfalls den Befehl `carthage update`.
 
@@ -85,7 +85,7 @@ Sie können mithilfe von [CocoaPods](https://cocoapods.org){: new_window} oder [
   Platzieren Sie den Initialisierungscode in der Methode `application(_:didFinishLaunchingWithOptions:)` Ihres Anwendungsbeauftragten oder an einer Position, die für Ihr Projekt am geeignetsten ist.
 
   ```Swift
-    BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth) // Make sure that you point to your region
+  BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth) // Vergewissern Sie sich, dass auf Ihre Region verwiesen wird
   ```
   {: codeblock}
 

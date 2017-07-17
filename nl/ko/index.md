@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-04-10"
+lastupdated: "2016-06-23"
 
 ---
 {:new_window: target="_blank"}
@@ -15,9 +15,9 @@ lastupdated: "2016-04-10"
 # 클라우드 네이티브 프로젝트 빌드
 {: #web-mobile}
 
-{{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} [프로젝트](projects.html) 개념을 통해 클라우드 네이티브 앱을 관리할 수 있습니다. [{{site.data.keyword.dev_console}}](devex.html) 또는 {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} CLI의 [{{site.data.keyword.dev_cli_notm}}](dev_cli.html)을 사용하여 프로젝트를 작성할 수 있습니다. {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}은 클라우드 네이티브 애플리케이션 개발자가 필요로 하는 대부분의 일반적 서비스 기능을 개발자에게 최적화된 하나의 연결된 경험으로 제공합니다. 
+{{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} *프로젝트* 개념을 통해 클라우드 네이티브 앱을 관리할 수 있습니다. [{{site.data.keyword.dev_console}}](devex.html) 또는 {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} CLI의 [{{site.data.keyword.dev_cli_notm}}](dev_cli.html)을 사용하여 프로젝트를 작성할 수 있습니다. {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}은 클라우드 네이티브 애플리케이션 개발자가 필요로 하는 대부분의 일반적 서비스 기능을 개발자에게 최적화된 하나의 연결된 경험으로 제공합니다. 
 
-{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}은 클라우드 네이티브 애플리케이션 개발자가 다양한 [패턴 유형](patterns.html) 및 [스타터](starters.html)로부터 프로젝트를 작성하고, 주요 {{site.data.keyword.Bluemix_notm}} 최적화 서비스를 작성하여 프로젝트에 연결하고, SDK를 사용하여 작동하는 코드를 빠르게 다운로드할 수 있게 해 줍니다. SDK는 이를 신속히 실행할 수 있게 해 주는 기능 신임 정보 및 종속 항목과 완전히 통합되어 있습니다. 애플리케이션이 실행 중이며 기능을 구성한 경우에는 프로젝트로 돌아가 애플리케이션 사용자와의 상호관계를 모니터하고 관리할 수 있습니다. {{site.data.keyword.dev_console}}을 통해 서비스를 구성하고 관리할 수도 있습니다. 
+{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}은 클라우드 네이티브 애플리케이션 개발자가 다양한 패턴 유형 및 스타터에서 프로젝트를 작성하고, 주요 {{site.data.keyword.Bluemix_notm}} 최적화 서비스를 작성하여 프로젝트에 연결하고, SDK로 작업 코드를 신속하게 다운로드할 수 있게 해 줍니다. SDK는 이를 신속히 실행할 수 있게 해 주는 기능 신임 정보 및 종속 항목과 완전히 통합되어 있습니다. 애플리케이션이 실행 중이며 기능을 구성한 경우에는 프로젝트로 돌아가 애플리케이션 사용자와의 상호관계를 모니터하고 관리할 수 있습니다. {{site.data.keyword.dev_console}}을 통해 서비스를 구성하고 관리할 수도 있습니다. 
 
 <!--
 While the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} provides an integrated development experience, some developers might still want to have finer-grained control and wire services together manually. If this is your preferred approach, you might want to consider using the [{{site.data.keyword.mobilefirstbp}} Starter boilerplate](try_mobile.html).
@@ -34,9 +34,7 @@ The Mobile dashboard provides an integrated experience on {{site.data.keyword.Bl
 
 {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}}은 앱 사용자 인터페이스, 데이터 및 서비스를 하나의 완전한 *프로젝트*로 결합합니다. 프로젝트를 작성하여 앱의 모든 필수 파트와 추가된 기능을 {{site.data.keyword.Bluemix_notm}} 서버에서 유지보수합니다. 사용자는 앱 코드를 다운로드할 수 있으며 서비스가 프로젝트 내에 구성된 경우에는 필수 신임 정보 및 초기자(initializer)도 다운로드할 수 있습니다. **프로젝트**를 선택하여 모든 프로젝트를 볼 수 있습니다.   
 
-**프로젝트** 페이지에서 프로젝트를 선택하여 하나의 프로젝트에 대한 추가 정보를 볼 수 있습니다. 이를 수행하면 **프로젝트 개요** 페이지가 표시되며, 이 페이지는 해당 프로젝트용으로 구성되고 사용 가능한 서비스를 포함합니다. 서비스는 기능을 추가하여 앱을 확장하는 별도의 기능입니다. 서비스는 개별적으로 추가되므로 푸시 서비스, 인증, 데이터 및 스토리지 또는 기타 서비스 등 필요한 서비스를 추가할 수 있습니다. **프로젝트 개요** 페이지에서 프로젝트에 서비스를 추가하고 지시사항에 따라 이를 구성하면 해당 서비스가 자동으로 앱과 연관됩니다. 프로젝트 개요 페이지에 대한 자세한 정보는 [프로젝트 개요 페이지](project_overview_page.html)를 참조하십시오. 
-
-프로젝트를 작성하려면 [패턴](patterns.html) 및 [스타터](starters.html)를 선택해야 합니다. 
+**프로젝트** 페이지에서 프로젝트를 선택하여 하나의 프로젝트에 대한 추가 정보를 볼 수 있습니다. 이를 수행하면 **프로젝트 개요** 페이지가 표시되며, 이 페이지는 해당 프로젝트용으로 구성되고 사용 가능한 서비스를 포함합니다. 서비스는 기능을 추가하여 앱을 확장하는 별도의 기능입니다. 서비스는 개별적으로 추가되므로 푸시 서비스, 인증, 데이터 및 스토리지 또는 기타 서비스 등 필요한 서비스를 추가할 수 있습니다. **프로젝트 개요** 페이지에서 프로젝트에 서비스를 추가하고 지시사항에 따라 이를 구성하면 해당 서비스가 자동으로 앱과 연관됩니다. 
 
 
 ### 프로젝트 개요 페이지

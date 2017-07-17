@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-05-18"
 
 ---
 {:new_window: target="_blank"}
@@ -14,14 +14,19 @@ lastupdated: "2017-04-18"
 # 모바일 기본 스타터의 엔드-투-엔드 튜토리얼
 {: #tutorial}
 
-다음의 엔드-투-엔드 튜토리얼에서는 모바일 기본 스타터에서 프로젝트를 작성하는 단계를 안내합니다. 여기에는 전제조건 도구의 설치와  Xcode 및 Android Studio에서 프로젝트를 실행하는 단계가 포함됩니다. 
+다음의 엔드-투-엔드 튜토리얼에서는 모바일 기본 스타터에서 프로젝트를 작성하는 단계를 안내합니다. 이 안내서에는 전제조건 도구의 설치 및 Xcode와 Android Studio에서 프로젝트를 실행하기 위한 단계가 포함됩니다. 
 
-웹 기반 [{{site.data.keyword.dev_console}}](#create-devex)을 사용하거나 명령어 방식 [{{site.data.keyword.dev_cli_notm}}](#create-cli)을 통해 프로젝트를 작성할 수 있습니다. 
 
 ## 개발자 도구 설치
 {: #dev_tools}
 
 [전제조건 개발자 도구 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](get_code.html#prereq-dev-tools){: new_window}를 설치했는지 확인하십시오. 
+
+
+## 프로젝트 작성 방법 선택
+{: #choose_how}
+
+웹 기반 [{{site.data.keyword.dev_console}}](#create-devex)을 사용하거나 명령어 방식 [{{site.data.keyword.dev_cli_notm}}](#create-cli)을 통해 프로젝트를 작성할 수 있습니다. 
 
 
 ## {{site.data.keyword.dev_console}}을 사용하여 프로젝트 작성
@@ -55,8 +60,8 @@ lastupdated: "2017-04-18"
    
    4. ID 제공자를 선택하고 이를 구성하기 위한 정보를 입력하십시오. 하나의 ID 제공자만 사용 가능하게 설정할 수 있습니다. 
    
-   5. 인증 구성에 대한 자세한 정보는 [ID 제공자 구성 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/appid/identity-providers.html){: new_window}을 참조하십시오. 
-
+   5. 인증 구성에 대한 자세한 정보는 [ID 제공자 구성 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/appid/identity-providers.html){: new_window}을 참조하십시오.
+   
 3. 선택사항: 분석 기능을 추가하십시오. 
 
    1. **프로젝트 개요** 페이지에서 **분석**에 대해 **추가**를 클릭하십시오. 
@@ -67,7 +72,7 @@ lastupdated: "2017-04-18"
    
    3. 앱을 실행한 후 분석 데이터를 보려면 **데모 모드**를 토글하여 끄십시오. 
    
-   4. 분석 구성에 대한 자세한 정보는 [{{site.data.keyword.mobileanalytics_short}} 시작하기 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/mobileanalytics/index.html){: new_window}를 참조하십시오. 
+   4. 분석 구성에 대한 자세한 정보는 [{{site.data.keyword.mobileanalytics_short}} 시작하기 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/mobileanalytics/index.html){: new_window}를 참조하십시오.
 
 4. 선택사항: {{site.data.keyword.mobilepushshort}} 기능을 추가하십시오. 
 
@@ -91,9 +96,9 @@ lastupdated: "2017-04-18"
 
    3. 서비스 이름을 입력하고 **작성**을 클릭하십시오. 
 
-   4. {{site.data.keyword.cloudant_short_notm}} 구성에 대한 자세한 정보는 [{{site.data.keyword.cloudant_short_notm}} 시작하기 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/Cloudant/index.html){: new_window}를 참조하십시오. 
+   4. {{site.data.keyword.cloudant_short_notm}} 구성에 대한 자세한 정보는 [{{site.data.keyword.cloudant_short_notm}} 시작하기 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/Cloudant/index.html){: new_window}를 참조하십시오.
 
-   5. {{site.data.keyword.objectstorageshort}} 구성에 대한 자세한 정보는 [{{site.data.keyword.objectstorageshort}} 시작하기 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/ObjectStorage/index.html){: new_window}를 참조하십시오. 
+   5. {{site.data.keyword.objectstorageshort}} 구성에 대한 자세한 정보는 [{{site.data.keyword.objectstorageshort}} 시작하기 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/ObjectStorage/index.html){: new_window}를 참조하십시오.
 
 6. 프로젝트 코드를 생성하십시오. 
 
@@ -153,7 +158,7 @@ lastupdated: "2017-04-18"
       
       2. 기존 pod를 업데이트해야 하는 경우 `pod update`를 실행하십시오. 
       
-      3. 프로젝트에 필요한 pod를 설치하려면 `pod install`을 실행하십시오.
+      3. 프로젝트에 대한 pod를 설치하려면 `pod install`을 실행하십시오.
       
    3. `BasicProject.xcworkspace` Xcode 작업공간을 여십시오.
       

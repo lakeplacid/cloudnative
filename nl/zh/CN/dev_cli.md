@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-06-13"
 
 ---
 {:new_window: target="_blank"}  
@@ -18,9 +18,9 @@ lastupdated: "2017-04-18"
 
 {: shortdesc}
 
-{{site.data.keyword.dev_cli_notm}} 使用两个容器，便于构建和测试应用程序。第一个容器是工具容器，包含用于构建和测试应用程序所必需的实用程序。此容器的 Docker 文件通过 [dockerfile-tools](#command-parameters) 参数定义。您可以将其视为一个开发容器，因为它包含通常用于开发特定运行时的工具。
+{{site.data.keyword.dev_cli_notm}} 使用两个容器，便于构建和测试应用程序。第一个容器是工具容器，包含用于构建和测试应用程序所必需的实用程序。此容器的 Docker 文件通过 [`dockerfile-tools`](#command-parameters) 参数定义。您可以将其视为一个开发容器，因为它包含通常用于开发特定运行时的工具。
 
-第二个容器是运行容器。此容器的形式适合部署在如 {{site.data.keyword.Bluemix}} 等产品中使用。因此，此容器一般会定义一个入口点，用于启动应用程序。选择通过 {{site.data.keyword.dev_cli_short}} 运行应用程序时，会使用此容器。此容器的 Docker 文件通过 [dockerfile-run](#run-parameters) 参数定义。
+第二个容器是运行容器。此容器的形式适合部署在如 {{site.data.keyword.Bluemix}} 等产品中使用。因此，会定义一个入口点，用于启动应用程序。选择通过 {{site.data.keyword.dev_cli_short}} 运行应用程序时，会使用此容器。此容器的 Docker 文件通过 [`dockerfile-run`](#run-parameters) 参数定义。
 
 
 ## 添加 {{site.data.keyword.dev_cli_notm}}
@@ -30,15 +30,15 @@ lastupdated: "2017-04-18"
 ### 先决条件
 {: #prereq}
 
-因为 {{site.data.keyword.dev_cli_short}} 不但可扩展性高，而且支持利用更多补充技术，所以只要满足一些先决条件，即可充分开发并正确利用其功能。
+因为 {{site.data.keyword.dev_cli_short}} 具有很高的可扩展性，支持利用更多补充技术，所以您必须满足一些先决条件，才可以完全开发并正确利用其功能。
 
-1. 安装 [Cloud Foundry CLI ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/cloudfoundry/cli#getting-started)。
+<!--1. Install the [Cloud Foundry CLI ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/cli#getting-started "External link icon").-->
 
-2. 安装 [{{site.data.keyword.Bluemix}} CLI ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://clis.ng.bluemix.net/ui/home.html)。
+1. 安装 [{{site.data.keyword.Bluemix}} CLI ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://clis.ng.bluemix.net/ui/home.html "外部链接图标")。
 
-3. 获取 [{{site.data.keyword.Bluemix_notm}}](https://www.bluemix.net) 标识。
+2. 获取 [{{site.data.keyword.Bluemix_notm}}](https://www.bluemix.net) 标识。
 
-4. 如果计划在本地运行和调试应用程序，那么还必须安装 [Docker ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.docker.com/get-docker)。只有非移动项目才需要执行 Docker 安装。
+3. 如果计划在本地运行和调试应用程序，那么还必须安装 [Docker ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.docker.com/get-docker "外部链接图标")。
 
 
 ### 开始之前
@@ -65,7 +65,7 @@ lastupdated: "2017-04-18"
 	
 	This link does not work in production yet --> 
 	
-	1. 登录到 [{{site.data.keyword.iamshort}} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.bluemix.net/iam/#/apikeys){: new_window}。
+	1. 登录到 [{{site.data.keyword.iamshort}} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.bluemix.net/iam/#/apikeys "外部链接图标"){: new_window}。
 	2. 选择**创建 API 键**。
 		* 输入 apiKey 名称和描述
 	3. 下载 apiKey。
@@ -81,14 +81,14 @@ lastupdated: "2017-04-18"
 ### 安装
 {: #installation}
 
-1. 通过运行以下命令安装 [{{site.data.keyword.dev_cli_short}} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in){: new_window}：
+1. 通过运行以下命令安装 [{{site.data.keyword.dev_cli_short}} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in "外部链接图标"){: new_window}：
  
 	```
 	bx plugin install dev -r Bluemix
 	```
 	{: codeblock}
 
-2. 	通过运行以下命令验证安装是否成功：  
+2. 	通过运行以下命令验证插件安装是否成功：  
  
 	```
 	bx dev
@@ -104,7 +104,7 @@ lastupdated: "2017-04-18"
 ### Build
 {: #build}
 
-您可以使用 `build` 命令构建应用程序。`build-cmd-run` 配置元素用于构建应用程序。`test`、`debug` 和 `run` 命令都会自动运行构建，因此并不一定需要提前明确运行 build 命令。
+您可以使用 `build` 命令构建应用程序。`build-cmd-run` 配置元素用于构建应用程序。`test`、`debug` 和 `run` 命令预期找到已编译的项目，因此您必须先提前至少运行一次构建操作。
 
 在当前项目目录中运行以下命令以构建应用程序：  
 
@@ -133,9 +133,9 @@ bx dev code <projectName>
 ### Create
 {: #create}
 
-创建新项目，系统会提示输入所有信息，包括语言、项目名称和应用程序模式类型。将在当前目录中创建项目。 
+创建项目，系统会提示输入所有信息，包括语言、项目名称和应用程序模式类型。将在当前目录中创建项目。 
 
-要在当前项目目录中创建新项目并将服务与其关联，请运行以下命令：
+要在当前项目目录中创建项目并将服务与其关联，请运行以下命令：
 
 ```
 bx dev create
@@ -146,9 +146,16 @@ bx dev create
 ### Debug
 {: #debug}
 
-您可以通过 `debug` 命令调试应用程序。通过将 `build-cmd-debug` 配置元素用作构建指令，先针对项目完成构建。然后启动容器，以提供 `container-port-map-debug` 中定义的调试端口。将偏好的调试工具连接到端口，可照常调试应用程序。
+您可以通过 `debug` 命令调试应用程序。必须先使用 build 命令，完成对项目的构建。当您调用 `debug` 命令时，会启动一个容器，其可提供一个或多个调试端口，如 `container-port-map-debug` 值所定义。将偏好的调试工具连接到端口，可照常调试应用程序。
 
 **限制**：Swift 项目不可用于调试。
+
+首先，对项目进行编译：
+
+```
+bx dev build
+```
+{: codeblock}
 
 在当前项目目录中运行以下命令以调试应用程序：
 
@@ -169,19 +176,19 @@ bx dev debug
 {: #port-map-debug}
 
 * 调试端口的端口映射。第一个值为要在主机操作系统中使用的端口，第二个值为容器中的端口 [host-port:container-port]。
-* 用法：`bx dev debug container-port-map-debug [7777:7777]`
+* 用法：`bx dev debug --container-port-map-debug [7777:7777]`
 
 ##### `build-cmd-debug`
 {: #build-cmd-debug}
 
-* 用于为 DEBUG 构建代码。
-* 用法：`bx dev debug build-cmd-debug build.command.sh`
+* 用于为 DEBUG 构建代码的参数。
+* 用法：`bx dev debug --build-cmd-debug build.command.sh`
 
 ##### `debug-cmd`
 {: #debug-cmd}
 
-* 用于在工具容器中调试代码。如果 `build-cmd-debug` 以调试方式启动应用程序，那么此参数是可选的。
-* 用法：`bx dev debug debug-cmd /the/debug/command`
+* 用于指定在工具容器中调用 debug 的命令的参数。如果 `build-cmd-debug` 以调试方式启动应用程序，请使用此参数。
+* 用法：`bx dev debug --debug-cmd /the/debug/command`
 
 #### 本地应用程序调试：
 {: #local-app-dev}
@@ -203,6 +210,26 @@ bx dev delete <projectName>
  
 
 **注：****不会**除去 {{site.data.keyword.Bluemix}} 服务。
+
+
+### Deploy
+{: #deploy}
+
+当您项目的根目录中存在 `manifest.yml` 文件时，通过 `deploy` 命令，可以将应用程序推送至 {{site.data.keyword.Bluemix}}。
+
+在当前项目目录中运行以下命令以构建应用程序：  
+
+```
+bx dev build
+```
+{: codeblock}
+
+运行以下命令可将项目部署到 {{site.data.keyword.Bluemix}}：
+
+```
+bx dev deploy
+```
+{: codeblock}
 
 
 ### Help
@@ -247,7 +274,14 @@ bx dev edit
 ### Run
 {: #run}
 
-您可以通过 `run` 命令运行应用程序。通过将 `build-cmd-run` 配置元素用作构建指令，先针对项目完成构建。然后，会启动运行容器，并公开 `container-port-map` 中定义的端口。如果运行容器不包含完成此步骤的入口点，那么可以使用 `run-cmd` 调用应用程序。 
+您可以通过 `run` 命令运行应用程序。必须先使用 `build` 命令，完成对项目的构建。调用 run 命令时，会启动运行容器，并公开 `container-port-map` 参数所定义的端口。如果运行容器 Dockerfile 不包含完成此步骤的入口点，那么可以使用 `run-cmd` 参数调用应用程序。 
+
+首先，对项目进行编译：
+
+```
+bx dev build
+```
+{: codeblock}
 
 在当前项目目录中运行以下命令以启动应用程序：
 
@@ -268,37 +302,37 @@ bx dev run
 {: #container-name-run}
 	
 * 运行容器的容器名称。
-* 用法：`bx dev run container-name-run <projectName>`
+* 用法：`bx dev run --container-name-run [<projectName>]`
 
 ##### `container-path-run`
 {: #container-path-run}
 
 * 容器中要在运行时共享的位置。
-* 用法：`bx dev run container-path-run [/path/to/app]`
+* 用法：`bx dev run --container-path-run [/path/to/app]`
 
 ##### `host-path-run`
 {: #host-path-run}
 
 * 容器中要针对运行共享的主机系统上的位置。
-* 用法：`bx dev run host-path-run [/path/to/app/bin]`
+* 用法：`bx dev run --host-path-run [/path/to/app/bin]`
 
 ##### `dockerfile-run`
 {: #dockerfile-run}
 
-* 运行容器的 Docker 文件。
-* 用法：`bx dev run dockerfile-run [/path/to/Dockerfile.yml]`
+* 运行容器的 Dockerfile。
+* 用法：`bx dev run --dockerfile-run [/path/to/Dockerfile.yml]`
 
 ##### `image-name-run`
 {: #image-name-run}
 
-* 要从 dockerfile-run 创建的映像。
-* 用法：`bx dev run image-name-run [/path/to/image-name]`
+* 要从 `dockerfile-run` 创建的映像。
+* 用法：`bx dev run --image-name-run [/path/to/image-name]`
 
 ##### `run-cmd`
 {: #run-cmd}
 
-* 用于在运行容器中运行代码的参数。如果映像将启动应用程序，那么此参数是可选的。
-* 用法：`bx dev run run-cmd [/the/run/command]`
+* 用于在运行容器中运行代码的参数。如果映像启动应用程序，请使用此参数。
+* 用法：`bx dev run --run-cmd [/the/run/command]`
 	
 ### Status
 {: #status}
@@ -319,29 +353,29 @@ bx dev status
 ### Stop
 {: #stop}
 
-您可以通过 `stop` 命令停止容器。使用 `container-name` 参数可指定要停止的容器。如果未指定此参数，那么 stop 命令将停止 `container-name-run` 参数所定义的运行容器。 
+您可以通过 `stop` 命令停止容器。
 
-在当前项目目录中运行以下命令以停止容器：
+要如 `cli-config.yml` 文件中所定义的那样停止工具并运行容器，请运行：
 
 ```
 bx dev stop
 ```
 {: codeblock}
 
+要停止未在 `cli-config.yml` 文件中定义的容器，您可以指定额外的命令行参数以对其进行覆盖。对于工具容器，请使用 [`--container-name-tools`](#container-name-tools) 参数，对于运行容器，请使用 [`--container-name-run`](#container-name-run) 参数。如果在 `cli-config.yml` 文件中或命令行上未指定任何容器，那么只是返回 stop 命令。
 
-#### 其他 stop 参数： 
-{: #stop-parameter}
-
-##### `container-name`
-{: #container-name}
-
-* 工具容器的容器名称。
-* 用法：`bx dev stop container-name <demo-tools>` 
 
 ### Test
 {: #test}
 
-您可以通过 `test` 命令测试应用程序。通过将 `build-cmd-run` 配置元素用作构建指令，先针对项目完成构建。然后，使用工具容器针对应用程序调用 `test-cmd`。
+您可以通过 `test` 命令测试应用程序。必须先使用 `build` 命令，完成对项目的构建。然后，使用工具容器针对应用程序调用 `test-cmd`。
+
+首先，对项目进行编译：
+
+```
+bx dev build
+```
+{: codeblock}
 
 运行以下命令以测试应用程序： 
 
@@ -365,47 +399,54 @@ bx dev test
 {: #container-name-tools}
 
 * 工具容器的容器名称。
-* 用法：`bx dev <build|debug|run|test> container-name-tools [<demo-tools>]`
+* 用法：`bx dev <build|debug|run|stop|test> --container-name-tools [<projectName>]`
 
 ### `host-path-tools`
 {: #host-path-tools}
 
 * 主机上要针对 build、debug 和 test 共享的位置。
-* 用法：`bx dev <build|debug|run|test> host-path-tools [/path/to/build/tools]`
+* 用法：`bx dev <build|debug|run|test> --host-path-tools [/path/to/build/tools]`
 
 ### `container-path-tools`
 {: #container-path-tools}
 
 * 容器中要针对 build、debug 和 test 共享的位置。
-* 用法：`bx dev <build|debug|run|test> container-path-tools [/path/for/build]`
+* 用法：`bx dev <build|debug|run|test> --container-path-tools [/path/for/build]`
 
 ### `container-port-map`
 {: #container-port-map}
 
 * 容器的端口映射。第一个值为要在主机操作系统中使用的端口，第二个值为容器中的端口 [host-port:container-port]。
-* 用法：`bx dev <build|debug|run|test> container-port-map [8090:8090,9090,9090]`
+* 用法：`bx dev <build|debug|run|test> --container-port-map [8090:8090,9090,9090]`
 
 ### `dockerfile-tools`
 {: #dockerfile-tools}
 
-* 工具容器的 Docker 文件。
-* 用法：`bx dev <build|debug|run|test> dockerfile-tools [path/to/dockerfile]`
+* 工具容器的 Dockerfile。
+* 用法：`bx dev <build|debug|run|test> --dockerfile-tools [path/to/dockerfile]`
 
 ### `image-name-tools`
 {: #image-name-tools}
 
-* 要从 dockerfile-tools 创建的映像。
-* 用法：`bx dev <build|debug|run|test> image-name-tools [path/to/image-name]`
+* 要从 `dockerfile-tools` 创建的映像。
+* 用法：`bx dev <build|debug|run|test> --image-name-tools [path/to/image-name]`
 
 ### `build-cmd-run`
 {: #build-cmd-run}
 
-* 用于针对除 DEBUG 之外的所有用法构建代码的命令。
-* 用法：`bx dev <build|debug|run|test> build-cmd-run [some.build.command]`
+* 用于指定针对除 DEBUG 之外的所有用法构建代码的命令的参数。
+* 用法：`bx dev <build|debug|run|test> --build-cmd-run [some.build.command]`
 
 ### `test-cmd`
 {: #test-cmd}
 
-* 用于在工具容器中测试代码的命令。
-* 用法：`bx dev <build|debug|run|test> test-cmd [/the/test/command]`
+* 用于指定在工具容器中测试代码的命令的参数。
+* 用法：`bx dev <build|debug|run|test> --test-cmd [/the/test/command]`
+
+### `trace`
+{: #trace}
+
+* 使用此参数来提供详细输出。
+* 用法：`bx dev <build|debug|run|test> --trace`
+
 

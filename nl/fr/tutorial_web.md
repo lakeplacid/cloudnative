@@ -1,8 +1,8 @@
----
+﻿---
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-06-12"
 
 ---
 {:new_window: target="_blank"}
@@ -11,36 +11,44 @@ lastupdated: "2017-04-18"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Tutoriel de bout en bout du module de démarrage Web Basic
+# Tutoriel de bout en bout du module de démarrage Web Basic 
 {: #tutorial}
 
-Le tutoriel de bout en bout suivant couvre les étapes de création d'un projet depuis le module de démarrage Web Basic, ce qui inclut l'installation des outils prérequis et la procédure d'exécution du code de projet.
-
-Vous pouvez créer un projet en utilisant la console [{{site.data.keyword.dev_console}}](#create-devex) reposant sur le Web ou le plug-in [{{site.data.keyword.dev_cli_notm}}](#create-cli) géré par commande.
+Le tutoriel de bout en bout ci-dessous vous guide tout au long des étapes de création d'un projet depuis le module de démarrage Web Basic. Il présente l'installation des outils prérequis et la procédure d'exécution du code du projet. 
 
 
 ## Installation des outils de développement
 {: #dev_tools}
 
-Prenez soin d'installer les [outils prérequis pour le développeur![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](get_code.html#prereq-dev-tools){: new_window}.
+Prenez soin d'installer les [outils de développement prérequis![External link icon](../icons/launch-glyph.svg "External link icon")](get_code.html#prereq-dev-tools){: new_window}.
+
+
+## Choisissez la façon dont vous allez créer votre projet 
+{: #choose_how}
+
+Vous pouvez créer un projet en utilisant la console [{{site.data.keyword.dev_console}}](#create-devex) reposant sur le Web ou le plug-in [{{site.data.keyword.dev_cli_notm}}](#create-cli) géré par commande. Une fois le projet créé, vous pouvez l'[exécuter](#run).
 
 
 ## Création d'un projet en utilisant la console {{site.data.keyword.dev_console}}
 {: #create-devex}
 
-1. Créez un projet dans la console {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}}:
+1. Créez un projet dans la console {{site.data.keyword.dev_console}} de {{site.data.keyword.Bluemix}} :
 
-	1. Dans la page de [**mise en route** ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://console.ng.bluemix.net/developer/getting-started/) de la console {{site.data.keyword.dev_console}},  cliquez sur la commande de création de projet..
+	1. Depuis la page [**Initiation** ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/developer/getting-started/) dans la console {{site.data.keyword.dev_console}}, cliquez sur **Créer un projet**.
 
-		Vous pouvez également cliquer sur la commande de création de projet dans la page des projets.
+		Vous pouvez également cliquer sur **Créer un projet** dans la page **Projets**. 
 
-	2. Sélectionnez l'option relative à l'application Web puis cliquez sur **Suivant**.
+	2. Sélectionnez **Appli Web**, puis cliquez sur **Suivant**.
 
-	3. Sélectionnez l'option relative à **Basic Web** puis cliquez sur **Suivant**.
+	3. Sélectionnez **Basic Web**, puis cliquez sur **Suivant**.
 
 	4. Entrez le nom de votre projet. Pour ce tutoriel, utilisez `WebBasicProject`.   
 
-	5. Entrez un nom d'hôte unique. Pour ce tutoriel, utilisez `devhost` 
+	5. Entrez un nom d'hôte unique, par exemple vos initiales, plus `-devhost`. Exemple :
+	
+	 ```
+	 abc-devhost
+ 	     ```
 
 	6. Sélectionnez votre plateforme de langage. Pour ce tutoriel, utilisez `Swift`.
    
@@ -50,18 +58,17 @@ Prenez soin d'installer les [outils prérequis pour le développeur![Icône de l
 
 	1. Cliquez sur **Afficher** pour **Données** sur la page **Présentation du projet**.
 
-      Vous pouvez aussi sélectionner les commandes de création ou d'ajout d'une fonctionnalité existante sur la page des fonctionnalités relatives aux données.
+      Vous pouvez aussi sélectionner **Créer** ou **Ajouter des instances existantes** dans la page **Fonctions > Données**. 
 
-   2. Entrez le nom de votre service et cliquez sur
-**Créer**.
+   2. Entrez le nom de votre service et cliquez sur **Créer**.
 
 3. Générez votre code de projet :
 
-	1. Cliquez sur  la commande relative à l'obtention du code sur la page de présentation du projet pour sélectionner votre langue.
+	1. Cliquez sur **Obtenir le code** dans la page **Présentation du projet** pour sélectionner votre langue. 
    
 		Vous pouvez également cliquer sur la page **Code**.
       
-	2. Cliquez sur la commande de génération de code.
+	2. Cliquez sur **Générer le code**.
    
 	3. Lorsque la génération du code du projet est terminée, cliquez sur **Télécharger le code** pour télécharger l'archive du projet.
 
@@ -71,7 +78,7 @@ Prenez soin d'installer les [outils prérequis pour le développeur![Icône de l
 	
 	2. Accédez au nouveau répertoire de projet.
 	
-	3. Utilisez la console {{site.data.keyword.dev_cli_notm}} pour poursuivre.
+	3. Utilisez le plug-in {{site.data.keyword.dev_cli_notm}} pour poursuivre.
 
 5. Facultatif : [mettez à jour votre projet](project_overview_page.html#update_language) pour générer un nouveau langage.
 
@@ -81,13 +88,12 @@ Prenez soin d'installer les [outils prérequis pour le développeur![Icône de l
 
 1. Prenez soin d'installer le plug-in [{{site.data.keyword.dev_cli_short}}](dev_cli.html).
 
-2. Dans votre invite de terminal, accédez au répertoire local de votre choix et exécutez la commande suivante.
+2. Dans votre invite de terminal, accédez au répertoire local de votre choix et exécutez la commande suivante :
   
 	```
 	bx dev create
 	```
 	{: codeblock}
-
 
 3. Fournissez les valeurs suivantes, quand vous y êtes invité :
 
@@ -95,15 +101,26 @@ Prenez soin d'installer les [outils prérequis pour le développeur![Icône de l
 	* Sélectionnez un module de démarrage : 1 (pour Basic Web)
 	* Sélectionnez un langage : 2 (pour Swift)
 	* Entrez le nom de votre projet : `WebBasicProjectCLI`
-	* Entrez un nom d'hôte pour votre projet : `myhost`
+	* Entrez un nom d'hôte pour votre projet : `abc-devhost`
+	  * Entrez un nom d'hôte unique, par exemple vos initiales, plus `-devhost`. Exemple :
+	
+	     ```
+	     abc-devhost
+ 	     ```
 
-4. Si vous voulez ajouter des services à votre projet, répondez par l'affirmative à la question qui vous est posée puis répondez aux questions suivantes.
+4. Une fois votre projet `WebBasicProjectCLI` sauvegardé, accédez au dossier `WebBasicProjectCLI`.
 
-5. Une fois votre projet `WebBasicProjectCLI` correctement sauvegardé, accédez au dossier `WebBasicProjectCLI`.
+5. Ajoutez votre propre code, puis générez et exécutez le projet.
 
-6. Ajoutez votre propre code et exécutez le projet.
+	
+	1. Générez le projet avec la commande suivante : 
  
-	1. Exécutez le projet avec la commande suivante :
+		```
+		bx dev build
+		```
+		{: codeblock}
+	 
+	2. Exécutez le projet avec la commande suivante :
  
 		```
 		bx dev run
@@ -114,38 +131,8 @@ Prenez soin d'installer les [outils prérequis pour le développeur![Icône de l
 ## Exécution d'un projet Web
 {: #run}
 
-### Localement
-{: #local notoc}
+Vous pouvez exécuter l'application localement sur votre système hôte si vous installez les outils de génération nécessaires ou en utilisant le support de conteneur disponible dans le plug-in {site.data.keyword.dev_cli_notm}}.
 
-1. Installez vos dépendances de noeud :
-
-  ```
-  npm install
-  ```
-  {: codeblock}
-
-2. Incluez votre code frontend dans un module :
-
-  ```
-  node_modules/.bin/gulp
-  ```
-  {: codeblock}
-
-3. Compilez votre serveur :
-
-  ```
-  swift build
-  ```
-  {: codeblock}
-
-4. Exécutez votre application :
-
-  ```
-  .build/debug/WebBasicProjectCLI
-  ```
-  {: codeblock}
-
-5. Accédez, dans votre navigateur, à l'URL `http://localhost:8080`.
 
 
 ### Utilisation du plug-in {{site.data.keyword.dev_cli_short}}
@@ -165,14 +152,22 @@ Prenez soin d'installer les [outils prérequis pour le développeur![Icône de l
   ```
   {: codeblock}
 
-3. Lancez la compilation :
+3. Pour générer le projet dans votre répertoire de projet en cours, entrez la commande suivante :
+
+  ```
+  bx dev build
+  ```
+  {: codeblock}
+
+4. Pour exécuter le projet dans votre répertoire de projet en cours, entrez la commande suivante :
+
 
   ```
   bx dev run
   ```
   {: codeblock}
 
-4. Accédez, dans votre navigateur, à l'URL `http://localhost:8080`.
+5. Dans votre navigateur, ouvrez l'URL `http://localhost:8080`.
 
 
 ## Exécution de votre projet dans Xcode
@@ -189,9 +184,9 @@ Prenez soin d'installer les [outils prérequis pour le développeur![Icône de l
 
 2. Rendez exécutable votre cible active :
 
-	Ouvrez votre projet sous Xcode et assurez-vous que votre cible active est exécutable. Vous pouvez maintenir enfoncée la touche d'option tout en cliquant sur le menu déroulant pour sélectionner l'exécutable actif voulu.
+	Ouvrez votre projet sous Xcode et assurez-vous que votre cible active est exécutable. Vous pouvez maintenir la touche d'option enfoncée et cliquer sur le menu déroulant pour sélectionner l'exécutable actif de votre choix. 
 
-3. Appuyez sur **run**.
+3. Cliquez sur **run**.
 
-4. Accédez, dans votre navigateur, à l'URL `http://localhost:8080`.
+4. Dans votre navigateur, ouvrez l'URL `http://localhost:8080`.
 

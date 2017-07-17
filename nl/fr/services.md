@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-25"
 
 ---
 {:new_window: target="_blank"}
@@ -13,7 +13,7 @@ lastupdated: "2017-03-17"
 # Services
 {: #services}
 
-La page **Services** d'{{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} vous permet de visualiser vos services Web et mobiles existants ou de créer de nouveaux services. La console fournit un emplacement unique qui permet d'afficher tous les services Web et mobiles {{site.data.keyword.Bluemix_notm}} gérés par les projets.  
+La page **Services** de la console {{site.data.keyword.dev_console}} de {{site.data.keyword.Bluemix}} vous permet de visualiser vos services Web et mobiles existants ou de créer de nouveaux services. La console fournit un emplacement unique qui permet d'afficher tous les services Web et mobiles {{site.data.keyword.Bluemix_notm}} gérés par les projets.  
 
 Si vous supprimez des services de la vue **Services**, ces derniers sont déconnectés du projet qui leur est associé. Vous devez alors créer une nouvelle instance de service si vous voulez reconnecter le service au projet.
 
@@ -26,6 +26,13 @@ Le tableau suivant décrit les services Web et mobiles {{site.data.keyword.Bluem
 <caption>Tableau 1. Services Web et mobiles {{site.data.keyword.Bluemix_notm}}</caption>
 <th>Service Web et mobile {{site.data.keyword.Bluemix_notm}}</th>
 <th>Description</th>
+<tr>
+<td> <img src="images/app_id_icon.png" alt="icône du service {{site.data.keyword.appid_short}}"><br/>{{site.data.keyword.app_id_short}}
+</td>
+<td valign="top">Utilisez le service {{site.data.keyword.app_id_full}} pour ajouter l'authentification à vos applications Web et mobiles et protéger vos systèmes de back end. <br/><br/>
+Pour plus d'informations sur le fonctionnement de ce service, reportez-vous à la documentation <a href="/docs/services/appid/index.html" alt="{{site.data.keyword.app_id_short}} documentation link">{{site.data.keyword.app_id_short}}</a>.
+</td>
+</tr>
 <tr>
 <td> <img src="images/mobile_analytics_icon.png" alt="icône {{site.data.keyword.mobileanalytics_short}}"><br/>{{site.data.keyword.mobileanalytics_short}}</td>
 <td valign="top">Le service {{site.data.keyword.mobileanalytics_full}} permet d'obtenir plus de détails sur les performances et l'utilisation de vos applications mobiles.<br/><br/>

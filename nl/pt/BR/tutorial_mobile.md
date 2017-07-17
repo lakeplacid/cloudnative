@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-05-18"
 
 ---
 {:new_window: target="_blank"}
@@ -14,14 +14,19 @@ lastupdated: "2017-04-18"
 # Tutorial de ponta a ponta do Iniciador Mobile Basic
 {: #tutorial}
 
-O tutorial de ponta a ponta a seguir o acompanha nas etapas para criar um projeto por meio do Mobile Basic Starter. Isso inclui instalar ferramentas de pré-requisito e as etapas para execução do projeto no Xcode e no Android Studio.
+O tutorial de ponta a ponta a seguir o acompanha nas etapas para criar um projeto por meio do Mobile Basic Starter. Esse guia inclui a instalação de ferramentas obrigatórias e as etapas para a execução do projeto em Xcode e em Android Studio.
 
-É possível criar um projeto usando o [{{site.data.keyword.dev_console}}](#create-devex) baseado na web ou por meio do [{{site.data.keyword.dev_cli_notm}}](#create-cli) orientado por comando.
 
 ## Instalando ferramentas do desenvolvedor
 {: #dev_tools}
 
-Assegure-se de instalar as [ferramentas de desenvolvedor de pré-requisito![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](get_code.html#prereq-dev-tools){: new_window}.
+Assegure-se de instalar as [ferramentas de desenvolvedor de pré-requisito![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](get_code.html#prereq-dev-tools "Ícone de link externo"){: new_window}.
+
+
+## Escolha como criar o seu projeto
+{: #choose_how}
+
+É possível criar um projeto usando o [{{site.data.keyword.dev_console}}](#create-devex) baseado na web ou por meio do [{{site.data.keyword.dev_cli_notm}}](#create-cli) orientado por comando.
 
 
 ## Criando um projeto usando o {{site.data.keyword.dev_console}}
@@ -29,7 +34,7 @@ Assegure-se de instalar as [ferramentas de desenvolvedor de pré-requisito![Íco
 
 1. Crie um projeto {{site.data.keyword.dev_console}} no {{site.data.keyword.Bluemix}}.
 
-   1. Na página [**Introdução** ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/developer/getting-started/) no {{site.data.keyword.dev_console}}, clique em **Criar projeto**.
+   1. Na página [**Introdução** ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/developer/getting-started/ "Ícone de link externo") no {{site.data.keyword.dev_console}}, clique em **Criar projeto**.
 
       Como alternativa, clique em **Criar projeto** na página **Projetos**.
 
@@ -55,8 +60,9 @@ Assegure-se de instalar as [ferramentas de desenvolvedor de pré-requisito![Íco
    
    4. Selecione seu provedor de identidade e insira as informações para configurá-lo. É possível ativar apenas um provedor de identidade.
    
-   5. Veja [Configurando provedores de identidade} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/appid/identity-providers.html){: new_window} para obter mais informações sobre como configurar a Autenticação.
+   5. Para obter mais informações sobre como configurar a autenticação, consulte [Configurando provedores de identidade} ![Ícone delink externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/appid/identity-providers.html "Ícone de link externo"){: new_window}.
 
+   
 3. Opcional: inclua o recurso de Analítica.
 
    1. Clique em **Incluir** para **Analítica** na página **Visão geral do projeto**.
@@ -67,7 +73,8 @@ Assegure-se de instalar as [ferramentas de desenvolvedor de pré-requisito![Íco
    
    3. Desligue o **Modo demo** para ver os seus lados de analítica após executar o seu aplicativo.
    
-   4. Veja [Introdução ao {{site.data.keyword.mobileanalytics_short}} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/mobileanalytics/index.html){: new_window} para obter mais informações sobre como configurar o Analytics.
+   4. Para obter mais informações sobre como configurar o Analytics, consulte [Introdução ao {{site.data.keyword.mobileanalytics_short}}
+![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/mobileanalytics/index.html "Ícone de link externo"){: new_window}.
 
 4. Opcional: inclua o recurso {{site.data.keyword.mobilepushshort}}.
 
@@ -77,9 +84,10 @@ Assegure-se de instalar as [ferramentas de desenvolvedor de pré-requisito![Íco
 
    2. Insira o nome do serviço e clique em **Criar**.
 
-   3. Para iOS, [configure o Apple Push Notification Service ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}.
+   3. Para iOS, [configure o Serviço de notificação push da Apple![Íconede link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/mobilepush/t_push_provider_ios.html "Ícone de link externo"){: new_window}.
 
-   4. Para Android, [configure o Firebase Cloud Messaging ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
+
+   4. Para Android, [configure o Sistema de mensagens de nuvem Firebase![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/mobilepush/t_push_provider_android.html "Ícone de link externo"){: new_window}.
 
 5. Opcional: inclua o recurso Dados.
 
@@ -91,9 +99,11 @@ Assegure-se de instalar as [ferramentas de desenvolvedor de pré-requisito![Íco
 
    3. Insira o nome do serviço e clique em **Criar**.
 
-   4. Veja [Introdução ao {{site.data.keyword.cloudant_short_notm}} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/Cloudant/index.html){: new_window} para obter mais informações sobre como configurar o {{site.data.keyword.cloudant_short_notm}}.
+   4. Para obter mais informações sobre como configurar o {{site.data.keyword.cloudant_short_notm}}, consulte
+[Introdução ao {{site.data.keyword.cloudant_short_notm}} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/Cloudant/index.html "Ícone de link externo"){: new_window}.
 
-   5. Veja [Introdução ao {{site.data.keyword.objectstorageshort}} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/ObjectStorage/index.html){: new_window} para obter mais informações sobre como configurar o {{site.data.keyword.objectstorageshort}}.
+   5. Para obter mais informações sobre como configurar o {{site.data.keyword.objectstorageshort}}, consulte [Introdução ao {{site.data.keyword.objectstorageshort}}
+![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/ObjectStorage/index.html "Ícone de link externo"){: new_window}.
 
 6. Gere seu código do projeto:
 
@@ -158,8 +168,7 @@ configurar seu repositório CocoaPods.
       2. Execute `pod update` se precisar
 atualizar os seus módulos existentes.
       
-      3. Execute `pod install` para instalar
-os módulos requeridos para seu projeto.
+      3. Execute `pod install` para instalar os pods para o seu projeto.
       
    3. Abra sua área de trabalho do Xcode `BasicProject.xcworkspace`.
       

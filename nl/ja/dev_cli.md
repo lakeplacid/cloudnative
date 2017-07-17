@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-06-13"
 
 ---
 {:new_window: target="_blank"}  
@@ -18,9 +18,9 @@ lastupdated: "2017-04-18"
 
 {: shortdesc}
 
-{{site.data.keyword.dev_cli_notm}} では、アプリケーションのビルドおよびテストを容易にするために、2 つのコンテナーを使用します。1 つ目は、アプリケーションのビルドとテストに必要なユーティリティーを含むツール・コンテナーです。このコンテナーの Dockerfile は、[dockerfile-tools](#command-parameters) パラメーターで定義されます。これは、特定のランタイムの開発に通常役立つツールを含むため、開発コンテナーとして考えることもできます。
+{{site.data.keyword.dev_cli_notm}} では、アプリケーションのビルドおよびテストを容易にするために、2 つのコンテナーを使用します。1 つ目は、アプリケーションのビルドとテストに必要なユーティリティーを含むツール・コンテナーです。このコンテナーの Dockerfile は、[`dockerfile-tools`](#command-parameters) パラメーターで定義されます。これは、特定のランタイムの開発に通常役立つツールを含むため、開発コンテナーとして考えることもできます。
 
-2 つ目のコンテナーは実行コンテナーです。このコンテナーは、例えば {{site.data.keyword.Bluemix}} などで使用するためにデプロイされるのに適した形式のものです。結果として、このコンテナーには一般的に、アプリケーションを開始するエントリー・ポイントが定義されます。{{site.data.keyword.dev_cli_short}} でアプリケーションを実行することを選択すると、このコンテナーが使用されます。このコンテナーの Dockerfile は、[dockerfile-run](#run-parameters) パラメーターで定義されます。
+2 つ目のコンテナーは実行コンテナーです。このコンテナーは、例えば {{site.data.keyword.Bluemix}} などで使用するためにデプロイされるのに適した形式のものです。結果として、アプリケーションを開始するエントリー・ポイントが定義されます。{{site.data.keyword.dev_cli_short}} でアプリケーションを実行することを選択すると、このコンテナーが使用されます。このコンテナーの Dockerfile は、[`dockerfile-run`](#run-parameters) パラメーターで定義されます。
 
 
 ## {{site.data.keyword.dev_cli_notm}} の追加
@@ -30,15 +30,15 @@ lastupdated: "2017-04-18"
 ### 前提条件
 {: #prereq}
 
-{{site.data.keyword.dev_cli_short}} は高度に拡張可能であり、追加の無料テクノロジーを活用できるようにするものであるため、これをフルに探索して適切に利用するにはいくつかの前提条件があります。
+{{site.data.keyword.dev_cli_short}} は追加の無料テクノロジーを活用できるように高度に拡張可能であるため、これをフルに探索して適切に利用するには、いくつかの前提条件を入手する必要があります。
 
-1. [Cloud Foundry CLI ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/cloudfoundry/cli#getting-started) をインストールします。
+<!--1. Install the [Cloud Foundry CLI ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/cli#getting-started "External link icon").-->
 
-2. [{{site.data.keyword.Bluemix}} CLI ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://clis.ng.bluemix.net/ui/home.html) をインストールします。
+1. [{{site.data.keyword.Bluemix}} CLI ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://clis.ng.bluemix.net/ui/home.html "外部リンク・アイコン") をインストールします。
 
-3. [{{site.data.keyword.Bluemix_notm}}](https://www.bluemix.net) ID を入手します。
+2. [{{site.data.keyword.Bluemix_notm}}](https://www.bluemix.net) ID を入手します。
 
-4. ローカルでのアプリケーションの実行およびデバッグを予定している場合は、[Docker ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.docker.com/get-docker) のインストールも必要です。Docker のインストールは、非モバイル・プロジェクトにのみ必要です。
+3. ローカルでのアプリケーションの実行およびデバッグを予定している場合は、[Docker ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.docker.com/get-docker "外部リンク・アイコン") のインストールも必要です。
 
 
 ### 始めに
@@ -65,7 +65,7 @@ lastupdated: "2017-04-18"
 	
 	This link does not work in production yet --> 
 	
-	1. [{{site.data.keyword.iamshort}} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.bluemix.net/iam/#/apikeys){: new_window} にログインします。
+	1. [{{site.data.keyword.iamshort}} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.bluemix.net/iam/#/apikeys "外部リンク・アイコン"){: new_window} にログインします。
 	2. **「API キーの作成」**を選択します。
 		* apiKey の名前と説明を入力します。
 	3. apiKey をダウンロードします。
@@ -81,14 +81,14 @@ lastupdated: "2017-04-18"
 ### インストール
 {: #installation}
 
-1. 以下のコマンドを実行して、[{{site.data.keyword.dev_cli_short}} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in){: new_window} をインストールします。
+1. 以下のコマンドを実行して、[{{site.data.keyword.dev_cli_short}} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in "外部リンク・アイコン"){: new_window} をインストールします。
  
 	```
 	bx plugin install dev -r Bluemix
 	```
 	{: codeblock}
 
-2. 	以下のコマンドを実行して、インストールが成功したことを確認します。  
+2. 	以下のコマンドを実行して、プラグインのインストールが成功したことを確認します。  
  
 	```
 	bx dev
@@ -104,7 +104,7 @@ lastupdated: "2017-04-18"
 ### build
 {: #build}
 
-`build` コマンドを使用してアプリケーションをビルドすることができます。アプリケーションのビルドには、`build-cmd-run` 構成エレメントが使用されます。`test`、`debug`、および `run` の各コマンドはすべて、ビルドを自動的に実行するため、事前に build コマンドを明示的に実行することが常に必要となるわけではありません。
+`build` コマンドを使用してアプリケーションをビルドすることができます。アプリケーションのビルドには、`build-cmd-run` 構成エレメントが使用されます。`test`、`debug`、および `run` の各コマンドは、コンパイルされたプロジェクトを検出することを予期しているため、事前に少なくとも 1 度はビルド操作を実行しておく必要があります。
 
 アプリケーションをビルドするには、現行プロジェクト・ディレクトリーで以下のコマンドを実行します。  
 
@@ -133,9 +133,9 @@ bx dev code <projectName>
 ### create
 {: #create}
 
-新規プロジェクトを作成します。言語、プロジェクト名、アプリ・パターン・タイプなど、すべての情報の入力を求められます。プロジェクトが現行ディレクトリーに作成されます。 
+プロジェクトを作成します。言語、プロジェクト名、アプリ・パターン・タイプなど、すべての情報の入力を求められます。プロジェクトが現行ディレクトリーに作成されます。 
 
-現行プロジェクト・ディレクトリーに新規プロジェクトを作成して、それにサービスを関連付けるには、以下のコマンドを実行します。
+現行プロジェクト・ディレクトリーにプロジェクトを作成して、それにサービスを関連付けるには、以下のコマンドを実行します。
 
 ```
 bx dev create
@@ -146,9 +146,16 @@ bx dev create
 ### debug
 {: #debug}
 
-`debug` コマンドを使用してアプリケーションをデバッグすることができます。まず、ビルド命令として `build-cmd-debug` 構成エレメントを使用して、プロジェクトに対してビルドが実行されます。その後、`container-port-map-debug` で定義されたデバッグ・ポート (複数可) を提供するコンテナーが開始されます。任意のデバッグ・ツールをポートに接続して、アプリケーションを通常どおりデバッグできます。
+`debug` コマンドを使用してアプリケーションをデバッグすることができます。まず、build コマンドを使用して、プロジェクトに対してビルドを完了する必要があります。`debug` コマンドを呼び出すと、`container-port-map-debug` の値で定義されたデバッグ・ポート (複数可) を提供するコンテナーが開始されます。任意のデバッグ・ツールをポートに接続して、アプリケーションを通常どおりデバッグできます。
 
 **制限事項**: Swift プロジェクトをデバッグに使用できません。
+
+まず、プロジェクトをコンパイルします。
+
+```
+bx dev build
+```
+{: codeblock}
 
 アプリケーションをデバッグするには、現行プロジェクト・ディレクトリーで以下のコマンドを実行します。
 
@@ -169,19 +176,19 @@ bx dev debug
 {: #port-map-debug}
 
 * デバッグ・ポートのポート・マッピング。最初の値は、ホスト OS で使用するポートで、2 つ目の値はコンテナー内のポートです [host-port:container-port]。
-* 使用法: `bx dev debug container-port-map-debug [7777:7777]`
+* 使用法: `bx dev debug --container-port-map-debug [7777:7777]`
 
 ##### `build-cmd-debug`
 {: #build-cmd-debug}
 
-* デバッグのためにコードをビルドするのに使用されます。
-* 使用法: `bx dev debug build-cmd-debug build.command.sh`
+* デバッグ用にコードをビルドするために使用されるパラメーター。
+* 使用法: `bx dev debug --build-cmd-debug build.command.sh`
 
 ##### `debug-cmd`
 {: #debug-cmd}
 
-* ツール・コンテナーでコードをデバッグするのに使用されます。`build-cmd-debug` がデバッグでアプリケーションを開始する場合、このパラメーターはオプションです。
-* 使用法: `bx dev debug debug-cmd /the/debug/command`
+* ツール・コンテナーで debug を呼び出すコマンドを指定するために使用されるパラメーター。`build-cmd-debug` がデバッグでアプリケーションを開始する場合に、このパラメーターを使用します。
+* 使用法: `bx dev debug --debug-cmd /the/debug/command`
 
 #### ローカル・アプリケーション・デバッグ:
 {: #local-app-dev}
@@ -203,6 +210,26 @@ bx dev delete <projectName>
  
 
 **注:** {{site.data.keyword.Bluemix}} サービスは**削除されません**。
+
+
+### deploy
+{: #deploy}
+
+プロジェクトのルート・ディレクトリーに `manifest.yml` ファイルがある場合は、`deploy` コマンドによってアプリケーションを {{site.data.keyword.Bluemix}} にプッシュできます。
+
+アプリケーションをビルドするには、現行プロジェクト・ディレクトリーで以下のコマンドを実行します。  
+
+```
+bx dev build
+```
+{: codeblock}
+
+プロジェクトを {{site.data.keyword.Bluemix}} にデプロイするには、以下のコマンドを実行します。
+
+```
+bx dev deploy
+```
+{: codeblock}
 
 
 ### help
@@ -247,7 +274,14 @@ bx dev edit
 ### run
 {: #run}
 
-`run` コマンドを使用してアプリケーションを実行することができます。まず、ビルド命令として `build-cmd-run` 構成エレメントを使用して、プロジェクトに対してビルドが実行されます。その後、実行コンテナーが開始され、`container-port-map` で定義されたポートを公開します。このステップを完了するためのエントリー・ポイントが実行コンテナーに含まれない場合は、`run-cmd` を使用してアプリケーションを呼び出すことができます。 
+`run` コマンドを使用してアプリケーションを実行することができます。まず、`build` コマンドを使用して、プロジェクトに対してビルドを完了する必要があります。run コマンドを呼び出すと、実行コンテナーが開始され、`container-port-map` パラメーターで定義されたポートを公開します。このステップを完了するためのエントリー・ポイントが実行コンテナー Dockerfile に含まれない場合は、`run-cmd` パラメーターを使用してアプリケーションを呼び出すことができます。 
+
+まず、プロジェクトをコンパイルします。
+
+```
+bx dev build
+```
+{: codeblock}
 
 アプリケーションを開始するには、現行プロジェクト・ディレクトリーで以下のコマンドを実行します。
 
@@ -268,37 +302,37 @@ bx dev run
 {: #container-name-run}
 	
 * 実行コンテナーのコンテナー名。
-* 使用法: `bx dev run container-name-run <projectName>`
+* 使用法: `bx dev run --container-name-run [<projectName>]`
 
 ##### `container-path-run`
 {: #container-path-run}
 
 * 実行に関して共有するコンテナー内の場所。
-* 使用法: `bx dev run container-path-run [/path/to/app]`
+* 使用法: `bx dev run --container-path-run [/path/to/app]`
 
 ##### `host-path-run`
 {: #host-path-run}
 
 * 実行に関してコンテナーで共有するホスト・システム上の場所。
-* 使用法: `bx dev run host-path-run [/path/to/app/bin]`
+* 使用法: `bx dev run --host-path-run [/path/to/app/bin]`
 
 ##### `dockerfile-run`
 {: #dockerfile-run}
 
-* 実行コンテナーの Docker ファイル。
-* 使用法: `bx dev run dockerfile-run [/path/to/Dockerfile.yml]`
+* 実行コンテナーの Dockerfile。
+* 使用法: `bx dev run --dockerfile-run [/path/to/Dockerfile.yml]`
 
 ##### `image-name-run`
 {: #image-name-run}
 
-* dockerfile-run から作成するイメージ。
-* 使用法: `bx dev run image-name-run [/path/to/image-name]`
+* `dockerfile-run` から作成するイメージ。
+* 使用法: `bx dev run --image-name-run [/path/to/image-name]`
 
 ##### `run-cmd`
 {: #run-cmd}
 
-* 実行コンテナーでコードを実行するのに使用されるパラメーター。イメージによってアプリケーションが開始される場合、このパラメーターはオプションです。
-* 使用法: `bx dev run run-cmd [/the/run/command]`
+* 実行コンテナーでコードを実行するのに使用されるパラメーター。イメージによってアプリケーションが開始される場合に、このパラメーターを使用してください。
+* 使用法: `bx dev run --run-cmd [/the/run/command]`
 	
 ### status
 {: #status}
@@ -319,29 +353,29 @@ bx dev status
 ### stop
 {: #stop}
 
-`stop` コマンドを使用してコンテナーを停止することができます。`container-name` パラメーターを使用して、停止するコンテナーを指定します。このパラメーターを指定しないと、stop コマンドは `container-name-run` パラメーターで定義された実行コンテナーを停止します。 
+`stop` コマンドを使用してコンテナーを停止することができます。
 
-コンテナーを停止するには、現行プロジェクト・ディレクトリーで以下のコマンドを実行します。
+`cli-config.yml` ファイルで定義されているツールを停止してコンテナーを実行するには、以下を実行してください。
 
 ```
 bx dev stop
 ```
 {: codeblock}
 
+`cli-config.yml` ファイルで定義されていないコンテナーを停止するには、追加のコマンド・ライン・パラメーターを指定してオーバーライドします。ツール・コンテナーに対しては [`--container-name-tools`](#container-name-tools) パラメーターを使用し、実行コンテナーに対しては[`--container-name-run`](#container-name-run) パラメーターを使用します。`cli-config.yml` ファイルでもコマンド・ラインでもコンテナーが指定されていない場合、stop コマンドは単にリターンします。
 
-#### 追加の stop パラメーター: 
-{: #stop-parameter}
-
-##### `container-name`
-{: #container-name}
-
-* ツール・コンテナーのコンテナー名。
-* 使用法: `bx dev stop container-name <demo-tools>` 
 
 ### test
 {: #test}
 
-`test` コマンドを使用してアプリケーションをテストすることができます。まず、ビルド命令として `build-cmd-run` 構成エレメントを使用して、プロジェクトに対してビルドが実行されます。その後、ツール・コンテナーを使用して、アプリケーションの `test-cmd` を呼び出します。
+`test` コマンドを使用してアプリケーションをテストすることができます。まず、`build` コマンドを使用して、プロジェクトに対してビルドを完了する必要があります。その後、ツール・コンテナーを使用して、アプリケーションの `test-cmd` を呼び出します。
+
+まず、プロジェクトをコンパイルします。
+
+```
+bx dev build
+```
+{: codeblock}
 
 アプリケーションをテストするには、以下のコマンドを実行します。 
 
@@ -365,47 +399,54 @@ bx dev test
 {: #container-name-tools}
 
 * ツール・コンテナーのコンテナー名。
-* 使用法: `bx dev <build|debug|run|test> container-name-tools [<demo-tools>]`
+* 使用法: `bx dev <build|debug|run|stop|test> --container-name-tools [<projectName>]`
 
 ### `host-path-tools`
 {: #host-path-tools}
 
 * build、debug、test の場合に共有するホスト上の場所。
-* 使用法: `bx dev <build|debug|run|test> host-path-tools [/path/to/build/tools]`
+* 使用法: `bx dev <build|debug|run|test> --host-path-tools [/path/to/build/tools]`
 
 ### `container-path-tools`
 {: #container-path-tools}
 
 * build、debug、test の場合に共有するコンテナー内の場所。
-* 使用法: `bx dev <build|debug|run|test> container-path-tools [/path/for/build]`
+* 使用法: `bx dev <build|debug|run|test> --container-path-tools [/path/for/build]`
 
 ### `container-port-map`
 {: #container-port-map}
 
 * コンテナーのポート・マッピング。最初の値は、ホスト OS で使用するポートで、2 つ目の値はコンテナー内のポートです [host-port:container-port]。
-* 使用法: `bx dev <build|debug|run|test> container-port-map [8090:8090,9090,9090]`
+* 使用法: `bx dev <build|debug|run|test> --container-port-map [8090:8090,9090,9090]`
 
 ### `dockerfile-tools`
 {: #dockerfile-tools}
 
-* ツール・コンテナーの Docker ファイル。
-* 使用法: `bx dev <build|debug|run|test> dockerfile-tools [path/to/dockerfile]`
+* ツール・コンテナーの Dockerfile。
+* 使用法: `bx dev <build|debug|run|test> --dockerfile-tools [path/to/dockerfile]`
 
 ### `image-name-tools`
 {: #image-name-tools}
 
-* dockerfile-tools から作成するイメージ。
-* 使用法: `bx dev <build|debug|run|test> image-name-tools [path/to/image-name]`
+* `dockerfile-tools` から作成するイメージ。
+* 使用法: `bx dev <build|debug|run|test> --image-name-tools [path/to/image-name]`
 
 ### `build-cmd-run`
 {: #build-cmd-run}
 
-* デバッグ以外のすべての使用で、コードをビルドするコマンド。
-* 使用法: `bx dev <build|debug|run|test> build-cmd-run [some.build.command]`
+* デバッグ以外のすべての用途でコードをビルドするコマンドを指定するために使用されるパラメーター。
+* 使用法: `bx dev <build|debug|run|test> --build-cmd-run [some.build.command]`
 
 ### `test-cmd`
 {: #test-cmd}
 
-* ツール・コンテナーでコードをテストするコマンド。
-* 使用法: `bx dev <build|debug|run|test> test-cmd [/the/test/command]`
+* ツール・コンテナーでコードをテストするコマンドを指定するために使用されるパラメーター。
+* 使用法: `bx dev <build|debug|run|test> --test-cmd [/the/test/command]`
+
+### `trace`
+{: #trace}
+
+* このパラメーターは、詳細出力を提供するために使用します。
+* 使用法: `bx dev <build|debug|run|test> --trace`
+
 

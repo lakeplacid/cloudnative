@@ -1,3 +1,4 @@
+<!-- Markdown Navigation -->
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
@@ -16,9 +17,9 @@ Génération de projets de cloud natifs
         services.md
 
     {: .topicgroup}
-    Plug-ins pour l'interface de ligne de commande Bluemix
+    Plug-in pour l'interface de ligne de commande Bluemix
         dev_cli.md
-        dev_cli_local_debug.md
+            dev_cli_local_debug.md
         sdk_cli.md
 
     {: .topicgroup}
@@ -37,7 +38,7 @@ Génération de projets de cloud natifs
 
     {: .navgroup id="help"}
     troubleshoot.md
-    [stackoverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
+    [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
     [Obtenir de l'aide](../support/index.html#getting-help)
-    [Contacter le support](../support/index.html#contacting-support)
+    [Contacter le service de support](../support/index.html#contacting-support)
     {: .navgroup-end}

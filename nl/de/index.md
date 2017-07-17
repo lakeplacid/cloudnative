@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-04-10"
+lastupdated: "2016-06-23"
 
 ---
 {:new_window: target="_blank"}
@@ -12,12 +12,12 @@ lastupdated: "2016-04-10"
 {:pre: .pre}
 {:note:.deprecated}
 
-# Cloudorientierte Projekte erstellen
+# Für die Cloud native Projekte erstellen
 {: #web-mobile}
 
-Sie können cloudorientierte Apps unter Verwendung des Konzepts der {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}}-[Projekte](projects.html) verwalten. Sie können ein Projekt mit der [{{site.data.keyword.dev_console}}](devex.html) oder dem [{{site.data.keyword.dev_cli_notm}}](dev_cli.html) für die {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} CLI verwalten. Die {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} stellt die am meisten gebräuchlichen Servicefunktionen, die für einen cloudorientierten Anwendungsentwickler erforderlich sind, in einer einzigen übergreifenden Umgebung bereit, die für Entwickler optimiert wurde.
+Sie können für die Cloud native Apps unter Verwendung des Konzepts der {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}}-*Projekte* verwalten. Sie können ein Projekt mit der [{{site.data.keyword.dev_console}}](devex.html) oder dem [{{site.data.keyword.dev_cli_notm}}](dev_cli.html) für die {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} CLI verwalten. Die {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} stellt die am meisten gebräuchlichen Servicefunktionen, die für einen Entwickler von für die Cloud nativen Anwendungen erforderlich sind, in einer einzigen übergreifenden Umgebung bereit, die für Entwickler optimiert wurde.
 
-Die {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} ermöglicht einem cloudorientierten Anwendungsentwickler die Erstellung eines Projekts über eine Vielzahl von [Mustertypen](patterns.html) und [Startern](starters.html), die Erstellung wichtiger {{site.data.keyword.Bluemix_notm}}-optimierter Services und deren Verbindung mit Ihrem Projekt sowie das schnelle Herunterladen von Code mithilfe von SDKs. Die SDKs sind vollständig mit den Funktionsberechtigungsnachweisen oder Abhängigkeiten integriert, um Ihnen die Ausführung innerhalb weniger Minuten zu ermöglichen. Wenn Ihre Anwendung aktiv ist und Sie die Funktionen eingerichtet und konfiguriert haben, können Sie zu Ihrem Projekt zurückkehren, um die Aktivitäten Ihrer Anwendungsbenutzer zu überwachen und zu verwalten. Sie können die Services auch über die {{site.data.keyword.dev_console}} konfigurieren und verwalten.
+Die {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} ermöglicht einem Entwickler von für die Cloud nativen Anwendungen die Erstellung eines Projekts über eine Vielzahl von Mustertypen und Startern, die Erstellung wichtiger {{site.data.keyword.Bluemix_notm}}-optimierter Services und deren Verbindung mit Ihrem Projekt sowie das schnelle Herunterladen von Code mithilfe von SDKs. Die SDKs sind vollständig mit den Funktionsberechtigungsnachweisen oder Abhängigkeiten integriert, um Ihnen die Ausführung innerhalb weniger Minuten zu ermöglichen. Wenn Ihre Anwendung aktiv ist und Sie die Funktionen eingerichtet und konfiguriert haben, können Sie zu Ihrem Projekt zurückkehren, um die Aktivitäten Ihrer Anwendungsbenutzer zu überwachen und zu verwalten. Sie können die Services auch über die {{site.data.keyword.dev_console}} konfigurieren und verwalten.
 
 <!--
 While the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} provides an integrated development experience, some developers might still want to have finer-grained control and wire services together manually. If this is your preferred approach, you might want to consider using the [{{site.data.keyword.mobilefirstbp}} Starter boilerplate](try_mobile.html).
@@ -34,9 +34,7 @@ The Mobile dashboard provides an integrated experience on {{site.data.keyword.Bl
 
 Die {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} kombiniert die App-Benutzerschnittstelle, die Daten und Services zu einem vollständigen Projekt (*project*). Indem Sie ein Projekt erstellen, werden alle erforderlichen Teile Ihrer App und die hinzugefügten Funktionen auf dem {{site.data.keyword.Bluemix_notm}}-Server beibehalten. Sie können den App-Code und die erforderlichen Berechtigungsnachweise und Initialisierungsoperatoren herunterladen, wenn die Services im Projekt konfiguriert sind. Durch Auswahl von **Projekte** können Sie alle Projekte anzeigen.  
 
-Sie können zusätzliche Informationen zu einem einzelnen Projekt anzeigen; hierfür müssen Sie es auf der Seite **Projekte** auswählen. Dadurch wird die Seite **Projektübersicht** angezeigt; dort sind die Services aufgeführt, die konfiguriert und für das Projekt verfügbar sind. Services sind separate Funktionen, die Ihre App durch Hinzufügen einer Funktion erweitern. Da sie einzeln hinzugefügt werden, können Sie sich auf die Services beschränken, die Sie benötigen, wie zum Beispiel Push-, Authentication-, Data- und Storage-Services oder andere Services. Wenn Sie auf der Seite **Projektübersicht** einen Service zu Ihrem Projekt hinzufügen und die Anweisungen zum Konfigurieren des Service befolgen, wird der Service automatisch Ihrer App zugeordnet. Weitere Informationen zur Seite 'Projektübersicht' finden Sie im Abschnitt [Seite 'Projektübersicht'](project_overview_page.html).
-
-Zum Erstellen eines Projekts müssen Sie ein [Muster](patterns.html) und danach einen [Starter](starters.html) auswählen.
+Sie können zusätzliche Informationen zu einem einzelnen Projekt anzeigen; hierfür müssen Sie es auf der Seite **Projekte** auswählen. Dadurch wird die Seite **Projektübersicht** angezeigt; dort sind die Services aufgeführt, die konfiguriert und für das Projekt verfügbar sind. Services sind separate Funktionen, die Ihre App durch Hinzufügen einer Funktion erweitern. Da sie einzeln hinzugefügt werden, können Sie sich auf die Services beschränken, die Sie benötigen, wie zum Beispiel Push-, Authentication-, Data- und Storage-Services oder andere Services. Wenn Sie auf der Seite **Projektübersicht** einen Service zu Ihrem Projekt hinzufügen und die Anweisungen zum Konfigurieren des Service befolgen, wird der Service automatisch Ihrer App zugeordnet. 
 
 
 ### Seite 'Projektübersicht'
@@ -79,7 +77,7 @@ Wählen Sie **Code abrufen** in der Kachel **Code** aus, um den Code für Ihr Pr
 ## Mustertypen
 {: #patterns}
 
-Cloudorientierte Muster sind bewährte Designs, die dazu beitragen, eine konsistente, skalierbare und zuverlässige Topologie für die Anwendungen sicherzustellen. Wenn Sie ein Projekt erstellen, können Sie aus verschiedenen Mustertypen einen auswählen. Sie wählen einfach Mustertyp und Funktionen aus, die im Projekt enthalten sein sollen. Nachdem Sie die Projektvorgaben definiert haben, wird ein Starter-Projekt generiert, das Sie bearbeiten, ausführen oder debuggen und lokal oder in {{site.data.keyword.Bluemix}} bereitstellen können.
+Für die Cloud native Muster sind bewährte Designs, die dazu beitragen, eine konsistente, skalierbare und zuverlässige Topologie für die Anwendungen sicherzustellen. Wenn Sie ein Projekt erstellen, können Sie aus verschiedenen Mustertypen einen auswählen. Sie wählen einfach Mustertyp und Funktionen aus, die im Projekt enthalten sein sollen. Nachdem Sie die Projektvorgaben definiert haben, wird ein Starter-Projekt generiert, das Sie bearbeiten, ausführen oder debuggen und lokal oder in {{site.data.keyword.Bluemix}} bereitstellen können.
 
 
 ### Web-App
@@ -107,15 +105,15 @@ Sie können die mobilen Apps in Swift, Android oder Cordova generieren.
 ### Backend for Frontend (BFF)
 {: #bff}
 
-BFF-Muster, die auch als BFFs bezeichnet werden, unterstützen Sie bei der Bereitstellung von Geschäftsdaten und Services in einer Form, die mit den Anforderungen für die Benutzerinteraktion übereinstimmt. Um die User Journey zu Ihrer Cloudlösung optimieren zu können, benötigen Sie für mobile Anwendungen möglicherweise eine separate User Journey sowie eine User Journey für Webanwendungen, die normalerweise umfangreicher und detaillierter gestaltet ist. Durch die Einführung sprachgesteuerter Einheiten wie z. B. den [{{site.data.keyword.conversationfull}} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/watson/developercloud/conversation.html)-Service kann die Interaktion mit einem Benutzer sprachlich gesteuert werden. Dieser digitale Vertriebskanal erfordert ein grundlegend anderes BFF zur Verwaltung dieser absichtsbasierten Sprachinteraktionen. 
+BFF-Muster, die auch als BFFs bezeichnet werden, unterstützen Sie bei der Bereitstellung von Geschäftsdaten und Services in einer Form, die mit den Anforderungen für die Benutzerinteraktion übereinstimmt. Um die User Journey zu Ihrer Cloudlösung optimieren zu können, benötigen Sie für mobile Anwendungen möglicherweise eine separate User Journey sowie eine User Journey für Webanwendungen, die normalerweise umfangreicher und detaillierter gestaltet ist. Durch die Einführung sprachgesteuerter Einheiten wie z. B. den [{{site.data.keyword.conversationfull}} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/watson/developercloud/conversation.html "Symbol für externen Link")-Service kann die Interaktion mit einem Benutzer sprachlich gesteuert werden. Dieser digitale Vertriebskanal erfordert ein grundlegend anderes BFF zur Verwaltung dieser absichtsbasierten Sprachinteraktionen.
 
-Mit {{site.data.keyword.Bluemix_notm}} können Sie ein BFF erstellen, indem Sie einen polyglotten Programmieransatz zum Definieren des BFF anwenden. IBM empfiehlt die Verwendung von Node.js, Swift oder Java und die Ausführung dieser Komponenten in einem cloudorientierten nativen Muster entweder mit Cloud Foundry, Container-Services oder ohne Server.
+Mit {{site.data.keyword.Bluemix_notm}} können Sie ein BFF erstellen, indem Sie einen polyglotten Programmieransatz zum Definieren des BFF anwenden. IBM empfiehlt die Verwendung von Node.js, Swift oder Java und die Ausführung dieser Komponenten in einem für die Cloud nativen Muster entweder mit Cloud Foundry, Container-Services oder ohne Server.
 
-Das BFF verwaltet die Integration mit Services für die Datenpersistenz, das Caching und die Integration mit hochwertigen Services wie {{site.data.keyword.ibmwatson}}, {{site.data.keyword.iot_short_notm}}, {{site.data.keyword.weather_short}} sowie mit Datenanalyseprodukten wie {{site.data.keyword.sparks}}. 
+Das BFF verwaltet die Integration mit Services für die Datenpersistenz, das Caching und die Integration mit hochwertigen Services wie {{site.data.keyword.ibmwatson}}, {{site.data.keyword.iot_short_notm}}, {{site.data.keyword.weather_short}} sowie mit Datenanalyseprodukten wie {{site.data.keyword.sparks}}.
 
-Das BFF stellt eine API bereit, die im Normalfall ein REST-Muster verwendet. Sie können das BFF jedoch auch so entwerfen, dass es über eine Nachrichtenarchitektur mit {{site.data.keyword.messagehub}} arbeitet. 
+Das BFF stellt eine API bereit, die im Normalfall ein REST-Muster verwendet. Sie können das BFF jedoch auch so entwerfen, dass es über eine Nachrichtenarchitektur mit {{site.data.keyword.messagehub}} arbeitet.
 
-Ein BFF Basic Starter steht bei Verwendung von Node.js oder Swift zur Verfügung. 
+Ein BFF Basic Starter steht bei Verwendung von Node.js oder Swift zur Verfügung.
 
 
 ### Microservice
@@ -140,9 +138,9 @@ Content to be provided by Karl Bishop.
 
 Folgende Sprachen werden unterstützt:
 
-   * [Java ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](../runtimes/liberty/getting-started.html){: new_window}
-   * [Node.js ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](../runtimes/nodejs/getting-started.html){: new_window}
-   * [Swift ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](../runtimes/swift/getting-started.html){: new_window}
+   * [Java ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](../runtimes/liberty/getting-started.html "Symbol für externen Link"){: new_window}
+   * [Node.js ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](../runtimes/nodejs/getting-started.html "Symbol für externen Link"){: new_window}
+   * [Swift ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](../runtimes/swift/getting-started.html "Symbol für externen Link"){: new_window}
 
 
 #### Java

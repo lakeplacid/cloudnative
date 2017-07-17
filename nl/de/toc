@@ -1,8 +1,9 @@
+<!-- Markdown Navigation -->
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="cloudnative" audience="platform" href="/docs/cloudnative/index.html"}
-Cloudorientierte Projekte erstellen
+Für die Cloud native Projekte erstellen
 
     {: .navgroup id="learn"}
     index.md
@@ -16,7 +17,7 @@ Cloudorientierte Projekte erstellen
         services.md
 
     {: .topicgroup}
-    Plug-ins für die Bluemix-CLI
+    Plug-ins für Bluemix CLI
         dev_cli.md
             dev_cli_local_debug.md
         sdk_cli.md

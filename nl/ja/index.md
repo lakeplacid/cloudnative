@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-04-10"
+lastupdated: "2016-06-23"
 
 ---
 {:new_window: target="_blank"}
@@ -15,9 +15,9 @@ lastupdated: "2016-04-10"
 # クラウド・ネイティブ・プロジェクトの構築
 {: #web-mobile}
 
-{{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} [プロジェクト](projects.html)の概念を通じて、クラウド・ネイティブ・アプリを管理できます。プロジェクトを作成するには、[{{site.data.keyword.dev_console}}](devex.html) を使用するか、{{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} CLI のために [{{site.data.keyword.dev_cli_notm}}](dev_cli.html) を使用することができます。{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} は、クラウド・ネイティブ・アプリケーション開発者に必要な最も一般的なサービス機能を、その開発者用に最適化された単一のエクスペリエンスに結合します。
+{{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} *プロジェクト*の概念を通じて、クラウド・ネイティブ・アプリを管理できます。プロジェクトを作成するには、[{{site.data.keyword.dev_console}}](devex.html) を使用するか、{{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} CLI のために [{{site.data.keyword.dev_cli_notm}}](dev_cli.html) を使用することができます。{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} は、クラウド・ネイティブ・アプリケーション開発者に必要な最も一般的なサービス機能を、その開発者用に最適化された単一のエクスペリエンスに結合します。
 
-{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} を使用して、クラウド・ネイティブ・アプリケーション開発者は、さまざまな[パターン・タイプ](patterns.html)および[スターター](starters.html)からプロジェクトを作成し、{{site.data.keyword.Bluemix_notm}} 向けに最適化された主要サービスを作成してプロジェクトに接続し、機能するコードを SDK と共に迅速にダウンロードすることができます。それらの SDK には機能の資格情報や依存関係が完全に組み込まれているため、数分のうちに実行することが可能です。アプリケーションが実行中で、機能のセットアップおよび構成を完了したら、プロジェクトに戻って、アプリケーション・ユーザーとの関わりをモニターおよび管理することができます。また、{{site.data.keyword.dev_console}} でサービスを構成および管理することも可能です。
+{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} を使用して、クラウド・ネイティブ・アプリケーション開発者は、さまざまなパターン・タイプおよびスターターからプロジェクトを作成し、{{site.data.keyword.Bluemix_notm}} 向けに最適化された主要サービスを作成してプロジェクトに接続し、機能するコードを SDK と共に迅速にダウンロードすることができます。それらの SDK には機能の資格情報や依存関係が完全に組み込まれているため、数分のうちに実行することが可能です。アプリケーションが実行中で、機能のセットアップおよび構成を完了したら、プロジェクトに戻って、アプリケーション・ユーザーとの関わりをモニターおよび管理することができます。また、{{site.data.keyword.dev_console}} でサービスを構成および管理することも可能です。
 
 <!--
 While the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} provides an integrated development experience, some developers might still want to have finer-grained control and wire services together manually. If this is your preferred approach, you might want to consider using the [{{site.data.keyword.mobilefirstbp}} Starter boilerplate](try_mobile.html).
@@ -34,9 +34,7 @@ The Mobile dashboard provides an integrated experience on {{site.data.keyword.Bl
 
 {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} は、アプリのユーザー・インターフェース、データ、およびサービスを結合して 1 つの完全な*プロジェクト* にします。プロジェクトを作成することによって、アプリのすべての必要なパーツおよび追加された機能が {{site.data.keyword.Bluemix_notm}} サーバー上で保守されます。サービスがプロジェクトに構成されている場合に、アプリ・コードや、必要な資格情報および初期化指定子をダウンロードできます。**「プロジェクト」**を選択すると、すべてのプロジェクトを表示できます。  
 
-**「プロジェクト」**ページで単一プロジェクトを選択すると、それに関する追加情報を表示できます。これにより、プロジェクトの構成済みの使用可能なサービスを示した**「プロジェクト概要」**ページが表示されます。サービスは分離した機能であり、アプリの機能を拡充します。サービスは個別に追加されるため、必要なサービス (プッシュ・サービス、認証サービス、データおよびストレージ、またはその他のサービス) を追加できます。**「プロジェクト概要」**ページでサービスをプロジェクトに追加し、手順に従ってサービスを構成すると、サービスは自動的にアプリに関連付けられます。「プロジェクト概要」ページについて詳しくは、[「プロジェクト概要」ページ](project_overview_page.html)を参照してください。
-
-プロジェクトを作成するには、[パターン](patterns.html)を選択し、その後に[スターター](starters.html)を選択する必要があります。
+**「プロジェクト」**ページで単一プロジェクトを選択すると、それに関する追加情報を表示できます。これにより、プロジェクトの構成済みの使用可能なサービスを示した**「プロジェクト概要」**ページが表示されます。サービスは分離した機能であり、アプリの機能を拡充します。サービスは個別に追加されるため、必要なサービス (プッシュ・サービス、認証サービス、データおよびストレージ、またはその他のサービス) を追加できます。**「プロジェクト概要」**ページでサービスをプロジェクトに追加し、手順に従ってサービスを構成すると、サービスは自動的にアプリに関連付けられます。
 
 
 ### プロジェクト概要ページ
@@ -108,7 +106,7 @@ Web プロジェクトでは、HTML、JavaScript、スタイルシートなど�
 ### Backend for Frontend (BFF)
 {: #bff}
 
-Backend for Frontend パターン (通常 BFF と呼ばれる) は、ユーザー・インタラクションの要件に一致する形式でビジネス・データおよびサービスを公開することに重点を置く上で役立ちます。クラウド・ソリューションへのユーザー・ジャーニーを最適化するには、モバイル・アプリケーション用の別のユーザー・ジャーニーと、Web アプリケーション用のよりリッチで詳細なジャーニーが必要な可能性があります。[{{site.data.keyword.conversationfull}} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/watson/developercloud/conversation.html) サービスのような音声制御デバイスの導入により、ユーザーとのインタラクションは音声で制御される可能性があります。このデジタル・チャネルには、これらの音声インテント・ベースのインタラクションを管理するための、非常に異なる BFF が必要になります。
+Backend for Frontend パターン (通常 BFF と呼ばれる) は、ユーザー・インタラクションの要件に一致する形式でビジネス・データおよびサービスを公開することに重点を置く上で役立ちます。クラウド・ソリューションへのユーザー・ジャーニーを最適化するには、モバイル・アプリケーション用の別のユーザー・ジャーニーと、Web アプリケーション用のよりリッチで詳細なジャーニーが必要な可能性があります。[{{site.data.keyword.conversationfull}} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/watson/developercloud/conversation.html "外部リンク・アイコン") サービスのような音声制御デバイスの導入により、ユーザーとのインタラクションは音声で制御される可能性があります。このデジタル・チャネルには、これらの音声インテント・ベースのインタラクションを管理するための、非常に異なる BFF が必要になります。
 
 {{site.data.keyword.Bluemix_notm}} では、BFF を定義するための Polyglot プログラミング・アプローチを使用して BFF を作成することができます。Node.js、Swift、または Java を使用すること、および Cloud Foundry、Container サービス、またはサーバーレスのいずれかを使用してクラウド・ネイティブ・パターンでそれらを実行することを IBM は推奨しています。
 
@@ -141,9 +139,9 @@ Content to be provided by Karl Bishop.
 
 サポートされる言語は、以下のとおりです。
 
-   * [Java ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](../runtimes/liberty/getting-started.html){: new_window}
-   * [Node.js ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](../runtimes/nodejs/getting-started.html){: new_window}
-   * [Swift ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](../runtimes/swift/getting-started.html){: new_window}
+   * [Java ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](../runtimes/liberty/getting-started.html "外部リンク・アイコン"){: new_window}
+   * [Node.js ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](../runtimes/nodejs/getting-started.html "外部リンク・アイコン"){: new_window}
+   * [Swift ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](../runtimes/swift/getting-started.html "外部リンク・アイコン"){: new_window}
 
 
 #### Java

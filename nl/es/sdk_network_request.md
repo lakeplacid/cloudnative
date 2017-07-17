@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-27"
 
 ---
 {:new_window: target="_blank"}
@@ -22,23 +22,30 @@ También puede utilizar el SDK `BMSCore` para realizar solicitudes de red a cual
 	
 2. Realice una solicitud de red.
 
-	```
-	public void makeGetCall() {
-		Thread thread = new Thread(new Runnable() {
-			@Override
-			public void run() {
-				try  {
-					Request request = new Request("http://httpbin.org/get", "GET");
-					request.send(null, null);
-				} catch (Exception e) {
-					// Manejar aquí los errores.
-				}
-			}
-		});
-		thread.start();
-	}
+	```Java
+	String customResourceURL = "<your resource URL>";
+	Request request = new Request(customResourceURL, "GET");
+
+	ResponseListener listener = new ResponseListener() {
+		@Override
+		public void onSuccess(Response response) {
+			Log.i("MyApp", "Response: " + response.getResponseText());
+		}
+
+		@Override
+		public void onFailure(Response response, Throwable t, JSONObject extendedInfo) {
+			Log.i("MyApp", "Request failed. Response: " + response.getResponseText() + ". Error: " + t.getLocalizedMessage());
+		}
+	};
+        
+	request.send(getApplicationContext(), listener);
 	```
 	{: codeblock}
+
+La clase `Request` ofrece un método sencillo para realizar una solicitud HTTP y obtener la respuesta una vez completada la solicitud. Si va a descargar o a cargar archivos grandes o grandes cantidades de datos, puede utilizar los métodos `Request` `download` o `upload`. Para supervisar el progreso de la descarga o de la carga, cree un `ProgressListener` personalizado y páselo a los métodos `download` o `upload`. 
+
+<!--For complete usage examples, see the `BMSCore` GitHub [README](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core).-->
+
 
 ## iOS
 {: #request-ios}
@@ -51,17 +58,16 @@ También puede utilizar el SDK `BMSCore` para realizar solicitudes de red a cual
 	{: #ios-swift3 notoc}
 	
 	```Swift
-	 	// Realizar una solicitud de red
-		let customResourceURL = "<your resource URL>"
-		let request = Request(url: customResourceURL, method: HttpMethod.GET)
+	let customResourceURL = "<your resource URL>"
+	let request = Request(url: customResourceURL, method: HttpMethod.GET)
 	
-		let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
-	   	if error == nil {
-	       	    print ("response:\(response?.responseText), no error")
-	    	  } else {
-	       	    print ("error: \(error)")
-	    	}
+	let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
+		if error == nil {
+			print ("Response: \(response?.responseText), no error")
+		} else {
+			print ("Error: \(error)")
 		}
+	}
 		request.send(completionHandler: callBack)
 	```
 	{: codeblock}
@@ -70,24 +76,25 @@ También puede utilizar el SDK `BMSCore` para realizar solicitudes de red a cual
 	{: #ios-swift22 notoc}
 	
 	```Swift
-	 	// Realizar una solicitud de red
-		let customResourceURL = "<your resource URL>"
-		let request = Request(url: customResourceURL, method: HttpMethod.GET)
+	let customResourceURL = "<your resource URL>"
+	let request = Request(url: customResourceURL, method: HttpMethod.GET)
 	
-		let callBack:BMSCompletionHandler = {(response: Response?, error: NSError?) in
-	   	if error == nil {
-	       	    print ("response:\(response?.responseText), no error")
-	    	  } else {
-	       	    print ("error: \(error)")
-	    	}
+	let callBack:BMSCompletionHandler = {(response: Response?, error: NSError?) in
+		if error == nil {
+			print ("Response: \(response?.responseText), no error")
+		} else {
+			print ("Error: \(error)")
 		}
+	}
 		request.send(completionHandler: callBack)
 	```
 	{: codeblock}
 
 La clase `Request` ofrece un método sencillo para realizar una solicitud HTTP y obtener la respuesta una vez completada la solicitud. Si desea más flexibilidad y control del que puede obtener de la clase `Request`, puede utilizar la clase `BMSURLSession`. Algunas de las características de la clase `BMSURLSession` incluyen el progreso de supervisión de las cargas y la colocación en pausa o cancelación de solicitudes. Para obtener las respuestas, puede elegir manejadores de terminación o delegados.
 
-La clase `BMSURLSession` solo está disponible para iOS. Para obtener más información sobre `BMSURLSession`, consulte los archivos [README](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core) del SDK de `BMSCore`.
+La clase `BMSURLSession` solo está disponible para iOS.
+
+Para ver ejemplos de uso completos, consulte archivo [README](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core) de `BMSCore` GitHub.
 
 
 ## Cordova
@@ -97,7 +104,7 @@ La clase `BMSURLSession` solo está disponible para iOS. Para obtener más infor
 
 2. Cree una solicitud de red.
 
-	```
+	```Javascript
 	var success = function(data) {
 		console.log("success", data);
 	}
@@ -109,13 +116,3 @@ La clase `BMSURLSession` solo está disponible para iOS. Para obtener más infor
 	```
 	{: codeblock}
 
-
-# Enlaces relacionados
-{: #rellinks notoc}
-
-## Enlaces relacionados
-{: #general notoc}
-
-* [SDK de Android de BMSCore](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
-* [SDK de iOS de BMSCore](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
-* [SDK de Cordova de BMSCore](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}

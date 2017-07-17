@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-25"
 
 ---
 {:new_window: target="_blank"}
@@ -27,14 +27,22 @@ In der folgenden Tabelle werden die {{site.data.keyword.Bluemix_notm}} Web and M
 <th>{{site.data.keyword.Bluemix_notm}} Web and Mobile-Service</th>
 <th>Beschreibung</th>
 <tr>
+<td> <img src="images/app_id_icon.png" alt="Symbol für {{site.data.keyword.appid_short}}"><br/>{{site.data.keyword.app_id_short}}
+</td>
+<td valign="top">Verwenden Sie den {{site.data.keyword.app_id_full}}-Service, um die Authentifizierung zu Ihren Web-Apps und mobilen Apps hinzuzufügen und Ihre Back-End-Systeme zu schützen. <br/><br/>
+Weitere Informationen zum Betrieb dieses Service finden Sie in der <a href="/docs/services/appid/index.html" alt="Link zur Dokumentation für {{site.data.keyword.app_id_short}}">{{site.data.keyword.app_id_short}}-Dokumentation</a>.
+</td>
+</tr>
+<tr>
 <td> <img src="images/mobile_analytics_icon.png" alt="Symbol für {{site.data.keyword.mobileanalytics_short}}"><br/>{{site.data.keyword.mobileanalytics_short}}</td>
 <td valign="top">Mithilfe des Service '{{site.data.keyword.mobileanalytics_full}}' erhalten Sie Einblick in die Leistung und die Art der Nutzung Ihrer mobilen Apps.<br/><br/>
-Weitere Informationen zum Betrieb dieses Service finden Sie in der <a href="/docs/services/mobileanalytics/index.html" alt="Link zur Dokumentation für {{site.data.keyword.mobileanalytics_short}}">{{site.data.keyword.mobileanalytics_short}}-Dokumentation</a>. </td>
+Weitere Informationen zum Betrieb dieses Service finden Sie in der <a href="/docs/services/mobileanalytics/index.html" alt="Link zur Dokumentation für {{site.data.keyword.mobileanalytics_short}}">{{site.data.keyword.mobileanalytics_short}}-Dokumentation</a>.
+</td>
 </tr>
 <tr>
 <td><img src="images/MFPFoundation_icon.png" alt="{{site.data.keyword.mobilefoundation_short}} - Servicesymbol"><br/> {{site.data.keyword.mobilefoundation_short}}</td>
 <td valign="top">Mithilfe des Service '{{site.data.keyword.mobilefoundation_long}}' können Sie die Einrichtung einer {{site.data.keyword.mfp_full}}-Umgebung für Entwicklung, Test und Betrieb mobiler Unternehmens-Apps beschleunigen.<br/><br/>
-Weitere Informationen zum Betrieb dieses Service finden Sie in der <a href="/docs/services/mobilefoundation/index.html" alt="{{site.data.keyword.mobilefoundation_short}} Link zur Dokumentation">{{site.data.keyword.mobilefoundation_short}}-Dokumentation</a>.</td>
+Weitere Informationen zum Betrieb dieses Service finden Sie in der <a href="/docs/services/mobilefoundation/index.html" alt="Link zur Dokumentation für {{site.data.keyword.mobilefoundation_short}}">{{site.data.keyword.mobilefoundation_short}}-Dokumentation</a>. </td>
 </tr>
 <tr>
 <!--

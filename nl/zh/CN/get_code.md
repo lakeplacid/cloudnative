@@ -26,10 +26,10 @@ lastupdated: "2017-04-18"
 ### 常规
 {: #general notoc}
 
-* [Homebrew ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://brew.sh/)
+* [Homebrew ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://brew.sh/ "外部链接图标")
 	* 命令行工具，用于帮助安装其他工具和运行时，如 CocoaPods 和 Carthage（对于 Apple 开发者）。
 
-* [Docker ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.docker.com/get-docker)
+* [Docker ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.docker.com/get-docker "外部链接图标")
 	* 开放式源代码项目，用于帮助运行和调试容器中的应用程序。只有非移动项目需要它。
 
 ### {{site.data.keyword.Bluemix_notm}}
@@ -43,37 +43,37 @@ lastupdated: "2017-04-18"
 	$ brew install Node5
 	```
 
-* [Bluemix CLI 工具 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://clis.ng.bluemix.net/ui/home.html)
+* [Bluemix CLI 工具 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://clis.ng.bluemix.net/ui/home.html "外部链接图标")
 
    命令行工具，用于使用 {{site.data.keyword.Bluemix_notm}} 从命令行界面部署 Cloud Foundry 运行时。  
 
-* [{{site.data.keyword.dev_cli_notm}} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](dev_cli.html)
+* [{{site.data.keyword.dev_cli_notm}} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](dev_cli.html "外部链接图标")
 
 	{{site.data.keyword.Bluemix_notm}} CLI 插件，用于创建、运行、测试和部署 Web 和移动项目。
 	
-* [SDK Generator 插件 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](sdk_cli.html)
+* [SDK Generator 插件 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](sdk_cli.html "外部链接图标")
 
-	{{site.data.keyword.Bluemix_notm}} CLI 插件，用于从符合[开放 API 规范 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.openapis.org/) 的 REST API 定义中生成 SDK。
+	{{site.data.keyword.Bluemix_notm}} CLI 插件，用于从符合[开放 API 规范 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.openapis.org/ "外部链接图标") 的 REST API 定义中生成 SDK。
 
 ### Android
 {: #android notoc}
 
-* [Android Studio 2.2 或更高版本 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://developer.android.com/studio)
-	* 安装最新的 [Android 7.0 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.android.com/versions/nougat-7-0/) 运行时。
+* [Android Studio 2.2 或更高版本 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://developer.android.com/studio "外部链接图标")
+	* 安装最新的 [Android 7.0 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.android.com/versions/nougat-7-0/ "外部链接图标") 运行时。
 
 ### iOS
 {: #ios notoc}
 
-* [Xcode 8 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://developer.apple.com/xcode/)（建议）
+* [Xcode 8 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://developer.apple.com/xcode/ "外部链接图标")（建议）
 
 <!-- * Install the latest [iOS 10 ![External link icon](../icons/launch-glyph.svg "External link icon")](http://www.apple.com/ios/ios-10/) runtime.
 -->
-* [CocoaPods ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://cocoapods.org/) 依赖关系管理器，用于安装 iOS SDK 依赖关系。请使用最新的版本：
+* [CocoaPods ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://cocoapods.org/ "外部链接图标") 依赖关系管理器，用于安装 iOS SDK 依赖关系。请使用最新的版本：
 
 	```
 	$ sudo gem install cocoapods --pre
 	```
-* [Carthage ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/Carthage/Carthage) 依赖关系管理器，用于安装 {{site.data.keyword.watson}} Developer Cloud SDK。
+* [Carthage ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/Carthage/Carthage "外部链接图标") 依赖关系管理器，用于安装 {{site.data.keyword.watson}} Developer Cloud SDK。
 
 	```
 	$ brew install carthage

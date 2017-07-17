@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-06-12"
 
 ---
 {:new_window: target="_blank"}
@@ -14,15 +14,19 @@ lastupdated: "2017-04-18"
 # Web Basic Starter 的完整指導教學
 {: #tutorial}
 
-下列完整指導教學逐步執行從 Web Basic Starter 建立專案的步驟。這包括安裝必備工具，以及執行專案程式碼的步驟。
-
-您可以使用 Web 型 [{{site.data.keyword.dev_console}}](#create-devex) 或透過指令驅動的 [{{site.data.keyword.dev_cli_notm}}](#create-cli) 來建立專案。
+下列完整指導教學逐步執行從 Web Basic Starter 建立專案的步驟。步驟包括安裝必備工具，以及如何執行專案程式碼。
 
 
 ## 安裝開發人員工具
 {: #dev_tools}
 
-請確定您已安裝[必備開發人員工具 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](get_code.html#prereq-dev-tools){: new_window}。
+請確定您已安裝[必備開發人員工具 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](get_code.html#prereq-dev-tools "外部鏈結圖示"){: new_window}。
+
+
+## 選擇如何建立您的專案
+{: #choose_how}
+
+您可以使用 Web 型 [{{site.data.keyword.dev_console}}](#create-devex) 或透過指令驅動的 [{{site.data.keyword.dev_cli_notm}}](#create-cli) 來建立專案。建立專案之後，便可以[執行專案](#run)。
 
 
 ## 使用 {{site.data.keyword.dev_console}} 建立專案
@@ -30,7 +34,7 @@ lastupdated: "2017-04-18"
 
 1. 在 {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} 中建立專案：
 
-	1. 從 {{site.data.keyword.dev_console}} 的[**開始使用** ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/developer/getting-started/) 頁面中，按一下**建立專案**。
+	1. 從 {{site.data.keyword.dev_console}} 的[**開始使用** ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/developer/getting-started/ "外部鏈結圖示") 頁面中，按一下**建立專案**。
 
 		您也可以按一下**專案**頁面中的**建立專案**。
 
@@ -40,7 +44,11 @@ lastupdated: "2017-04-18"
 
 	4. 輸入專案名稱。對於此指導教學，使用 `WebBasicProject`。   
 
-	5. 輸入唯一的主機名稱。對於此指導教學，使用 `devhost`。 
+	5. 輸入唯一的主機名稱，例如您的起始名稱加上 `-devhost`。例如：
+	
+	 ```
+	 abc-devhost
+	 ```
 
 	6. 選取語言平台。對於此指導教學，使用 `Swift`。
    
@@ -87,22 +95,31 @@ lastupdated: "2017-04-18"
 	```
 	{: codeblock}
 
-
 3. 系統提示時，提供下列值：
 
 	* 選取型樣：1（適用於 Web）
 	* 選取入門範本：1（適用於 Basic Web）
 	* 選取語言：2（適用於 Swift）
 	* 輸入專案的名稱：`WebBasicProjectCLI`
-	* 輸入專案的主機名稱：`myhost`
+	* 輸入專案的主機名稱：`abc-devhost`
+	  * 輸入唯一的主機名稱，例如您的起始名稱加上 `-devhost`。例如：
+	
+	     ```
+	     abc-devhost
+	     ```
 
-4. 如果您要將服務新增至專案，請在問題提示字元中鍵入 `y`，並回答其餘的問題。
+4. 順利儲存 `WebBasicProjectCLI` 專案後，請導覽至 `WebBasicProjectCLI` 資料夾。
 
-5. 順利儲存 `WebBasicProjectCLI` 專案後，請導覽至 `WebBasicProjectCLI` 資料夾。
-
-6. 新增自己的程式碼，並執行專案。
+5. 新增自己的程式碼、建置，然後執行專案。
+	
+	1. 使用下列指令來建置專案：
  
-	1. 使用下列指令來執行專案：
+		```
+		bx dev build
+		```
+		{: codeblock}
+	 
+	2. 使用下列指令來執行專案：
  
 		```
 		bx dev run
@@ -113,38 +130,7 @@ lastupdated: "2017-04-18"
 ## 執行 Web 專案
 {: #run}
 
-### 本端
-{: #local notoc}
-
-1. 安裝節點相依關係：
-
-  ```
-  npm install
-  ```
-  {: codeblock}
-
-2. 將前端程式碼組合到模組：
-
-  ```
-  node_modules/.bin/gulp
-  ```
-  {: codeblock}
-
-3. 編譯伺服器：
-
-  ```
-  swift build
-  ```
-  {: codeblock}
-
-4. 執行應用程式：
-
-  ```
-  .build/debug/WebBasicProjectCLI
-  ```
-  {: codeblock}
-
-5. 將瀏覽器開啟至 `http://localhost:8080`。
+如果安裝必要的建置工具，您可以在主機系統上本端執行應用程式，或是在 {{site.data.keyword.dev_cli_notm}} 中使用可用的容器支援來執行。
 
 
 ### 使用 {{site.data.keyword.dev_cli_short}}
@@ -164,14 +150,21 @@ lastupdated: "2017-04-18"
   ```
   {: codeblock}
 
-3. 執行編譯：
+3. 若要在現行專案目錄中建置專案，請輸入下列指令：
+
+  ```
+bx dev build
+```
+  {: codeblock}
+
+4. 若要在現行專案目錄中執行專案，請輸入下列指令：
 
   ```
   bx dev run
   ```
   {: codeblock}
 
-4. 將瀏覽器開啟至 `http://localhost:8080`。
+5. 將瀏覽器開啟至 `http://localhost:8080`。
 
 
 ## 在 Xcode 中執行專案
@@ -188,7 +181,7 @@ lastupdated: "2017-04-18"
 
 2. 將作用中目標變更為執行檔：
 
-	接下來，在 Xcode 中開啟專案，並確定作用中目標是執行檔。您可以按住 Option 鍵，同時按一下下拉功能表，來選取所需的作用中執行檔。
+	接下來，在 Xcode 中開啟專案，並確定作用中目標是執行檔。您可以按住 Option 鍵，然後按一下下拉功能表，來選取所需的作用中執行檔。
 
 3. 按 **run**。
 

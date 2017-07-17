@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-05-19"
 
 ---
 {:new_window: target="_blank"}
@@ -14,9 +14,9 @@ lastupdated: "2017-03-17"
 # Plugin del generador de SDK
 {: #sdk-cli}
 
-El plugin del Generador de SDK de {{site.data.keyword.IBM}} se puede instalar en la CLI de [{{site.data.keyword.Bluemix_notm}} ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](/docs/cli/reference/bluemix_cli/index.html).
+El plugin del Generador de SDK de {{site.data.keyword.IBM}} se puede instalar en la CLI de [{{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](/docs/cli/reference/bluemix_cli/index.html "Icono de enlace externo").
 
-Como desarrollador en {{site.data.keyword.Bluemix_notm}}, puede utilizar este plug-in para generar SDK desde su definición de la API REST compatible con la [Especificación de Open API ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://www.openapis.org/). A medida que realice cambios a su definición de API REST, podrá utilizar este plug-in para volver a generar sólo el SDK, en lugar de volver a generar todo el proyecto.
+Como desarrollador en {{site.data.keyword.Bluemix_notm}}, puede utilizar este plug-in para generar SDK desde su definición de la API REST compatible con la [Especificación de Open API ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://www.openapis.org/ "icono de enlace externo"). A medida que realice cambios a su definición de API REST, podrá utilizar este plug-in para volver a generar sólo el SDK, en lugar de volver a generar todo el proyecto.
 
 También puede ver si las apps de Cloud Foundry en un espacio determinado tienen definiciones de API REST válidas para la generación de SDK. Finalmente, puede utilizar el plugin del Generador de SDK de {{site.data.keyword.IBM_notm}} para validar cualquier definición de API REST para garantizar que cumpla con los requisitos del generador de SDK.
 
@@ -30,16 +30,16 @@ La definición de la API REST debe ser válida y estar alojada en un punto final
 
 Asegúrese de haber satisfecho los siguientes requisitos.
 
-* Tiene una [cuenta de {{site.data.keyword.Bluemix_notm}} ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](http://bluemix.net)
-* Una definición de API válida que se ajusta a la [especificación de Open API ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://www.openapis.org/)
+* Tiene una cuenta de [{{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](http://bluemix.net "Icono de enlace externo") 
+* Una definición de API válida que se ajusta a la [especificación de Open API ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://www.openapis.org/ "icono de enlace externo")
 
 
 ## Instalación
 {: #installation}
 
-1. [Instale la CLI de {{site.data.keyword.Bluemix}} ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](http://clis.ng.bluemix.net/ui/home.html).
+1. [Instale la CLI de {{site.data.keyword.Bluemix}} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](http://clis.ng.bluemix.net/ui/home.html "Icono de enlace externo").
 
-2. [Instale el plug-in ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in).
+2. [Instale el plug-in ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in "icono de enlace externo").
 
 	```
 	bx plugin install sdk-gen -r Bluemix
@@ -56,7 +56,7 @@ Utilice los siguientes mandatos para generar un SDK, validar los archivos de def
 ### Generación de un SDK
 {: #gen}
 
-Utilice `bluemix sdk generate [argumentos...][command options]`.
+Utilice `bluemix sdk generate [argumentos...] [opciones del mandato]`.
 
 
 #### Argumentos
@@ -74,6 +74,12 @@ Utilice `bluemix sdk generate [argumentos...][command options]`.
    * `--android`: generar un SDK de Android
    * `--ios` - generar un SDK de Swift de iOS
    * `--swift` - generar un SDK de servidor de Swift
+   * `--js` - generar un SDK de JavaScript
+* `LOCATION` (obligatorio) - especifica el tipo de `OPENAPI_DOC_LOCATION`
+   * `-r` - URL remoto
+   * `-f` - archivo
+   * `-a` - app que se ejecuta en {{site.data.keyword.Bluemix_notm}}
+   * `-l` - URL del host local
 * `--output "YOUR_RELATIVE_PATH"` (opcional): coloca el SDK generado en el directorio especificado por `YOUR_RELATIVE_PATH` (se sobrescribe si hay un SDK existente)
 * `--unzip` (opcional): extrae el SDK generado (se sobrescribe si hay artefactos SDK existentes)
 
@@ -84,14 +90,14 @@ Utilice `bluemix sdk generate [argumentos...][command options]`.
 Para generar un SDK desde una app de Cloud Foundry que se está ejecutando en {{site.data.keyword.Bluemix_notm}}, puede utilizar el nombre de la app como un parámetro para la CLI. El mandato siguiente utiliza el nombre de la app como el `SDK_Name`.
 
 ```
-bluemix sdk generate [APP_NAME] [PLATFORM]
+bluemix sdk generate [APP_NAME] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
 Para generar un SDK desde un URL a un archivo de definición de Open API o un archivo JSON o Yaml local, utilice el siguiente mandato.
 
 ```
-bluemix sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [Platform]
+bluemix sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
@@ -115,14 +121,14 @@ Utilice `bluemix sdk validate [argument]`.
 Para validar una especificación de API de la app Cloud Foundry que se está ejecutando en {{site.data.keyword.Bluemix_notm}}, puede utilizar el nombre de la app como un parámetro para la CLI.
 
 ```
-bluemix sdk validate [APP_NAME]
+bluemix sdk validate [APP_NAME] [LOCATION]
 ```
 {: codeblock}
 
 Para validar un SDK desde el URL a un documento de especificación de la API o un archivo JSON o Yaml local, utilice el siguiente mandato.
 
 ```
-bluemix sdk validate [OPENAPI_DOC_LOCATION]
+bluemix sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ```
 {: codeblock}
 
@@ -131,7 +137,7 @@ bluemix sdk validate [OPENAPI_DOC_LOCATION]
 ### List Apps (Cloud Foundry)
 {: #list-apps}
 
-Utilice `bluemix sdk list [argumento][option]` para listar apps y validar especificaciones de la API. Debe tener la variable de entorno `OPENAPI_SPEC` establecida en la vía de acceso de URL relativo que aloja su especificación.
+Utilice `bluemix sdk list [argumento] [opción]` para obtener una lista de apps y validar las especificaciones de API. Debe tener la variable de entorno `OPENAPI_SPEC` establecida en la vía de acceso de URL relativo que aloja su especificación.
 
 
 #### Argumentos

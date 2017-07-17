@@ -105,7 +105,7 @@ La única parte de la especificación de Open API que no está completamente sop
 
 Puede utilizar este patrón de BFF para iniciarse rápidamente con el suministro de un BFF que funcione completamente en {{site.data.keyword.Bluemix_notm}} y utilizarlo para ayudar a comprender la facilidad con que se integra un BFF en un proyecto móvil y se generan SDK nativos para iOS y Android en Swift y Java, respectivamente.
 
-Siga las instrucciones de [README ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/backend-for-frontend-node) para crear un proyecto e instalarlo.
+Siga las instrucciones de [README ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/backend-for-frontend-node "icono de enlace externo") para crear un proyecto e instalarlo.
 
 
 ## Uso de Programa de fondo para programa de usuario con un proyecto de experiencia de desarrollador
@@ -154,14 +154,14 @@ bluemix sdk list --url
 ```
 {: codeblock}
 
-Utilice el siguiente mandato para validar el archivo de definición de Open API del `<Nombre_App>` para determinar si se puede utilizar para generar un SDK. El mandato busca `<Nombre_App>` en el espacio actual y utiliza la vía de acceso relativa en la variable de entorno `OPENAPI_SPEC` para localizar la especificación para la validación.
+Utilice el siguiente mandato para validar el archivo de definición de Open API del `<AppName>` para determinar si se puede utilizar para generar un SDK. El mandato busca `<AppName>` en el espacio actual y utiliza la vía de acceso relativa en la variable de entorno `OPENAPI_SPEC` para localizar la especificación para la validación.
 
 ```
 bluemix sdk validate <AppName>
 ```
 {: codeblock}
 
-Utilice el siguiente mandato para generar un SDK para la `<Plataforma>` nativa que elija y coloque un archivo comprimido en el directorio de trabajo actual.
+Utilice el siguiente mandato para generar un SDK para la `<Platform>` nativa que elija y coloque un archivo comprimido en el directorio de trabajo actual.
 
 ```
 bluemix sdk generate <AppName> <SDKName> --<Platform>

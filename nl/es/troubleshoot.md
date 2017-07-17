@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-04-10"
+lastupdated: "2017-06-12"
 
 ---
 
@@ -27,7 +27,7 @@ Se documentan algunos problemas conocidos con el {{site.data.keyword.dev_cli_not
 En las secciones siguientes se describen problemas conocidos y posibles soluciones.
 
 
-### El nombre de host da un error al crear un proyecto con un patrón no móvil
+### El nombre de host da un error cuando se crea un proyecto con un patrón no móvil
 {: #hostname}
 
 Es posible que le aparezca el siguiente error si utiliza {{site.data.keyword.dev_cli_short}} para crear un proyecto desde los patrones de app web, BFF o microservicio:
@@ -83,7 +83,49 @@ bx login
 {: codeblock}
 
 
-### Error de intermediario de servicio al añadir la prestación de {{site.data.keyword.objectstorageshort}}
+### Error: "No such image" cuando se ejecuta un proyecto nuevo
+{: #nosuchimage}
+
+Es posible que le aparezca el siguiente error cuando ejecute un proyecto sin compilarlo antes. 
+
+```
+$ bx dev run testProject
+The run-cmd option was not specified
+Stopping the 'testProject' container...
+The 'testProject' container was not found
+Creating image bx-dev-testProject based on Dockerfile...
+OK
+Creating a container named 'testProject' from that image...
+FAILED
+Container 'testProject' could not be created:
+Error: No such image: bx-dev-testProject
+```
+
+
+#### Motivo
+{: #nosuchimage-cause}
+
+Debe compilar un proyecto antes de ejecutarlo.  
+
+
+#### Resolución
+{: #nosuchimage-resolution}
+
+Ejecute el siguiente mandato en el directorio del proyecto actual para crear la aplicación:
+
+```
+bx dev build
+```
+{: codeblock}
+
+Ejecute el siguiente mandato en el directorio del proyecto actual para iniciar la aplicación:
+
+```
+bx dev run
+```
+
+
+### Error de intermediario de servicio cuando se añade la prestación de {{site.data.keyword.objectstorageshort}}
 {: #os}
 
 Es posible que le aparezca el siguiente error si utiliza {{site.data.keyword.dev_cli_short}} para crear dos proyectos con la prestación {{site.data.keyword.objectstorageshort}}:
@@ -98,7 +140,7 @@ Error de intermediario de servicio: {"description"=>"No puede crear esta instanc
 #### Motivo
 {: #os-cause}
    
-Este error se debe al servicio de {{site.data.keyword.objectstorageshort}} que solo proporciona una instancia del plan de {{site.data.keyword.objectstorageshort}} gratuito.
+Este error se debe al servicio de {{site.data.keyword.objectstorageshort}}, que solo proporciona una instancia del plan de {{site.data.keyword.objectstorageshort}} gratuito.
 
 
 #### Resolución
@@ -142,7 +184,7 @@ Puede obtener el código de una de las siguientes formas:
 
 * Utilice la {{site.data.keyword.dev_console}}.
 
-	1. Seleccione el [proyecto ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://console.{DomainName}/developer/projects) en la {{site.data.keyword.dev_console}} y pulse **Obtener el código**.
+	1. Seleccione el [proyecto ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://console.{DomainName}/developer/projects "Icono de enlace externo") en la {{site.data.keyword.dev_console}} y pulse **Obtener el código**.
 
 	2. Pulse **Generar código**.
 
@@ -178,7 +220,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 #### Motivo
 {: #node-cause}
    
-Este error se debe a que el módulo `appmetrics` se ha instalado en otra arquitectura. Los módulos npm nativos instalados en una arquitectura no funcionan en otra. Las imágenes de Docker incluidas se basan en el kernel de Linux.
+Este error se produce cuando el módulo `appmetrics` se ha instalado en otra arquitectura. Los módulos npm nativos instalados en una arquitectura no funcionan en otra. Las imágenes de Docker incluidas se basan en el kernel de Linux.
 
 
 #### Resolución
@@ -198,16 +240,16 @@ Suprima la carpeta `node_modules` y vuelva a ejecutar `bx dev run`.
 ## Obtención de ayuda y soporte
 {: #gettinghelp}
 
-Si tiene problemas o preguntas sobre la {{site.data.keyword.dev_console}} de {{site.data.keyword.Bluemix_notm}} o {{site.data.keyword.dev_cli_notm}}, puede obtener ayuda buscando información o formulando preguntas a través de un foro. También puede abrir una incidencia de soporte.
+Si tiene problemas o preguntas sobre la {{site.data.keyword.dev_console}} de {{site.data.keyword.Bluemix_notm}} o {{site.data.keyword.dev_cli_notm}}, obtenga ayuda buscando información o formulando preguntas a través de un foro. También puede abrir una incidencia de soporte.
 
-Cuando formule una pregunta en los foros, etiquete la pregunta de modo que los equipos de desarrollo de {{site.data.keyword.Bluemix_notm}} la vean. 
+Cuando publique en foros, puede etiquetar sus preguntas para que se notifique a los equipos de desarrollo de {{site.data.keyword.Bluemix_notm}}. 
 
 <!--Insert the appropriate Stack Overflow tag for your service for <service_keyword> in URL and text below:  -->
 
 Si tiene preguntas técnicas sobre el desarrollo o el despliegue de una app con la {{site.data.keyword.dev_console}} o {{site.data.keyword.dev_cli_notm}}:
 
-* Publique la pregunta en [Stack Overflow ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix) y etiquete la pregunta con `bluemix-dev-services` e `ibm-bluemix`.
-* Publique la pregunta en [Slack ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](http://ibm-cloud-tech.slack.com/) en el canal `bluemix-dev-services`. [Inicie sesión en ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](http://ibm.biz/IBMCloudNativeSlack) hoy mismo.
+* Publique la pregunta en [Stack Overflow ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix "Icono de enlace externo") y etiquete la pregunta con `bluemix-dev-services` e `ibm-bluemix`.
+* Publique la pregunta en [Slack ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](http://ibm-cloud-tech.slack.com/ "Icono de enlace externo") en el canal `bluemix-dev-services`. [Inicie sesión en ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](http://ibm.biz/IBMCloudNativeSlack "Icono de enlace externo") hoy mismo.
 
 
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
@@ -215,9 +257,9 @@ Si tiene preguntas técnicas sobre el desarrollo o el despliegue de una app con 
 * For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers ![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/bluemix-dev-services/?smartspace=bluemix) forum. Include the  "bluemix-dev-services" and "bluemix" tags.
 * -->
 
-Consulte [Obtención de ayuda ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](/docs/support/index.html#getting-help) para obtener más información detallada sobre el uso de los foros.
+Consulte [Obtención de ayuda ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](/docs/support/index.html#getting-help "Icono de enlace externo") para obtener más información detallada sobre el uso de los foros.
 
-Para obtener información sobre cómo abrir una incidencia de soporte de {{site.data.keyword.IBM}}, o sobre los niveles de soporte y gravedades de las incidencias, consulte [Cómo obtener soporte ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](/docs/support/index.html#contacting-support).
+Para obtener información sobre cómo abrir una incidencia de soporte de {{site.data.keyword.IBM}}, o sobre los niveles de soporte y gravedades de las incidencias, consulte [Cómo obtener soporte ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](/docs/support/index.html#contacting-support "Icono de enlace externo").
 
 <!--Add a heading and content for how to get help. (Support not available for experimental.) Use this template for experimental services:  -->
 

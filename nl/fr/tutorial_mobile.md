@@ -1,8 +1,8 @@
----
+﻿---
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-05-18"
 
 ---
 {:new_window: target="_blank"}
@@ -14,28 +14,33 @@ lastupdated: "2017-04-18"
 # Tutoriel de bout en bout du module de démarrage Mobile Basic
 {: #tutorial}
 
-Le tutoriel de bout en bout suivant couvre les étapes de création d'un projet depuis le module de démarrage Mobile Basic, ce qui inclut l'installation des outils prérequis et la procédure d'exécution du projet dans Xcode et Android Studio.
+Le tutoriel de bout en bout ci-dessous vous guide tout au long des étapes de création d'un projet depuis le module de démarrage Mobile Basic. Il présente l'installation des outils prérequis et la procédure d'exécution du projet dans Xcode et Android Studio.
 
-Vous pouvez créer un projet en utilisant la console [{{site.data.keyword.dev_console}}](#create-devex) reposant sur le Web ou le plug-in [{{site.data.keyword.dev_cli_notm}}](#create-cli) géré par commande.
 
 ## Installation des outils de développement
 {: #dev_tools}
 
-Prenez soin d'installer les [outils prérequis pour le développeur![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](get_code.html#prereq-dev-tools){: new_window}.
+Prenez soin d'installer les [outils de développement prérequis ![External link icon](../icons/launch-glyph.svg "External link icon")](get_code.html#prereq-dev-tools){: new_window}.
+
+
+## Choisissez la façon dont vous allez créer votre projet 
+{: #choose_how}
+
+Vous pouvez créer un projet en utilisant la console [{{site.data.keyword.dev_console}}](#create-devex) reposant sur le Web ou le plug-in [{{site.data.keyword.dev_cli_notm}}](#create-cli) géré par commande.
 
 
 ## Création d'un projet en utilisant la console {{site.data.keyword.dev_console}}
 {: #create-devex}
 
-1. Créez un projet {{site.data.keyword.dev_console}} dans {{site.data.keyword.Bluemix}}.
+1. Créez un projet de console {{site.data.keyword.dev_console}} dans {{site.data.keyword.Bluemix}}.
 
-   1. Dans la page de [**mise en route** ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://console.ng.bluemix.net/developer/getting-started/) de la console {{site.data.keyword.dev_console}},  cliquez sur la commande de création de projet..
+   1. Depuis la page [**Initiation** ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/developer/getting-started/) dans la console {{site.data.keyword.dev_console}}, cliquez sur **Créer un projet**.
 
-      Vous pouvez également cliquer sur la commande de création de projet dans la page des projets.
+      Vous pouvez également cliquer sur **Créer un projet** dans la page **Projets**. 
 
-   2. Sélectionnez l'option relative à l'application mobile puis cliquez sur **Suivant**.
+   2. Sélectionnez **Appli mobile**, puis cliquez sur **Suivant**.
 
-   3. Sélectionnez l'option relative à **Basic** puis cliquez sur **Suivant**.
+   3. Sélectionnez **Basique**, puis cliquez sur **Suivant**.
 
    4. Entrez le nom de votre projet. Pour ce tutoriel, utilisez `MobileBasicProject`.
 
@@ -47,45 +52,42 @@ Prenez soin d'installer les [outils prérequis pour le développeur![Icône de l
 
    1. Cliquez sur **Ajouter** pour **Authentification** dans la page **Présentation du projet**.
 
-      Vous pouvez aussi sélectionner les commandes de création ou d'ajout d'une fonctionnalité existante sur la page des fonctionnalités relatives à l'authentification.
+      Vous pouvez aussi sélectionner **Créer** ou **Ajouter des instances existantes** dans la page **Fonctions > Authentification**. 
 
-   2. Entrez le nom de votre service et cliquez sur
-**Créer**.
+   2. Entrez le nom de votre service et cliquez sur **Créer**.
    
    3. Activez **Authentification**.
    
-   4. Sélectionnez votre fournisseur d'identité et entrez les informations pour le configurer. Vous pouvez activer un seul fournisseur d'identité.
+   4. Sélectionnez votre fournisseur d'identité et entrez les informations pour le configurer. Vous ne pouvez activer qu'un seul fournisseur d'identité.
    
-   5. Voir la rubrique relative à la [configuration des fournisseurs d'identité} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/appid/identity-providers.html){: new_window} pour plus d'informations sur la configuration de l'authentification.
-
-3. Facultatif : ajoutez la fonction Analyse.
+   5. Pour plus d'informations sur la configuration de l'authentification, voir [Configuration des fournisseurs d'identité ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/appid/identity-providers.html){: new_window}.
+   
+3. Facultatif : ajoutez la fonction Analyse. 
 
    1. Cliquez sur **Ajouter** pour **Analyse** dans la page **Présentation du projet**.
 
-      Vous pouvez aussi sélectionner les commandes de création ou d'ajout d'une fonctionnalité existante sur la page des fonctionnalités relatives à l'analyse.
+      Vous pouvez aussi cliquer sur **Créer** ou **Ajouter des instances existantes** dans la page **Fonctions > Analyse**. 
 
-   2. Entrez le nom de votre service et cliquez sur
-**Créer**.
+   2. Entrez le nom de votre service et cliquez sur **Créer**.
    
-   3. Désactivez le **Mode démonstration** pour afficher vos données analytiques après avoir exécuté votre application.
+   3. Désactivez le **mode démonstration** pour afficher vos données d'analyse après avoir exécuté votre application.
    
-   4. Voir [Initiation à {{site.data.keyword.mobileanalytics_short}} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/mobileanalytics/index.html){: new_window} pour plus d'informations sur la configuration du service Analytics.
+   4. Pour plus d'informations sur la configuration de l'analyse, voir [Initiation à {{site.data.keyword.mobileanalytics_short}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/mobileanalytics/index.html){: new_window}.
 
-4. Facultatif : Ajoutez la fonctionnalité {{site.data.keyword.mobilepushshort}}.
+4. Facultatif : Ajoutez la fonction {{site.data.keyword.mobilepushshort}}.
 
    1. Cliquez sur **Ajouter** pour **{{site.data.keyword.mobilepushshort}}** sur la page
 **Présentation du projet**.
 
-      Vous pouvez aussi cliquer sur les commandes de création ou d'ajout d'une fonctionnalité existante sur la page des fonctionnalités relatives à {{site.data.keyword.mobilepushshort}}.
+      Vous pouvez aussi cliquer sur **Créer** ou **Ajouter des instances existantes** dans la page **Fonctions > {{site.data.keyword.mobilepushshort}}**. 
 
-   2. Entrez le nom de votre service et cliquez sur
-**Créer**.
+   2. Entrez le nom de votre service et cliquez sur **Créer**.
 
-   3. Pour iOS, [configurez Apple Push Notification Service ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}.
+   3. Pour iOS, [configurez Apple Push Notification Service ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}.
 
-   4. Pour Android, [configurez Firebase Cloud Messaging ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
+   4. Pour Android, [configurez Firebase Cloud Messaging ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
 
-5. Facultatif : ajoutez la fonctionnalité Données.
+5. Facultatif : ajoutez la fonction Données.
 
    1. Cliquez sur **Afficher** pour **Données** sur la page **Présentation du projet**.
 
@@ -93,20 +95,19 @@ Prenez soin d'installer les [outils prérequis pour le développeur![Icône de l
       
    2. Choisissez **{{site.data.keyword.cloudant_short_notm}}** ou **{{site.data.keyword.objectstorageshort}}**.
 
-   3. Entrez le nom de votre service et cliquez sur
-**Créer**.
+   3. Entrez le nom de votre service et cliquez sur **Créer**.
 
-   4. Voir [Initiation à {{site.data.keyword.cloudant_short_notm}} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/Cloudant/index.html){: new_window} pour plus d'informations sur la configuration de {{site.data.keyword.cloudant_short_notm}}.
+   4. Pour plus d'informations sur la configuration de {{site.data.keyword.cloudant_short_notm}}, voir [Initiation à {{site.data.keyword.cloudant_short_notm}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/Cloudant/index.html){: new_window}.
 
-   5. Voir [Initiation à {{site.data.keyword.objectstorageshort}} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/ObjectStorage/index.html){: new_window} pour plus d'informations sur la configuration d'{{site.data.keyword.objectstorageshort}}.
+   5. Pour plus d'informations sur la configuration d'{{site.data.keyword.objectstorageshort}}, voir [Initiation à {{site.data.keyword.objectstorageshort}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/ObjectStorage/index.html){: new_window}.
 
 6. Générez votre code de projet :
 
-   1. Cliquez sur  la commande relative à l'obtention du code sur la page de présentation du projet pour sélectionner votre langue.
+   1. Cliquez sur **Obtenir le code** dans la page **Présentation du projet** pour sélectionner votre langue. 
    
       Vous pouvez également cliquer sur la page **Code**.
       
-   2. Cliquez sur la commande relative à la génération Swift.
+   2. Cliquez sur la commande de génération Swift.
    
    3. Quand la génération du code du projet est terminée, cliquez sur la commande de téléchargement Swift pour télécharger l'archive du projet.
 
@@ -116,7 +117,7 @@ Prenez soin d'installer les [outils prérequis pour le développeur![Icône de l
 	
 	2. Accédez au nouveau répertoire de projet.
 	
-	3. Utilisez la console {{site.data.keyword.dev_cli_notm}} pour poursuivre.
+	3. Utilisez le plug-in {{site.data.keyword.dev_cli_notm}} pour poursuivre.
 
 8. Facultatif : [mettez à jour votre projet](project_overview_page.html#update_language) pour générer un nouveau langage.
 
@@ -126,7 +127,7 @@ Prenez soin d'installer les [outils prérequis pour le développeur![Icône de l
 
 1. Prenez soin d'installer le plug-in [{{site.data.keyword.dev_cli_short}}](dev_cli.html).
 
-2. Dans votre invite de terminal, accédez au répertoire local de votre choix et exécutez la commande suivante.
+2. Dans votre invite de terminal, accédez au répertoire local de votre choix et exécutez la commande suivante :
 
 	```
 	bx dev create
@@ -140,25 +141,25 @@ Prenez soin d'installer les [outils prérequis pour le développeur![Icône de l
 	* Sélectionnez une plateforme : 3 (pour iOS Swift)
 	* Entrez le nom de votre projet : `MobileBasicProjectCLI`
 
-4. Si vous voulez ajouter des services à votre projet, répondez par l'affirmative à la question qui vous est posée puis répondez aux questions suivantes.
+4. Si vous voulez ajouter des services à votre projet, répondez par l'affirmative à la question qui vous est posée, puis répondez aux questions suivantes.
 
-5. Une fois votre projet `MobileBasicProjectCLI` correctement sauvegardé, accédez au dossier `MobileBasicProjectCLI/MobileBasicProjectCLI-Swift`.
+5. Une fois votre projet `MobileBasicProjectCLI` sauvegardé, accédez au dossier `MobileBasicProjectCLI/MobileBasicProjectCLI-Swift`.
 
 
 ## Exécution de votre projet Swift dans Xcode
 {: #run_swift}
 
-1. Extrayez le fichier `MobileBasicProject-Swift.zip`.
+1. Décompressez le fichier `MobileBasicProject-Swift.zip`.
 
 2. Ouvrez le fichier `README.md` dans un lecteur Markdown pour examiner les étapes de configuration de votre projet.
 
-   1. Ouvrez votre Terminal et accédez à votre dossier de projet.
+   1. Ouvrez votre terminal et accédez à votre dossier de projet.
    
       1. Exécutez `pod setup` si vous devez configurer votre référentiel CocoaPods.
       
-      2. Exécutez `pod update` si vous devez mettre à jour les nacelles existantes.
+      2. Exécutez `pod update` si vous devez mettre à jour les pods existants. 
       
-      3. Exécutez `pod install` pour installer les nacelles requises pour votre projet.
+      3. Exécutez `pod install` afin d'installer les pods pour votre projet.
       
    3. Ouvrez votre espace de travail Xcode `BasicProject.xcworkspace`.
       
@@ -168,7 +169,7 @@ Prenez soin d'installer les [outils prérequis pour le développeur![Icône de l
 ## Exécution de votre projet Cordova dans Xcode
 {: #run_cordova_xcode}
 
-1. Extrayez le fichier `MobileBasicProject-Cordova.zip`.
+1. Décompressez le fichier `MobileBasicProject-Cordova.zip`.
 
 2. Ouvrez le fichier `README.md` dans un lecteur Markdown pour configurer votre projet.
 
@@ -192,7 +193,7 @@ Prenez soin d'installer les [outils prérequis pour le développeur![Icône de l
 ## Exécution de votre projet Android dans Android Studio
 {: #run_android}
 
-1. Extrayez le fichier `MobileBasicProject-Android.zip`.
+1. Décompressez le fichier `MobileBasicProject-Android.zip`.
 
 2. Ouvrez le fichier `README.md` dans un lecteur Markdown pour configurer votre projet.
 
