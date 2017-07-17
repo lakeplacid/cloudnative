@@ -105,7 +105,7 @@ Open API 仕様において、ファイル構造のみが完全にサポート�
 
 この BFF パターンを使用して、完全に機能する BFF の {{site.data.keyword.Bluemix_notm}} へのプロビジョニングを素早く開始し、それを使用して、BFF をモバイル・プロジェクトに統合し、iOS 用と Android 用のネイティブ SDK をそれぞれ Swift と Java で生成することがどれほど簡単かを理解するのに役立てることができます。
 
-プロジェクトを作成してインストールするための、[README ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/backend-for-frontend-node) の説明に従ってください。
+プロジェクトを作成してインストールするための、[README ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/backend-for-frontend-node "外部リンク・アイコン") の説明に従ってください。
 
 
 ## Developer Experience プロジェクトでの Backend for Frontend の使用

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-04-10"
+lastupdated: "2017-06-12"
 
 ---
 
@@ -27,7 +27,7 @@ lastupdated: "2017-04-10"
 다음 절에는 알려진 문제와 가능한 해결책이 설명되어 있습니다. 
 
 
-### 비모바일 패턴을 사용하여 프로젝트를 작성하는 중에 hostname is taken 오류 발생
+### 비모바일 패턴을 사용하여 프로젝트 작성 시 Hostname is taken 오류 발생
 {: #hostname}
 
 웹 앱, BFF 또는 마이크로서비스 패턴으로부터 프로젝트를 작성하는 데 {{site.data.keyword.dev_cli_short}}을 사용하는 경우 다음 오류가 표시될 수 있습니다. 
@@ -83,7 +83,49 @@ bx login
 {: codeblock}
 
 
-### {{site.data.keyword.objectstorageshort}} 기능 추가 중 서비스 브로커 오류 발생
+### 오류: 새 프로젝트 실행 시 해당하는 이미지가 없음
+{: #nosuchimage}
+
+프로젝트를 먼저 빌드하지 않고 실행하는 경우 다음과 같은 오류가 표시될 수 있습니다.
+
+```
+$ bx dev run testProject
+The run-cmd option was not specified
+Stopping the 'testProject' container...
+The 'testProject' container was not found
+Creating image bx-dev-testProject based on Dockerfile...
+OK                    
+Creating a container named 'testProject' from that image...
+FAILED
+Container 'testProject' could not be created:
+Error: No such image: bx-dev-testProject
+```
+
+
+#### 원인
+{: #nosuchimage-cause}
+
+프로젝트를 실행하기 전에 먼저 빌드해야 합니다. 
+
+
+#### 해결
+{: #nosuchimage-resolution}
+
+애플리케이션을 빌드하려면 현재 프로젝트 디렉토리에서 다음 명령을 실행하십시오. 
+
+```
+bx dev build
+```
+{: codeblock}
+
+애플리케이션을 시작하려면 현재 프로젝트 디렉토리에서 다음 명령을 실행하십시오. 
+
+```
+bx dev run
+```
+
+
+### {{site.data.keyword.objectstorageshort}} 기능 추가 시 서비스 브로커 오류 발생
 {: #os}
 
 {{site.data.keyword.objectstorageshort}} 기능이 있는 두 프로젝트를 작성하는 데 {{site.data.keyword.dev_cli_short}}을 사용하는 경우 다음 오류가 표시될 수 있습니다. 
@@ -98,7 +140,7 @@ Service broker error: {"description"=>"You can not create this Object Storage in
 #### 원인
 {: #os-cause}
    
-이 오류는 무료 {{site.data.keyword.objectstorageshort}} 플랜에서는 하나의 인스턴스만 제공하는 {{site.data.keyword.objectstorageshort}} 서비스로 인해 발생합니다. 
+이 오류는 무료 {{site.data.keyword.objectstorageshort}} 플랜에서 하나의 인스턴스만 제공하는 {{site.data.keyword.objectstorageshort}} 서비스로 인한 것입니다. 
 
 
 #### 해결
@@ -138,7 +180,7 @@ https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbe
    ```
    {: codeblock}
 
-   `<your-project-name>`을 프로젝트 작성 중에 지정한 프로젝트 이름으로 대체하십시오. 
+   `<your-project-name>`을 프로젝트 작성 중에 지정한 프로젝트 이름으로 바꾸십시오. 
 
 * {{site.data.keyword.dev_console}}을 사용합니다. 
 
@@ -178,7 +220,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 #### 원인
 {: #node-cause}
    
-이 오류는 다른 아키텍처에 설치된 `appmetrics` 모듈로 인해 발생합니다. 한 아키텍처에 설치된 고유 npm 모듈은 다른 아키텍처에서는 작동하지 않습니다. 포함된 Docker 이미지는 Linux 커널을 기반으로 합니다. 
+이 오류는 `appmetrics` 모듈이 다른 아키텍처에 설치되었을 때 발생합니다. 한 아키텍처에 설치된 고유 npm 모듈은 다른 아키텍처에서는 작동하지 않습니다. 포함된 Docker 이미지는 Linux 커널을 기반으로 합니다. 
 
 
 #### 해결
@@ -198,9 +240,9 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 ## 도움 및 지원 받기
 {: #gettinghelp}
 
-{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} 또는 {{site.data.keyword.dev_cli_notm}}에 대한 문제점이나 질문이 있으면 정보를 검색하거나 포럼을 통해 질문하여 도움을 받을 수 있습니다. 또는 지원 티켓을 열 수도 있습니다. 
+{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} 또는 {{site.data.keyword.dev_cli_notm}}에 대한 문제점이나 질문이 있을 경우 정보를 검색하거나 포럼을 통해 질문하여 도움을 받으십시오. 또는 지원 티켓을 열 수도 있습니다. 
 
-포럼에서 질문하는 경우에는 {{site.data.keyword.Bluemix_notm}} 개발 팀이 볼 수 있도록 질문에 태그를 지정하십시오. 
+포럼에 게시할 때 {{site.data.keyword.Bluemix_notm}} 개발 팀에 통지가 되도록 질문에 태그를 지정할 수 있습니다.
 
 <!--Insert the appropriate Stack Overflow tag for your service for <service_keyword> in URL and text below:  -->
 

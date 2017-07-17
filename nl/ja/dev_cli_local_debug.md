@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-05-18"
 
 ---
 {:new_window: target="_blank"}
@@ -33,8 +33,8 @@ Java アプリケーションのデバッグを有効にするステップ
 2. デバッガーをアプリケーションに接続します。
 
 	* Eclipse
-      1. 「Existing maven project」プロジェクトを Eclipse にインポートします。
-      2. [Java リモート・アプリケーション ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm) のデバッグ構成を作成します。
+      1. **「Existing maven project」** を Eclipse にインポートします。
+      2. [Java リモート・アプリケーション ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm "外部リンク・アイコン") のデバッグ構成を作成します。
       		1. IP アドレスまたは `localhost:<port>` を入力します。  
       		2. ポート番号として `7777` を入力します。
       		3. インポートした java プロジェクトの名前を指定します。
@@ -42,8 +42,8 @@ Java アプリケーションのデバッグを有効にするステップ
       7. デバッグ構成を実行します。
       8. ブラウザーでエンドポイントにアクセスして、問題を再現します。  
 	   **注**: Java の基本的なマイクロサービス・エンドポイントのデフォルト・ポートは 9080 です。
-	* [IntelliJ ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html)
-	* [VSCode ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugge)
+	* [IntelliJ ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html "外部リンク・アイコン")
+	* [VSCode ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugge "外部リンク・アイコン")
 	* JDK コマンド・ライン: `jdb -attach <host:port>`
 
 ## Node.js アプリケーションのデバッグ
@@ -57,8 +57,8 @@ Node.js アプリケーションのデバッグを有効にするステップ
 	`bx dev debug`
 
 2. デバッガーをアプリケーションに接続します。
-	* [VSCode ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://blog.docker.com/2016/07/live-debugging-docker/)
-	* [WebStorm ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://blog.alexseifert.com/2016/10/25/debugging-node-js-in-a-docker-container-with-webstorm/)
+	* [VSCode ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://blog.docker.com/2016/07/live-debugging-docker/ "外部リンク・アイコン")
+	* [WebStorm ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://blog.alexseifert.com/2016/10/25/debugging-node-js-in-a-docker-container-with-webstorm/ "外部リンク・アイコン")
 
 
 <!--

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-05-19"
 
 ---
 {:new_window: target="_blank"}
@@ -14,9 +14,9 @@ lastupdated: "2017-03-17"
 # SDK Generator 插件
 {: #sdk-cli}
 
-{{site.data.keyword.IBM}} SDK Generator 插件可安装在 [{{site.data.keyword.Bluemix_notm}} CLI ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/cli/reference/bluemix_cli/index.html) 中。
+{{site.data.keyword.IBM}} SDK Generator 插件可安装在 [{{site.data.keyword.Bluemix_notm}} CLI ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/cli/reference/bluemix_cli/index.html "外部链接图标") 中。
 
-作为 {{site.data.keyword.Bluemix_notm}} 上的开发者，您可以使用此插件，从符合[开放 API 规范 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.openapis.org/) 的 REST API 定义中生成 SDK。当您对 REST API 定义进行更改时，可以使用此插件，仅重新生成 SDK 而非重新生成整个项目。
+作为 {{site.data.keyword.Bluemix_notm}} 上的开发者，您可以使用此插件，从符合[开放 API 规范 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.openapis.org/ "外部链接图标") 的 REST API 定义中生成 SDK。当您对 REST API 定义进行更改时，可以使用此插件，仅重新生成 SDK 而非重新生成整个项目。
 
 您还可以查看给定空间中的 Cloud Foundry 应用程序是否具有对生成 SDK 有效的 REST API 定义。最后，您可以使用 {{site.data.keyword.IBM_notm}} SDK Generator 插件，来验证任何 REST API 定义，以确保它们符合 SDK 生成器需求。
 
@@ -30,16 +30,16 @@ REST API 定义必须有效，或者在活动服务器端点上托管，或者�
 
 确保满足以下需求。
 
-* 具有 [{{site.data.keyword.Bluemix_notm}} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://bluemix.net) 帐户
-* 具有符合[开放 API ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.openapis.org/) 规范的有效 API 定义
+* 具有 [{{site.data.keyword.Bluemix_notm}} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://bluemix.net "外部链接图标") 帐户
+* 具有符合[开放 API ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.openapis.org/ "外部链接图标") 规范的有效 API 定义
 
 
 ## 安装
 {: #installation}
 
-1. [安装 {{site.data.keyword.Bluemix}} CLI ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://clis.ng.bluemix.net/ui/home.html)。
+1. [安装 {{site.data.keyword.Bluemix}} CLI ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://clis.ng.bluemix.net/ui/home.html "外部链接图标")。
 
-2. [安装插件 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in)。
+2. [安装插件 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in "外部链接图标")。
 
 	```
 	bx plugin install sdk-gen -r Bluemix
@@ -56,7 +56,7 @@ REST API 定义必须有效，或者在活动服务器端点上托管，或者�
 ### 生成 SDK
 {: #gen}
 
-使用 `bluemix sdk generate [arguments...][command options]`。
+使用 `bluemix sdk generate [arguments...] [command options]`。
 
 
 #### 自变量
@@ -74,6 +74,12 @@ REST API 定义必须有效，或者在活动服务器端点上托管，或者�
    * `--android` - 生成 Android SDK
    * `--ios` - 生成 iOS Swift SDK
    * `--swift` - 生成 Swift 服务器 SDK
+   * `--js` - 生成 JavaScript SDK
+* `LOCATION`（必要）- 指定 `OPENAPI_DOC_LOCATION` 的类型
+   * `-r` - 远程 URL
+   * `-f` - 文件
+   * `-a` - 在 {{site.data.keyword.Bluemix_notm}} 上运行的应用程序
+   * `-l` - localhost URL
 * `--output "YOUR_RELATIVE_PATH"`（可选）- 将所生成的 SDK 置于 `YOUR_RELATIVE_PATH` 所指定的目录中（如果存在现有的 SDK 则覆盖）
 * `--unzip`（可选）- 解压缩所生成的 SDK（如果存在现有的 SDK 工件则覆盖）
 
@@ -84,14 +90,14 @@ REST API 定义必须有效，或者在活动服务器端点上托管，或者�
 要通过在 {{site.data.keyword.Bluemix_notm}} 中运行的 Cloud Foundry 应用程序生成 SDK，可以使用应用程序的名称作为 CLI 的参数。以下命令使用应用程序的名称作为 `SDK_Name`。
 
 ```
-bluemix sdk generate [APP_NAME] [PLATFORM]
+bluemix sdk generate [APP_NAME] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
 要从开放 API 定义文件或本地 JSON 或 Yaml 文件的 URL 生成 SDK，请使用以下命令。
 
 ```
-bluemix sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [Platform]
+bluemix sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
@@ -115,14 +121,14 @@ bluemix sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [Platform]
 要验证在 {{site.data.keyword.Bluemix_notm}} 中运行的 Cloud Foundry 应用程序 API 规范，可以使用应用程序的名称作为 CLI 的参数。
 
 ```
-bluemix sdk validate [APP_NAME]
+bluemix sdk validate [APP_NAME] [LOCATION]
 ```
 {: codeblock}
 
 要从 API 规范文档或本地 JSON 或 Yaml 文件的 URL 验证 SDK，请使用以下命令。
 
 ```
-bluemix sdk validate [OPENAPI_DOC_LOCATION]
+bluemix sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ```
 {: codeblock}
 
@@ -131,7 +137,7 @@ bluemix sdk validate [OPENAPI_DOC_LOCATION]
 ### 列出应用程序 (Cloud Foundry)
 {: #list-apps}
 
-使用 `bluemix sdk list [argument][option]` 可以列出应用程序并验证 API 规范。您必须已将 `OPENAPI_SPEC` 环境变量设置为托管规范的相对 URL 路径。
+使用 `bluemix sdk list [argument] [option]` 可以列出应用程序并验证 API 规范。您必须已将 `OPENAPI_SPEC` 环境变量设置为托管规范的相对 URL 路径。
 
 
 #### 自变量

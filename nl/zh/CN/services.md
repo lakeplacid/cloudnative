@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-25"
 
 ---
 {:new_window: target="_blank"}
@@ -26,6 +26,12 @@ lastupdated: "2017-03-17"
 <caption>表 1. {{site.data.keyword.Bluemix_notm}} Web 和移动服务</caption>
 <th>{{site.data.keyword.Bluemix_notm}} Web 和移动服务</th>
 <th>描述</th>
+<tr>
+<td> <img src="images/app_id_icon.png" alt="{{site.data.keyword.appid_short}} 图标"><br/>{{site.data.keyword.app_id_short}}
+</td>
+<td valign="top">使用 {{site.data.keyword.app_id_full}} 服务，可以添加 Web 和移动应用程序的认证并保护后端系统。<br/><br/>
+在 <a href="/docs/services/appid/index.html" alt="{{site.data.keyword.app_id_short}} 文档链接">{{site.data.keyword.app_id_short}} 文档</a>中阅读有关操作此服务的更多信息。</td>
+</tr>
 <tr>
 <td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}} 图标"><br/>{{site.data.keyword.mobileanalytics_short}}</td>
 <td valign="top">使用 {{site.data.keyword.mobileanalytics_full}} 服务，可深入了解您的移动应用程序的性能如何，以及如何使用它们。<br/><br/>

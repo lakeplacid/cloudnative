@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-28"
 
 ---
 {:new_window: target="_blank"}
@@ -13,7 +13,7 @@ lastupdated: "2017-03-17"
 # BMSClient 초기화
 {: #sdk_BMSClient}
 
-`BMSCore`에서는 다른 {{site.data.keyword.Bluemix}} 모바일 서비스 클라이언트 SDK가 이와 연관된 {{site.data.keyword.Bluemix_notm}} 서비스와 통신하는 데 사용하는 HTTP 인프라를 제공합니다. 
+`BMSCore`에서는 다른 {{site.data.keyword.Bluemix}} 웹 및 모바일 서비스 클라이언트 SDK가 해당하는 {{site.data.keyword.Bluemix_notm}} 서비스와 통신하는 데 사용하는 HTTP 인프라를 제공합니다. 
 
 
 ## Android 애플리케이션 초기화

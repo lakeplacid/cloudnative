@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-06-12"
 
 ---
 {:new_window: target="_blank"}
@@ -14,14 +14,19 @@ lastupdated: "2017-04-18"
 # マイクロサービス・ベーシック・スターターのエンドツーエンド・チュートリアル
 {: #tutorial}
 
-以下のエンドツーエンド・チュートリアルでは、マイクロサービス・ベーシック・スターターからプロジェクトを作成するための手順を段階的に説明します。これには、前提条件ツールのインストールと、プロジェクト・コードの実行手順が含まれます。
+以下のエンドツーエンド・チュートリアルでは、マイクロサービス・ベーシック・スターターからプロジェクトを作成するための手順を段階的に説明します。ステップには、前提条件ツールのインストールと、プロジェクト・コードの実行手順が含まれます。
 
-Web ベースの [{{site.data.keyword.dev_console}}](#create-devex) を使用するか、またはコマンド駆動型 [{{site.data.keyword.dev_cli_notm}}](#create-cli) を使用して、プロジェクトを作成することができます。
 
 ## 開発者ツールのインストール
 {: #dev_tools}
 
-[前提条件の開発者ツール![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](get_code.html#prereq-dev-tools){: new_window} を必ずインストールしてください。
+[前提条件の開発者ツール![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](get_code.html#prereq-dev-tools "外部リンク・アイコン"){: new_window} を必ずインストールしてください。
+
+
+## プロジェクトの作成方法の選択
+{: #choose_how}
+
+Web ベースの [{{site.data.keyword.dev_console}}](#create-devex) を使用するか、またはコマンド駆動型 [{{site.data.keyword.dev_cli_notm}}](#create-cli) を使用して、プロジェクトを作成することができます。プロジェクトが作成されたら、[プロジェクトを実行](#running-dev-plugin)できます。
 
 
 ## {{site.data.keyword.dev_console}} を使用したプロジェクトの作成
@@ -29,7 +34,7 @@ Web ベースの [{{site.data.keyword.dev_console}}](#create-devex) を使用す
 
 1. {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} でプロジェクトを作成します。
 
-	1. {{site.data.keyword.dev_console}} 内の [**「開始」** ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/developer/getting-started/) ページから**「プロジェクトの作成」**をクリックします。
+	1. {{site.data.keyword.dev_console}} 内の [**「開始」** ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/developer/getting-started/ "外部リンク・アイコン") ページから**「プロジェクトの作成」**をクリックします。
 
 		代替方法として、**「プロジェクト」**ページから**「プロジェクトの作成」**をクリックすることもできます。
 
@@ -39,8 +44,12 @@ Web ベースの [{{site.data.keyword.dev_console}}](#create-devex) を使用す
 
 	4. プロジェクト名を入力します。このチュートリアルでは、`MicroserviceProject` を使用します。   
 
-	5. 固有のホスト名を入力してください。このチュートリアルでは、`devhost` を使用します。 
-   
+	5. 固有のホスト名を入力します (自分のイニシャルに `-devhost` を付加したものなど)。以下に例を示します。
+	
+	 ```
+	 abc-devhost
+	 ```
+	   
 	6. **「作成」**をクリックします。
 
 2. オプション: Data (データ) 機能を追加します。
@@ -88,14 +97,18 @@ Web ベースの [{{site.data.keyword.dev_console}}](#create-devex) を使用す
 
 	* パターンの選択: 4 (マイクロサービス)
 	* スターターの選択: 1 (ベーシック)
-	* プラットフォームの選択: 3 (Java)
+	* プラットフォームの選択: 1 (Java)
 	* プロジェクト名の入力: `MicroserviceProjectCLI`
+	* プロジェクトのホスト名の入力: `abc-devhost`
+	  * 固有のホスト名を入力します (自分のイニシャルに `-devhost` を付加したものなど)。以下に例を示します。
+	
+	     ```
+	     abc-devhost
+	     ```
 
-4. プロジェクトにサービスを追加する場合は、該当の質問のプロンプトで `y` を入力し、残りの質問に答えます。
+4. `MicroserviceProjectCLI` が正常に保存されたら、`MicroserviceProjectCLI` フォルダーにナビゲートします。
 
-5. `MicroserviceProjectCLI` が正常に保存されたら、`MicroserviceProjectCLI` フォルダーにナビゲートします。
-
-6. この時点で、独自コードを追加するか、プロジェクトをビルドするか、またはプロジェクトを実行することができます。
+5. この時点で、独自コードを追加するか、プロジェクトをビルドするか、またはプロジェクトを実行することができます。
  
  
 ## {{site.data.keyword.dev_cli_notm}} を使用したプロジェクトの実行
@@ -108,7 +121,7 @@ Web ベースの [{{site.data.keyword.dev_console}}](#create-devex) を使用す
 	```     
 	{: codeblock}
 
-2. 現行プロジェクト・ディレクトリーでプロジェクトをビルドして実行するには、以下のコマンドを入力します。
+2. 現行プロジェクト・ディレクトリーでプロジェクトを実行するには、以下のコマンドを入力します。
 
 	```
 	bx dev run

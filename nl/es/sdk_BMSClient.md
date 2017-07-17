@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-28"
 
 ---
 {:new_window: target="_blank"}
@@ -13,7 +13,7 @@ lastupdated: "2017-03-17"
 # Inicialización de BMSClient
 {: #sdk_BMSClient}
 
-`BMSCore` proporciona la infraestructura HTTP que utilizan los otros SDK de cliente de servicios de {{site.data.keyword.Bluemix}} Mobile con sus correspondientes servicios de {{site.data.keyword.Bluemix_notm}}.
+`BMSCore` proporciona la infraestructura HTTP que utilizan los otros SDK de cliente de servicios de web y móviles de {{site.data.keyword.Bluemix}} con sus correspondientes servicios de {{site.data.keyword.Bluemix_notm}}.
 
 
 ## Inicialización de la aplicación Android
@@ -31,7 +31,7 @@ Puede descargar e importar el paquete `BMSCore` en su proyecto Android Studio o 
 2. Inicialice el SDK `BMSClient` en la aplicación Android añadiendo el código de inicialización del método `onCreate` de la actividad principal a la aplicación Android o en la ubicación que mejor se ajuste a su proyecto.
 
   ```Java
-	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_US_SOUTH); // Asegúrese de apuntar a su región
+  BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_US_SOUTH); // Asegúrese de que apunte a su región
   ```
   {: codeblock}
 
@@ -56,9 +56,9 @@ Puede utilizar [CocoaPods](https://cocoapods.org){: new_window} o [Carthage](htt
 
   Luego ejecute el mandato `pod install` y abra el archivo `.xcworkspace` generado. Para actualizar a un release posterior de `BMSCore`, utilice `pod update BMSCore`.
 
-  Para obtener más información sobre cómo utilizar CocoaPods, consulte las [Guías de CocoaPods ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://guides.cocoapods.org/using/index.html){: new_window}.
+  Para obtener más información sobre cómo utilizar CocoaPods, consulte las [Guías de CocoaPods ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://guides.cocoapods.org/using/index.html "icono de enlace externo"){: new_window}.
 
-2. Para instalar `BMSCore` mediante Carthage, siga estas [instrucciones ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/Carthage/Carthage#getting-started){: new_window}.
+2. Para instalar `BMSCore` mediante Carthage, siga estas [instrucciones ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/Carthage/Carthage#getting-started "icono de enlace externo"){: new_window}.
 
   1. Añada la siguiente línea a Cartfile:
 
@@ -69,7 +69,7 @@ Puede utilizar [CocoaPods](https://cocoapods.org){: new_window} o [Carthage](htt
 
   2. Ejecute el mandato `carthage update`.
 
-  3. Una vez finalizada la compilación, añada `BMSCore.framework` al proyecto siguiendo el [Paso 3 ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/Carthage/Carthage#getting-started) en las instrucciones de Carthage.
+  3. Una vez finalizada la compilación, añada `BMSCore.framework` al proyecto siguiendo el [Paso 3 ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/Carthage/Carthage#getting-started "icono de enlace externo") en las instrucciones de Carthage.
 
       Para aplicaciones compiladas con Swift 2.3, utilice el mandato `carthage update --toolchain com.apple.dt.toolchain.Swift_2_3`. De lo contrario, utilice el mandato `carthage update`.
 
@@ -85,7 +85,7 @@ Puede utilizar [CocoaPods](https://cocoapods.org){: new_window} o [Carthage](htt
   Coloque el código de inicialización en el método `application(_:didFinishLaunchingWithOptions:)` de delegado de la aplicación o en la ubicación que mejor se ajuste a su proyecto.
 
   ```Swift
-    BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth) // Asegúrese de apuntar a su región
+  BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth) // Asegúrese de que apunte a su región
   ```
   {: codeblock}
 

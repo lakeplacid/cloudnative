@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-05-18"
 
 ---
 {:new_window: target="_blank"}
@@ -33,18 +33,19 @@ Etapas para ativar a depuração de um aplicativo Java:
 2. Conectando o depurador a seu aplicativo:
 
 	* Eclipse
-      1. Importe o projeto “Projeto maven existente” no Eclipse.
-      2. Crie uma configuração de depuração de [Aplicativo remoto Java![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm)”.
-      		1. Insira o endereço IP ou `localhost:<port>`  
+      1. Importe o **Projeto maven existente** no Eclipse.
+      2. Crie uma configuração de depuração do [aplicativo
+remoto Java ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm "Ícone de link externo").
+      		1. Insira o endereço IP ou o `localhost:<port>`  
       		2. Insira `7777` para o número da porta.
       		3. Especifique o nome do projeto Java que você importou.
       6. Configure um ponto de interrupção no IDE.
       7. Execute a configuração de depuração.
       8. Acesse o terminal com um navegador para recriar o problema.  
 	   **Nota**: a porta padrão é 9080 para o terminal Java basic Microservices.
-	* [IntelliJ ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html)
-	* [VSCode ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugge)
-	* Linha de comandos JDK: `jdb -attach <host:port>`
+	* [IntelliJ ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html "Ícone de link externo")
+	* [VSCode ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugge "Ícone de link externo")
+	* Linha de comandos do JDK: `jdb -attach <host:port>`
 
 ## Depuração do aplicativo Node.js
 
@@ -57,8 +58,8 @@ Etapas para ativar a depuração de um aplicativo Node.js:
 	`bx dev debug`
 
 2. Conectando o depurador a seu aplicativo:
-	* [VSCode ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://blog.docker.com/2016/07/live-debugging-docker/)
-	* [WebStorm ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://blog.alexseifert.com/2016/10/25/debugging-node-js-in-a-docker-container-with-webstorm/)
+	* [VSCode ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://blog.docker.com/2016/07/live-debugging-docker/ "Ícone de link externo")
+	* [WebStorm ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://blog.alexseifert.com/2016/10/25/debugging-node-js-in-a-docker-container-with-webstorm/ "Ícone de link externo")
 
 
 <!--

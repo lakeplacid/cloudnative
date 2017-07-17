@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-05-19"
 
 ---
 {:new_window: target="_blank"}
@@ -37,7 +37,7 @@ REST API 정의는 유효해야 하며 라이브 서버 엔드포인트에서 �
 ## 설치
 {: #installation}
 
-1. [{{site.data.keyword.Bluemix}} CLI ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://clis.ng.bluemix.net/ui/home.html)를 설치하십시오. 
+1. [{{site.data.keyword.Bluemix}} CLI ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://clis.ng.bluemix.net/ui/home.html)를 설치하십시오.
 
 2. [플러그인 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in)을 설치하십시오. 
 
@@ -56,7 +56,7 @@ REST API 정의는 유효해야 하며 라이브 서버 엔드포인트에서 �
 ### SDK 생성
 {: #gen}
 
-`bluemix sdk generate [arguments...][command options]`를 사용하십시오. 
+`bluemix sdk generate [arguments...] [command options]`를 사용하십시오.
 
 
 #### 인수
@@ -74,6 +74,12 @@ REST API 정의는 유효해야 하며 라이브 서버 엔드포인트에서 �
    * `--android` - Android SDK 생성
    * `--ios` - iOS Swift SDK 생성
    * `--swift` - Swift 서버 SDK 생성
+   * `--js` - JavaScript SDK 생성
+* `LOCATION`(필수) - `OPENAPI_DOC_LOCATION`의 유형 지정
+   * `-r` - 원격 URL
+   * `-f` - 파일
+   * `-a` - {{site.data.keyword.Bluemix_notm}}에서 실행되는 앱
+   * `-l` - localhost URL
 * `--output "YOUR_RELATIVE_PATH"`(선택사항) - 생성된 SDK를 `YOUR_RELATIVE_PATH`에서 지정한 디렉토리에 배치(기존의 SDK가 있는 경우 겹쳐씀)
 * `--unzip`(선택사항) - 생성된 SDK 추출(기존의 SDK 아티팩트가 있는 경우 겹쳐씀)
 
@@ -84,14 +90,14 @@ REST API 정의는 유효해야 하며 라이브 서버 엔드포인트에서 �
 {{site.data.keyword.Bluemix_notm}}에서 실행 중인 Cloud Foundry에서 SDK를 생성하기 위해 CLI에 대한 매개변수로 앱의 이름을 사용할 수 있습니다. 다음 명령은 앱의 이름을 `SDK_Name`으로 사용합니다. 
 
 ```
-bluemix sdk generate [APP_NAME] [PLATFORM]
+bluemix sdk generate [APP_NAME] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
 로컬 JSON 또는 Yaml 파일이나 Open API 정의 파일에 대한 URL에서 SDK를 생성하려면 다음 명령을 사용하십시오. 
 
 ```
-bluemix sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [Platform]
+bluemix sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
@@ -115,14 +121,14 @@ bluemix sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [Platform]
 {{site.data.keyword.Bluemix_notm}}에서 실행 중인 Cloud Foundry 앱의 API 스펙의 유효성을 검증하기 위해 CLI에 대한 매개변수로 앱의 이름을 사용할 수 있습니다. 
 
 ```
-bluemix sdk validate [APP_NAME]
+bluemix sdk validate [APP_NAME] [LOCATION]
 ```
 {: codeblock}
 
 로컬 JSON 또는 Yaml 파일이나 API 스펙 문서에 대한 URL의 SDK 유효성을 검증하려면 다음 명령을 사용하십시오. 
 
 ```
-bluemix sdk validate [OPENAPI_DOC_LOCATION]
+bluemix sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ```
 {: codeblock}
 
@@ -131,7 +137,7 @@ bluemix sdk validate [OPENAPI_DOC_LOCATION]
 ### 앱 나열(Cloud Foundry)
 {: #list-apps}
 
-`bluemix sdk list [argument][option]`를 사용하여 앱을 나열하고 API 스펙의 유효성을 검증하십시오. `OPENAPI_SPEC` 환경 변수가 스펙을 호스팅하는 상대 URL로 설정되어 있어야 합니다. 
+`bluemix sdk list [argument] [option]`을 사용하여 앱을 나열하고 API 스펙의 유효성을 검증하십시오. `OPENAPI_SPEC` 환경 변수가 스펙을 호스팅하는 상대 URL로 설정되어 있어야 합니다. 
 
 
 #### 인수

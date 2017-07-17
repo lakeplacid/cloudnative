@@ -26,10 +26,10 @@ lastupdated: "2017-04-18"
 ### 一般
 {: #general notoc}
 
-* [Homebrew ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://brew.sh/)
+* [Homebrew ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://brew.sh/ "外部リンク・アイコン")
 	* 他のツールおよびランタイム (CocoaPods や Carthage など) のインストールを支援する、Apple 開発者向けのコマンド・ライン・ツール。
 
-* [Docker ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.docker.com/get-docker)
+* [Docker ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.docker.com/get-docker "外部リンク・アイコン")
 	* コンテナーでのアプリケーションの実行およびデバッグを支援するオープン・ソース・プロジェクト。非モバイル・プロジェクトの場合にのみ必要です。
 
 ### {{site.data.keyword.Bluemix_notm}}
@@ -43,37 +43,37 @@ lastupdated: "2017-04-18"
 	$ brew install Node5
 	```
 
-* [Bluemix CLI ツール ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://clis.ng.bluemix.net/ui/home.html)
+* [Bluemix CLI ツール ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://clis.ng.bluemix.net/ui/home.html "外部リンク・アイコン")
 
    {{site.data.keyword.Bluemix_notm}} とのコマンド・ライン・インターフェースから Cloud Foundry ランタイムをデプロイするためのコマンド・ライン・ツール。  
 
-* [{{site.data.keyword.dev_cli_notm}} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](dev_cli.html)
+* [{{site.data.keyword.dev_cli_notm}} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](dev_cli.html "外部リンク・アイコン")
 
 	Web およびモバイルのプロジェクトを作成、実行、テスト、およびデプロイするための {{site.data.keyword.Bluemix_notm}} CLI プラグイン。
 	
-* [SDK Generator プラグイン ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](sdk_cli.html)
+* [SDK Generator プラグイン ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](sdk_cli.html "外部リンク・アイコン")
 
-	[Open API 仕様 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.openapis.org/) 準拠の REST API 定義から SDK を生成する {{site.data.keyword.Bluemix_notm}} CLI プラグイン。
+	[Open API 仕様 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.openapis.org/ "外部リンク・アイコン") 準拠の REST API 定義から SDK を生成する {{site.data.keyword.Bluemix_notm}} CLI プラグイン。
 
 ### Android
 {: #android notoc}
 
-* [Android Studio 2.2 以上![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.android.com/studio)
-	* 最新の [Android 7.0 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.android.com/versions/nougat-7-0/) ランタイムをインストールします。
+* [Android Studio 2.2 以上![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.android.com/studio "外部リンク・アイコン")
+	* 最新の [Android 7.0 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.android.com/versions/nougat-7-0/ "外部リンク・アイコン") ランタイムをインストールします。
 
 ### iOS
 {: #ios notoc}
 
-* [Xcode 8 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.apple.com/xcode/) (推奨)
+* [Xcode 8 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.apple.com/xcode/ "外部リンク・アイコン") (推奨)
 
 <!-- * Install the latest [iOS 10 ![External link icon](../icons/launch-glyph.svg "External link icon")](http://www.apple.com/ios/ios-10/) runtime.
 -->
-* iOS SDK 依存関係をインストールするための [CocoaPods ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://cocoapods.org/) の依存関係マネージャー。最新バージョンを使用してください。
+* iOS SDK 依存関係をインストールするための [CocoaPods ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://cocoapods.org/ "外部リンク・アイコン") の依存関係マネージャー。最新バージョンを使用してください。
 
 	```
 	$ sudo gem install cocoapods --pre
 	```
-* {{site.data.keyword.watson}} Developer Cloud SDK をインストールするための [Carthage ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/Carthage/Carthage) の依存関係マネージャー。
+* {{site.data.keyword.watson}} Developer Cloud SDK をインストールするための [Carthage ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/Carthage/Carthage "外部リンク・アイコン") の依存関係マネージャー。
 
 	```
 	$ brew install carthage

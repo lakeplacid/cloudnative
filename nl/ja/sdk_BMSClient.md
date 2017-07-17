@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-28"
 
 ---
 {:new_window: target="_blank"}
@@ -13,7 +13,7 @@ lastupdated: "2017-03-17"
 # BMSClient の初期化
 {: #sdk_BMSClient}
 
-`BMSCore` は、他の {{site.data.keyword.Bluemix}} モバイル・サービス・クライアント SDK が、それぞれに対応する {{site.data.keyword.Bluemix_notm}} サービスと通信するために使用する HTTP インフラストラクチャーを提供します。
+`BMSCore` は、他の {{site.data.keyword.Bluemix}} Web サービス・クライアント SDK とモバイル・サービス・クライアント SDK が、それぞれに対応する {{site.data.keyword.Bluemix_notm}} サービスと通信するために使用する HTTP インフラストラクチャーを提供します。
 
 
 ## Android アプリケーションの初期化
@@ -31,8 +31,8 @@ lastupdated: "2017-03-17"
 2. Android アプリケーション内のメイン・アクティビティーの `onCreate` メソッド、またはプロジェクトの最適な動作位置に初期化コードを追加して、Android アプリケーションで `BMSClient` SDK を初期化します。
 
   ```Java
-	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_US_SOUTH); // Make sure that you point to your region
-	```
+  BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_US_SOUTH); // Make sure that you point to your region
+  ```
   {: codeblock}
 
   **bluemixRegion** パラメーターを指定して `BMSClient` を初期化する必要があります。初期化指定子では、**bluemixRegion** 値は、どの {{site.data.keyword.Bluemix_notm}} デプロイメントを使用するか (例えば、`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK`、または `BMSClient.REGION_SYDNEY`) を指定します。
@@ -56,9 +56,9 @@ lastupdated: "2017-03-17"
 
   次に、`pod install` コマンドを実行し、生成された `.xcworkspace` ファイルを開きます。新しいリリースの `BMSCore` に更新するには、`pod update BMSCore` を使用します。
 
-  CocoaPods の使用方法について詳しくは、[「CocoaPods Guides」 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://guides.cocoapods.org/using/index.html){: new_window} を参照してください。
+  CocoaPods の使用方法について詳しくは、[「CocoaPods Guides」 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://guides.cocoapods.org/using/index.html "外部リンク・アイコン"){: new_window} を参照してください。
 
-2. Carthage を使用して `BMSCore` をインストールするには、次の[手順 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/Carthage/Carthage#getting-started){: new_window} を参照してください。
+2. Carthage を使用して `BMSCore` をインストールするには、次の[手順 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/Carthage/Carthage#getting-started "外部リンク・アイコン"){: new_window} を参照してください。
 
   1. 次の行を Cartfile に追加します。
 
@@ -69,7 +69,7 @@ lastupdated: "2017-03-17"
 
   2. `carthage update` コマンドを実行します。
 
-  3. ビルドが終了したら、Carthage の手順の[ステップ 3 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/Carthage/Carthage#getting-started) に従って `BMSCore.framework` をプロジェクトに追加します。
+  3. ビルドが終了したら、Carthage の手順の[ステップ 3 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/Carthage/Carthage#getting-started "外部リンク・アイコン") に従って `BMSCore.framework` をプロジェクトに追加します。
 
       Swift 2.3 でビルドされているアプリケーションの場合は、`carthage update --toolchain com.apple.dt.toolchain.Swift_2_3` コマンドを使用します。その他の場合は、`carthage update` コマンドを使用します。
 
@@ -85,8 +85,8 @@ lastupdated: "2017-03-17"
   アプリケーション代行の `application(_:didFinishLaunchingWithOptions:)` メソッド、またはプロジェクトの最適な動作位置に、初期化コードを挿入します。
 
   ```Swift
-    BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth) // Make sure that you point to your region
-    ```
+  BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth) // Make sure that you point to your region
+  ```
   {: codeblock}
 
   **bluemixRegion** パラメーターを指定して `BMSClient` を初期化する必要があります。初期化指定子では、**bluemixRegion** 値は、どの {{site.data.keyword.Bluemix_notm}} デプロイメントを使用するか (例えば、`BMSClient.Region.usSouth`、 `BMSClient.Region.unitedKingdom`、または `BMSClient.Region.sydney`) を指定します。

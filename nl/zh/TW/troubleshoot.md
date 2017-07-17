@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-04-10"
+lastupdated: "2017-06-12"
 
 ---
 
@@ -83,6 +83,48 @@ bx login
 {: codeblock}
 
 
+### 執行新專案時發生 Error: No such image
+{: #nosuchimage}
+
+當您執行專案而未先建置它時，可能會看到下列錯誤。
+
+```
+$ bx dev run testProject
+The run-cmd option was not specified
+Stopping the 'testProject' container...
+The 'testProject' container was not found
+Creating image bx-dev-testProject based on Dockerfile...
+OK                    
+Creating a container named 'testProject' from that image...
+FAILED
+Container 'testProject' could not be created:
+Error: No such image: bx-dev-testProject
+```
+
+
+#### 原因
+{: #nosuchimage-cause}
+
+您必須先建置專案，才能執行它。 
+
+
+#### 解決方法
+{: #nosuchimage-resolution}
+
+在現行專案目錄中執行下列指令，以建置您的應用程式：
+
+```
+bx dev build
+```
+{: codeblock}
+
+在現行專案目錄中執行下列指令，以啟動您的應用程式：
+
+```
+bx dev run
+```
+
+
 ### 新增 {{site.data.keyword.objectstorageshort}} 功能時發生服務分配管理系統錯誤
 {: #os}
 
@@ -142,7 +184,7 @@ bx dev code <your-project-name>
 
 * 使用 {{site.data.keyword.dev_console}}。
 
-	1. 在 {{site.data.keyword.dev_console}} 中選取[專案 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.{DomainName}/developer/projects)，然後按一下**取得程式碼**。
+	1. 在 {{site.data.keyword.dev_console}} 中選取[專案 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.{DomainName}/developer/projects "外部鏈結圖示")，然後按一下**取得程式碼**。
 
 	2. 按一下**產生程式碼**。
 
@@ -178,7 +220,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 #### 原因
 {: #node-cause}
    
-此錯誤是將 `appmetrics` 模組安裝在不同的架構上所造成。安裝在某個架構上的原生 npm 模組，無法在另一個架構上運作。包括的 Docker 映像檔是以 Linux Kernel 為依據。
+此錯誤發生於將 `appmetrics` 模組安裝在不同的架構上的情況。安裝在某個架構上的原生 npm 模組，無法在另一個架構上運作。包括的 Docker 映像檔是以 Linux Kernel 為依據。
 
 
 #### 解決方法
@@ -200,14 +242,14 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 
 如果您有 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} 或 {{site.data.keyword.dev_cli_notm}} 的問題或疑問，可以搜尋資訊或透過討論區提問來取得協助。您也可以開啟支援問題單。
 
-在討論區提問時，請標記您的問題，讓 {{site.data.keyword.Bluemix_notm}} 開發團隊可以看到它。
+當您張貼到討論區時，可以標記您的問題，讓 {{site.data.keyword.Bluemix_notm}} 開發團隊可以收到通知。
 
 <!--Insert the appropriate Stack Overflow tag for your service for <service_keyword> in URL and text below:  -->
 
 如果您有使用 {{site.data.keyword.dev_console}} 或 {{site.data.keyword.dev_cli_notm}} 開發或部署應用程式的技術問題，請執行下列動作：
 
-* 將問題張貼在 [Stack Overflow ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)，並且使用 `bluemix-dev-services` 及 `ibm-bluemix` 來標記您的問題。
-* 將問題張貼在 `bluemix-dev-services` 通道中的 [Slack ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://ibm-cloud-tech.slack.com/) 上。請馬上[註冊 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://ibm.biz/IBMCloudNativeSlack)。
+* 將問題張貼在 [Stack Overflow ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix "外部鏈結圖示")，並且使用 `bluemix-dev-services` 及 `ibm-bluemix` 來標記您的問題。
+* 將問題張貼在 `bluemix-dev-services` 通道中的 [Slack ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://ibm-cloud-tech.slack.com/ "外部鏈結圖示") 上。請馬上[註冊 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://ibm.biz/IBMCloudNativeSlack "外部鏈結圖示")。
 
 
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
@@ -215,9 +257,9 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 * For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers ![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/bluemix-dev-services/?smartspace=bluemix) forum. Include the  "bluemix-dev-services" and "bluemix" tags.
 * -->
 
-如需使用討論區的詳細資料，請參閱[取得協助 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/support/index.html#getting-help)。
+如需使用討論區的詳細資料，請參閱[取得協助 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/support/index.html#getting-help "外部鏈結圖示")。
 
-如需開啟 {{site.data.keyword.IBM}} 支援問題單或是支援層次及問題單嚴重性的相關資訊，請參閱[與支援中心聯絡 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/support/index.html#contacting-support)。
+如需開啟 {{site.data.keyword.IBM}} 支援問題單或是支援層次及問題單嚴重性的相關資訊，請參閱[與支援中心聯絡 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/support/index.html#contacting-support "外部鏈結圖示")。
 
 <!--Add a heading and content for how to get help. (Support not available for experimental.) Use this template for experimental services:  -->
 

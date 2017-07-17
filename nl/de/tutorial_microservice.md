@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-06-12"
 
 ---
 {:new_window: target="_blank"}
@@ -14,14 +14,19 @@ lastupdated: "2017-04-18"
 # Umfassendes Lernprogramm zum Microservice Basic Starter
 {: #tutorial}
 
-Das folgende umfassende Lernprogramm führt Sie durch die Schritte zur Erstellung eines Projekts mit dem Microservice Basic Starter. Dies schließt das Installieren erforderlicher Tools sowie die Schritte zum Ausführen des Projektcodes ein.
+Das folgende umfassende Lernprogramm führt Sie durch die Schritte zur Erstellung eines Projekts mit dem Microservice Basic Starter. In diesen Schritten wird das Installieren erforderlicher Tools sowie das Ausführen des Projektcodes erläutert. 
 
-Sie können ein Projekt entweder mithilfe der webbasierten [{{site.data.keyword.dev_console}}](#create-devex) oder über das befehlsgesteuerte [{{site.data.keyword.dev_cli_notm}}](#create-cli) erstellen.
 
 ## Entwicklertools installieren
 {: #dev_tools}
 
-Stellen Sie sicher, dass die [vorausgesetzten Entwicklertools ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](get_code.html#prereq-dev-tools){: new_window} installiert sind.
+Stellen Sie sicher, dass die [vorausgesetzten Entwicklertools ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](get_code.html#prereq-dev-tools "Symbol für externen Link"){: new_window} installiert sind.
+
+
+## Vorgehensweise zur Projekterstellung auswählen
+{: #choose_how}
+
+Sie können ein Projekt entweder mithilfe der webbasierten [{{site.data.keyword.dev_console}}](#create-devex) oder über das befehlsgesteuerte [{{site.data.keyword.dev_cli_notm}}](#create-cli) erstellen. Nachdem das Projekt erstellt wurde, können Sie das [Projekt ausführen](#running-dev-plugin). 
 
 
 ## Projekt mit der {{site.data.keyword.dev_console}} erstellen
@@ -29,7 +34,7 @@ Stellen Sie sicher, dass die [vorausgesetzten Entwicklertools ![Symbol für exte
 
 1. Erstellen Sie ein Projekt in der {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}}.
 
-	1. Klicken Sie auf der Seite [**Einführung** ![Symbol für externen Link](../icons/launch-glyph.svg " Symbol für externen Link")](https://console.ng.bluemix.net/developer/getting-started/) in der {{site.data.keyword.dev_console}} auf **Projekt erstellen**.
+	1. Klicken Sie auf der Seite [**Einführung** ![Symbol für externen Link](../icons/launch-glyph.svg " Symbol für externen Link")](https://console.ng.bluemix.net/developer/getting-started/ " Symbol für externen Link") in der {{site.data.keyword.dev_console}} auf **Projekt erstellen**.
 
 		Alternativ können Sie auf der Seite **Projekte** auf **Projekt erstellen** klicken.
 
@@ -39,8 +44,12 @@ Stellen Sie sicher, dass die [vorausgesetzten Entwicklertools ![Symbol für exte
 
 	4. Geben Sie Ihren Projektnamen ein. Verwenden Sie für dieses Lernprogramm `MicroserviceProject`.   
 
-	5. Geben Sie einen eindeutigen Hostnamen ein. Verwenden Sie für dieses Lernprogramm `devhost`. 
-   
+	5. Geben Sie einen eindeutigen Hostnamen, z. B. Ihre Initialen und `-devhost` ein. Beispiel: 
+	
+	 ```
+	 abc-devhost
+	 ```
+	   
 	6. Klicken Sie auf **Erstellen**.
 
 2. Optional: Fügen Sie die Data-Funktion hinzu.
@@ -88,14 +97,18 @@ Stellen Sie sicher, dass die [vorausgesetzten Entwicklertools ![Symbol für exte
 
 	* Wählen Sie ein Muster aus: 4 (für Microservices)
 	* Wählen Sie einen Starter aus: 1 (für Basis)
-	* Wählen Sie eine Plattform aus: 3 (für Java)
+	* Wählen Sie eine Plattform aus: 1 (für Java)
 	* Geben Sie einen Namen für Ihr Projekt ein: `MicroserviceProjectCLI`
+	* Geben Sie einen Hostnamen für Ihr Projekt ein: `abc-devhost`
+	  * Geben Sie einen eindeutigen Hostnamen, z. B. Ihre Initialen und `-devhost` ein. Beispiel: 
+	
+	     ```
+	     abc-devhost
+	     ```
 
-4. Wenn Sie Services zu Ihrem Projekt hinzufügen möchten, geben Sie `y` ein, wenn Sie in der Eingabeaufforderung danach gefragt werden, und beantworten Sie die restlichen Fragen.
+4. Navigieren Sie nach dem erfolgreichen Speichern des Projekts `MicroserviceProjectCLI` zum Ordner `MicroserviceProjectCLI`.
 
-5. Navigieren Sie nach dem erfolgreichen Speichern des Projekts `MicroserviceProjectCLI` zum Ordner `MicroserviceProjectCLI`.
-
-6. Nun können Sie eigenen Code zum Projekt hinzufügen oder das Projekt erstellen bzw. ausführen.
+5. Nun können Sie eigenen Code zum Projekt hinzufügen, das Projekt erstellen oder ausführen.
  
  
 ## Projekt mit dem {{site.data.keyword.dev_cli_notm}} ausführen
@@ -108,7 +121,7 @@ Stellen Sie sicher, dass die [vorausgesetzten Entwicklertools ![Symbol für exte
 	```     
 	{: codeblock}
 
-2. Geben Sie zum Erstellen und Ausführen des Projekts im aktuellen Projektverzeichnis den folgenden Befehl ein:
+2. Geben Sie zum Ausführen des Projekts im aktuellen Projektverzeichnis den folgenden Befehl ein: 
 
 	```
 	bx dev run

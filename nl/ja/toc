@@ -1,29 +1,27 @@
+<!-- Markdown Navigation -->
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="cloudnative" audience="platform" href="/docs/cloudnative/index.html"}
 クラウド・ネイティブ・プロジェクトの構築
-
     {: .navgroup id="learn"}
     index.md
 
     {: .topicgroup}
-    開始
-        devex.md
+    入門        devex.md
         what_is_new.md
         compute.md
         get_code.md
         services.md
 
     {: .topicgroup}
-    Bluemix CLI のプラグイン
+     Bluemix CLI のプラグイン
         dev_cli.md
             dev_cli_local_debug.md
         sdk_cli.md
 
     {: .topicgroup}
-    チュートリアル
-        tutorial_web.md
+    チュートリアル        tutorial_web.md
         tutorial_mobile.md
         tutorial_bff.md
         tutorial_microservice.md

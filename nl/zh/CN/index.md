@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-04-10"
+lastupdated: "2016-06-23"
 
 ---
 {:new_window: target="_blank"}
@@ -15,9 +15,9 @@ lastupdated: "2016-04-10"
 # 构建云本机项目
 {: #web-mobile}
 
-您可以通过 {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} [项目](projects.html)的概念来管理云本机应用程序。您可以通过使用 [{{site.data.keyword.dev_console}}](devex.html) 或使用适用于 {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} CLI 的 [{{site.data.keyword.dev_cli_notm}}](dev_cli.html) 来创建项目。{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} 将云本机应用程序开发者所需的最常用服务集中到单一位置，为开发者提供优化的连接体验。
+您可以通过 {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} *项目*的概念来管理云本机应用程序。您可以通过使用 [{{site.data.keyword.dev_console}}](devex.html) 或使用适用于 {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} CLI 的 [{{site.data.keyword.dev_cli_notm}}](dev_cli.html) 来创建项目。{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} 将云本机应用程序开发者所需的最常用服务集中到单一位置，为开发者提供优化的连接体验。
 
-通过 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}，云本机应用程序开发者可以利用 SDK，从各种[模式类型](patterns.html)和[入门模板](starters.html)创建项目、创建关键 {{site.data.keyword.Bluemix_notm}} 优化服务并将其连接到项目，以及快速下载工作代码。SDK 完全与功能凭证或依赖关系相集成，使您能够几分钟内就让其运行起来。当应用程序处于运行状态时，如果已经设置并配置了功能，那么您可以返回到项目，监视并管理应用程序用户的参与情况。还可以通过 {{site.data.keyword.dev_console}} 配置和管理服务。
+通过 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}，云本机应用程序开发者可以利用 SDK，从各种模式类型和入门模板创建项目、创建关键 {{site.data.keyword.Bluemix_notm}} 优化服务并将其连接到项目，以及快速下载工作代码。SDK 完全与功能凭证或依赖关系相集成，使您能够几分钟内就让其运行起来。当应用程序处于运行状态时，如果已经设置并配置了功能，那么您可以返回到项目，监视并管理应用程序用户的参与情况。还可以通过 {{site.data.keyword.dev_console}} 配置和管理服务。
 
 <!--
 While the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} provides an integrated development experience, some developers might still want to have finer-grained control and wire services together manually. If this is your preferred approach, you might want to consider using the [{{site.data.keyword.mobilefirstbp}} Starter boilerplate](try_mobile.html).
@@ -34,9 +34,7 @@ The Mobile dashboard provides an integrated experience on {{site.data.keyword.Bl
 
 {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} 将应用程序用户界面、数据和服务结合到完整的*项目*中。通过创建项目，您应用程序所需的所有组件和已添加的功能会保留在 {{site.data.keyword.Bluemix_notm}} 服务器上。如果在项目中配置了这些服务，那么可以下载应用程序代码以及所需凭证和初始化程序。您可以通过选择**项目**来查看所有项目。  
 
-您可以通过在**项目**页面上选择单个项目，查看该项目的其他信息。这将显示**项目概述**页面，其中包含已配置并可用于项目的服务。服务是不同的功能，可通过添加函数来扩展您的应用程序。由于服务是单独添加的，因此您可以添加所需服务，如推送、认证、数据和存储服务以及其他服务。向**项目概述**页面上的项目添加服务并遵循指示信息对其进行配置后，该服务会自动与应用程序相关联。有关“项目概述”页面的更多信息，请参阅[项目概述页面](project_overview_page.html)。
-
-要创建项目，必须选择[模式](patterns.html)，后跟[入门模板](starters.html)。
+您可以通过在**项目**页面上选择单个项目，查看该项目的其他信息。这将显示**项目概述**页面，其中包含已配置并可用于项目的服务。服务是不同的功能，可通过添加函数来扩展您的应用程序。由于服务是单独添加的，因此您可以添加所需服务，如推送、认证、数据和存储服务以及其他服务。向**项目概述**页面上的项目添加服务并遵循指示信息对其进行配置后，该服务会自动与应用程序相关联。
 
 
 ### 项目概述页面
@@ -107,7 +105,7 @@ Web 项目添加了新功能，可为 Web 服务器处理诸如 HTML、JavaScrip
 ### 服务于前端的后端 (BFF)
 {: #bff}
 
-服务于前端的后端模式通常称为 BFF，让您可以重点关注公开业务数据和服务的方式要能够满足用户的交互需求。要优化云解决方案的用户旅程，可能需要对移动应用程序具有不同的用户旅程，而对 Web 应用程序具有更丰富、更详细的旅程。随着语音控制设备（如 [{{site.data.keyword.conversationfull}} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/watson/developercloud/conversation.html) 服务）的引入，与用户的交互可以是由语音控制。这个数字通道需要截然不同的 BFF，以管理这些基于语音意图的交互。
+服务于前端的后端模式通常称为 BFF，让您可以重点关注公开业务数据和服务的方式要能够满足用户的交互需求。要优化云解决方案的用户旅程，可能需要对移动应用程序具有不同的用户旅程，而对 Web 应用程序具有更丰富、更详细的旅程。随着语音控制设备（如 [{{site.data.keyword.conversationfull}} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/watson/developercloud/conversation.html "外部链接图标") 服务）的引入，与用户的交互可以是由语音控制。这个数字通道需要截然不同的 BFF，以管理这些基于语音意图的交互。
 
 有了 {{site.data.keyword.Bluemix_notm}}，可以通过使用混合编程方法来定义 BFF，从而构建 BFF。IBM 建议使用 Node.js、Swift 或 Java，以具有 Cloud Foundry、Container 服务或无服务器的方式，在云本机模式下运行。
 
@@ -140,9 +138,9 @@ Content to be provided by Karl Bishop.
 
 以下为受支持的语言：
 
-   * [Java ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](../runtimes/liberty/getting-started.html){: new_window}
-   * [Node.js ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](../runtimes/nodejs/getting-started.html){: new_window}
-   * [Swift ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](../runtimes/swift/getting-started.html){: new_window}
+   * [Java ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](../runtimes/liberty/getting-started.html "外部链接图标"){: new_window}
+   * [Node.js ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](../runtimes/nodejs/getting-started.html "外部链接图标"){: new_window}
+   * [Swift ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](../runtimes/swift/getting-started.html "外部链接图标"){: new_window}
 
 
 #### Java

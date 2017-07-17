@@ -103,9 +103,9 @@ A única parte da especificação de Open API que não é totalmente suportada �
 
 O {{site.data.keyword.Bluemix_notm}} criou um BFF de referência usando o {{site.data.keyword.apiconnect_short}} e o Strongloop, que mapeiam um modelo de produto para um {{site.data.keyword.cloudant}} e uma API de imagem para referenciar imagens no {{site.data.keyword.objectstorageshort}}.
 
-É possível usar esse padrão de BFF para iniciar rapidamente o fornecimento de um BFF totalmente funcional para o {{site.data.keyword.Bluemix_notm}} e usá-lo para ajudar a entender como é fácil integrar um BFF a um projeto móvel e gerar SDKs nativos para iOS e Android no Swift e Java, respectivamente.
+É possível usar esse padrão de BFF para iniciar rapidamente o fornecimento de um BFF totalmente funcional para o {{site.data.keyword.Bluemix_notm}} e usá-lo para ajudar a entender como é fácil integrar um BFF a um projeto móvel e gerar SDKs nativos para iOS e Android no Swift e Java, respectivamente. 
 
-Siga as instruções do [LEIA-ME ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-bluemix-mobile-services/backend-for-frontend-node) para criar e instalar um projeto.
+Siga as instruções do [LEIA-ME ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-bluemix-mobile-services/backend-for-frontend-node "Ícone de link externo") para criar e instalar um projeto.
 
 
 ## Usando o Backend for Frontend com um projeto do Developer Experience
@@ -154,14 +154,14 @@ bluemix sdk list --url
 ```
 {: codeblock}
 
-Use o comando a seguir para validar o arquivo de definição de Open API do `<AppName>` para determinar se ele pode ser usado para gerar um SDK. O comando localiza `<AppName>` no espaço atual e usa o caminho relativo na variável de ambiente `OPENAPI_SPEC` para localizar a especificação para validação.
+Use o comando a seguir para validar o arquivo de definição do Open API do `<AppName>` para determinar se ele pode ser usado para gerar um SDK. O comando encontra `<AppName>` em seu espaço atual e usa o caminho relativo na variável de ambiente `OPENAPI_SPEC` para localizar a especificação para validação.
 
 ```
 bluemix sdk validate <AppName>
 ```
 {: codeblock}
 
-Use o comando a seguir para gerar um SDK para a `< Platform>` nativa de sua preferência e colocar um arquivo compactado no diretório atualmente em funcionamento.
+Use o comando a seguir para gerar um SDK para a `<Platform>` nativa de sua escolha e colocar um arquivo compactado em seu diretório atualmente em funcionamento.
 
 ```
 bluemix sdk generate <AppName> <SDKName> --<Platform>

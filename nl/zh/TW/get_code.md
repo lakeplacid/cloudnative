@@ -26,10 +26,10 @@ lastupdated: "2017-04-18"
 ### 一般
 {: #general notoc}
 
-* [Homebrew ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://brew.sh/)
+* [Homebrew ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://brew.sh/ "外部鏈結圖示")
 	* 協助 Apple 開發人員安裝其他工具及運行環境（例如 CocoaPods 及 Carthage）的指令行工具。
 
-* [Docker ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://www.docker.com/get-docker)
+* [Docker ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://www.docker.com/get-docker "外部鏈結圖示")
 	* 開放程式碼專案，協助在容器中執行及除錯應用程式。只有針對非行動專案，這才是必要項目。
 
 ### {{site.data.keyword.Bluemix_notm}}
@@ -43,37 +43,37 @@ lastupdated: "2017-04-18"
 	$ brew install Node5
 	```
 
-* [Bluemix CLI 工具 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://clis.ng.bluemix.net/ui/home.html)
+* [Bluemix CLI 工具 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://clis.ng.bluemix.net/ui/home.html "外部鏈結圖示")
 
    使用 {{site.data.keyword.Bluemix_notm}}，從指令行介面部署 Cloud Foundry 運行環境的指令行工具。  
 
-* [{{site.data.keyword.dev_cli_notm}} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](dev_cli.html)
+* [{{site.data.keyword.dev_cli_notm}} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](dev_cli.html "外部鏈結圖示")
 
 	建立、執行、測試與部署 Web 及行動專案的 {{site.data.keyword.Bluemix_notm}} CLI 外掛程式。
 	
-* [SDK 產生器外掛程式 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](sdk_cli.html)
+* [SDK 產生器外掛程式 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](sdk_cli.html "外部鏈結圖示")
 
-	從 [Open API 規格 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://www.openapis.org/) 相容的 REST API 定義產生 SDK 的 {{site.data.keyword.Bluemix_notm}} CLI 外掛程式。
+	從 [Open API 規格 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://www.openapis.org/ "外部鏈結圖示") 相容的 REST API 定義產生 SDK 的 {{site.data.keyword.Bluemix_notm}} CLI 外掛程式。
 
 ### Android
 {: #android notoc}
 
-* [Android Studio 2.2 或更新版本![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.android.com/studio)
-	* 安裝最新的 [Android 7.0 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://www.android.com/versions/nougat-7-0/) 運行環境。
+* [Android Studio 2.2 或更新版本![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.android.com/studio "外部鏈結圖示")
+	* 安裝最新的 [Android 7.0 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://www.android.com/versions/nougat-7-0/ "外部鏈結圖示") 運行環境。
 
 ### iOS
 {: #ios notoc}
 
-* [Xcode 8 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.apple.com/xcode/)（建議）
+* [Xcode 8 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.apple.com/xcode/ "外部鏈結圖示")（建議）
 
 <!-- * Install the latest [iOS 10 ![External link icon](../icons/launch-glyph.svg "External link icon")](http://www.apple.com/ios/ios-10/) runtime.
 -->
-* [CocoaPods ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://cocoapods.org/) 相依關係管理程式，用於安裝 iOS SDK 相依關係。請使用最新版本：
+* [CocoaPods ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://cocoapods.org/ "外部鏈結圖示") 相依關係管理程式，用於安裝 iOS SDK 相依關係。請使用最新版本：
 
 	```
 	$ sudo gem install cocoapods --pre
 	```
-* 安裝 {{site.data.keyword.watson}} Developer Cloud SDK 的 [Carthage ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/Carthage/Carthage) 相依關係管理員。
+* 安裝 {{site.data.keyword.watson}} Developer Cloud SDK 的 [Carthage ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/Carthage/Carthage "外部鏈結圖示") 相依關係管理員。
 
 	```
 	$ brew install carthage

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-04-10"
+lastupdated: "2016-06-23"
 
 ---
 {:new_window: target="_blank"}
@@ -15,9 +15,9 @@ lastupdated: "2016-04-10"
 # Construindo projetos nativos de nuvem
 {: #web-mobile}
 
-É possível gerenciar apps nativos de nuvem por meio do conceito de [Projetos](projects.html) do {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}}. É possível criar um projeto usando o [{{site.data.keyword.dev_console}}](devex.html) ou a [{{site.data.keyword.dev_cli_notm}}](dev_cli.html) para o {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} CLI. O {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} traz as competências de serviços mais comuns que são necessárias a um desenvolvedor de aplicativo nativo de nuvem para uma experiência única e conectada que foi otimizada para o desenvolvedor.
+É possível gerenciar apps nativos de nuvem por meio do conceito de *Projetos* do {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}}. É possível criar um projeto usando o [{{site.data.keyword.dev_console}}](devex.html) ou a [{{site.data.keyword.dev_cli_notm}}](dev_cli.html) para o {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} CLI. O {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} traz as competências de serviços mais comuns que são necessárias a um desenvolvedor de aplicativo nativo de nuvem para uma experiência única e conectada que foi otimizada para o desenvolvedor.
 
-O {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} permite que um desenvolvedor de aplicativo nativo de nuvem crie um projeto usando uma variedade de [tipos padrão](patterns.html) e [Iniciadores](starters.html), crie e conecte os principais serviços otimizados pelo {{site.data.keyword.Bluemix_notm}} ao projeto e faça download rapidamente do código de trabalho com SDKs. Os SDKs estão totalmente integrados a credenciais ou dependências de recurso que permitem tê-los em execução em minutos. Quando seu aplicativo está em execução e você instalou e configurou recursos, é possível retornar ao projeto para monitorar e gerenciar engajamento com os usuários do aplicativo. Também é possível configurar e gerenciar os serviços por meio do {{site.data.keyword.dev_console}}.
+O {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} permite que um desenvolvedor de aplicativo nativo de nuvem crie um projeto usando uma variedade de iniciadores e tipos padrão, crie e conecte serviços essenciais otimizados do {{site.data.keyword.Bluemix_notm}} para seu projeto e faça download rapidamente do código de trabalho com SDKs. Os SDKs estão totalmente integrados a credenciais ou dependências de recurso que permitem tê-los em execução em minutos. Quando seu aplicativo está em execução e você instalou e configurou recursos, é possível retornar ao projeto para monitorar e gerenciar engajamento com os usuários do aplicativo. Também é possível configurar e gerenciar os serviços por meio do {{site.data.keyword.dev_console}}.
 
 <!--
 While the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} provides an integrated development experience, some developers might still want to have finer-grained control and wire services together manually. If this is your preferred approach, you might want to consider using the [{{site.data.keyword.mobilefirstbp}} Starter boilerplate](try_mobile.html).
@@ -39,9 +39,7 @@ servidor {{site.data.keyword.Bluemix_notm}}. Será possível fazer download do c
 É possível visualizar informações adicionais sobre um único projeto, selecionando-o na página **Projetos**. Isso exibe a página **Visão geral do projeto**, que inclui os serviços que estão configurados e disponíveis para o projeto. Serviços são recursos
 separados que estendem seu app incluindo uma função. Como são incluídos individualmente, é possível incluir os serviços necessários, como serviços de push, autenticação, dados e armazenamento ou outros serviços. Ao
 incluir um serviço em seu projeto na página **Visão geral do projeto** e seguir as instruções para configurá-la, ela será
-automaticamente associada ao seu app. Para obter mais informações sobre a página Visão geral do projeto, consulte [página Visão geral do projeto](project_overview_page.html).
-
-Para criar seu projeto, deve-se selecionar um [padrão](patterns.html), seguido por um [iniciador](starters.html).
+automaticamente associada ao seu app.
 
 
 ### Página Visão geral do projeto
@@ -113,7 +111,7 @@ Os padrões de app móvel ajudam a construir apps móveis que se conectam direta
 ### Backend for Frontend (BFF)
 {: #bff}
 
-Os padrões de Backend for Frontend, comumente conhecidos como BFFs, ajudam a focar na exposição de dados de negócios e serviços em um formato que corresponde aos requisitos de interação com o usuário. Para otimizar uma jornada do usuário para sua solução de nuvem, pode ser necessária uma jornada de usuário diferente para o aplicativo móvel e uma jornada mais detalhada e mais rica para o aplicativo da web. Com a introdução de dispositivos controlados por voz, como o serviço [{{site.data.keyword.conversationfull}} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/watson/developercloud/conversation.html), a interação com um usuário poderia ser controlada por voz. Esse canal digital requererá um BFF muito diferente para gerenciar essas interações baseadas em intenção de voz.
+Os padrões de Backend for Frontend, comumente conhecidos como BFFs, ajudam a focar na exposição de dados de negócios e serviços em um formato que corresponde aos requisitos de interação com o usuário. Para otimizar uma jornada do usuário para sua solução de nuvem, pode ser necessária uma jornada de usuário diferente para o aplicativo móvel e uma jornada mais detalhada e mais rica para o aplicativo da web. Com a introdução de dispositivos controlados por voz, como o serviço [{{site.data.keyword.conversationfull}} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/watson/developercloud/conversation.html "Ícone de link externo"), a interação com um usuário poderia ser controlada por voz. Esse canal digital requererá um BFF muito diferente para gerenciar essas interações baseadas em intenção de voz.
 
 Com o {{site.data.keyword.Bluemix_notm}}, é possível construir um BFF usando abordagem de programação poliglota para definir o BFF. A IBM recomenda usar Node.js, Swift ou Java e executá-los em um padrão nativo de nuvem com o Cloud Foundry, serviços de Contêiner ou sem servidor.
 
@@ -146,9 +144,9 @@ Content to be provided by Karl Bishop.
 
 As linguagens suportadas são:
 
-   * [Java ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](../runtimes/liberty/getting-started.html){: new_window}
-   * [Node.js ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](../runtimes/nodejs/getting-started.html){: new_window}
-   * [Swift ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](../runtimes/swift/getting-started.html){: new_window}
+   * [Java ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](../runtimes/liberty/getting-started.html "Ícone de link externo"){: new_window}
+   * [Node.js ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](../runtimes/nodejs/getting-started.html "Ícone de link externo"){: new_window}
+   * [Swift ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](../runtimes/swift/getting-started.html "Ícone de link externo"){: new_window}
 
 
 #### Compilador Java

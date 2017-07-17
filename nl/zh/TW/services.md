@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-25"
 
 ---
 {:new_window: target="_blank"}
@@ -26,6 +26,13 @@ lastupdated: "2017-03-17"
 <caption>表格 1. {{site.data.keyword.Bluemix_notm}} Web 及行動服務</caption>
 <th>{{site.data.keyword.Bluemix_notm}} Web 及行動服務</th>
 <th>說明</th>
+<tr>
+<td> <img src="images/app_id_icon.png" alt="{{site.data.keyword.appid_short}} 圖示"><br/>{{site.data.keyword.app_id_short}}
+</td>
+<td valign="top">使用 {{site.data.keyword.app_id_full}} 服務來新增鑑別至您的 Web 及行動應用程式，並保護您的後端系統。<br/><br/>
+深入閱讀 <a href="/docs/services/appid/index.html" alt="{{site.data.keyword.app_id_short}} 文件鏈結">{{site.data.keyword.app_id_short}} 文件</a>中操作此服務的相關資訊。
+</td>
+</tr>
 <tr>
 <td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}} 圖示"><br/>{{site.data.keyword.mobileanalytics_short}}</td>
 <td valign="top">使用 {{site.data.keyword.mobileanalytics_full}} 服務來瞭解行動應用程式的執行方式及其使用方式。<br/><br/>

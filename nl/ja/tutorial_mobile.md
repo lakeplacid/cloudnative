@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-05-18"
 
 ---
 {:new_window: target="_blank"}
@@ -14,14 +14,19 @@ lastupdated: "2017-04-18"
 # モバイル・ベーシック・スターターのエンドツーエンド・チュートリアル
 {: #tutorial}
 
-以下のエンドツーエンド・チュートリアルでは、モバイル・ベーシック・スターターからプロジェクトを作成するための手順を段階的に説明します。これには、前提条件ツールのインストールと、Xcode および Android Studio でのプロジェクトの実行手順が含まれます。
+以下のエンドツーエンド・チュートリアルでは、モバイル・ベーシック・スターターからプロジェクトを作成するための手順を段階的に説明します。このガイドには、前提条件ツールのインストールと、Xcode および Android Studio でのプロジェクトの実行手順が含まれます。
 
-Web ベースの [{{site.data.keyword.dev_console}}](#create-devex) を使用するか、またはコマンド駆動型 [{{site.data.keyword.dev_cli_notm}}](#create-cli) を使用して、プロジェクトを作成することができます。
 
 ## 開発者ツールのインストール
 {: #dev_tools}
 
-[前提条件の開発者ツール![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](get_code.html#prereq-dev-tools){: new_window} を必ずインストールしてください。
+[前提条件の開発者ツール![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](get_code.html#prereq-dev-tools "外部リンク・アイコン"){: new_window} を必ずインストールしてください。
+
+
+## プロジェクトの作成方法の選択
+{: #choose_how}
+
+Web ベースの [{{site.data.keyword.dev_console}}](#create-devex) を使用するか、またはコマンド駆動型 [{{site.data.keyword.dev_cli_notm}}](#create-cli) を使用して、プロジェクトを作成することができます。
 
 
 ## {{site.data.keyword.dev_console}} を使用したプロジェクトの作成
@@ -29,7 +34,7 @@ Web ベースの [{{site.data.keyword.dev_console}}](#create-devex) を使用す
 
 1. {{site.data.keyword.Bluemix}} で {{site.data.keyword.dev_console}} プロジェクトを作成します。
 
-   1. {{site.data.keyword.dev_console}} 内の [**「開始」** ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/developer/getting-started/) ページから**「プロジェクトの作成」**をクリックします。
+   1. {{site.data.keyword.dev_console}} 内の [**「開始」** ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/developer/getting-started/ "外部リンク・アイコン") ページから**「プロジェクトの作成」**をクリックします。
 
       代替方法として、**「プロジェクト」**ページから**「プロジェクトの作成」**をクリックすることもできます。
 
@@ -55,8 +60,8 @@ Web ベースの [{{site.data.keyword.dev_console}}](#create-devex) を使用す
    
    4. ID プロバイダーを選択し、それを構成するための情報を入力します。ID プロバイダーは 1 つだけ有効にすることができます。
    
-   5. Authentication (認証) の構成について詳しくは、[ID プロバイダーの構成 (Configuring identity providers) ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/appid/identity-providers.html){: new_window} を参照してください。
-
+   5. Authentication の構成方法について詳しくは、『[ID プロバイダーの構成![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/appid/identity-providers.html "外部リンク・アイコン"){: new_window}』 を参照してください。
+   
 3. オプション: Analytics (分析) 機能を追加します。
 
    1. **「プロジェクト概要 (Project Overview)」** ページで、**「Analytics (分析)」**に対して**「追加」**をクリックします。
@@ -67,7 +72,7 @@ Web ベースの [{{site.data.keyword.dev_console}}](#create-devex) を使用す
    
    3. アプリを実行した後、**「デモ・モード」**をオフに切り替えて、分析データを確認できます。
    
-   4. Analytics の構成について詳しくは、[「{{site.data.keyword.mobileanalytics_short}} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") の開始」](/docs/services/mobileanalytics/index.html){: new_window}を参照してください。
+   4. Analytics の構成方法について詳しくは、 『[{{site.data.keyword.mobileanalytics_short}} の概説 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/mobileanalytics/index.html "外部リンク・アイコン"){: new_window}』を参照してください。
 
 4. オプション: {{site.data.keyword.mobilepushshort}} 機能を追加します。
 
@@ -77,9 +82,9 @@ Web ベースの [{{site.data.keyword.dev_console}}](#create-devex) を使用す
 
    2. サービス名を入力し、**「作成」**をクリックします。
 
-   3. iOS の場合、[Apple Push Notification Service ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を構成します](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}。
+   3. iOS の場合、[Apple プッシュ通知サービスを構成します ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/mobilepush/t_push_provider_ios.html "外部リンク・アイコン"){: new_window}。
 
-   4. Android　の場合、[Firebase Cloud Messaging ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を構成します](/docs/services/mobilepush/t_push_provider_android.html){: new_window}。
+   4. Android の場合、[Firebase Cloud Messaging を構成します ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/mobilepush/t_push_provider_android.html "外部リンク・アイコン"){: new_window}。
 
 5. オプション: Data (データ) 機能を追加します。
 
@@ -91,9 +96,9 @@ Web ベースの [{{site.data.keyword.dev_console}}](#create-devex) を使用す
 
    3. サービス名を入力し、**「作成」**をクリックします。
 
-   4. {{site.data.keyword.cloudant_short_notm}} の構成について詳しくは、[「{{site.data.keyword.cloudant_short_notm}} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") の概要」](/docs/services/Cloudant/index.html){: new_window}を参照してください。
+   4. {{site.data.keyword.cloudant_short_notm}} の構成方法について詳しくは、『[Getting started with {{site.data.keyword.cloudant_short_notm}} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/Cloudant/index.html "外部リンク・アイコン"){: new_window}』を参照してください。
 
-   5. {{site.data.keyword.objectstorageshort}} の構成について詳しくは、[「{{site.data.keyword.objectstorageshort}} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") 入門」](/docs/services/ObjectStorage/index.html){: new_window}を参照してください。
+   5. {{site.data.keyword.objectstorageshort}} の構成方法について詳しくは、 『[{{site.data.keyword.objectstorageshort}} 概説 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/ObjectStorage/index.html "外部リンク・アイコン"){: new_window}』を参照してください。
 
 6. プロジェクト・コードを生成します。
 
@@ -153,7 +158,7 @@ Web ベースの [{{site.data.keyword.dev_console}}](#create-devex) を使用す
       
       2. 既存の Pods を更新する必要がある場合は、`pod update` を実行します。
       
-      3. プロジェクトに必要な Pods をインストールするには、`pod install` を実行します。
+      3. プロジェクト用の Pods をインストールするには、`pod install` を実行します。
       
    3. `BasicProject.xcworkspace` Xcode ワークスペースを開きます。
       

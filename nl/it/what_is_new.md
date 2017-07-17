@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-06-27"
 
 ---
 {:new_window: target="_blank"}
@@ -16,10 +16,18 @@ lastupdated: "2017-04-18"
 {: #what-is-new}
 
 
+## Novità a partire da giugno 2017 
+{: #june-2017}
+
+L'aggiornamento di giugno 2017 della {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} introduce le seguenti modifiche: 
+
+   * Gli starter mobili ora gestiscono la creazione dei servizi {{site.data.keyword.ibmwatson}} necessari e l'inserimento delle tue credenziali del servizio nel progetto.
+   * {{site.data.keyword.dev_cli_long}} è stato aggiornato con nuove funzioni. Per ulteriori informazioni, vedi [What’s included in the {{site.data.keyword.Bluemix_notm}} CLI {{site.data.keyword.dev_cli_short}} version 0.1.12 ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/blogs/bluemix/2017/06/whats-included-bluemix-cli-developer-plug-version-0-1-12/ "Icona link esterno").
+
 ## Novità a partire da marzo 2017
 {: #mar-2017}
 
-L'aggiornamento di marzo 2017 della {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} introduce le seguenti modifiche:
+L'aggiornamento di marzo 2017 della {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} introduce le seguenti modifiche:
 
    * Il dashboard mobile {{site.data.keyword.Bluemix_notm}} è ora la {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}.
    * La creazione dei progetti è stata riprogettata per includere i tipi di modello server Applicazione Web, BFF e Microservizio con il supporto per Node.js, Java e Swift.
@@ -33,7 +41,7 @@ L'aggiornamento di marzo 2017 della {{site.data.keyword.Bluemix}} {{site.data.ke
 
 L'aggiornamento di gennaio 2017 del dashboard {{site.data.keyword.Bluemix_notm}} Mobile introduce le seguenti modifiche:
 
-   * A partire dal 31 gennaio, gli Starter IU sono obsoleti. I progetti esistenti creati da uno Starter IU possono essere utilizzati fino al 30 aprile 2017. Per ulteriori informazioni sulla procedura di migrazione e sulle date di rimozione, vedi il [post del blog relativo agli annunci di deprecazione ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/blogs/bluemix/2017/01/bluemix-mobile-dashboard-update/).
+   * A partire dal 31 gennaio, gli Starter IU sono obsoleti. I progetti esistenti creati da uno Starter IU possono essere utilizzati fino al 30 aprile 2017. Per ulteriori informazioni sulla procedura di migrazione e sulle date di rimozione, vedi il [post del blog relativo agli annunci di deprecazione ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/blogs/bluemix/2017/01/bluemix-mobile-dashboard-update/ "Icona link esterno").
 {: deprecated}
    * Puoi ora aggiornare il tipo di starter del progetto invece di eliminare il progetto e crearne uno nuovo.
    * Puoi ora creare il tuo progetto con uno starter codice [Watson Conversation](tutorial_conversation.html).
@@ -60,8 +68,8 @@ L'aggiornamento di novembre 2016 del dashboard {{site.data.keyword.Bluemix_notm}
 
    * Puoi ora generare le risorse SDK per i tuoi progetti dalla pagina **Codice**.
    * Cordova è ora supportato per lo starter codice di base.
-   * Puoi ora [segnalare gli eventi di rete ![Icona link esterno](../icons/launch-glyph.svg "External link icon")](/docs/services/mobileanalytics/sdk.html#network-requests){: new_window} e [monitorare le richieste di rete ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/services/mobileanalytics/app-monitoring.html#monitor-network-requests){: new_window} nella pagina **Richieste di rete** della console {{site.data.keyword.mobileanalytics_short}}.
-   * Puoi ora [esportare i dati in dashDB ![Icona link esterno](../icons/launch-glyph.svg "External link icon")](/docs/services/mobileanalytics/app-monitoring.html#dashdb){: new_window} nella console {{site.data.keyword.mobileanalytics_short}}.
+   * Puoi ora [segnalare gli eventi di rete ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/services/mobileanalytics/sdk.html#network-requests "Icona link esterno"){: new_window} e [monitorare le richieste di rete ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/services/mobileanalytics/app-monitoring.html#monitor-network-requests "Icona link esterno"){: new_window} nella pagina **Richieste di rete** della console {{site.data.keyword.mobileanalytics_short}}.
+   * Puoi ora [esportare i dati in dashDB ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/services/mobileanalytics/app-monitoring.html#dashdb "Icona link esterno"){: new_window} nella console {{site.data.keyword.mobileanalytics_short}}.
 
 
 ## Novità a partire da ottobre 2016
@@ -70,7 +78,7 @@ L'aggiornamento di novembre 2016 del dashboard {{site.data.keyword.Bluemix_notm}
 L'aggiornamento di ottobre 2016 del dashboard {{site.data.keyword.Bluemix_notm}} Mobile introduce le seguenti modifiche:
 
    * Puoi ora aggiungere le funzionalità {{site.data.keyword.mobilepushshort}} e Analytics al tuo progetto direttamente dal dashboard.
-   * Gli [Starter codice](starters.html#Code_Starter) sono ora disponibili.
+   * Gli starter di codice sono ora disponibili.
    * Puoi aggiungere Authentication ai tuoi progetti creati da uno starter codice.
    * Swift è ora supportato.
 
@@ -92,6 +100,6 @@ L'aggiornamento di ottobre 2016 del dashboard {{site.data.keyword.Bluemix_notm}}
 ### Codice
 {: #code notoc}
 
-   * Il codice Objective-C e Swift generato per iOS utilizza ora CocoaPods per gestire le dipendenze. Questo significa che devi installare CocoaPods. Per installarlo, esegui `sudo gem install cocoapods`. Dopo aver installato CocoaPods, esegui `pod setup` per configurarlo se non è già configurato). Infine, esegui `pod install` per scaricare e installare le dipendenze del progetto prima di aprire il tuo file `.xcworkspace` in Xcode. Ulteriori dettagli sono disponibili nel file `README.md` nell'archivio del codice scaricato. Per ulteriori informazioni, vedi [Strumenti per sviluppatori prerequisiti](get_code.html#prereq-dev-tools).
+   * Il codice Objective-C e Swift generato per iOS utilizza ora CocoaPods per gestire le dipendenze, per cui devi installarlo. Per installare CocoaPods, esegui `sudo gem install cocoapods`. Dopo aver installato CocoaPods, esegui `pod setup` per configurarlo se non è già configurato). Infine, esegui `pod install` per scaricare e installare le dipendenze del progetto prima di aprire il tuo file `.xcworkspace` in Xcode. Ulteriori dettagli sono disponibili nel file `README.md` nell'archivio del codice scaricato. Per ulteriori informazioni, vedi [Strumenti per sviluppatori prerequisiti](get_code.html#prereq-dev-tools).
 
 Controlla frequentemente di essere al passo con i nuovi aggiornamenti.

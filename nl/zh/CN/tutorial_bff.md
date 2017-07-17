@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-06-12"
 
 ---
 {:new_window: target="_blank"}
@@ -14,14 +14,19 @@ lastupdated: "2017-04-18"
 # BFF 基本入门模板端到端教程
 {: #tutorial}
 
-以下端到端教程将引导您完成通过“BFF 基本入门模板”创建项目的步骤（包括必须安装的工具）以及接下来运行项目代码的步骤。
+以下端到端教程将引导您完成通过“BFF 基本入门模板”创建项目的步骤。步骤包括安装必备工具以及运行项目代码的步骤。
 
-您可以选择使用基于 Web 的 [{{site.data.keyword.dev_console}}](#create-devex) 或通过命令驱动的 [{{site.data.keyword.dev_cli_notm}}](#create-cli) 来创建项目。
 
 ## 安装开发者工具
 {: #dev_tools}
 
-确保您已安装[必备开发者工具 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](get_code.html#prereq-dev-tools){: new_window}。
+确保安装[必备开发者工具 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](get_code.html#prereq-dev-tools "外部链接图标"){: new_window}。
+
+
+## 选择创建项目的方式
+{: #choose_how}
+
+使用基于 Web 的 [{{site.data.keyword.dev_console}}](#create-devex) 或通过命令驱动的 [{{site.data.keyword.dev_cli_notm}}](#create-cli) 来创建项目。创建项目后，您可以[运行项目](#running-bff)。
 
 
 ## 使用 {{site.data.keyword.dev_console}} 创建项目
@@ -29,7 +34,7 @@ lastupdated: "2017-04-18"
 
 1. 在 {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} 中创建项目。
 
-	1. 在 {{site.data.keyword.dev_console}} 中的[**入门** ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://console.ng.bluemix.net/developer/getting-started/) 页面中，单击**创建项目**。
+	1. 在 {{site.data.keyword.dev_console}} 中的[**入门** ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://console.ng.bluemix.net/developer/getting-started/ "外部链接图标") 页面中，单击**创建项目**。
 
 		或者，您可以从**项目**页面单击**创建项目**。
 
@@ -39,7 +44,11 @@ lastupdated: "2017-04-18"
 
 	4. 输入项目名称。对于本教程，请使用 `BFFProject`。   
 
-	5. 输入唯一主机名。对于本教程，请使用 `devhost` 
+	5. 输入唯一主机名，如您的首字母缩写加 `-devhost`。例如：
+	
+	 ```
+	 abc-devhost
+	 ``` 
 
 	6. 选择语言平台。对于本教程，请使用 `Node`。
    
@@ -77,7 +86,7 @@ lastupdated: "2017-04-18"
 ## 使用 {{site.data.keyword.dev_cli_notm}} 创建项目
 {: #create-cli}
 
-1. 确保您已安装 [{{site.data.keyword.dev_cli_short}}](dev_cli.html)。
+1. 确保安装 [{{site.data.keyword.dev_cli_short}}](dev_cli.html)。
 
 2. 在“终端”提示符处，浏览到所选的本地目录并运行以下命令。
   
@@ -92,15 +101,25 @@ lastupdated: "2017-04-18"
 	* 选择入门模板：1（“基本后端”）
 	* 选择语言：1 (Node)
 	* 输入项目的名称：`BFFProjectCLI`
-	* 输入项目的主机名：`myhost`
+	* 输入项目的主机名：`abc-devhost`
+	  * 输入唯一主机名，如您的首字母缩写加 `-devhost`。例如：
+	
+	     ```
+	     abc-devhost
+	     ```
+	  
+4. 成功保存 `BFFProjectCLI` 后，浏览到 `BFFProjectCLI` 文件夹。
 
-4. 如果要向项目添加服务，请在问题提示处输入 `y` 并回答其余问题。
-
-5. 成功保存 `BFFProjectCLI` 后，浏览到 `BFFProjectCLI` 文件夹。
-
-6. 添加您自己的代码，然后运行项目。
+5. 添加您自己的代码、构建项目，然后运行项目。
  
-	1. 使用以下命令运行项目：
+	1. 使用以下命令构建项目：
+
+		```
+		bx dev build
+	```
+		{: codeblock}
+		 
+	2. 使用以下命令运行项目：
 
  		```
 		bx dev run
@@ -108,42 +127,46 @@ lastupdated: "2017-04-18"
 		{: codeblock}
 
 
-## 运行 BFF 项目
+## Running a BFF project
 {: #running-bff}
 
-### 本地
-{: #bff-local}
-
-1. 编译服务器：
-
-  ```
-  swift build
-  ```
-  {: codeblock}
-
-2. 运行应用程序。例如，假设应用程序名为 `MyServer`：
-
-  ```
-  .build/debug/MyServer
-  ```
-  {: codeblock}
-
-3. 您可以使用 `curl http://localhost:8080` 在服务器上运行 curl。
+如果您安装了必要构建工具，那么您可以在主机系统上本地运行应用程序，或者使用 {{site.data.keyword.dev_cli_notm}} 中可用的容器支持。
 
 
-### 使用 Bluemix 插件
+### Using the Bluemix Plugin
 {: #using-blumix}
 
-1. 运行编译：
+1. 要在当前项目目录中构建项目，请输入以下命令：
 
-	```
-	bx dev run
-	```
-	{: codeblock}
+   ```
+bx dev build
+```
+   {: codeblock}
 
-2. 您可以使用以下命令在服务器上运行 curl：
-  
+2. 要在当前项目目录中运行项目，请输入以下命令：
+
+   ```
+  bx dev run
+  ```
+   {: codeblock}
+
+3. 您可以使用以下命令在服务器上运行 curl：
+
+   ```
+curl http://localhost:8080
 	```
-	curl http://localhost:8080
-	```
-	{: codeblock}
+   {: codeblock}
+
+4. 您可以在服务器上查看 API 文档，网址为：
+
+   ```
+   http://localhost:8080/swagger/api
+   ```
+   {: codeblock}
+
+5. 您可以在服务器上探索 API，网址为：
+
+   ```
+   http://localhost:8080/explorer
+   ```
+   {: codeblock}

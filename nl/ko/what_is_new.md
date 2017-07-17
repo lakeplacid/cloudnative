@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-06-27"
 
 ---
 {:new_window: target="_blank"}
@@ -16,10 +16,18 @@ lastupdated: "2017-04-18"
 {: #what-is-new}
 
 
+## 새로운 기능: 2017년 6월
+{: #june-2017}
+
+{{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}}의 2017년 6월 업데이트에서 다음 변경사항이 도입되었습니다. 
+
+   * 이제 모바일 스타터에서 필수 {{site.data.keyword.ibmwatson}} 서비스 작성 및 프로젝트에 대한 서비스 신임 정보 삽입을 지원합니다.
+   * {{site.data.keyword.dev_cli_long}}이 새 기능과 함께 업데이트되었습니다. 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} CLI {{site.data.keyword.dev_cli_short}} 버전 0.1.12에 포함된 내용 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/blogs/bluemix/2017/06/whats-included-bluemix-cli-developer-plug-version-0-1-12/)을 참조하십시오.
+
 ## 새로운 기능: 2017년 3월
 {: #mar-2017}
 
-{{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}}의 2017년 3월 업데이트에서 다음 변경사항이 도입되었습니다. 
+{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}의 2017년 3월 업데이트에서 다음 변경사항이 도입되었습니다. 
 
    * {{site.data.keyword.Bluemix_notm}} 모바일 대시보드가 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}로 변경되었습니다. 
    * Node.js, Java, Swift를 지원하고 웹 앱, BFF, 마이크로서비스 서버 패턴 유형을 포함하도록 프로젝트 작성이 재설계되었습니다. 
@@ -70,7 +78,7 @@ lastupdated: "2017-04-18"
 {{site.data.keyword.Bluemix_notm}} 모바일 대시보드의 2016년 10월 업데이트에서 다음 변경사항이 도입되었습니다. 
 
    * 이제 대시보드에서 직접 {{site.data.keyword.mobilepushshort}} 및 분석 기능을 프로젝트에 추가할 수 있습니다. 
-   * [코드 스타터](starters.html#Code_Starter)를 사용할 수 있습니다. 
+   * 이제 코드 스타터를 사용할 수 있습니다.
    * 코드 스타터에서 작성한 프로젝트에 인증을 추가할 수 있습니다. 
    * Swift가 지원됩니다. 
 
@@ -92,6 +100,6 @@ lastupdated: "2017-04-18"
 ### 코드
 {: #code notoc}
 
-   * 생성된 iOS용 Objective-C 코드와 Swift 코드에서 CocoaPods를 사용하여 종속 항목을 관리합니다. 이는 CocoaPods를 설치해야 함을 의미합니다. 이를 설치하려면 `sudo gem install cocoapods`를 실행하십시오. CocoaPods 설치 후 `pod setup`을 실행하여 구성하십시오(아직 구성되지 않은 경우). 마지막으로 Xcode에서 `.xcworkspace` 파일을 열기 전에 `pod install`을 실행하여 프로젝트 종속 항목을 다운로드하고 설치하십시오. 추가 세부사항은 다운로드된 코드 아카이브의 `README.md` 파일에서 사용 가능합니다. 자세한 정보는 [전제조건 개발자 도구](get_code.html#prereq-dev-tools)를 살펴보십시오. 
+   * 생성된 iOS용 Objective-C 및 Swift 코드는 이제 CocoaPods를 사용하여 종속 항목을 관리하므로 이를 설치해야 합니다. CocoaPods를 설치하려면 `sudo gem install cocoapods`를 실행하십시오. CocoaPods 설치 후 `pod setup`을 실행하여 구성하십시오(아직 구성되지 않은 경우). 마지막으로 Xcode에서 `.xcworkspace` 파일을 열기 전에 `pod install`을 실행하여 프로젝트 종속 항목을 다운로드하고 설치하십시오. 추가 세부사항은 다운로드된 코드 아카이브의 `README.md` 파일에서 사용 가능합니다. 자세한 정보는 [전제조건 개발자 도구](get_code.html#prereq-dev-tools)를 살펴보십시오. 
 
 자주 방문하여 추가되는 새 업데이트를 확인하십시오. 

@@ -1,3 +1,4 @@
+<!-- Markdown Navigation -->
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
@@ -8,7 +9,7 @@ Creación de proyectos nativos en la nube
     index.md
 
     {: .topicgroup}
-    Iniciación
+    Guía de inicio
         devex.md
         what_is_new.md
         compute.md
@@ -16,7 +17,7 @@ Creación de proyectos nativos en la nube
         services.md
 
     {: .topicgroup}
-    Plug-ins para la CLI de Bluemix
+    Plugins para la CLI de Bluemix
         dev_cli.md
             dev_cli_local_debug.md
         sdk_cli.md

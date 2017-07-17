@@ -1,4 +1,4 @@
----
+﻿---
 
 copyright:
   years: 2017
@@ -11,10 +11,10 @@ lastupdated: "2017-03-17"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Compute
+# Calcul 
 {: #compute}
 
-Quand vous générez une application de canal numérique de cloud native pour web et mobile, la meilleure façon de procéder est d'avoir une architecture BFF (Backend for Frontend) qui est dédiée à votre canal numérique ou offre la même prise en charge de données et d'intégration logique pour les applications client mobiles et web. Pour plus d'informations sur cette architecture, voir [Microservices for web and mobile ![Icône de lien externe](../icons/launch-glyph.svg)](https://www.ibm.com/devops/method/content/architecture/omnichannelArchitecture).
+Lorsque vous générez une application de canal numérique de cloud natif pour Web et mobile, il est recommandé d'avoir une architecture BFF (Backend for Frontend) qui est dédiée à votre canal numérique ou offre la même prise en charge de données et d'intégration logique pour les applications client mobiles et web. Pour plus d'informations sur cette architecture, voir [Microservices for web and mobile ![External link icon](../icons/launch-glyph.svg)](https://www.ibm.com/devops/method/content/architecture/omnichannelArchitecture).
 
 Le diagramme suivant présente une architecture BFF.
 
@@ -45,7 +45,7 @@ The BFF will expose an API most commonly using a REST pattern, but you can desig
 ## Intégration d'un client mobile avec BFF
 {: #integration}
 
-Pour faciliter l'intégration entre un client mobile et une architecture BFF, {{site.data.keyword.Bluemix_notm}} prend en charge une génération SDK de client mobile pour iOS et Android en langage Swift et Java, respectivement. Pour activer cette fonction, vous devez exposer votre intégration BFF en utilisant un document de spécification Open API (Swagger), qui peut être au format JSON ou YAML.
+Pour faciliter l'intégration entre un client mobile et une architecture BFF, {{site.data.keyword.Bluemix_notm}} prend en charge une génération de SDK de client mobile pour iOS et Android en langage Swift et Java, respectivement. Pour activer cette fonction, vous devez exposer votre intégration BFF en utilisant un document de spécification Open API (Swagger), qui peut être au format JSON ou YAML.
 
 Le générateur SDK client se sert du fichier de définition Open API pour définir un SDK développeur optimisé client qui est facile à consommer dans votre application mobile native. Il accélérera l'intégration de votre architecture BFF dans votre application mobile.
 
@@ -57,7 +57,7 @@ L'architecture BFF doit exposer un fichier de définition d'API conforme à la s
 
 Pour ajouter la variable d'environnement `OPENAPI_SPEC` dans {{site.data.keyword.Bluemix_notm}}, procédez comme suit :
 
-1. Connectez-vous à [{{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../icons/launch-glyph.svg)](http://bluemix.net).
+1. Connectez-vous à [{{site.data.keyword.Bluemix_notm}} ![External link icon](../icons/launch-glyph.svg)](http://bluemix.net).
 2. Sélectionnez une application Cloud Foundry.
 3. Sélectionnez **Exécution**.
 4. Sélectionnez **Variables d'environnement**.
@@ -95,7 +95,7 @@ Vous pouvez également définir des opérations de logique applicative.
 ### Eléments de la spécification Open API pris en charge
 {: #supported-elements notoc}
 
-La seule portion de la spécification Open API qui n'est complètement prise en charge est la structure de fichier. La spécification autorise le fractionnement en différents fichiers de portions de la définition et leur référencement en utilisant la zone json `$ref`. L'ensemble de votre définition doit être contenu dans un fichier.
+La seule portion de la spécification Open API qui n'est pas complètement prise en charge est la structure de fichier. La spécification autorise le fractionnement en différents fichiers de portions de la définition et leur référencement en utilisant la zone json `$ref`. L'ensemble de votre définition doit être contenu dans un fichier.
 
 
 ## Exemple de BFF (Backend for Frontend) utilisant Bluegen
@@ -105,15 +105,15 @@ La seule portion de la spécification Open API qui n'est complètement prise en 
 
 Vous pouvez utiliser cette architecture BFF pour vous lancer rapidement dans le provisionnement d'une architecture BFF totalement opérationnelle dans {{site.data.keyword.Bluemix_notm}} et vous en servir pour comprendre comme il est facile d'intégrer une architecture BFF dans un projet mobile et générer des SDK natifs pour iOS et Android sous Swift et Java, respectivement.
 
-Suivez les instructions du fichier [README ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/backend-for-frontend-node) pour créer un projet et l'installer.
+Suivez les instructions du fichier [README ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/backend-for-frontend-node) pour créer un projet et l'installer.
 
 
 ## Utilisation de BFF (Backend for Frontend) avec un projet Developer Experience
 {: #bff-devex}
 
-L'expérience {{site.data.keyword.Bluemix_notm}} Mobile Developer Experience est conçue pour simplifier la définition d'un projet mobile avec un certain nombre de services de cloud associés. Vous pouvez facilement ajouter des services [{{site.data.keyword.mobilepushshort}} ![Icône de lien externe](../icons/launch-glyph.svg)](/docs/services/mobilepush/index.html), [Analytics ![Icône de lien externe](../icons/launch-glyph.svg)](/docs/services/mobileanalytics/index.html) et Data ou Storage.
+L'expérience {{site.data.keyword.Bluemix_notm}} Mobile Developer Experience est conçue pour simplifier la définition d'un projet mobile avec un certain nombre de services de cloud associés. Vous pouvez facilement ajouter des services [{{site.data.keyword.mobilepushshort}} ![External link icon](../icons/launch-glyph.svg)](/docs/services/mobilepush/index.html), [Analytics ![External link icon](../icons/launch-glyph.svg)](/docs/services/mobileanalytics/index.html) et Data ou Storage.
 
-La console {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} introduit la possibilité d'intégrer une infrastructure BFF dans un projet mobile, dans la page **Compute**. Vous pouvez ajouter des instances de service de calcul existantes à votre projet mobile. Une fois cet ajout effectué, vous pouvez générer un SDK natif pour votre choix de langue ou générer le projet complet et le SDK sera intégré dans le package source du projet de la page **Code**, ce qui est particulièrement utile quand vous procédez à une intégration à des architectures BFF qui sont déjà bien définies.
+La console {{site.data.keyword.dev_console}} de {{site.data.keyword.Bluemix}} introduit la possibilité d'intégrer une infrastructure BFF dans un projet mobile, dans la page **Calcul**. Vous pouvez ajouter des instances de service de calcul existantes à votre projet mobile. Une fois cet ajout effectué, vous pouvez générer un SDK natif pour votre choix de langue ou générer le projet complet et le SDK sera intégré dans le package source du projet de la page **Code**, ce qui est particulièrement utile quand vous procédez à une intégration à des architectures BFF qui sont déjà bien définies.
 
 Une fois que vous avez téléchargé votre projet, vous pouvez l'ouvrir avec Xcode ou Android et le compiler avec le SDK client.
 
@@ -135,7 +135,7 @@ bluemix sdk
 ```
 {: codeblock}
 
-Utilisez la commande suivante pour répertorier les instances Cloud Foundry en cours d'exécution dans votre espace {{site.data.keyword.Bluemix_notm}} actuel.
+Utilisez la commande suivante pour répertorier les instances Cloud Foundry en cours d'exécution dans votre espace {{site.data.keyword.Bluemix_notm}} en cours :
 
 ```
 bluemix sdk list
@@ -154,21 +154,21 @@ bluemix sdk list --url
 ```
 {: codeblock}
 
-Utilisez la commande suivante pour valider le fichier de définition Open API d'`<NomApp>` afin de déterminer s'il peut être utilisé pour générer un SDK. La commande trouve `<NomApp>` dans votre espace actuel et utilise le chemin relatif de la variable d'environnement `OPENAPI_SPEC` pour localiser la spécification pour la validation.
+Utilisez la commande suivante pour valider le fichier de définition Open API de l'application `<AppName>` afin de déterminer s'il peut être utilisé pour générer un SDK. La commande trouve l'application `<AppName>` dans votre espace en cours et utilise le chemin relatif dans la variable d'environnement `OPENAPI_SPEC` pour localiser la spécification en vue de sa validation. 
 
 ```
-bluemix sdk validate <NomApp>
-```
-{: codeblock}
-
-Utilisez la commande suivante pour générer un SDK pour la `<plateforme>` native de votre choix et placer un fichier compressé dans votre répertoire de travail actuel.
-
-```
-bluemix sdk generate <NomApp> <NomSDK> --<Plateforme>
+bluemix sdk validate <AppName>
 ```
 {: codeblock}
 
-L'utilisation de l'option `--unzip` extrait automatiquement le SDK dans votre répertoire de travail actuel. Vous pouvez, si vous le souhaitez, spécifier l'emplacement où extraire le SDK en utilisant l'option `--output`. Vous pouvez gérer votre code source avec GitHub et créer une nouvelle branche spécifiquement pour la mise à jour du SDK. L'utilisation de cette approche facilite la visualisation des changements et la fusion de votre SDK mis à jour dans votre branche de développement.
+Utilisez la commande suivante afin de générer un SDK pour la plateforme native `<Platform>` de votre choix et placer un fichier compressé dans votre répertoire de travail en cours. 
+
+```
+bluemix sdk generate <AppName> <SDKName> --<Platform>
+```
+{: codeblock}
+
+L'utilisation de l'option `--unzip` extrait automatiquement le SDK dans votre répertoire de travail en cours. Vous pouvez, si vous le souhaitez, spécifier l'emplacement où extraire le SDK en utilisant l'option `--output`. Vous pouvez gérer votre code source avec GitHub et créer une nouvelle branche spécifiquement pour la mise à jour du SDK. L'utilisation de cette approche facilite la visualisation des changements et la fusion de votre SDK mis à jour dans votre branche de développement.
 
 
 ## Utilisation de modèles de SDK générés et d'API

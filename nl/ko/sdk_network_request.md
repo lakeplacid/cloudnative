@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-27"
 
 ---
 {:new_window: target="_blank"}
@@ -22,23 +22,30 @@ lastupdated: "2017-03-17"
 	
 2. 네트워크 요청을 작성하십시오. 
 
-	```
-	public void makeGetCall() {
-		Thread thread = new Thread(new Runnable() {
-			@Override
-			public void run() {
-				try  {
-					Request request = new Request("http://httpbin.org/get", "GET");
-					request.send(null, null);
-				} catch (Exception e) {
-					// Handle failure here.
-				}
-			}
-		});
-		thread.start();
-	}
+	```Java
+	String customResourceURL = "<your resource URL>";
+	Request request = new Request(customResourceURL, "GET");
+
+	ResponseListener listener = new ResponseListener() {
+		@Override
+		public void onSuccess(Response response) {
+			Log.i("MyApp", "Response: " + response.getResponseText());
+		}
+
+		@Override
+		public void onFailure(Response response, Throwable t, JSONObject extendedInfo) {
+			Log.i("MyApp", "Request failed. Response: " + response.getResponseText() + ". Error: " + t.getLocalizedMessage());
+		}
+	};
+        
+	request.send(getApplicationContext(), listener);
 	```
 	{: codeblock}
+
+`Request` 클래스는 요청을 작성하고 요청이 완료된 후에 응답을 가져오는 간단한 방법입니다. 큰 파일 또는 본문이 큰 데이터를 다운로드하거나 업로드하는 경우, `Request` `download` 또는 `upload` 메소드를 사용할 수 있습니다. 다운로드 또는 업로드의 진행상태를 모니터하려면 사용자 정의 `ProgressListener`를 작성해서 `download` 또는 `upload` 메소드에 전달하십시오.
+
+<!--For complete usage examples, see the `BMSCore` GitHub [README](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core).-->
+
 
 ## iOS
 {: #request-ios}
@@ -51,18 +58,17 @@ lastupdated: "2017-03-17"
 	{: #ios-swift3 notoc}
 	
 	```Swift
-	 	// Make a network request
-		let customResourceURL = "<your resource URL>"
-		let request = Request(url: customResourceURL, method: HttpMethod.GET)
+	let customResourceURL = "<your resource URL>"
+	let request = Request(url: customResourceURL, method: HttpMethod.GET)
 	
-		let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
-	   	if error == nil {
-	       	    print ("response:\(response?.responseText), no error")
-	    	  } else {
-	       	    print ("error: \(error)")
-	    	}
+	let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
+		if error == nil {
+			print ("Response: \(response?.responseText), no error")
+		} else {
+			print ("Error: \(error)")
 		}
-		request.send(completionHandler: callBack)
+	}
+	request.send(completionHandler: callBack)
 	```
 	{: codeblock}
  
@@ -70,24 +76,25 @@ lastupdated: "2017-03-17"
 	{: #ios-swift22 notoc}
 	
 	```Swift
-	 	// Make a network request
-		let customResourceURL = "<your resource URL>"
-		let request = Request(url: customResourceURL, method: HttpMethod.GET)
+	let customResourceURL = "<your resource URL>"
+	let request = Request(url: customResourceURL, method: HttpMethod.GET)
 	
-		let callBack:BMSCompletionHandler = {(response: Response?, error: NSError?) in
-	   	if error == nil {
-	       	    print ("response:\(response?.responseText), no error")
-	    	  } else {
-	       	    print ("error: \(error)")
-	    	}
+	let callBack:BMSCompletionHandler = {(response: Response?, error: NSError?) in
+		if error == nil {
+			print ("Response: \(response?.responseText), no error")
+		} else {
+			print ("Error: \(error)")
 		}
-		request.send(completionHandler: callBack)
+	}
+	request.send(completionHandler: callBack)
 	```
 	{: codeblock}
 
 `Request` 클래스는 요청을 작성하고 요청이 완료된 후에 응답을 가져오는 간단한 방법입니다. `Request` 클래스보다 더 많은 유연성과 제어 기능을 원하는 경우, `BMSURLSession` 클래스를 사용할 수 있습니다. `BMSURLSession` 클래스의 일부 기능으로는 업로드 프로세스 모니터링과 요청 일시정지 또는 취소가 있습니다. 응답을 가져오는 옵션으로 완료 핸들러 또는 위임 중 하나를 선택할 수 있습니다.
 
-`BMSURLSession` 클래스는 iOS용으로만 사용 가능합니다. `BMSURLSession`에 대한 자세한 정보는 `BMSCore` SDK [README](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core)를 참조하십시오.
+`BMSURLSession` 클래스는 iOS용으로만 사용 가능합니다. 
+
+전체 사용법 예제는 `BMSCore` GitHub [README](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core)를 참조하십시오.
 
 
 ## Cordova
@@ -97,7 +104,7 @@ lastupdated: "2017-03-17"
 
 2. 네트워크 요청을 작성하십시오. 
 
-	```
+	```Javascript
 	var success = function(data) {
 		console.log("success", data);
 	}
@@ -109,13 +116,3 @@ lastupdated: "2017-03-17"
 	```
 	{: codeblock}
 
-
-# 관련 링크
-{: #rellinks notoc}
-
-## 관련 링크
-{: #general notoc}
-
-* [BMSCore Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
-* [BMSCore iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
-* [BMSCore Cordova 플러그인](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}

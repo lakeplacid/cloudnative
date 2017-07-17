@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-04-10"
+lastupdated: "2017-06-12"
 
 ---
 
@@ -27,7 +27,7 @@ Alguns problemas conhecidos com a {{site.data.keyword.dev_cli_notm}} são docume
 As seções a seguir descrevem os problemas conhecidos e as possíveis resoluções.
 
 
-### Erro "Hostname is taken" ao criar um projeto com um padrão não móvel
+### O nome do host é considerado um erro quando você cria um projeto com um padrão não móvel
 {: #hostname}
 
 Será possível ver o erro a seguir se você usar a {{site.data.keyword.dev_cli_short}} para criar um projeto por meio dos padrões Web App, BFF ou Microservice:
@@ -83,6 +83,48 @@ bx login
 {: codeblock}
 
 
+### Erro: não há essa imagem ao executar um novo projeto
+{: #nosuchimage}
+
+O erro a seguir pode ser exibido ao executar um projeto sem construí-lo primeiro.
+
+```
+$ bx dev run testProject
+The run-cmd option was not specified
+Stopping the 'testProject' container...
+The 'testProject' container was not found
+Creating image bx-dev-testProject based on Dockerfile...
+OK                    
+Creating a container named 'testProject' from that image...
+FAILED
+Container 'testProject' could not be created:
+Error: No such image: bx-dev-testProject
+```
+
+
+#### Causa
+{: #nosuchimage-cause}
+
+Deve-se construir um projeto antes de executá-lo. 
+
+
+#### Resolução
+{: #nosuchimage-resolution}
+
+Execute o comando a seguir no diretório de projeto atual para construir seu aplicativo:
+
+```
+bx dev build
+```
+{: codeblock}
+
+Execute o comando a seguir no diretório de projeto atual para iniciar seu aplicativo:
+
+```
+bx dev run
+```
+
+
 ### Erro do broker de serviço ao incluir o recurso {{site.data.keyword.objectstorageshort}}
 {: #os}
 
@@ -98,7 +140,7 @@ Service broker error: {"description"=>"You can not create this Object Storage in
 #### Causa
 {: #os-cause}
    
-Esse erro ocorre porque o serviço {{site.data.keyword.objectstorageshort}} fornece somente uma instância do plano Free {{site.data.keyword.objectstorageshort}}.
+Esse erro acontece devido ao serviço {{site.data.keyword.objectstorageshort}}, que fornece somente uma instância do plano grátis do {{site.data.keyword.objectstorageshort}}.
 
 
 #### Resolução
@@ -138,11 +180,11 @@ Esse erro deve-se a um tempo limite interno.
    ```
    {: codeblock}
 
-   Substitua `<your-project-name>` pelo nome do projeto que você especificou durante a criação do projeto.
+   Substitua `<your-project-name>` com o nome do projeto especificado durante a criação do projeto.
 
 * Use o {{site.data.keyword.dev_console}}.
 
-	1. Selecione seu [projeto ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://console.{DomainName}/developer/projects) no {{site.data.keyword.dev_console}} e clique em **Obter o código**.
+	1. Selecione seu [projeto ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://console.{DomainName}/developer/projects "Ícone de link externo") no {{site.data.keyword.dev_console}} e clique em **Obter o código**.
 
 	2. Clique em **Gerar código**.
 
@@ -178,7 +220,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 #### Causa
 {: #node-cause}
    
-Esse erro é causado pelo módulo `appmetrics` estar instalado em uma arquitetura diferente. Módulos npm nativos que estão instalados em uma arquitetura não funcionam em outra. As imagens incluídas do Docker baseiam-se no kernel Linux.
+Esse erro ocorre quando o módulo `appmetrics` é instalado em uma arquitetura diferente. Módulos npm nativos que estão instalados em uma arquitetura não funcionam em outra. As imagens incluídas do Docker baseiam-se no kernel Linux.
 
 
 #### Resolução
@@ -198,16 +240,16 @@ Exclua a pasta `node_modules` e execute `bx dev run` novamente.
 ## Obtendo Ajuda e Suporte
 {: #gettinghelp}
 
-Se você tiver problemas ou perguntas sobre o {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} ou o {{site.data.keyword.dev_cli_notm}}, será possível obter ajuda procurando informações ou fazendo perguntas por meio de um fórum. Também é possível abrir um chamado de suporte.
+Se você tiver problemas ou dúvidas sobre o {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} ou o {{site.data.keyword.dev_cli_notm}}, procure informações ou faça perguntas em um fórum para obter ajuda. Também é possível abrir um chamado de suporte.
 
-Ao fazer uma pergunta nos fóruns, identifique sua pergunta para que ela seja vista pelas equipes de desenvolvimento do {{site.data.keyword.Bluemix_notm}}.
+Quando você posta nos fóruns, é possível identificar suas perguntas, para que as equipes de desenvolvimento do {{site.data.keyword.Bluemix_notm}} sejam notificadas.
 
 <!--Insert the appropriate Stack Overflow tag for your service for <service_keyword> in URL and text below:  -->
 
 Se tiver questões técnicas sobre como desenvolver ou implementar um app com o {{site.data.keyword.dev_console}} ou a {{site.data.keyword.dev_cli_notm}}:
 
-* Poste sua pergunta no [Stack Overflow ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix) e marque-a com `bluemix-dev-services` e `ibm-bluemix`.
-* Poste sua pergunta no [Slack ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://ibm-cloud-tech.slack.com/) no canal `bluemix-dev-services`. [Inscreva-se ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://ibm.biz/IBMCloudNativeSlack) hoje.
+* Poste sua pergunta no [Stack Overflow ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix "Ícone de link externo") e marque-a com `bluemix-dev-services` e `ibm-bluemix`.
+* Poste sua pergunta no [Slack ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://ibm-cloud-tech.slack.com/ "Ícone de link externo") no canal `bluemix-dev-services`. [Inscreva-se ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://ibm.biz/IBMCloudNativeSlack "Ícone de link externo") hoje.
 
 
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
@@ -215,9 +257,9 @@ Se tiver questões técnicas sobre como desenvolver ou implementar um app com o 
 * For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers ![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/bluemix-dev-services/?smartspace=bluemix) forum. Include the  "bluemix-dev-services" and "bluemix" tags.
 * -->
 
-Consulte [Obtendo ajuda![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/support/index.html#getting-help) para obter mais detalhes sobre o uso dos fóruns.
+Consulte [Obtendo ajuda![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/support/index.html#getting-help "Ícone de link externo") para obter mais detalhes sobre o uso dos fóruns.
 
-Para obter informações sobre como abrir um chamado de suporte da {{site.data.keyword.IBM}} ou sobre os níveis de suporte e as severidades dos chamados, veja [Entrando em contato com o suporte ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/support/index.html#contacting-support).
+Para obter informações sobre como abrir um chamado de suporte da {{site.data.keyword.IBM}} ou sobre os níveis de suporte e as severidades dos chamados, veja [Entrando em contato com o suporte ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/support/index.html#contacting-support "Ícone de link externo").
 
 <!--Add a heading and content for how to get help. (Support not available for experimental.) Use this template for experimental services:  -->
 

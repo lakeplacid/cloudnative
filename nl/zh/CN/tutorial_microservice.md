@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-06-12"
 
 ---
 {:new_window: target="_blank"}
@@ -14,14 +14,19 @@ lastupdated: "2017-04-18"
 # 微服务基本入门模板端到端教程
 {: #tutorial}
 
-以下端到端教程将引导您完成通过“微服务基本入门模板”创建项目的步骤。这包括安装必备工具以及运行项目代码的步骤。
+以下端到端教程将引导您完成通过“微服务基本入门模板”创建项目的步骤。步骤包括安装必备工具以及运行项目代码的步骤。
 
-您可以使用基于 Web 的 [{{site.data.keyword.dev_console}}](#create-devex) 或通过命令驱动的 [{{site.data.keyword.dev_cli_notm}}](#create-cli) 来创建项目。
 
 ## 安装开发者工具
 {: #dev_tools}
 
-确保安装[必备开发者工具 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](get_code.html#prereq-dev-tools){: new_window}。
+确保安装[必备开发者工具 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](get_code.html#prereq-dev-tools "外部链接图标"){: new_window}。
+
+
+## 选择创建项目的方式
+{: #choose_how}
+
+您可以使用基于 Web 的 [{{site.data.keyword.dev_console}}](#create-devex) 或通过命令驱动的 [{{site.data.keyword.dev_cli_notm}}](#create-cli) 来创建项目。创建项目后，您可以[运行项目](#running-dev-plugin)。
 
 
 ## 使用 {{site.data.keyword.dev_console}} 创建项目
@@ -29,7 +34,7 @@ lastupdated: "2017-04-18"
 
 1. 在 {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} 中创建项目。
 
-	1. 在 {{site.data.keyword.dev_console}} 中的[**入门** ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://console.ng.bluemix.net/developer/getting-started/) 页面中，单击**创建项目**。
+	1. 在 {{site.data.keyword.dev_console}} 中的[**入门** ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://console.ng.bluemix.net/developer/getting-started/ "外部链接图标") 页面中，单击**创建项目**。
 
 		或者，您可以从**项目**页面单击**创建项目**。
 
@@ -39,8 +44,12 @@ lastupdated: "2017-04-18"
 
 	4. 输入项目名称。对于本教程，请使用 `MicroserviceProject`。   
 
-	5. 输入唯一主机名。对于本教程，请使用 `devhost` 
-   
+	5. 输入唯一主机名，如您的首字母缩写加 `-devhost`。例如：
+	
+	 ```
+	 abc-devhost
+	 ```
+	   
 	6. 单击**创建**。
 
 2. 可选：添加数据功能。
@@ -88,14 +97,18 @@ lastupdated: "2017-04-18"
 
 	* 选择模式：4（“微服务”）
 	* 选择入门模板：1（“基本”）
-	* 选择平台：3 (Java)
+	* 选择平台：1 (Java)
 	* 输入项目的名称：`MicroserviceProjectCLI`
+	* 输入项目的主机名：`abc-devhost`
+	  * 输入唯一主机名，如您的首字母缩写加 `-devhost`。例如：
+	
+	     ```
+	     abc-devhost
+	     ```
 
-4. 如果要向项目添加服务，请在问题提示处输入 `y` 并回答其余问题。
+4. 成功保存 `MicroserviceProjectCLI` 后，浏览到 `MicroserviceProjectCLI` 文件夹。
 
-5. 成功保存 `MicroserviceProjectCLI` 后，浏览到 `MicroserviceProjectCLI` 文件夹。
-
-6. 现在，可添加您自己的代码，构建或运行项目。
+5. 现在，可添加您自己的代码，构建或运行项目。
  
  
 ## 使用 {{site.data.keyword.dev_cli_notm}} 运行项目
@@ -108,7 +121,7 @@ lastupdated: "2017-04-18"
 	```     
 	{: codeblock}
 
-2. 要在当前项目目录中构建和运行项目，请输入以下命令：
+2. 要在当前项目目录中运行项目，请输入以下命令：
 
 	```
 	bx dev run

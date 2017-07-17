@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-06-12"
 
 ---
 {:new_window: target="_blank"}
@@ -14,15 +14,19 @@ lastupdated: "2017-04-18"
 # Web ベーシック・スターターのエンドツーエンド・チュートリアル
 {: #tutorial}
 
-以下のエンドツーエンド・チュートリアルでは、Web ベーシック・スターターからプロジェクトを作成するための手順を段階的に説明します。これには、前提条件ツールのインストールと、プロジェクト・コードの実行手順が含まれます。
-
-Web ベースの [{{site.data.keyword.dev_console}}](#create-devex) を使用するか、またはコマンド駆動型 [{{site.data.keyword.dev_cli_notm}}](#create-cli) を使用して、プロジェクトを作成することができます。
+以下のエンドツーエンド・チュートリアルでは、Web ベーシック・スターターからプロジェクトを作成するための手順を段階的に説明します。ステップには、前提条件ツールのインストールと、プロジェクト・コードの実行方法が含まれます。
 
 
 ## 開発者ツールのインストール
 {: #dev_tools}
 
-[前提条件の開発者ツール![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](get_code.html#prereq-dev-tools){: new_window} を必ずインストールしてください。
+[前提条件の開発者ツール![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](get_code.html#prereq-dev-tools "外部リンク・アイコン"){: new_window} を必ずインストールしてください。
+
+
+## プロジェクトの作成方法の選択
+{: #choose_how}
+
+Web ベースの [{{site.data.keyword.dev_console}}](#create-devex) を使用するか、またはコマンド駆動型 [{{site.data.keyword.dev_cli_notm}}](#create-cli) を使用して、プロジェクトを作成することができます。プロジェクトが作成されたら、[プロジェクトを実行](#run)できます。
 
 
 ## {{site.data.keyword.dev_console}} を使用したプロジェクトの作成
@@ -30,7 +34,7 @@ Web ベースの [{{site.data.keyword.dev_console}}](#create-devex) を使用す
 
 1. {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} でプロジェクトを作成します。
 
-	1. {{site.data.keyword.dev_console}} 内の [**「開始」** ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/developer/getting-started/) ページから**「プロジェクトの作成」**をクリックします。
+	1. {{site.data.keyword.dev_console}} 内の [**「開始」** ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/developer/getting-started/ "外部リンク・アイコン") ページから**「プロジェクトの作成」**をクリックします。
 
 		代替方法として、**「プロジェクト」**ページから**「プロジェクトの作成」**をクリックすることもできます。
 
@@ -40,7 +44,11 @@ Web ベースの [{{site.data.keyword.dev_console}}](#create-devex) を使用す
 
 	4. プロジェクト名を入力します。このチュートリアルでは、`WebBasicProject` を使用します。   
 
-	5. 固有のホスト名を入力してください。このチュートリアルでは、`devhost` を使用します。 
+	5. 固有のホスト名を入力します (自分のイニシャルに `-devhost` を付加したものなど)。以下に例を示します。
+	
+	 ```
+	 abc-devhost
+	 ```
 
 	6. 言語プラットフォームを選択します。このチュートリアルでは、`Swift` を使用します。
    
@@ -87,22 +95,31 @@ Web ベースの [{{site.data.keyword.dev_console}}](#create-devex) を使用す
 	```
 	{: codeblock}
 
-
 3. プロンプトが出されたら、以下の値を入力します。
 
 	* パターンの選択: 1 (Web)
 	* スターターの選択: 1 (ベーシック Web)
 	* 言語の選択: 2 (Swift)
 	* プロジェクト名の入力: `WebBasicProjectCLI`
-	* プロジェクトのホスト名の入力: `myhost`
+	* プロジェクトのホスト名の入力: `abc-devhost`
+	  * 固有のホスト名を入力します (自分のイニシャルに `-devhost` を付加したものなど)。以下に例を示します。
+	
+	     ```
+	     abc-devhost
+	     ```
 
-4. プロジェクトにサービスを追加する場合は、該当の質問のプロンプトで `y` を入力し、残りの質問に答えます。
+4. `WebBasicProjectCLI` プロジェクトが正常に保存されたら、`WebBasicProjectCLI` フォルダーにナビゲートします。
 
-5. `WebBasicProjectCLI` プロジェクトが正常に保存されたら、`WebBasicProjectCLI` フォルダーにナビゲートします。
-
-6. 独自のコードを追加し、プロジェクトを実行します。
+5. 独自のコードを追加、ビルドし、プロジェクトを実行します。
+	
+	1. 以下のコマンドを使用してプロジェクトをビルドします。
  
-	1. 以下のコマンドを使用してプロジェクトを実行します。
+		```
+		bx dev build
+	```
+		{: codeblock}
+	 
+	2. 以下のコマンドを使用してプロジェクトを実行します。
  
 		```
 		bx dev run
@@ -113,38 +130,7 @@ Web ベースの [{{site.data.keyword.dev_console}}](#create-devex) を使用す
 ## Web プロジェクトの実行
 {: #run}
 
-### ローカルの場合
-{: #local notoc}
-
-1. ノードの依存関係をインストールします。
-
-  ```
-  npm install
-  ```
-  {: codeblock}
-
-2. フロントエンド・コードをモジュールにバンドルします。
-
-  ```
-  node_modules/.bin/gulp
-  ```
-  {: codeblock}
-
-3. サーバーをコンパイルします。
-
-  ```
-  swift build
-  ```
-  {: codeblock}
-
-4. アプリケーションを実行します。
-
-  ```
-  .build/debug/WebBasicProjectCLI
-  ```
-  {: codeblock}
-
-5. ブラウザーで `http://localhost:8080` を開きます。
+必要なビルド・ツールをインストールした場合、あるいは {site.data.keyword.dev_cli_notm}} で使用可能なコンテナー・サポートを使用すると、アプリケーションをホスト・システム上でローカルに実行することができます。
 
 
 ### {{site.data.keyword.dev_cli_short}} の使用
@@ -164,14 +150,21 @@ Web ベースの [{{site.data.keyword.dev_console}}](#create-devex) を使用す
   ```
   {: codeblock}
 
-3. コンパイルを実行します。
+3. 現行プロジェクト・ディレクトリーでプロジェクトをビルドするには、以下のコマンドを入力します。
+
+  ```
+bx dev build
+```
+  {: codeblock}
+
+4. 現行プロジェクト・ディレクトリーでプロジェクトを実行するには、以下のコマンドを入力します。
 
   ```
   bx dev run
   ```
   {: codeblock}
 
-4. ブラウザーで `http://localhost:8080` を開きます。
+5. ブラウザーで `http://localhost:8080` を開きます。
 
 
 ## Xcode でのプロジェクトの実行

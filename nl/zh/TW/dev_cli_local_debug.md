@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-05-18"
 
 ---
 {:new_window: target="_blank"}
@@ -33,17 +33,17 @@ lastupdated: "2017-04-18"
 2. 將除錯器連接至應用程式：
 
 	* Eclipse
-      1. 將「現有 Maven 專案」專案匯入至 Eclipse。
-      2. 建立 [Java 遠端應用程式 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm) 除錯配置。
+      1. 將**現有 Maven 專案**匯入至 Eclipse。
+      2. 建立 [Java 遠端應用程式 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm "外部鏈結圖示") 除錯配置。
       		1. 輸入 IP 位址或 `localhost:<port>`  
       		2. 輸入 `7777` 作為埠號。
       		3. 指定您已匯入之 Java 專案的名稱。
       6. 在 IDE 中設定岔斷點。
       7. 執行除錯配置。
       8. 使用瀏覽器來存取端點，以重建問題。  
-	   **附註**：Java 基本 Microservices 端點的預設埠是 9080。
-	* [IntelliJ ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html)
-	* [VSCode ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugge)
+	   **附註**：Java 基本 Microservice 端點的預設埠是 9080。
+	* [IntelliJ ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html "外部鏈結圖示")
+	* [VSCode ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugge "外部鏈結圖示")
 	* JDK 指令行：`jdb -attach <host:port>`
 
 ## Node.js 應用程式除錯
@@ -57,8 +57,8 @@ lastupdated: "2017-04-18"
 	`bx dev debug`
 
 2. 將除錯器連接至應用程式：
-	* [VSCode ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://blog.docker.com/2016/07/live-debugging-docker/)
-	* [WebStorm ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://blog.alexseifert.com/2016/10/25/debugging-node-js-in-a-docker-container-with-webstorm/)
+	* [VSCode ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://blog.docker.com/2016/07/live-debugging-docker/ "外部鏈結圖示")
+	* [WebStorm ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://blog.alexseifert.com/2016/10/25/debugging-node-js-in-a-docker-container-with-webstorm/ "外部鏈結圖示")
 
 
 <!--

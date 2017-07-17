@@ -2,13 +2,13 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-25"
 
 ---
 # SDK
 {: #sdk}
 
-要将 {{site.data.keyword.Bluemix}} Mobile Services SDK 添加到您的应用程序中，请选择要使用的 SDK，然后配置您的依赖关系管理器，以将 SDK 拉入您的应用程序中。
+要将 {{site.data.keyword.Bluemix}} Web 和 Mobile Services SDK 添加到您的应用程序中，请选择要使用的 SDK，然后配置您的依赖关系管理器，以将 SDK 拉入您的应用程序中。
 
 
 ## 客户机 SDK
@@ -20,29 +20,26 @@ lastupdated: "2017-03-17"
 ### Android SDK
 {: #android_sdk}
 
-- [核心 SDK ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core) 
-- [{{site.data.keyword.mobileanalytics_short}}SDK ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics) 
-- [{{site.data.keyword.mobilepushshort}} SDK ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-push) 
-- [Facebook 认证 SDK ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-facebookauthentication) 
-- [Google 认证 SDK ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-googleauthentication) 
+- [核心 SDK ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core "外部链接图标")
+- [{{site.data.keyword.appid_short}}SDK ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-cloud-security/appid-clientsdk-android "外部链接图标")
+- [{{site.data.keyword.mobileanalytics_short}}SDK ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics "外部链接图标")
+- [{{site.data.keyword.mobilepushshort}}SDK ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-push "外部链接图标")
 
 
 ### iOS SDK
 {: #ios_sdk}
 
-- [核心 SDK ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core)
-- [{{site.data.keyword.mobileanalytics_short}} SDK ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics) 
-- [{{site.data.keyword.mobilepushshort}} SDK ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push) 
-- [Facebook 认证 SDK ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-facebookauthentication)
-- [Google 认证 SDK ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-googleauthentication) 
-- [{{site.data.keyword.amashort}} SDK ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security) 
+- [核心 SDK ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core "外部链接图标")
+- [{{site.data.keyword.appid_short}}SDK ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-cloud-security/appid-clientsdk-swift "外部链接图标")
+- [{{site.data.keyword.mobileanalytics_short}}SDK ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics "外部链接图标")
+- [{{site.data.keyword.mobilepushshort}}SDK ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push "外部链接图标")
 
 
 ### Cordova 插件
 {: #cordova_plugin}
 
-- [核心插件 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
-- [{{site.data.keyword.mobilepushshort}} 插件 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)
+- [核心插件 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core "外部链接图标")
+- [{{site.data.keyword.mobilepushshort}} 插件 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push "外部链接图标")
 
 
 ## 服务器 SDK
@@ -51,17 +48,15 @@ lastupdated: "2017-03-17"
 如果您具有 Java、NodeJS 或 Swift 服务器应用程序，那么您可以使用以下 SDK，以与各自的服务进行通信。
 
 
+### {{site.data.keyword.appid_short}} 服务器 SDK
+{: #appid_sdk}
+
+- [{{site.data.keyword.appid_short}} Node.js 服务器 SDK ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-cloud-security/appid-serversdk-nodejs "外部链接图标")
+- [{{site.data.keyword.appid_short}} Swift 服务器 SDK ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-cloud-security/appid-serversdk-swift "外部链接图标")
+
 ### {{site.data.keyword.mobilepushshort}} 服务器 SDK
 {: #push_sdk}
 
-- [{{site.data.keyword.mobilepushshort}} Java 服务器 SDK ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-java) 
-- [{{site.data.keyword.mobilepushshort}} Swift 服务器 SDK ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-swift) 
-- [{{site.data.keyword.mobilepushshort}} NodeJS 服务器 SDK ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-nodejs)
-
-
-### {{site.data.keyword.amashort}} 服务器 SDK
-{: #mca_sdk}
-
-- [{{site.data.keyword.amashort}} Swift 服务器 SDK ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-mca-serversdk-swift)
-
-
+- [{{site.data.keyword.mobilepushshort}} Node.js 服务器 SDK ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-nodejs "外部链接图标")
+- [{{site.data.keyword.mobilepushshort}} Java 服务器 SDK ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-java "外部链接图标")
+- [{{site.data.keyword.mobilepushshort}} Swift 服务器 SDK ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-swift "外部链接图标")

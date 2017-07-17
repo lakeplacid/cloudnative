@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-04-10"
+lastupdated: "2017-06-12"
 
 ---
 
@@ -83,6 +83,48 @@ bx login
 {: codeblock}
 
 
+### 错误：运行新项目时没有这种映像
+{: #nosuchimage}
+
+如果未先构建项目就运行项目的话，可能会看到以下错误。
+
+```
+$ bx dev run testProject
+The run-cmd option was not specified
+Stopping the 'testProject' container...
+The 'testProject' container was not found
+Creating image bx-dev-testProject based on Dockerfile...
+OK                    
+Creating a container named 'testProject' from that image...
+FAILED
+Container 'testProject' could not be created:
+Error: No such image: bx-dev-testProject
+```
+
+
+#### 原因
+{: #nosuchimage-cause}
+
+必须先构建项目，然后再运行项目。 
+
+
+#### 解决方案
+{: #nosuchimage-resolution}
+
+在当前项目目录中运行以下命令以构建应用程序：
+
+```
+bx dev build
+```
+{: codeblock}
+
+在当前项目目录中运行以下命令以启动应用程序：
+
+```
+bx dev run
+```
+
+
 ### 添加 {{site.data.keyword.objectstorageshort}} 功能时发生服务代理错误
 {: #os}
 
@@ -142,7 +184,7 @@ bx dev code <your-project-name>
 
 * 使用 {{site.data.keyword.dev_console}}。
 
-	1. 在 {{site.data.keyword.dev_console}} 中选择您的[项目 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://console.{DomainName}/developer/projects)，并单击**获取代码**。
+	1. 在 {{site.data.keyword.dev_console}} 中选择您的[项目 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://console.{DomainName}/developer/projects "外部链接图标")，并单击**获取代码**。
 
 	2. 单击**生成代码**。
 
@@ -178,7 +220,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 #### 原因
 {: #node-cause}
    
-此错误是由于将 `appmetrics` 模块安装到其他体系结构中导致的。在一个体系结构上安装的本机 npm 模块无法在其他体系结构上使用。包含的 Docker 映像基于 Linux 内核。
+当将 `appmetrics` 模块安装到其他体系结构中时会发生此错误。在一个体系结构上安装的本机 npm 模块无法在其他体系结构上使用。包含的 Docker 映像基于 Linux 内核。
 
 
 #### 解决方案
@@ -200,14 +242,14 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 
 如果您对 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} 或 {{site.data.keyword.dev_cli_notm}} 有任何问题或疑问，可通过搜索信息或在论坛中提问获取帮助。您还可以提交支持凭单。
 
-在论坛中提问时，请对问题进行标记，以便 {{site.data.keyword.Bluemix_notm}} 开发团队能看到您的问题。
+当您在论坛中发布帖子时，可以对您的问题进行标记，以便通知 {{site.data.keyword.Bluemix_notm}} 开发团队。
 
 <!--Insert the appropriate Stack Overflow tag for your service for <service_keyword> in URL and text below:  -->
 
 如果在使用 {{site.data.keyword.dev_console}} 或 {{site.data.keyword.dev_cli_notm}} 开发或部署应用程序时遇到技术问题：
 
-* 请将问题发布到 [Stack Overflow ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)，并以 `bluemix-dev-services` 和 `ibm-bluemix` 来标记问题。
-* 请将问题发布到 `bluemix-dev-services` 通道中的 [Slack ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://ibm-cloud-tech.slack.com/)。立即[注册 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://ibm.biz/IBMCloudNativeSlack)。
+* 请将问题发布到 [Stack Overflow ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix "外部链接图标")，并以 `bluemix-dev-services` 和 `ibm-bluemix` 来标记问题。
+* 请将问题发布到 `bluemix-dev-services` 通道中的 [Slack ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://ibm-cloud-tech.slack.com/ "外部链接图标")。立即[注册 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://ibm.biz/IBMCloudNativeSlack "外部链接图标")。
 
 
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
@@ -215,9 +257,9 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 * For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers ![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/bluemix-dev-services/?smartspace=bluemix) forum. Include the  "bluemix-dev-services" and "bluemix" tags.
 * -->
 
-请参阅[获取帮助 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/support/index.html#getting-help)，以获取有关使用论坛的更多详细信息。
+请参阅[获取帮助 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/support/index.html#getting-help "外部链接图标")，以获取有关使用论坛的更多详细信息。
 
-有关提交 {{site.data.keyword.IBM}} 支持凭单或者有关支持级别和凭单严重性的信息，请参阅[联系支持人员 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/support/index.html#contacting-support)。
+有关提交 {{site.data.keyword.IBM}} 支持凭单或者有关支持级别和凭单严重性的信息，请参阅[联系支持人员 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/support/index.html#contacting-support "外部链接图标")。
 
 <!--Add a heading and content for how to get help. (Support not available for experimental.) Use this template for experimental services:  -->
 

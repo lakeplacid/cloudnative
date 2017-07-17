@@ -105,7 +105,7 @@ OPENAPI_SPEC='/explorer/swagger.json'
 
 您可以使用此 BFF 模式快速熟悉将完整工作 BFF 供应到 {{site.data.keyword.Bluemix_notm}}，并使用它来帮助理解将 BFF 集成到移动项目，并分别以 Swift 和 Java 为 iOS 和 Android 生成本机 SDK 是多么轻松的一件事。
 
-遵循[自述文件 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/backend-for-frontend-node) 指示信息，以创建项目并对其进行安装。
+遵循[自述文件 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/backend-for-frontend-node "外部链接图标") 指示信息，以创建项目并对其进行安装。
 
 
 ## 使用前端服务于后端与 Developer Experience 项目

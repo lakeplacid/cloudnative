@@ -1,3 +1,4 @@
+<!-- Markdown Navigation -->
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
@@ -37,7 +38,7 @@
 
     {: .navgroup id="help"}
     troubleshoot.md
-    [Stack Overflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
+    [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
     [取得協助](../support/index.html#getting-help)
     [與支援中心聯絡](../support/index.html#contacting-support)
     {: .navgroup-end}

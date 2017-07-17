@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-04-10"
+lastupdated: "2016-06-23"
 
 ---
 {:new_window: target="_blank"}
@@ -15,9 +15,9 @@ lastupdated: "2016-04-10"
 # Creación de proyectos nativos en la nube
 {: #web-mobile}
 
-Puede gestionar apps nativas en cloud a través del concepto de [Proyectos](projects.html) de la {{site.data.keyword.dev_console}} de {{site.data.keyword.Bluemix}}. Puede crear un proyecto utilizando el [{{site.data.keyword.dev_console}}](devex.html) o [{{site.data.keyword.dev_cli_notm}}](dev_cli.html) para la CLI de {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}}. La {{site.data.keyword.dev_console}} de {{site.data.keyword.Bluemix_notm}} ofrece las funcionalidades de servicio más comunes que son necesarias para un desarrollador móvil en una experiencia única y conectada que se ha optimizado para el desarrollador.
+Puede gestionar apps nativas en cloud a través del concepto de {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} *Proyectos*. Puede crear un proyecto utilizando el [{{site.data.keyword.dev_console}}](devex.html) o [{{site.data.keyword.dev_cli_notm}}](dev_cli.html) para la CLI de {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}}. La {{site.data.keyword.dev_console}} de {{site.data.keyword.Bluemix_notm}} ofrece las funcionalidades de servicio más comunes que son necesarias para un desarrollador móvil en una experiencia única y conectada que se ha optimizado para el desarrollador.
 
-La {{site.data.keyword.dev_console}} de {{site.data.keyword.Bluemix_notm}} permite a un desarrollador de aplicaciones nativas en cloud crear un proyecto a partir de diversos [tipos de patrones](patterns.html) e [Iniciadores](starters.html), crear y conectar servicios optimizados clave de {{site.data.keyword.Bluemix_notm}} al proyecto, y descargar rápidamente código que funciona con los SDK. Los SDK se integran totalmente con las dependencias o credenciales de la prestación, que le permiten ejecutarla en unos minutos. Cuando la aplicación se esté ejecutando y haya configurado las funciones, puede volver al proyecto para supervisar y gestionar la colaboración con los usuarios de la aplicación. También puede configurar y gestionar los servicios a través de la {{site.data.keyword.dev_console}}.
+La {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} permite a los desarrolladores de aplicaciones nativas de nube crear un proyecto a partir de diversos iniciadores y tipos de patrones, crear y conectar servicios optimizados de {{site.data.keyword.Bluemix_notm}} en el proyecto y descargar rápidamente código de trabajo con los SDK. Los SDK se integran totalmente con las dependencias o credenciales de la prestación, que le permiten ejecutarla en unos minutos. Cuando la aplicación se esté ejecutando y haya configurado las funciones, puede volver al proyecto para supervisar y gestionar la colaboración con los usuarios de la aplicación. También puede configurar y gestionar los servicios a través de la {{site.data.keyword.dev_console}}.
 
 <!--
 While the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} provides an integrated development experience, some developers might still want to have finer-grained control and wire services together manually. If this is your preferred approach, you might want to consider using the [{{site.data.keyword.mobilefirstbp}} Starter boilerplate](try_mobile.html).
@@ -34,9 +34,7 @@ The Mobile dashboard provides an integrated experience on {{site.data.keyword.Bl
 
 La {{site.data.keyword.dev_console}} de {{site.data.keyword.Bluemix}} combina la interfaz de usuario, los datos y los servicios de la app en un *proyecto* completo. Al crear un proyecto, se mantienen todas las partes necesarias de la app y las prestaciones añadidas en el servidor de {{site.data.keyword.Bluemix_notm}}. Puede descargar el código de la app y las credenciales e iniciadores necesarios si los servicios están configurados en su proyecto. Puede ver todos sus proyectos seleccionando **Proyectos**.  
 
-Para ver más información sobre un determinado proyecto, selecciónelo en la página **Proyectos**. Se abrirá la página **Visión general del proyecto**, que incluye los servicios configurados y disponibles para el proyecto. Los servicios son prestaciones independientes que amplían la app añadiendo una función. Debido a que se añaden individualmente, puede añadir los servicios que necesite, como los servicios push, de autenticación, datos y almacenamiento, entre otros. Cuando añade un servicio al proyecto en la página **Visión general del proyecto** y sigue las instrucciones para configurarlo, se asocia automáticamente a la app. Para obtener más información sobre la página Visión general del proyecto, consulte la [página Visión general del proyecto](project_overview_page.html).
-
-Para crear el proyecto, debe seleccionar un [patrón](patterns.html), seguido por un [iniciador](starters.html).
+Para ver más información sobre un determinado proyecto, selecciónelo en la página **Proyectos**. Se abrirá la página **Visión general del proyecto**, que incluye los servicios configurados y disponibles para el proyecto. Los servicios son prestaciones independientes que amplían la app añadiendo una función. Debido a que se añaden individualmente, puede añadir los servicios que necesite, como los servicios push, de autenticación, datos y almacenamiento, entre otros. Cuando añade un servicio al proyecto en la página **Visión general del proyecto** y sigue las instrucciones para configurarlo, se asocia automáticamente a la app. 
 
 
 ### Página Visión general del proyecto
@@ -108,7 +106,7 @@ Puede generar las apps móviles en Swift, Android o Cordova.
 ### Programa de fondo para programa de usuario (BFF)
 {: #bff}
 
-Los patrones de Programa de fondo para programa de usuario, normalmente conocidos como BFF, le ayudan a centrarse en exponer datos de negocio y servicios de una forma que coincida con los requisitos de interacción del usuario. Para optimizar un trayecto del usuario en su solución en la nube, puede que necesite un trayecto del usuario distinto para la aplicación móvil y un trayecto más rico y detallado para la aplicación web. Con la introducción de dispositivos controlados por voz como el servicio de [{{site.data.keyword.conversationfull}} ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://www.ibm.com/watson/developercloud/conversation.html), la interacción con un usuario se podría controlar mediante voz. Este canal digital necesitará un BFF muy distinto para gestionar estas interacciones basadas en intentos de voz.
+Los patrones de Programa de fondo para programa de usuario, normalmente conocidos como BFF, le ayudan a centrarse en exponer datos de negocio y servicios de una forma que coincida con los requisitos de interacción del usuario. Para optimizar un trayecto del usuario en su solución en la nube, puede que necesite un trayecto del usuario distinto para la aplicación móvil y un trayecto más rico y detallado para la aplicación web. Con la introducción de dispositivos controlados por voz como el servicio de [{{site.data.keyword.conversationfull}} ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://www.ibm.com/watson/developercloud/conversation.html "icono de enlace externo"), la interacción con un usuario se podría controlar mediante voz. Este canal digital necesitará un BFF muy distinto para gestionar estas interacciones basadas en intentos de voz.
 
 Con {{site.data.keyword.Bluemix_notm}}, puede crear un BFF mediante un enfoque de programación políglota para definir el BFF. IBM recomienda utilizar Node.js, Swift, o Java y ejecutarlos en un patrón nativo de nube con Cloud Foundry, servicios de contenedor o sin servidor.
 
@@ -141,9 +139,9 @@ Content to be provided by Karl Bishop.
 
 Los lenguajes soportados son:
 
-   * [Java ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](../runtimes/liberty/getting-started.html){: new_window}
-   * [Node.js ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](../runtimes/nodejs/getting-started.html){: new_window}
-   * [Swift ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](../runtimes/swift/getting-started.html){: new_window}
+   * [Java ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](../runtimes/liberty/getting-started.html "Icono de enlace externo"){: new_window}
+   * [Node.js ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](../runtimes/nodejs/getting-started.html "Icono de enlace externo"){: new_window}
+   * [Swift ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](../runtimes/swift/getting-started.html "Icono de enlace externo"){: new_window}
 
 
 #### Java

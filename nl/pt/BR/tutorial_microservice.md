@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-06-12"
 
 ---
 {:new_window: target="_blank"}
@@ -14,14 +14,19 @@ lastupdated: "2017-04-18"
 # Tutorial de ponta a ponta do Iniciador Microservice Basic
 {: #tutorial}
 
-O tutorial de ponta a ponta a seguir o acompanha nas etapas para criar um projeto por meio do Microservice Basic Starter. Isso inclui instalar ferramentas de pré-requisito e as etapas para executar o código do projeto.
+O tutorial de ponta a ponta a seguir o acompanha nas etapas para criar um projeto por meio do Microservice Basic Starter. As etapas incluem a instalação de ferramentas obrigatórias e as etapas para executar o código do projeto.
 
-É possível criar um projeto usando o [{{site.data.keyword.dev_console}}](#create-devex) baseado na web ou por meio do [{{site.data.keyword.dev_cli_notm}}](#create-cli) orientado por comando.
 
 ## Instalando ferramentas do desenvolvedor
 {: #dev_tools}
 
-Assegure-se de instalar as [ferramentas de desenvolvedor de pré-requisito![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](get_code.html#prereq-dev-tools){: new_window}.
+Assegure-se de instalar as [ferramentas de desenvolvedor de pré-requisito![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](get_code.html#prereq-dev-tools "Ícone de link externo"){: new_window}.
+
+
+## Escolha como criar o seu projeto
+{: #choose_how}
+
+É possível criar um projeto usando o [{{site.data.keyword.dev_console}}](#create-devex) baseado na web ou por meio do [{{site.data.keyword.dev_cli_notm}}](#create-cli) orientado por comando. Depois que o projeto é criado, será possível [executar o projeto](#running-dev-plugin).
 
 
 ## Criando um projeto usando o {{site.data.keyword.dev_console}}
@@ -29,7 +34,7 @@ Assegure-se de instalar as [ferramentas de desenvolvedor de pré-requisito![Íco
 
 1. Crie um projeto no {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}}.
 
-	1. Na página [**Introdução** ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/developer/getting-started/) no {{site.data.keyword.dev_console}}, clique em **Criar projeto**.
+	1. Na página [**Introdução** ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/developer/getting-started/ "Ícone de link externo") no {{site.data.keyword.dev_console}}, clique em **Criar projeto**.
 
 		Como alternativa, clique em **Criar projeto** na página **Projetos**.
 
@@ -39,8 +44,12 @@ Assegure-se de instalar as [ferramentas de desenvolvedor de pré-requisito![Íco
 
 	4. Insira o nome do projeto. Para este tutorial, use `MicroserviceProject`.   
 
-	5. Insira um nome do host exclusivo. Para este tutorial, use `devhost`. 
-   
+	5. Insira um nome do host exclusivo, tal como suas iniciais mais `-devhost`. Por exemplo:
+	
+	 ```
+	 abc-devhost
+	 ```
+	   
 	6. Clique em **Criar**.
 
 2. Opcional: inclua o recurso Dados.
@@ -90,14 +99,18 @@ download do seu archive de projeto.
 
 	* Selecione um padrão: 4 (para Microservices)
 	* Selecione um iniciador: 1 (para Basic)
-	* Selecione uma plataforma: 3 (para Java)
+	* Selecione uma plataforma: 1 (para Java)
 	* Insira um nome para seu projeto: `MicroserviceProjectCLI`
+	* Insira um nome do host para o seu projeto: `abc-devhost`
+	  * Insira um nome do host exclusivo, tal como suas iniciais mais `-devhost`. Por exemplo:
+	
+	     ```
+	     abc-devhost
+	     ```
 
-4. Se desejar incluir serviços no projeto, digite `y` no prompt de pergunta e responda às perguntas restantes.
+4. Quando seu `MicroserviceProjectCLI` estiver salvo com sucesso, navegue até a pasta `MicroserviceProjectCLI`.
 
-5. Quando seu `MicroserviceProjectCLI` estiver salvo com sucesso, navegue até a pasta `MicroserviceProjectCLI`.
-
-6. Agora, é possível incluir seu próprio código, construir ou executar o projeto.
+5. Agora é possível incluir seu próprio código, construir ou executar o projeto.
  
  
 ## Executando o projeto usando o {{site.data.keyword.dev_cli_notm}}
@@ -110,7 +123,7 @@ download do seu archive de projeto.
 	```     
 	{: codeblock}
 
-2. Para construir e executar o projeto em seu diretório de projeto atual, insira o comando a seguir:
+2. Para executar o projeto em seu diretório de projeto atual, insira o comando a seguir:
 
 	```
 	bx dev run

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-05-18"
 
 ---
 {:new_window: target="_blank"}
@@ -33,17 +33,17 @@ Passi per abilitare il debug per un'applicazione Java:
 2. Collegamento del programma di debug alla tua applicazione:
 
 	* Eclipse
-      1. Importa il progetto “Existing maven project” in Eclipse.
-      2. Crea una configurazione di debug per l'[applicazione remota Java ![icona link esterno](../icons/launch-glyph.svg "External link icon")](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm)”.
-      		1. Immetti l'indirizzo IP o `localhost:<port>`  
+      1. Importa il progetto **Existing maven project** in Eclipse.
+      2. Crea un'[applicazione remota Java ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm "Icona link esterno") di debug di configurazione.
+      		1. Immetti l'indirizzo IP o il `localhost:<port>`  
       		2. Immetti `7777` per il numero di porta.
       		3. Specifica il nome del progetto java che hai importato.
       6. Imposta un punto di interruzione nell'IDE.
       7. Esegui la configurazione di debug.
       8. Accedi all'endpoint con un browser per ricreare il problema.  
 	   **Nota**: la porta predefinita è 9080 per l'endpoint dei microservizi di base Java.
-	* [IntelliJ ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html)
-	* [VSCode ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugge)
+	* [IntelliJ ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html "Icona link esterno")
+	* [VSCode ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugge "Icona link esterno")
 	* Riga di comando JDK: `jdb -attach <host:port>`
 
 ## Debug dell'applicazione Node.js
@@ -57,8 +57,8 @@ Passi per abilitare il debug per un'applicazione Node.js:
 	`bx dev debug`
 
 2. Collegamento del programma di debug alla tua applicazione:
-	* [VSCode ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://blog.docker.com/2016/07/live-debugging-docker/)
-	* [WebStorm ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://blog.alexseifert.com/2016/10/25/debugging-node-js-in-a-docker-container-with-webstorm/)
+	* [VSCode ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://blog.docker.com/2016/07/live-debugging-docker/ "Icona link esterno")
+	* [WebStorm ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://blog.alexseifert.com/2016/10/25/debugging-node-js-in-a-docker-container-with-webstorm/ "Icona link esterno")
 
 
 <!--

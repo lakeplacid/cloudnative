@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-06-13"
 
 ---
 {:new_window: target="_blank"}  
@@ -14,13 +14,13 @@ lastupdated: "2017-04-18"
 # {{site.data.keyword.dev_cli_short}}
 {: #developercli}	
 
-{{site.data.keyword.dev_cli_long}}은 `dev` 플러그인을 사용하여 웹 프로젝트를 작성하고 개발하고 배치할 수 있는 확장 가능한 명령 중심 접근법을 제공합니다. 이는 엔드-투-엔드 마이크로서비스 애플리케이션을 개발할 때 명령행 제어를 사용하고자 하는 개발자에게 적합합니다. 
+{{site.data.keyword.dev_cli_long}}은 `dev` 플러그인을 사용하여 웹 프로젝트를 작성하고 개발하고 배치할 수 있는 확장 가능한 명령 중심 접근법을 제공합니다. 엔드-투-엔드 마이크로서비스 애플리케이션을 개발하기 위해 명령행 제어를 사용하고자 하는 개발자에게 적합합니다. 
 
 {: shortdesc}
 
-{{site.data.keyword.dev_cli_notm}}은 애플리케이션 빌드 및 테스트를 위해 두 개의 컨테이너를 사용합니다. 첫 번째는 애플리케이션을 빌드하고 테스트하기 위한 필수 유틸리티가 포함된 도구 컨테이너입니다. 이 컨테이너에 대한 Dockerfile은 [dockerfile-tools](#command-parameters) 매개변수에 의해 정의됩니다. 이는 일반적으로 특정 런타임의 개발에 유용한 도구를 포함하고 있으므로 개발 컨테이너라 생각할 수도 있습니다. 
+{{site.data.keyword.dev_cli_notm}}은 애플리케이션 빌드 및 테스트를 위해 두 개의 컨테이너를 사용합니다. 첫 번째는 애플리케이션을 빌드하고 테스트하기 위한 필수 유틸리티가 포함된 도구 컨테이너입니다. 이 컨테이너에 대한 Dockerfile은 [`dockerfile-tools`](#command-parameters) 매개변수에 의해 정의됩니다. 이는 일반적으로 특정 런타임의 개발에 유용한 도구를 포함하고 있으므로 개발 컨테이너라 생각할 수도 있습니다. 
 
-두 번째 컨테이너는 실행 컨테이너입니다. 이 컨테이너는 {{site.data.keyword.Bluemix}} 등에서 사용할 수 있도록 배치하는 데 적합한 양식입니다. 그 결과, 일반적으로 이 컨테이너에는 애플리케이션을 시작하는 시작점이 정의되어 있습니다. {{site.data.keyword.dev_cli_short}}을 통해 애플리케이션을 실행하도록 선택하면 이 플러그인은 이 컨테이너를 사용합니다. 이 컨테이너에 대한 Dockerfile은 [dockerfile-run](#run-parameters) 매개변수에 의해 정의됩니다. 
+두 번째 컨테이너는 실행 컨테이너입니다. 이 컨테이너는 {{site.data.keyword.Bluemix}} 등에서 사용할 수 있도록 배치하는 데 적합한 양식입니다. 그 결과, 애플리케이션을 시작하는 시작점이 정의됩니다. {{site.data.keyword.dev_cli_short}}을 통해 애플리케이션을 실행하도록 선택하면 이 플러그인은 이 컨테이너를 사용합니다. 이 컨테이너에 대한 Dockerfile은 [`dockerfile-run`](#run-parameters) 매개변수에 의해 정의됩니다. 
 
 
 ## {{site.data.keyword.dev_cli_notm}} 추가
@@ -30,15 +30,15 @@ lastupdated: "2017-04-18"
 ### 전제조건
 {: #prereq}
 
-{{site.data.keyword.dev_cli_short}}은 고도로 확장 가능하며 보완 기술을 활용할 수 있습니다. 이와 같은 기능을 완전히 이용하기 위한 전제조건은 다음과 같습니다. 
+{{site.data.keyword.dev_cli_short}}은 보완 기술 활용을 위해 고도로 확장 가능하므로 이를 완전히 탐색하고 올바르게 이용하기 위한 몇 가지 전제조건을 확보해야 합니다. 
 
-1. [Cloud Foundry CLI ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/cloudfoundry/cli#getting-started)를 설치하십시오. 
+<!--1. Install the [Cloud Foundry CLI ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/cli#getting-started "External link icon").-->
 
-2. [{{site.data.keyword.Bluemix}} CLI ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://clis.ng.bluemix.net/ui/home.html)를 설치하십시오. 
+1. [{{site.data.keyword.Bluemix}} CLI ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://clis.ng.bluemix.net/ui/home.html)를 설치하십시오. 
 
-3. [{{site.data.keyword.Bluemix_notm}}](https://www.bluemix.net) ID를 확보하십시오. 
+2. [{{site.data.keyword.Bluemix_notm}}](https://www.bluemix.net) ID를 확보하십시오. 
 
-4. 로컬로 애플리케이션을 실행하고 디버그하려면 [Docker ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.docker.com/get-docker)도 설치해야 합니다. Docker 설치는 모바일 이외의 프로젝트에만 필요합니다. 
+3. 로컬로 애플리케이션을 실행하고 디버그하려면 [Docker ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.docker.com/get-docker)도 설치해야 합니다. 
 
 
 ### 시작하기 전에
@@ -88,7 +88,7 @@ lastupdated: "2017-04-18"
 	```
 	{: codeblock}
 
-2. 	다음 명령을 실행하여 설치가 완료되었는지 유효성 검증하십시오.   
+2. 	다음 명령을 실행하여 플러그인 설치의 유효성 검증을 하십시오.   
  
 	```
 	bx dev
@@ -104,7 +104,7 @@ lastupdated: "2017-04-18"
 ### build
 {: #build}
 
-`build` 명령을 사용하여 애플리케이션을 빌드할 수 있습니다. 애플리케이션을 빌드하는 데 `build-cmd-run` 구성 요소가 사용됩니다. `test`, `debug` 및 `run` 명령은 모두 빌드를 자동으로 실행하므로, 빌드 명령을 항상 사전에 명시적으로 실행할 필요는 없습니다. 
+`build` 명령을 사용하여 애플리케이션을 빌드할 수 있습니다. 애플리케이션을 빌드하는 데 `build-cmd-run` 구성 요소가 사용됩니다. `test`, `debug` 및 `run` 명령은 컴파일된 프로젝트를 찾을 것으로 예상하므로 사전에 한 번 이상 빌드 오퍼레이션을 실행해야 합니다.
 
 애플리케이션을 빌드하려면 현재 프로젝트 디렉토리에서 다음 명령을 실행하십시오.   
 
@@ -133,7 +133,7 @@ bx dev code <projectName>
 ### create
 {: #create}
 
- 새 프로젝트를 작성하며 언어, 프로젝트 이름, 앱 패턴 유형 등을 포함한 모든 정보에 대한 프롬프트를 표시합니다. 프로젝트는 현재 디렉토리에 작성됩니다.  
+프로젝트를 작성하며 언어, 프로젝트 이름 및 앱 패턴 유형을 포함하는 모든 정보에 대한 프롬프트를 표시합니다. 프로젝트는 현재 디렉토리에 작성됩니다.  
 
 현재 프로젝트 디렉토리에 새 프로젝트를 작성하고 여기에 서비스를 연관시키려면 다음 명령을 실행하십시오. 
 
@@ -146,9 +146,16 @@ bx dev create
 ### debug
 {: #debug}
 
-`debug` 명령을 통해 애플리케이션을 디버그할 수 있습니다. 우선 `build-cmd-debug` 구성 요소를 빌드 명령어로 사용하여 프로젝트에 대해 빌드가 완료됩니다. 그다음 `container-port-map-debug`에 정의된 디버그 포트를 제공하는 컨테이너가 시작됩니다. 원하는 디버그 도구를 포트에 연결하면 여느 때와 같이 애플리케이션을 디버그할 수 있습니다. 
+`debug` 명령을 통해 애플리케이션을 디버그할 수 있습니다. build 명령을 사용하여 프로젝트에 대해 빌드를 우선 완료해야 합니다. `debug` 명령을 호출하면 `container-port-map-debug` 값에 의해 정의된 대로 디버그 포트 또는 포트를 제공하는 컨테이너가 시작됩니다. 원하는 디버그 도구를 포트에 연결하면 여느 때와 같이 애플리케이션을 디버그할 수 있습니다. 
 
 **제한사항**: Swift 프로젝트는 디버그에 사용할 수 없습니다. 
+
+우선 프로젝트를 컴파일하십시오. 
+
+```
+bx dev build
+```
+{: codeblock}
 
 애플리케이션을 디버그하려면 현재 프로젝트 디렉토리에서 다음 명령을 실행하십시오. 
 
@@ -169,19 +176,19 @@ bx dev debug
 {: #port-map-debug}
 
 * 디버그 포트의 포트 맵핑입니다. 첫 번째 값은 호스트 OS에서 사용할 포트이며, 두 번째 값은 컨테이너의 포트입니다([host-port:container-port]). 
-* 사용법: `bx dev debug container-port-map-debug [7777:7777]`
+* 사용법: `bx dev debug --container-port-map-debug [7777:7777]`
 
 ##### `build-cmd-debug`
 {: #build-cmd-debug}
 
-* DEBUG용 코드를 빌드하는 데 사용됩니다. 
-* 사용법: `bx dev debug build-cmd-debug build.command.sh`
+* DEBUG용 코드를 빌드하는 데 사용되는 매개변수입니다. 
+* 사용법: `bx dev debug --build-cmd-debug build.command.sh`
 
 ##### `debug-cmd`
 {: #debug-cmd}
 
-* 도구 컨테이너 내의 코드를 디버그하는 데 사용됩니다. `build-cmd-debug`가 애플리케이션을 디버그 모드로 시작하는 경우, 이 매개변수는 선택사항입니다. 
-* 사용법: `bx dev debug debug-cmd /the/debug/command`
+* 도구 컨테이너에서 디버그를 호출하는 명령을 지정하기 위해 사용되는 매개변수입니다. `build-cmd-debug`가 애플리케이션을 디버그 모드로 시작하는 경우 이 매개변수를 사용하십시오. 
+* 사용법: `bx dev debug --debug-cmd /the/debug/command`
 
 #### 로컬 애플리케이션 디버깅
 {: #local-app-dev}
@@ -203,6 +210,26 @@ bx dev delete <projectName>
  
 
 **참고:** {{site.data.keyword.Bluemix}} 서비스는 제거되지 **않습니다**. 
+
+
+### deploy
+{: #deploy}
+
+`manifest.yml` 파일이 프로젝트의 루트 디렉토리에 있을 때 `deploy` 명령을 통해 {{site.data.keyword.Bluemix}}에 애플리케이션을 푸시할 수 있습니다. 
+
+애플리케이션을 빌드하려면 현재 프로젝트 디렉토리에서 다음 명령을 실행하십시오.   
+
+```
+bx dev build
+```
+{: codeblock}
+
+{{site.data.keyword.Bluemix}}에 프로젝트를 배치하려면 다음 명령을 실행하십시오. 
+
+```
+bx dev deploy
+```
+{: codeblock}
 
 
 ### help
@@ -247,7 +274,14 @@ bx dev edit
 ### run
 {: #run}
 
-`run` 명령을 통해 애플리케이션을 실행할 수 있습니다. 우선 `build-cmd-run` 구성 요소를 빌드 명령어로 사용하여 프로젝트에 대해 빌드가 완료됩니다. 그 후 실행 컨테이너가 시작되며 `container-port-map`에 정의되어 있는 바와 같이 포트를 노출합니다. 실행 컨테이너에 이 단계를 완료하는 데 필요한 시작점이 포함되지 않은 경우에는 애플리케이션을 호출하기 위해 `run-cmd`를 사용할 수 있습니다.  
+`run` 명령을 통해 애플리케이션을 실행할 수 있습니다. `build` 명령을 사용하여 프로젝트에 대해 빌드를 우선 완료해야 합니다. run 명령을 호출하면 실행 컨테이너가 시작되며 `container-port-map` 매개변수에 의해 정의된 대로 포트를 노출합니다. 실행 컨테이너 Dockerfile에 이 단계를 완료하기 위한 시작점이 포함되지 않은 경우에는 애플리케이션을 호출하기 위해 `run-cmd` 매개변수를 사용할 수 있습니다.  
+
+우선 프로젝트를 컴파일하십시오. 
+
+```
+bx dev build
+```
+{: codeblock}
 
 애플리케이션을 시작하려면 현재 프로젝트 디렉토리에서 다음 명령을 실행하십시오. 
 
@@ -268,37 +302,37 @@ bx dev run
 {: #container-name-run}
 	
 * 실행 컨테이너의 컨테이너 이름입니다. 
-* 사용법: `bx dev run container-name-run <projectName>`
+* 사용법: `bx dev run --container-name-run [<projectName>]`
 
 ##### `container-path-run`
 {: #container-path-run}
 
 * 실행 시 공유할 컨테이너 내의 위치입니다. 
-* 사용법: `bx dev run container-path-run [/path/to/app]`
+* 사용법: `bx dev run --container-path-run [/path/to/app]`
 
 ##### `host-path-run`
 {: #host-path-run}
 
-* 실행 시 컨테이너 내에서 공유할 호스트 시스템 내의 위치입니다. 
-* 사용법: `bx dev run host-path-run [/path/to/app/bin]`
+* 실행 시 컨테이너에서 공유할 호스트 시스템 내의 위치입니다. 
+* 사용법: `bx dev run --host-path-run [/path/to/app/bin]`
 
 ##### `dockerfile-run`
 {: #dockerfile-run}
 
-* 실행 컨테이너에 대한 Docker 파일입니다. 
-* 사용법: `bx dev run dockerfile-run [/path/to/Dockerfile.yml]`
+* 실행 컨테이너의 Dockerfile입니다. 
+* 사용법: `bx dev run --dockerfile-run [/path/to/Dockerfile.yml]`
 
 ##### `image-name-run`
 {: #image-name-run}
 
-* dockerfile-run으로부터 작성할 이미지입니다. 
-* 사용법: `bx dev run image-name-run [/path/to/image-name]`
+* `dockerfile-run`에서 작성할 이미지입니다.
+* 사용법: `bx dev run --image-name-run [/path/to/image-name]`
 
 ##### `run-cmd`
 {: #run-cmd}
 
-* 실행 컨테이너에서 코드를 실행하는 데 사용되는 매개변수. 이미지가 애플리케이션을 시작하는 경우 이 매개변수는 선택사항입니다. 
-* 사용법: `bx dev run run-cmd [/the/run/command]`
+* 실행 컨테이너에서 코드를 실행하는 데 사용되는 매개변수. 이미지가 애플리케이션을 시작하는 경우 이 매개변수를 사용하십시오. 
+* 사용법: `bx dev run --run-cmd [/the/run/command]`
 	
 ### status
 {: #status}
@@ -319,29 +353,29 @@ bx dev status
 ### stop
 {: #stop}
 
-`stop` 명령을 통해 컨테이너를 중지할 수 있습니다. `container-name` 매개변수를 사용하여 중지할 컨테이너를 지정할 수 있습니다. 이 매개변수가 지정되지 않은 경우, stop 명령은 `container-name-run` 매개변수에서 정의한 실행 컨테이너를 중지합니다.  
+`stop` 명령을 통해 컨테이너를 중지할 수 있습니다. 
 
-컨테이너를 중지하려면 현재 프로젝트 디렉토리에서 다음 명령을 실행하십시오. 
+`cli-config.yml` 파일에 정의된 대로 도구 및 실행 컨테이너를 중지하려면 다음을 실행하십시오.
 
 ```
 bx dev stop
 ```
 {: codeblock}
 
+`cli-config.yml` 파일에 정의되지 않은 컨테이너를 중지하기 위해 추가 명령행 매개변수를 지정하여 대체할 수 있습니다. 도구 컨테이너의 경우 [`--container-name-tools`](#container-name-tools) 매개변수를 사용하고, 실행 컨테이너의 경우 [`--container-name-run`](#container-name-run) 매개변수를 사용하십시오. `cli-config.yml` 파일 또는 명령행에 컨테이너가 지정되어 있지 않으면 단순하게 stop 명령이 리턴됩니다. 
 
-#### 추가 stop 매개변수: 
-{: #stop-parameter}
-
-##### `container-name`
-{: #container-name}
-
-* 도구 컨테이너의 컨테이너 이름입니다. 
-* 사용법: `bx dev stop container-name <demo-tools>` 
 
 ### test
 {: #test}
 
-`test` 명령을 통해 애플리케이션을 테스트할 수 있습니다. 우선 `build-cmd-run` 구성 요소를 빌드 명령어로 사용하여 프로젝트에 대해 빌드가 완료됩니다. 그 후 애플리케이션에 대해 `test-cmd`를 호출하기 위해 도구 컨테이너가 사용됩니다. 
+`test` 명령을 통해 애플리케이션을 테스트할 수 있습니다. `build` 명령을 사용하여 프로젝트에 대해 빌드를 우선 완료해야 합니다. 그 후 애플리케이션에 대해 `test-cmd`를 호출하기 위해 도구 컨테이너가 사용됩니다. 
+
+우선 프로젝트를 컴파일하십시오. 
+
+```
+bx dev build
+```
+{: codeblock}
 
 애플리케이션을 테스트하려면 다음 명령을 실행하십시오.  
 
@@ -365,47 +399,54 @@ bx dev test
 {: #container-name-tools}
 
 * 도구 컨테이너의 컨테이너 이름입니다. 
-* 사용법: `bx dev <build|debug|run|test> container-name-tools [<demo-tools>]`
+* 사용법: `bx dev <build|debug|run|stop|test> --container-name-tools [<projectName>]`
 
 ### `host-path-tools`
 {: #host-path-tools}
 
 * build, debug, test에 대해 공유할 호스트 내의 위치입니다. 
-* 사용법: `bx dev <build|debug|run|test> host-path-tools [/path/to/build/tools]`
+* 사용법: `bx dev <build|debug|run|test> --host-path-tools [/path/to/build/tools]`
 
 ### `container-path-tools`
 {: #container-path-tools}
 
 * build, debug, test에 대해 공유할 컨테이너 내의 위치입니다. 
-* 사용법: `bx dev <build|debug|run|test> container-path-tools [/path/for/build]`
+* 사용법: `bx dev <build|debug|run|test> --container-path-tools [/path/for/build]`
 
 ### `container-port-map`
 {: #container-port-map}
 
 * 컨테이너의 포트 맵핑입니다. 첫 번째 값은 호스트 OS에서 사용할 포트이며, 두 번째 값은 컨테이너의 포트입니다([host-port:container-port]). 
-* 사용법: `bx dev <build|debug|run|test> container-port-map [8090:8090,9090,9090]`
+* 사용법: `bx dev <build|debug|run|test> --container-port-map [8090:8090,9090,9090]`
 
 ### `dockerfile-tools`
 {: #dockerfile-tools}
 
-* 도구 컨테이너에 대한 Docker 파일입니다. 
-* 사용법: `bx dev <build|debug|run|test> dockerfile-tools [path/to/dockerfile]`
+* 도구 컨테이너의 Dockerfile입니다. 
+* 사용법: `bx dev <build|debug|run|test> --dockerfile-tools [path/to/dockerfile]`
 
 ### `image-name-tools`
 {: #image-name-tools}
 
-* dockerfile-tools로부터 작성할 이미지입니다. 
-* 사용법: `bx dev <build|debug|run|test> image-name-tools [path/to/image-name]`
+* `dockerfile-tools`에서 작성할 이미지입니다.
+* 사용법: `bx dev <build|debug|run|test> --image-name-tools [path/to/image-name]`
 
 ### `build-cmd-run`
 {: #build-cmd-run}
 
-* DEBUG 외의 모든 용도를 위한 코드를 빌드하는 명령입니다. 
-* 사용법: `bx dev <build|debug|run|test> build-cmd-run [some.build.command]`
+* DEBUG 외의 모든 용도를 위한 코드를 빌드하는 명령을 지정하기 위해 사용되는 매개변수입니다. 
+* 사용법: `bx dev <build|debug|run|test> --build-cmd-run [some.build.command]`
 
 ### `test-cmd`
 {: #test-cmd}
 
-* 도구 컨테이너 내의 코드를 테스트하는 명령입니다. 
-* 사용법: `bx dev <build|debug|run|test> test-cmd [/the/test/command]`
+* 도구 컨테이너에서 코드를 테스트하는 명령을 지정하기 위해 사용되는 매개변수입니다. 
+* 사용법: `bx dev <build|debug|run|test> --test-cmd [/the/test/command]`
+
+### `trace`
+{: #trace}
+
+* 이 매개변수를 사용하여 상세 출력을 제공합니다.
+* 사용법: `bx dev <build|debug|run|test> --trace`
+
 

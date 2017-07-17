@@ -1,8 +1,9 @@
+<!-- Markdown Navigation -->
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="cloudnative" audience="platform" href="/docs/cloudnative/index.html"}
-Building cloud native projects
+클라우드 네이티브 프로젝트 빌드
 
     {: .navgroup id="learn"}
     index.md

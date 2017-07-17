@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-25"
 
 ---
 {:new_window: target="_blank"}
@@ -26,6 +26,13 @@ lastupdated: "2017-03-17"
 <caption>表 1. {{site.data.keyword.Bluemix_notm}} Web およびモバイル・サービス</caption>
 <th>{{site.data.keyword.Bluemix_notm}} Web およびモバイル・サービス</th>
 <th>説明</th>
+<tr>
+<td> <img src="images/app_id_icon.png" alt="{{site.data.keyword.appid_short}} アイコン"><br/>{{site.data.keyword.app_id_short}}
+</td>
+<td valign="top">{{site.data.keyword.app_id_full}} サービスを使用して、Web アプリとモバイル・アプリに認証を追加し、バックエンド・システムを保護します。<br/><br/>
+このサービスの操作について詳しくは、<a href="/docs/services/appid/index.html" alt="{{site.data.keyword.app_id_short}} の資料リンク">{{site.data.keyword.app_id_short}} の資料</a>をお読みください。
+</td>
+</tr>
 <tr>
 <td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}} アイコン"><br/>{{site.data.keyword.mobileanalytics_short}}</td>
 <td valign="top">{{site.data.keyword.mobileanalytics_full}} サービスを使用して、モバイル・アプリがどのように実行され、使用されているのかについての洞察を得ることができます。<br/><br/>
