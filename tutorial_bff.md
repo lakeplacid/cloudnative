@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-06-12"
+lastupdated: "2017-07-18"
 
 ---
 {:new_window: target="_blank"}
@@ -130,7 +130,7 @@ Create a project by using either the web-based [{{site.data.keyword.dev_console}
 ## Running a BFF project
 {: #running-bff}
 
-You can run the application locally on your host system if you install the necessary build tools, or by using the available container support in the {site.data.keyword.dev_cli_notm}}.
+You can run the application locally on your host system if you install the necessary build tools, or by using the available container support in the {{site.data.keyword.dev_cli_notm}}.
 
 
 ### Using the Bluemix Plugin
