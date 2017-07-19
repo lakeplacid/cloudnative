@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-06-12"
+lastupdated: "2017-07-19"
 
 ---
 {:new_window: target="_blank"}
@@ -132,7 +132,7 @@ download do seu archive de projeto.
 ## Executando um projeto do BFF
 {: #running-bff}
 
-Será possível executar o aplicativo localmente em seu sistema host se você instalar as ferramentas de construção necessárias ou usando o suporte de contêiner disponível no {site.data.keyword.dev_cli_notm}}.
+Será possível executar o aplicativo localmente em seu sistema host se você instalar as ferramentas de construção necessárias ou usando o suporte de contêiner disponível no {{site.data.keyword.dev_cli_notm}}.
 
 
 ### Usando o plug-in do Bluemix

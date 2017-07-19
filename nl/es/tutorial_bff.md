@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-06-12"
+lastupdated: "2017-07-19"
 
 ---
 {:new_window: target="_blank"}
@@ -130,7 +130,7 @@ Puede crear un proyecto utilizando la [{{site.data.keyword.dev_console}}](#creat
 ## Ejecución de un proyecto BFF
 {: #running-bff}
 
-Puede ejecutar la aplicación localmente en el sistema host si instala las herramientas de compilación necesarias, o bien utilizando el soporte de contenedor disponible en {site.data.keyword.dev_cli_notm}}.
+Puede ejecutar la aplicación localmente en el sistema host si instala las herramientas de compilación necesarias, o bien utilizando el soporte de contenedor disponible en {{site.data.keyword.dev_cli_notm}}.
 
 
 ### Utilización del plugin de Bluemix

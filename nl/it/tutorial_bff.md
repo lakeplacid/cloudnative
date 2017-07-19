@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-06-12"
+lastupdated: "2017-07-19"
 
 ---
 {:new_window: target="_blank"}
@@ -132,7 +132,7 @@ esempio:
 ## Esecuzione di un progetto BFF
 {: #running-bff}
 
-Puoi eseguire l'applicazione localmente sul tuo sistema host se installi gli strumenti di build necessari o utilizzando il supporto del contenitore disponibile in {site.data.keyword.dev_cli_notm}}.
+Puoi eseguire l'applicazione localmente sul tuo sistema host se installi gli strumenti di build necessari o utilizzando il supporto del contenitore disponibile in {{site.data.keyword.dev_cli_notm}}.
 
 
 ### Utilizzo del plugin Bluemix

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-06-12"
+lastupdated: "2017-07-19"
 
 ---
 {:new_window: target="_blank"}
@@ -130,7 +130,7 @@ Sie können ein Projekt entweder mithilfe der webbasierten [{{site.data.keyword.
 ## Running a BFF project
 {: #running-bff}
 
-Sie können die Anwendung lokal auf Ihrem Hostsystem ausführen, wenn Sie die dazu erforderlichen Erstellungstools installieren. Alternativ hierzu können Sie die verfügbare Containerunterstützung in {site.data.keyword.dev_cli_notm}} verwenden.
+Sie können die Anwendung lokal auf Ihrem Hostsystem ausführen, wenn Sie die dazu erforderlichen Erstellungstools installieren. Alternativ hierzu können Sie die verfügbare Containerunterstützung in {{site.data.keyword.dev_cli_notm}} verwenden.
 
 ### Using the Bluemix Plugin
 {: #using-blumix}

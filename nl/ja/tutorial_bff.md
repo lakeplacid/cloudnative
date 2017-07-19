@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-06-12"
+lastupdated: "2017-07-19"
 
 ---
 {:new_window: target="_blank"}
@@ -130,7 +130,7 @@ Web ベースの [{{site.data.keyword.dev_console}}](#create-devex) を使用す
 ## BFF プロジェクトの実行
 {: #running-bff}
 
-必要なビルド・ツールをインストールした場合、あるいは {site.data.keyword.dev_cli_notm}} で使用可能なコンテナー・サポートを使用すると、アプリケーションをホスト・システム上でローカルに実行することができます。
+必要なビルド・ツールをインストールした場合、あるいは {{site.data.keyword.dev_cli_notm}} で使用可能なコンテナー・サポートを使用すると、アプリケーションをホスト・システム上でローカルに実行することができます。
 
 
 ### Bluemix プラグインの使用

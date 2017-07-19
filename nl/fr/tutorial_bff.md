@@ -1,8 +1,8 @@
-﻿---
+---
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-06-12"
+lastupdated: "2017-07-19"
 
 ---
 {:new_window: target="_blank"}
@@ -150,7 +150,7 @@ accéder au dossier `BFFProjectCLI`.
 ## Exécution d'un projet BFF
 {: #running-bff}
 
-Vous pouvez exécuter l'application localement sur votre système hôte si vous installez les outils de génération nécessaires ou en utilisant le support de conteneur disponible dans le plug-in {site.data.keyword.dev_cli_notm}}.
+Vous pouvez exécuter l'application localement sur votre système hôte si vous installez les outils de génération nécessaires ou en utilisant le support de conteneur disponible dans le plug-in {{site.data.keyword.dev_cli_notm}}.
 
 
 ### Utilisation du plug-in Bluemix
