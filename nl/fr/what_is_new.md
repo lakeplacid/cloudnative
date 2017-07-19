@@ -1,8 +1,8 @@
-﻿---
+---
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-06-27"
+lastupdated: "2017-07-19"
 
 ---
 {:new_window: target="_blank"}
@@ -12,7 +12,7 @@ lastupdated: "2017-06-27"
 {:pre: .pre}
 {:note:.deprecated}
 
-# Nouveautés de la console {{site.data.keyword.dev_console}} de {{site.data.keyword.Bluemix}}
+# Nouveautés de la console {{site.data.keyword.dev_console}} de {{site.data.keyword.Bluemix_notm}}
 {: #what-is-new}
 
 
