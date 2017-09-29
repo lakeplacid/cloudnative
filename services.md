@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-06-29"
+lastupdated: "2017-09-20"
 
 ---
 {:new_window: target="_blank"}
@@ -13,19 +13,24 @@ lastupdated: "2017-06-29"
 # Services
 {: #services}
 
-From the {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} **Services** page, you can view your existing Web and Mobile services or create new services. The console provides a single location to view all of the {{site.data.keyword.Bluemix_notm}} Web and Mobile services that are being managed by projects.  
+From the {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}} **Resources** page, you can view the existing {{site.data.keyword.Bluemix_notm}} services that can be leveraged by your starter kit projects.
 
-If you delete services from the **Services** view, you will disconnect the service from the project that it is associated with. Create a new service instance if you want to reconnect the service to the project.
-
-## {{site.data.keyword.Bluemix_notm}} Web and Mobile services overview
+## {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}} services overview
 {: #mobile_services_overview}
 
-The following table depicts the {{site.data.keyword.Bluemix_notm}} Web and Mobile services. You can use individual services from the {{site.data.keyword.Bluemix_notm}} catalog, or you can integrate them into your project.
+The following table depicts the {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}} services. You can use individual services from the {{site.data.keyword.Bluemix_notm}} catalog, or you can integrate them into your project.
 
-<table summary="This table describes {{site.data.keyword.Bluemix_notm}} Web and Mobile services and provides links to the service documentation">
-<caption>Table 1. {{site.data.keyword.Bluemix_notm}} Web and Mobile services</caption>
-<th>{{site.data.keyword.Bluemix_notm}} Web and Mobile service</th>
+<table summary="This table describes {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}} services and provides links to the service documentation">
+<caption>Table 1. {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}} services</caption>
+<th>{{site.data.keyword.Bluemix_notm}} service</th>
 <th>Description</th>
+<tr>
+<td> <img src="images/alert_icon.png" alt="{{site.data.keyword.alertnotificationshort}} icon"><br/>{{site.data.keyword.alertnotificationshort}}
+</td>
+<td valign="top">Use the {{site.data.keyword.alertnotificationfull}} service to provide early notification of application or service issues before they affect users. Spend more time innovating, confident you are not ignoring critical issues.<br/><br/>
+Read more about operating this service in the <a href="/docs/services/AlertNotification/index.html" alt="{{site.data.keyword.alertnotificationshort}} documentation link">{{site.data.keyword.alertnotificationshort}} documentation</a>.
+</td>
+</tr>
 <tr>
 <td> <img src="images/app_id_icon.png" alt="{{site.data.keyword.appid_short}} icon"><br/>{{site.data.keyword.appid_short}}
 </td>
@@ -34,22 +39,25 @@ Read more about operating this service in the <a href="/docs/services/appid/inde
 </td>
 </tr>
 <tr>
-<td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}} icon"><br/>{{site.data.keyword.mobileanalytics_short}}</td>
-<td valign="top">Use the {{site.data.keyword.mobileanalytics_full}} service to gain insight into how your mobile apps are performing and how they are being used.<br/><br/>
-Read more about operating this service in the <a href="/docs/services/mobileanalytics/index.html" alt="{{site.data.keyword.mobileanalytics_short}} documentation link">{{site.data.keyword.mobileanalytics_short}} documentation</a>.
+<td> <img src="images/cloudant_icon.png" alt="{{site.data.keyword.cloudant_short_notm}} icon"><br/>{{site.data.keyword.cloudant_short_notm}}
+</td>
+<td valign="top">Use the {{site.data.keyword.cloudant_full}} service to access a fully managed NoSQL JSON data layer that is always on. This service is compatible with CouchDB, and accessible through a simple to use HTTP interface for mobile and web application models. <br/><br/>
+Read more about operating this service in the <a href="/docs/services/Cloudant/cloudant.html#overview" alt="{{site.data.keyword.cloudant_short_notm}} documentation link">{{site.data.keyword.cloudant_short_notm}} documentation</a>.
 </td>
 </tr>
 <tr>
-<td><img src="images/MFPFoundation_icon.png" alt="{{site.data.keyword.mobilefoundation_short}} service icon"><br/> {{site.data.keyword.mobilefoundation_short}}</td>
-<td valign="top">Use the {{site.data.keyword.mobilefoundation_long}} service to expedite setting up an {{site.data.keyword.mfp_full}} environment from which you can develop, test, and operate enterprise mobile apps.<br/><br/>
-Read more about operating this service in the <a href="/docs/services/mobilefoundation/index.html" alt="{{site.data.keyword.mobilefoundation_short}} documentation link">{{site.data.keyword.mobilefoundation_short}} documentation</a>.</td>
+<td> <img src="images/conversation_icon.svg" alt="{{site.data.keyword.conversationfull}} icon"><br/>{{site.data.keyword.conversationfull}}
+</td>
+<td valign="top">Use the {{site.data.keyword.conversationfull}} service to add a natural language interface to your application or automate interactions with your end users.<br/><br/>
+Read more about operating this service in the <a href="/docs/services/conversation/getting-started.html" alt="{{site.data.keyword.conversationshort}} documentation link">{{site.data.keyword.conversationshort}} documentation</a>.
+</td>
 </tr>
 <tr>
-<!--
-<td><img src="images/mqa_icon.png" alt="{{site.data.keyword.mqa}} service icon"><br/>{{site.data.keyword.mqa}}</td>
-<td valign="top">Use the {{site.data.keyword.mqafull}} service to discover and set up mobile quality services for your apps. You can view high-level quality metrics for your mobile apps to get a quick understanding of the issues for apps that you are working on. These metrics include information for crashes, bugs, user feedback, and user sentiment. By viewing this information for your apps, you can determine whether to investigate specific issues further.<br/><br/>
-Read more about operating this service in the <a href="/docs/services/MobileQualityAssurance/index.html" alt="{{site.data.keyword.mqa}} documentation link">{{site.data.keyword.mqa}} documentation</a>.</td>
--->
+<td> <img src="images/objectstorage_icon.png" alt="{{site.data.keyword.objectstorageshort}} icon"><br/>{{site.data.keyword.objectstorageshort}}
+</td>
+<td valign="top">Use the {{site.data.keyword.objectstoragefull}} service to utilize an unstructured cloud data store to build and deliver cost effective apps and services with high reliability and fast speed to market. Bluemix users can store and access unstructured data content and can interactively compose and connect to apps and services.<br/><br/>
+Read more about operating this service in the <a href="/docs/services/ObjectStorage/index.html" alt="{{site.data.keyword.objectstorageshort}} documentation link">{{site.data.keyword.objectstorageshort}} documentation</a>.
+</td>
 </tr>
 <tr>
 <td><img src="images/push_icon.png" alt="{{site.data.keyword.mobilepushshort}} service icon"><br/>{{site.data.keyword.mobilepushshort}}</td>
@@ -58,4 +66,26 @@ Read more about operating this service in the <a href="/docs/services/MobileQual
 The {{site.data.keyword.mobilepushshort}} manages the mapping of your application users to their devices, device platform, web browsers and handles dispatching push notifications to them. You can send broadcasts, unicasts (based on deviceID and userID), and also tags (or topics) as push notifications to your mobile and web browser application users. You can also use an SDK and REST APIs to further develop your client applications.
 <br/><br/>
 Read more about operating this service in the <a href="/docs/services/mobilepush/index.html" alt="{{site.data.keyword.mobilepushshort}} documentation link">{{site.data.keyword.mobilepushshort}} documentation</a>.</td>
+</tr>
+<tr>
+<td> <img src="images/mongodb_icon.png" alt="{{site.data.keyword.composeForMongoDB}} icon"><br/>{{site.data.keyword.composeForMongoDB}}
+</td>
+<td valign="top">Use the {{site.data.keyword.composeForMongoDB_full}} service to leverage powerful indexing and querying, aggregation, and wide driver support of JSON data in an easy, auto-scaling deployment system which delivers high availability and redundancy, automated no-stop backups, and much more.<br/><br/>
+Read more about operating this service in the <a href="/docs/services/ComposeForMongoDB/index.html#getting-started-with-compose-for-mongodb" alt="{{site.data.keyword.composeForMongoDB}} documentation link">{{site.data.keyword.composeForMongoDB}} documentation</a>.
+</td>
+</tr>
+<tr>
+<td> <img src="images/redis_icon.png" alt="{{site.data.keyword.composeForRedis}} icon"><br/>{{site.data.keyword.composeForRedis}}
+</td>
+<td valign="top">Use the {{site.data.keyword.composeForRedis_full}} service to leverage powerful indexing and querying, aggregation, and wide driver support of JSON data in an easy, auto-scaling deployment system which delivers high availability and redundancy, automated no-stop backups, and much more.<br/><br/>
+Read more about operating this service in the <a href="/docs/services/ComposeForRedis/index.html#getting-started-with-compose-for-redis" alt="{{site.data.keyword.composeForRedis}} documentation link">{{site.data.keyword.composeForRedis}} documentation</a>.
+</td>
+</tr>
+<tr>
+<td> <img src="images/postgresql_icon.png" alt="{{site.data.keyword.composeForPostgreSQL}} icon"><br/>{{site.data.keyword.composeForPostgreSQL}}
+</td>
+<td valign="top">Use the {{site.data.keyword.composeForPostgreSQL_full}} service provides a powerful, open source object-relational database that is highly customizable.<br/><br/>
+Read more about operating this service in the <a href="/docs/services/ComposeForPostgreSQL/index.html#getting-started-with-compose-for-postgresql" alt="{{site.data.keyword.composeForPostgreSQL}} documentation link">{{site.data.keyword.composeForPostgreSQL}} documentation</a>.
+</td>
+</tr>
 </table>

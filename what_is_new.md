@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-06-27"
+lastupdated: "2017-09-27"
 
 ---
 {:new_window: target="_blank"}
@@ -12,8 +12,22 @@ lastupdated: "2017-06-27"
 {:pre: .pre}
 {:note:.deprecated}
 
-# What is new in the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}
+# What is new in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}}
 {: #what-is-new}
+
+## New as of October 2017
+{: #oct-2017}
+
+The October 2017 update of the {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}} introduced the following changes:
+
+* A new Resources section has been added to the console, which features a brand new design.
+* The console, formerly known as the Bluemix Developer console, has been renamed to the {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}}.
+* Mobile and Web/Backend projects now have separate consoles.
+* Starter kit projects can now leverage the exciting capabilities provided by the following {{site.data.keyword.Bluemix_notm}} services: {{site.data.keyword.objectstoragefull}}, {{site.data.keyword.mobilepushfull}}, {{site.data.keyword.cloudantfull}}, {{site.data.keyword.alertnotificationfull}}, {{site.data.keyword.appid_full}}, {{site.data.keyword.conversationfull}},  {{site.data.keyword.composeForMongoDB_full}}, {{site.data.keyword.composeForRedis_full}}, and {{site.data.keyword.composeForPostgreSQL_full}}.
+* Deploying projects to {{site.data.keyword.Bluemix_notm}} is easier than ever before with seamless DevOps Toolchain integration.
+* Projects can be deployed as Kubernetes containers supported by {{site.data.keyword.containerlong_notm}} or as Cloud Foundry applications.
+* New Starter Kits include blank projects for Python, Java, Node.js, and Swift, which provide a bare bones application with {{site.data.keyword.Bluemix_notm}} capabilities.
+
 
 
 ## New as of June 2017
@@ -54,12 +68,12 @@ The January 2017 update of the {{site.data.keyword.Bluemix_notm}} Mobile dashboa
 
 The December 2016 update of the {{site.data.keyword.Bluemix_notm}} Mobile dashboard introduced the following changes:
 
-   * You can now remove a connected service from a project so it can be deleted or reused with another project. 
+   * You can now remove a connected service from a project so it can be deleted or reused with another project.
    * You can now add an existing service to a project.
    * You can now create or connect an existing CloudantNoSQL service as a data source when you use a Code Starter.
    * Where it is supported, you can now create or connect an existing Object Storage service as a data source for your project.
-   * You can now customize the navigation design of the app that you are creating with a UI Starter. 
-   
+   * You can now customize the navigation design of the app that you are creating with a UI Starter.
+
 
 ## New as of November 2016
 {: #nov-2016}
