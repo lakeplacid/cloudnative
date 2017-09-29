@@ -24,7 +24,7 @@ Figure 1: BFF architecture
 
 The concept of a BFF is to abstract away common business logic and integration logic from your microservices or high-value {{site.data.keyword.Bluemix}} cloud services.
 
-With this architecture, you can deploy and release updates to your mobile or Web application and deploy new versions of your BFF by using continous delivery pipelines with the dev ops service.
+With this architecture, you can deploy and release updates to your mobile or Web application and deploy new versions of your BFF by using continuous delivery pipelines with the dev ops service.
 
 If you have one BFF for iOS and a separate BFF for Android, the engineering teams that are delivering the function for these apps are not constrained to release features by a centralized API release schedule. This is a common goal for microservice and digital channel architectures - to free the teams to release function and features often, without being tightly coupled to another team's release schedule.
 
@@ -113,7 +113,7 @@ Follow the [README ![External link icon](../icons/launch-glyph.svg "External lin
 
 The {{site.data.keyword.Bluemix_notm}} Mobile Developer Experience is designed to make it simple to define a mobile project with a number of cloud services associated. You can easily add [{{site.data.keyword.mobilepushshort}} ![External link icon](../icons/launch-glyph.svg)](/docs/services/mobilepush/index.html), [Analytics ![External link icon](../icons/launch-glyph.svg)](/docs/services/mobileanalytics/index.html), and Data or Storage services.
 
-The {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} introduced the ability to integrate a BFF into a mobile project in the **Compute** page. You can add existing Compute service instances to your mobile project. After they are added, you can either generate a native SDK for your language choice or you can generate the full project and the SDK will be integrated into the source package of the project in the **Code** page. This is particularly useful when you are integrating with BFFs that are already well-defined.
+The {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}} introduces the ability to integrate a BFF into a mobile project in the **Compute** page. You can add existing Compute service instances to your mobile project. After they are added, you can either generate a native SDK for your language choice or you can generate the full project and the SDK will be integrated into the source package of the project in the **Code** page. This is particularly useful when you are integrating with BFFs that are already well-defined.
 
 After you have downloaded your project, you can open it with Xcode or Android Studio and compile your project with the client SDK.
 

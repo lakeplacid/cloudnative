@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-09-20"
 
 ---
 {:new_window: target="_blank"}
@@ -17,10 +17,13 @@ When you have completed the configuration and setup of your project with your se
 
 You will need to complete credentials for services that are not configurable in your downloaded project. The `README.md` file for the starter project contains instructions. View the `README.md` file in a Markdown viewer to complete the setup.
 
+To download the project code, select the `Download Code` button for the project or use the `Deploy with Toolchain` option, which will automatically set up deployment automation and prompt you with an option to clone the generated project directly into GitHub.  Simply provide the required information for projects where you have admin rights to leverage this functionality.
+
+
 ## Prerequisite Developer Tools
 {: #prereq-dev-tools}
 
-The following developer tools are needed when you are working with generated code from the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}:
+The following developer tools are needed when you are working with generated code from the {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}}:
 
 
 ### General
@@ -38,7 +41,7 @@ The following developer tools are needed when you are working with generated cod
 * Node.js (Node and npm runtimes) to assist with running {{site.data.keyword.apiconnect_short}} Loopback and other {{site.data.keyword.Bluemix_notm}} Productivity tools.
 
 	To run {{site.data.keyword.apiconnect_short}} tools locally, use Node 5.x:
-	
+
 	```
 	$ brew install Node5
 	```
@@ -50,7 +53,7 @@ The following developer tools are needed when you are working with generated cod
 * [{{site.data.keyword.dev_cli_notm}} ![External link icon](../icons/launch-glyph.svg "External link icon")](dev_cli.html)
 
 	{{site.data.keyword.Bluemix_notm}} CLI plug-in to create, run, test, and deploy web and mobile projects.
-	
+
 * [SDK Generator plug-in ![External link icon](../icons/launch-glyph.svg "External link icon")](sdk_cli.html)
 
 	{{site.data.keyword.Bluemix_notm}} CLI plug-in to generate SDKs from your [Open API Specification ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.openapis.org/) compliant REST API definition.
