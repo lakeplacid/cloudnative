@@ -34,6 +34,10 @@ Building cloud native projects
     sdk.md
         sdk_BMSClient.md
         sdk_network_request.md
+
+    {: .topicgroup}
+    Project contents
+        java_project_contents.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
