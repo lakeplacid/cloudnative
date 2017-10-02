@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-09-20"
+lastupdated: "2017-09-29"
 
 ---
 {:new_window: target="_blank"}
@@ -23,10 +23,10 @@ To download the project code, select the `Download Code` button for the project 
 ## Prerequisite Developer Tools
 {: #prereq-dev-tools}
 
-The following developer tools are needed when you are working with generated code from the {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}}:
+Use the [{{site.data.keyword.dev_cli_short}}](dev_cli.html#add-cli) to get started working with generated code from the {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}}.
 
 
-### General
+<!-- ### General
 {: #general notoc}
 
 * [Homebrew ![External link icon](../icons/launch-glyph.svg "External link icon")](http://brew.sh/)
@@ -69,8 +69,8 @@ The following developer tools are needed when you are working with generated cod
 
 * [Xcode 8 ![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.apple.com/xcode/) (recommended)
 
-<!-- * Install the latest [iOS 10 ![External link icon](../icons/launch-glyph.svg "External link icon")](http://www.apple.com/ios/ios-10/) runtime.
--->
+* Install the latest [iOS 10 ![External link icon](../icons/launch-glyph.svg "External link icon")](http://www.apple.com/ios/ios-10/) runtime.
+
 * [CocoaPods ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cocoapods.org/) dependency manager for installing iOS SDK dependencies. Use the latest version:
 
 	```
@@ -81,3 +81,5 @@ The following developer tools are needed when you are working with generated cod
 	```
 	$ brew install carthage
 	```
+
+-->

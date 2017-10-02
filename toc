@@ -38,6 +38,7 @@ Building cloud native projects
     {: .topicgroup}
     Project contents
         java_project_contents.md
+        swift_project_contents.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
