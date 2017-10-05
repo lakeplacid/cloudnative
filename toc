@@ -25,9 +25,10 @@ Building cloud native projects
     {: .topicgroup}
     Tutorials
         tutorial_web.md
-        tutorial_mobile.md
         tutorial_bff.md
         tutorial_microservice.md
+        tutorial_custom.md
+        tutorial_mobile.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -39,6 +40,8 @@ Building cloud native projects
     Project contents
         java_project_contents.md
         swift_project_contents.md
+        node_project_contents.md
+        python_project_contents.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}

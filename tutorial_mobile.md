@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-18"
+lastupdated: "2017-10-02"
 
 ---
 {:new_window: target="_blank"}
@@ -11,10 +11,10 @@ lastupdated: "2017-05-18"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# End-to-end tutorial of the Mobile Basic Starter
+# Mobile Basic Starter
 {: #tutorial}
 
-The following end-to-end tutorial walks you through the steps to create a project from the Mobile Basic Starter. This guide includes installing prerequisite tools, and the steps to run the project in Xcode and Android Studio.
+The following end-to-end tutorial walks you through the steps to create a mobile project from a Mobile Basic Starter. This guide includes installing prerequisite tools, and the steps to run the project in Xcode and Android Studio.
 
 
 ## Installing developer tools
@@ -34,91 +34,58 @@ You can create a project by using either the web-based [{{site.data.keyword.dev_
 
 1. Create a {{site.data.keyword.dev_console}} project in {{site.data.keyword.Bluemix}}.
 
-   1. From the [**Getting Started** ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/developer/getting-started/) page in the {{site.data.keyword.dev_console}}, click **Create Project**.
+    1. From the [**Starter Kits** ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) page in the {{site.data.keyword.dev_console}}, select a Starter Kit based on your chosen capabilities. For example, for a Watson Language application, go to **Watson Language** and click **Select Starter Kit**.
 
-      You can alternatively click **Create Project** from the **Projects** page.
+    2. Enter your project name. For this tutorial, use `WatsonProject`.   
 
-   2. Select **Mobile App** and click **Next**.
+    3. Select your language platform. For this tutorial, use `Swift`.
 
-   3. Select **Basic** and click **Next**.
+    4. Click **Create Project**.
 
-   4. Enter your project name. For this tutorial, use `MobileBasicProject`.
+## Optional: Add services
+{: #add-services}
 
-   5. Select your platform. For this tutorial, use `Swift`.
-   
-   6. Click **Create**.
+1. Select your project in the **Projects** page. 
 
-2. Optional: Add the Authentication capability.
+2. Click **Add Service**.
 
-   1. Click **Add** for **Authentication** on the **Project Overview** page.
+3. Select the kind of service you want. For this tutorial, select **Security** > **Next** > **App ID** > **Next**.
 
-      You can alternatively select **Create** or **Add Existing** on the **Capabilities > Authentication** page.
+4. Enter your service name and click **Create**.
 
-   2. Enter your service name and click **Create**.
-   
-   3. Toggle on **Authentication**.
-   
-   4. Select your identity provider and enter the information to configure it. You can enable only one identity provider.
-   
-   5. For more information about configuring Authentication, see [Configuring identity providers} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/appid/identity-providers.html){: new_window}.
-   
-3. Optional: Add the Analytics capability.
+5. For more information about configuring Authentication, see [Configuring identity providers ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/appid/identity-providers.html){: new_window}.
 
-   1. Click **Add** for **Analytics** in the **Project Overview** page.
+6. For more information about configuring Analytics, see [Getting started with {{site.data.keyword.mobileanalytics_short}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/mobileanalytics/index.html){: new_window}.
 
-      You can alternatively click **Create** or **Add Existing** from the **Capabilities > Analytics** page.
+7. For more information about configuring {{site.data.keyword.cloudant_short_notm}}, see [Getting started with {{site.data.keyword.cloudant_short_notm}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/Cloudant/index.html){: new_window}.
 
-   2. Enter your service name and click **Create**.
-   
-   3. Toggle off **Demo Mode** to see your analytics data after you run your app.
-   
-   4. For more information about configuring Analytics, see [Getting started with {{site.data.keyword.mobileanalytics_short}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/mobileanalytics/index.html){: new_window}.
+8. For more information about configuring {{site.data.keyword.objectstorageshort}}, see [Getting started with {{site.data.keyword.objectstorageshort}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/ObjectStorage/index.html){: new_window}.
 
-4. Optional: Add the {{site.data.keyword.mobilepushshort}} capability.
+9. For more information about adding the Push Notifications capability, see:
 
-   1. Click **Add** for **{{site.data.keyword.mobilepushshort}}** in the **Project Overview** page.
+    1. For iOS, [configure Apple Push Notification Service ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}.
 
-      You can alternatively click **Create** or **Add Existing** from the **Capabilities > {{site.data.keyword.mobilepushshort}}** page.
+    2. For Android, [configure Firebase Cloud Messaging ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
 
-   2. Enter your service name and click **Create**.
 
-   3. For iOS, [configure Apple Push Notification Service ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}.
+## Generate your project code
+{: #generate-code}
 
-   4. For Android, [configure Firebase Cloud Messaging ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
+1. Select your project in the **Projects** page. 
 
-5. Optional: Add the Data capability.
+2. Click **Download Code** to download your project archive.
 
-   1. Click **View** for **Data** on the **Project Overview** page.
 
-      You can alternatively select **Create** on the **Data** page.
-      
-   2. Choose **{{site.data.keyword.cloudant_short_notm}}** or **{{site.data.keyword.objectstorageshort}}**.
+## Begin working on your app
+{: #code}
 
-   3. Enter your service name and click **Create**.
+Begin working with your downloaded project:
 
-   4. For more information about configuring {{site.data.keyword.cloudant_short_notm}}, see [Getting started with {{site.data.keyword.cloudant_short_notm}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/Cloudant/index.html){: new_window}.
+1. Expand the archived file.
 
-   5. For more information about configuring {{site.data.keyword.objectstorageshort}}, see [Getting started with {{site.data.keyword.objectstorageshort}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/ObjectStorage/index.html){: new_window}.
+2. Navigate to the new project directory.
 
-6. Generate your project code:
-
-   1. Click **Get the Code** on the **Project Overview** page to select your language.
-   
-      You can alternatively click on the **Code** page.
-      
-   2. Click **Generate Swift**.
-   
-   3. When the project code is finished generating, click **Download Swift** to download your project archive.
-
-7. Begin working with your downloaded project:
-
-	1. Expand the archived file.
-	
-	2. Navigate to the new project directory.
-	
-	3. Use the {{site.data.keyword.dev_cli_notm}} to proceed.
-
-8. Optional: [Update your project](project_overview_page.html#update_language) to generate a new language.
+3. Use the {{site.data.keyword.dev_cli_notm}} to proceed.
 
 
 ## Creating a project by using the {{site.data.keyword.dev_cli_notm}}
@@ -160,7 +127,7 @@ You can create a project by using either the web-based [{{site.data.keyword.dev_
       
       3. Run `pod install` to install the pods for your project.
       
-   3. Open your `BasicProject.xcworkspace` Xcode workspace.
+   2. Open your `BasicProject.xcworkspace` Xcode workspace.
       
 3. Run your app.
 
