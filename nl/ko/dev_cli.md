@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-06-13"
+lastupdated: "2017-11-02"
 
 ---
 {:new_window: target="_blank"}  
@@ -61,7 +61,7 @@ lastupdated: "2017-06-13"
 	**참고:**  신임 정보가 거부된 경우에는 사용자가 연합 ID를 사용 중일 수 있습니다. 연합 ID를 사용하여 인증하려면 다음 단계를 따르십시오. 
 	
 	<!-- 
-	POINT TO BLUEMIX CLI LOG IN DOCUMENTATION !!!
+	POINT TO IBM CLOUD CLI LOG IN DOCUMENTATION !!!
 	
 	This link does not work in production yet --> 
 	
@@ -84,7 +84,7 @@ lastupdated: "2017-06-13"
 1. 다음 명령을 실행하여 [{{site.data.keyword.dev_cli_short}} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in){: new_window}을 설치하십시오. 
  
 	```
-	bx plugin install dev -r Bluemix
+	bx plugin install dev
 	```
 	{: codeblock}
 

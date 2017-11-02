@@ -17,7 +17,7 @@ Building cloud native projects
         services.md
 
     {: .topicgroup}
-    Plug-ins for the Bluemix CLI
+    Plug-ins for the IBM Cloud CLI
         dev_cli.md
             dev_cli_local_debug.md
         sdk_cli.md

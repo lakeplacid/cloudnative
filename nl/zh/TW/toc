@@ -17,7 +17,7 @@
         services.md
 
     {: .topicgroup}
-    Bluemix CLI 的外掛程式
+    IBM Cloud CLI 的外掛程式
         dev_cli.md
             dev_cli_local_debug.md
         sdk_cli.md

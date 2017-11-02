@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-07-19"
+lastupdated: "2017-11-02"
 
 ---
 {:new_window: target="_blank"}
@@ -135,7 +135,7 @@ esempio:
 Puoi eseguire l'applicazione localmente sul tuo sistema host se installi gli strumenti di build necessari o utilizzando il supporto del contenitore disponibile in {{site.data.keyword.dev_cli_notm}}.
 
 
-### Utilizzo del plugin Bluemix
+### Utilizzo del plugin IBM Cloud
 {: #using-blumix}
 
 1. Per creare il progetto nella tua directory del progetto corrente, immetti il seguente comando:

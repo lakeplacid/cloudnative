@@ -17,7 +17,7 @@ Creación de proyectos nativos en la nube
         services.md
 
     {: .topicgroup}
-    Plugins para la CLI de Bluemix
+    Plugins para la CLI de IBM Cloud
         dev_cli.md
             dev_cli_local_debug.md
         sdk_cli.md

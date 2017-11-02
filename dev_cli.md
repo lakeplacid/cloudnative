@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-08-31"
+lastupdated: "2017-11-02"
 
 ---
 {:new_window: target="_blank"}  
@@ -46,7 +46,7 @@ You must obtain a few prerequisites to fully explore and properly utilize the {{
 #### Installing
 {: #installation}
 
-To install the tool, you can run the relevant command to invoke our installer. This will install dependencies as well, such as the Bluemix CLI, Kubernetes, Helm, and Docker. To install these, use these installation steps:
+To install the tool, you can run the relevant command to invoke our installer. This will install dependencies as well, such as the IBM Cloud CLI, Kubernetes, Helm, and Docker. To install these, use these installation steps:
 
 **Mac and Linux:**  `curl -sL https://ibm.biz/idt-installer | bash`
 
@@ -79,7 +79,7 @@ Validate successful plug-in installation by running the following command:
 	**Note:** If your credentials are rejected, you might be using a Federated ID. Follow these steps to authenticate by using a Federated ID.
 	
 	<!-- 
-	POINT TO BLUEMIX CLI LOG IN DOCUMENTATION !!!
+	POINT TO IBM Cloud CLI LOG IN DOCUMENTATION !!!
 	
 	This link does not work in production yet --> 
 	
@@ -142,7 +142,7 @@ bx dev code <projectName>
 ### Console
 {: #console}
 
-Use the `console` command to open a web browser to your application's web console on Bluemix.  You can run the `bx dev console` command from inside your project's folder, and the CLI attempts to find a matching project on Bluemix that has the same name as the current directory. If the system is not able to find a matching name, it opens the Web and Mobile dashboard on Bluemix instead of the specific project.
+Use the `console` command to open a web browser to your application's web console on IBM Cloud.  You can run the `bx dev console` command from inside your project's folder, and the CLI attempts to find a matching project on the IBM Cloud that has the same project ID as the current directory. If the system is not able to find a matching name, it opens the Web and Mobile dashboard on IBM Cloud instead of the specific project.
 
 Optionally, you can provide a project name and the CLI will skip matching based on folder/application name.  In this case, the CLI opens the named project's console in a web browser.  
 
@@ -247,7 +247,7 @@ You must also define the location to a Helm chart with the `chart-path` configur
 
     deploy-target: "container"
 
-    deploy-image-target: "registry.<Bluemix Region>.bluemix.net/<Container Registry Namespace>/<App-Name>"
+    deploy-image-target: "registry.<IBM Cloud Region>.bluemix.net/<Container Registry Namespace>/<App-Name>"
 
     ibm-cluster: "mycluster"
     ```
@@ -629,6 +629,6 @@ For deploying an application as a container, you must also install install Kuber
 
 * Windows users: `curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/windows/amd64/kubectl.exe`
 	
-To use the plugin, the Bluemix CLI must first be installed. You can find information to install the CLI here: https://console.bluemix.net/docs/cli/reference/bluemix_cli/index.html#getting-started
+To use the plugin, the IBM Cloud CLI must first be installed. You can find information to install the CLI here: https://console.bluemix.net/docs/cli/reference/bluemix_cli/index.html#getting-started
 
-To use the plugin itself, you must install it by running the following command: `bx plugin install dev -r Bluemix`
+To use the plugin itself, you must install it by running the following command: `bx plugin install dev`

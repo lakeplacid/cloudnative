@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-11-02"
 
 ---
 {:new_window: target="_blank"}
@@ -43,7 +43,7 @@ lastupdated: "2017-04-18"
 	$ brew install Node5
 	```
 
-* [Bluemix CLI 工具 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://clis.ng.bluemix.net/ui/home.html "外部鏈結圖示")
+* [IBM Cloud CLI 工具 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://clis.ng.bluemix.net/ui/home.html "外部鏈結圖示")
 
    使用 {{site.data.keyword.Bluemix_notm}}，從指令行介面部署 Cloud Foundry 運行環境的指令行工具。  
 

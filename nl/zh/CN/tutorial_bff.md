@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-06-12"
+lastupdated: "2017-11-02"
 
 ---
 {:new_window: target="_blank"}
@@ -133,7 +133,7 @@ lastupdated: "2017-06-12"
 如果您安装了必要构建工具，那么您可以在主机系统上本地运行应用程序，或者使用 {{site.data.keyword.dev_cli_notm}} 中可用的容器支持。
 
 
-### Using the Bluemix Plugin
+### Using the IBM Cloud Plugin
 {: #using-blumix}
 
 1. 要在当前项目目录中构建项目，请输入以下命令：

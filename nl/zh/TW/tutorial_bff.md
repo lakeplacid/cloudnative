@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-06-12"
+lastupdated: "2017-11-02"
 
 ---
 {:new_window: target="_blank"}
@@ -133,7 +133,7 @@ lastupdated: "2017-06-12"
 如果安裝必要的建置工具，您可以在主機系統上本端執行應用程式，或是在 {{site.data.keyword.dev_cli_notm}} 中使用可用的容器支援來執行。
 
 
-### 使用 Bluemix 外掛程式
+### 使用 IBM Cloud 外掛程式
 {: #using-blumix}
 
 1. 若要在現行專案目錄中建置專案，請輸入下列指令：

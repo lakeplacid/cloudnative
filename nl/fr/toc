@@ -17,7 +17,7 @@ Génération de projets de cloud natifs
         services.md
 
     {: .topicgroup}
-    Plug-in pour l'interface de ligne de commande Bluemix
+    Plug-in pour l'interface de ligne de commande IBM Cloud
         dev_cli.md
             dev_cli_local_debug.md
         sdk_cli.md

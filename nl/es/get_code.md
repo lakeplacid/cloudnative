@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-11-02"
 
 ---
 {:new_window: target="_blank"}
@@ -43,7 +43,7 @@ Las siguientes herramientas de desarrollador son necesarias cuando trabaja con c
 	$ brew install Node5
 	```
 
-* [Herramientas de CLI de Bluemix ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](http://clis.ng.bluemix.net/ui/home.html "Icono de enlace externo")
+* [Herramientas de CLI de IBM Cloud ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](http://clis.ng.bluemix.net/ui/home.html "Icono de enlace externo")
 
    Herramientas de líneas de mandatos para desplegar los tiempos de ejecución de Cloud Foundry desde una interfaz de línea de mandatos con {{site.data.keyword.Bluemix_notm}}.  
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-05-19"
+lastupdated: "2017-11-02"
 
 ---
 {:new_window: target="_blank"}
@@ -42,7 +42,7 @@ REST API 定义必须有效，或者在活动服务器端点上托管，或者�
 2. [安装插件 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in "外部链接图标")。
 
 	```
-	bx plugin install sdk-gen -r Bluemix
+	bx plugin install sdk-gen
 	```
 	{: codeblock}
 
@@ -56,7 +56,7 @@ REST API 定义必须有效，或者在活动服务器端点上托管，或者�
 ### 生成 SDK
 {: #gen}
 
-使用 `bluemix sdk generate [arguments...] [command options]`。
+使用 `bx sdk generate [arguments...] [command options]`。
 
 
 #### 自变量
@@ -90,14 +90,14 @@ REST API 定义必须有效，或者在活动服务器端点上托管，或者�
 要通过在 {{site.data.keyword.Bluemix_notm}} 中运行的 Cloud Foundry 应用程序生成 SDK，可以使用应用程序的名称作为 CLI 的参数。以下命令使用应用程序的名称作为 `SDK_Name`。
 
 ```
-bluemix sdk generate [APP_NAME] [LOCATION] [PLATFORM]
+bx sdk generate [APP_NAME] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
 要从开放 API 定义文件或本地 JSON 或 Yaml 文件的 URL 生成 SDK，请使用以下命令。
 
 ```
-bluemix sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
+bx sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
@@ -105,7 +105,7 @@ bluemix sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
 ### 验证开放 API 定义
 {: #validating}
 
-使用 `bluemix sdk validate [argument]`。
+使用 `bx sdk validate [argument]`。
 
 
 #### 自变量
@@ -121,14 +121,14 @@ bluemix sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
 要验证在 {{site.data.keyword.Bluemix_notm}} 中运行的 Cloud Foundry 应用程序 API 规范，可以使用应用程序的名称作为 CLI 的参数。
 
 ```
-bluemix sdk validate [APP_NAME] [LOCATION]
+bx sdk validate [APP_NAME] [LOCATION]
 ```
 {: codeblock}
 
 要从 API 规范文档或本地 JSON 或 Yaml 文件的 URL 验证 SDK，请使用以下命令。
 
 ```
-bluemix sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
+bx sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ```
 {: codeblock}
 
@@ -137,7 +137,7 @@ bluemix sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ### 列出应用程序 (Cloud Foundry)
 {: #list-apps}
 
-使用 `bluemix sdk list [argument] [option]` 可以列出应用程序并验证 API 规范。您必须已将 `OPENAPI_SPEC` 环境变量设置为托管规范的相对 URL 路径。
+使用 `bx sdk list [argument] [option]` 可以列出应用程序并验证 API 规范。您必须已将 `OPENAPI_SPEC` 环境变量设置为托管规范的相对 URL 路径。
 
 
 #### 自变量
@@ -158,27 +158,27 @@ bluemix sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 要列出当前空间中的应用程序，请使用以下命令。
 
 ```
-bluemix sdk list
+bx sdk list
 ```
 {: codeblock}
 
 要列出当前空间中的应用程序并显示 API 规范 URL，请使用以下命令。
 
 ```
-bluemix sdk list --url
+bx sdk list --url
 ```
 {: codeblock}
 
 要列出特定空间中的应用程序，请使用以下命令。
 
 ```
-bluemix sdk list [SPACE_NAME]
+bx sdk list [SPACE_NAME]
 ```
 {: codeblock}
 
 要列出特定空间中的应用程序并显示 API 规范 URL，请使用以下命令。
 
 ```
-bluemix sdk list [SPACE_NAME] --url
+bx sdk list [SPACE_NAME] --url
 ```
 {: codeblock}

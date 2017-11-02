@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-09-20"
+lastupdated: "2017-11-02"
 
 ---
 {:new_window: target="_blank"}
@@ -55,7 +55,7 @@ Read more about operating this service in the <a href="/docs/services/conversati
 <tr>
 <td> <img src="images/objectstorage_icon.png" alt="{{site.data.keyword.objectstorageshort}} icon"><br/>{{site.data.keyword.objectstorageshort}}
 </td>
-<td valign="top">Use the {{site.data.keyword.objectstoragefull}} service to utilize an unstructured cloud data store to build and deliver cost effective apps and services with high reliability and fast speed to market. Bluemix users can store and access unstructured data content and can interactively compose and connect to apps and services.<br/><br/>
+<td valign="top">Use the {{site.data.keyword.objectstoragefull}} service to utilize an unstructured cloud data store to build and deliver cost effective apps and services with high reliability and fast speed to market. IBM Cloud users can store and access unstructured data content and can interactively compose and connect to apps and services.<br/><br/>
 Read more about operating this service in the <a href="/docs/services/ObjectStorage/index.html" alt="{{site.data.keyword.objectstorageshort}} documentation link">{{site.data.keyword.objectstorageshort}} documentation</a>.
 </td>
 </tr>

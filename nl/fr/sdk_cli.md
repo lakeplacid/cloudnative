@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-05-19"
+lastupdated: "2017-11-02"
 
 ---
 {:new_window: target="_blank"}
@@ -48,7 +48,7 @@ Assurez-vous de satisfaire les exigences suivantes :
 2. [Installez le plug-in ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in).
 
 	```
-	bx plugin install sdk-gen -r Bluemix
+	bx plugin install sdk-gen
 	```
 	{: codeblock}
 
@@ -62,7 +62,7 @@ Utilisez les commandes ci-après pour générer un SDK, valider des fichiers de 
 ### Génération d'un SDK
 {: #gen}
 
-Utilisez `bluemix sdk generate [arguments...] [options de commande]`.
+Utilisez `bx sdk generate [arguments...] [options de commande]`.
 
 
 #### Arguments
@@ -99,7 +99,7 @@ Pour générer un SDK depuis une application Cloud Foundry qui s'exécute dans
 commande suivante utilise le nom de l'application comme nom de SDK `SDK_Name`.
 
 ```
-bluemix sdk generate [APP_NAME] [LOCATION] [PLATFORM]
+bx sdk generate [APP_NAME] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
@@ -107,7 +107,7 @@ Pour générer un SDK depuis une URL dans un fichier de définition Open API
 ou un fichier Yaml ou JSON local, utilisez la commande suivante :
 
 ```
-bluemix sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
+bx sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
@@ -115,7 +115,7 @@ bluemix sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
 ### Validation des définitions Open API
 {: #validating}
 
-Utilisez `bluemix sdk validate [argument]`.
+Utilisez `bx sdk validate [argument]`.
 
 
 #### Arguments
@@ -134,7 +134,7 @@ fichier de définition d'API REST brut JSON ou Yaml
 Pour valider une spécification d'API d'une application Cloud Foundry qui s'exécute dans {{site.data.keyword.Bluemix_notm}}, vous pouvez utiliser le nom de l'application en tant que paramètre dans l'interface de ligne de commande de l'application.
 
 ```
-bluemix sdk validate [APP_NAME] [LOCATION]
+bx sdk validate [APP_NAME] [LOCATION]
 ```
 {: codeblock}
 
@@ -142,7 +142,7 @@ Pour valider un SDK depuis l'URL dans un document de spécification d'API
 ou un fichier Yaml ou JSON local, utilisez la commande suivante :
 
 ```
-bluemix sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
+bx sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ```
 {: codeblock}
 
@@ -151,7 +151,7 @@ bluemix sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ### Liste des applications (Cloud Foundry)
 {: #list-apps}
 
-Utilisez `bluemix sdk list [argument] [option]` pour répertorier
+Utilisez `bx sdk list [argument] [option]` pour répertorier
 les applications et valider les spécifications d'API. La variable d'environnement `OPENAPI_SPEC` doit être définie par rapport au chemin d'URL relatif qui héberge votre spécification.
 
 
@@ -176,7 +176,7 @@ Pour répertorier les applications de l'espace en cours, utilisez la commande
 suivante :
 
 ```
-bluemix sdk list
+bx sdk list
 ```
 {: codeblock}
 
@@ -184,7 +184,7 @@ Pour répertorier les applications de l'espace en cours et afficher l'URL de
 spécification d'API, utilisez la commande suivante :
 
 ```
-bluemix sdk list --url
+bx sdk list --url
 ```
 {: codeblock}
 
@@ -192,7 +192,7 @@ Pour répertorier les applications d'un espace spécifique, utilisez la commande
 suivante :
 
 ```
-bluemix sdk list [SPACE_NAME]
+bx sdk list [SPACE_NAME]
 ```
 {: codeblock}
 
@@ -200,6 +200,6 @@ Pour répertorier les applications d'un espace spécifique et afficher l'URL de
 spécification d'API, utilisez la commande suivante :
 
 ```
-bluemix sdk list [SPACE_NAME] --url
+bx sdk list [SPACE_NAME] --url
 ```
 {: codeblock}

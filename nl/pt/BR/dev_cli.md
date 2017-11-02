@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-06-13"
+lastupdated: "2017-11-02"
 
 ---
 {:new_window: target="_blank"}  
@@ -61,7 +61,7 @@ Deve-se obter alguns requisitos para explorar completamente e usar adequadamente
 	**Nota:** se suas credenciais forem rejeitadas, talvez você esteja usando um ID federado. Siga essas etapas para autenticar usando o ID federado.
 	
 	<!-- 
-	POINT TO BLUEMIX CLI LOG IN DOCUMENTATION !!!
+	POINT TO IBM CLOUD CLI LOG IN DOCUMENTATION !!!
 	
 	This link does not work in production yet --> 
 	
@@ -84,7 +84,7 @@ Deve-se obter alguns requisitos para explorar completamente e usar adequadamente
 1. Instale a [{{site.data.keyword.dev_cli_short}} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in "Ícone de link externo"){: new_window} executando o comando a seguir:
  
 	```
-	bx plugin install dev -r Bluemix
+	bx plugin install dev
 	```
 	{: codeblock}
 

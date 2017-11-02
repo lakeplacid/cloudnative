@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-11-02"
 
 ---
 {:new_window: target="_blank"}
@@ -43,7 +43,7 @@ lastupdated: "2017-04-18"
 	$ brew install Node5
 	```
 
-* [Bluemix CLI 도구 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://clis.ng.bluemix.net/ui/home.html)
+* [IBM Cloud CLI 도구 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://clis.ng.bluemix.net/ui/home.html)
 
    {{site.data.keyword.Bluemix_notm}}에 대한 명령행 인터페이스에서 Cloud Foundry 런타임을 배치하는 데 필요한 명령행 도구입니다.   
 

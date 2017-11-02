@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-07-19"
+lastupdated: "2017-11-02"
 
 ---
 {:new_window: target="_blank"}
@@ -153,7 +153,7 @@ accéder au dossier `BFFProjectCLI`.
 Vous pouvez exécuter l'application localement sur votre système hôte si vous installez les outils de génération nécessaires ou en utilisant le support de conteneur disponible dans le plug-in {{site.data.keyword.dev_cli_notm}}.
 
 
-### Utilisation du plug-in Bluemix
+### Utilisation du plug-in IBM Cloud
 {: #using-blumix}
 
 1. Pour générer le projet dans votre répertoire de projet en cours, entrez la commande suivante :

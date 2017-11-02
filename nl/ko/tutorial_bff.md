@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-07-19"
+lastupdated: "2017-11-02"
 
 ---
 {:new_window: target="_blank"}
@@ -133,7 +133,7 @@ lastupdated: "2017-07-19"
 필요한 빌드 도구를 설치하는 경우 로컬로 사용자의 호스트 시스템에서 애플리케이션을 실행하거나 {{site.data.keyword.dev_cli_notm}}에서 사용 가능한 컨테이너 지원을 사용하여 실행할 수 있습니다.
 
 
-### Bluemix 플러그인 사용
+### IBM Cloud 플러그인 사용
 {: #using-blumix}
 
 1. 현재 프로젝트 디렉토리에서 프로젝트를 빌드하려면 다음 명령을 입력하십시오.

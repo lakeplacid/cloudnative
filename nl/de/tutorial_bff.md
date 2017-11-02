@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-07-19"
+lastupdated: "2017-11-02"
 
 ---
 {:new_window: target="_blank"}
@@ -132,7 +132,7 @@ Sie können ein Projekt entweder mithilfe der webbasierten [{{site.data.keyword.
 
 Sie können die Anwendung lokal auf Ihrem Hostsystem ausführen, wenn Sie die dazu erforderlichen Erstellungstools installieren. Alternativ hierzu können Sie die verfügbare Containerunterstützung in {{site.data.keyword.dev_cli_notm}} verwenden.
 
-### Using the Bluemix Plugin
+### Using the IBM Cloud Plugin
 {: #using-blumix}
 
 1. Geben Sie zum Erstellen des Projekts im aktuellen Projektverzeichnis den folgenden Befehl ein:

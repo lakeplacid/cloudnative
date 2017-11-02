@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-07-19"
+lastupdated: "2017-11-02"
 
 ---
 {:new_window: target="_blank"}
@@ -133,7 +133,7 @@ Puede crear un proyecto utilizando la [{{site.data.keyword.dev_console}}](#creat
 Puede ejecutar la aplicación localmente en el sistema host si instala las herramientas de compilación necesarias, o bien utilizando el soporte de contenedor disponible en {{site.data.keyword.dev_cli_notm}}.
 
 
-### Utilización del plugin de Bluemix
+### Utilización del plugin de IBM Cloud
 {: #using-blumix}
 
 1. Para compilar el proyecto en el directorio de proyecto actual, escriba el siguiente mandato:

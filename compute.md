@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-11-02"
 
 ---
 {:new_window: target="_blank"}
@@ -131,14 +131,14 @@ To use the CLI, you must [install](sdk_cli.html#installation) it.
 Use the following command to list the actions that you can perform.
 
 ```
-bluemix sdk
+bx sdk
 ```
 {: codeblock}
 
 Use the following command to list the running Cloud Foundry instances in your current {{site.data.keyword.Bluemix_notm}} space.
 
 ```
-bluemix sdk list
+bx sdk list
 ```
 {: codeblock}
 
@@ -150,21 +150,21 @@ Each app is listed and the API is validated if the `OPENAPI_SPEC` environment va
 Use the following command to view the fully-formed URL for the API. The fully-formed route and uri to the API specification is listed. You can view the raw specification in a browser, directly consume it in the CLI, or verify that the BFF `OPENAPI_SPEC` environment variable is set correctly.
 
 ```
-bluemix sdk list --url
+bx sdk list --url
 ```
 {: codeblock}
 
 Use the following command to validate the Open API definition file of the `<AppName>` to determine if it can be used to generate an SDK. The command finds `<AppName>` in your current space and uses the relative path in the `OPENAPI_SPEC` environment variable to locate the specification for validation.
 
 ```
-bluemix sdk validate <AppName>
+bx sdk validate <AppName>
 ```
 {: codeblock}
 
 Use the following command to generate an SDK for the native `<Platform>` of your choice and place a compressed file into your current working directory.
 
 ```
-bluemix sdk generate <AppName> <SDKName> --<Platform>
+bx sdk generate <AppName> <SDKName> --<Platform>
 ```
 {: codeblock}
 

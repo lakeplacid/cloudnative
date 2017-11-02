@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-11-02"
 
 ---
 {:new_window: target="_blank"}
@@ -131,14 +131,14 @@ Zur Verwendung der CLI müssen Sie sie [installieren](sdk_cli.html#installation)
 Verwenden Sie den folgenden Befehl, um die Aktionen aufzulisten, die ausgeführt werden können.
 
 ```
-bluemix sdk
+bx sdk
 ```
 {: codeblock}
 
 Verwenden Sie den folgenden Befehl, um die aktiven Cloud Foundry-Instanzen in Ihrem aktuellen {{site.data.keyword.Bluemix_notm}}-Bereich aufzulisten.
 
 ```
-bluemix sdk list
+bx sdk list
 ```
 {: codeblock}
 
@@ -150,21 +150,21 @@ Jede App wird aufgelistet und die API wird überprüft, wenn die Umgebungsvariab
 Verwenden Sie den folgenden Befehl, um die vollständig formatierte URL der API anzuzeigen. Die vollständig formatierte Route und der URI zur API-Spezifikation werden aufgelistet. Sie können die unaufbereitete Spezifikation in einem Browser anzeigen, sie in der CLI direkt verarbeiten oder überprüfen, ob die Umgebungsvariable `OPENAPI_SPEC` korrekt festgelegt wurde.
 
 ```
-bluemix sdk list --url
+bx sdk list --url
 ```
 {: codeblock}
 
 Verwenden Sie den folgenden Befehl, um die Open API-Definitionsdatei von `<AppName>` zu überprüfen und so festzustellen, ob sie zum Generieren eines SDK verwendet werden kann. Der Befehl sucht `<AppName>` in Ihrem aktuellen Bereich und verwendet den relativen Pfad in der Umgebungsvariablen `OPENAPI_SPEC` zum Suchen der Spezifikation für die Überprüfung.
 
 ```
-bluemix sdk validate <AppName>
+bx sdk validate <AppName>
 ```
 {: codeblock}
 
 Verwenden Sie den folgenden Befehl, um ein SDK für die native Plattform (`<Platform>`) Ihrer Wahl zu generieren und um eine komprimierte Datei im aktuellen Arbeitsverzeichnis zu platzieren.
 
 ```
-bluemix sdk generate <AppName> <SDKName> --<Platform>
+bx sdk generate <AppName> <SDKName> --<Platform>
 ```
 {: codeblock}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-06-13"
+lastupdated: "2017-11-02"
 
 ---
 {:new_window: target="_blank"}  
@@ -61,7 +61,7 @@ Sie müssen bestimmte Voraussetzungen erfüllen, um das gesamte Funktionsspektru
 	**Hinweis:** Wenn Ihre Berechtigungsnachweise abgelehnt werden, kann es sein, dass Sie eine föderierte ID verwenden. Führen Sie die folgenden Schritte aus, um sich mit einer föderierten ID zu authentifizieren.
 	
 	<!-- 
-	POINT TO BLUEMIX CLI LOG IN DOCUMENTATION !!!
+	POINT TO IBM Cloud CLI LOG IN DOCUMENTATION !!!
 	
 	This link does not work in production yet --> 
 	
@@ -84,7 +84,7 @@ Sie müssen bestimmte Voraussetzungen erfüllen, um das gesamte Funktionsspektru
 1. Installieren Sie die [{{site.data.keyword.dev_cli_short}} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in "Symbol für externen Link"){: new_window} durch Ausführen des folgenden Befehls:
  
 	```
-	bx plugin install dev -r Bluemix
+	bx plugin install dev
 	```
 	{: codeblock}
 
