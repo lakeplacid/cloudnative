@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-07-19"
+lastupdated: "2017-11-02"
 
 ---
 {:new_window: target="_blank"}
@@ -133,7 +133,7 @@ Web ベースの [{{site.data.keyword.dev_console}}](#create-devex) を使用す
 必要なビルド・ツールをインストールした場合、あるいは {{site.data.keyword.dev_cli_notm}} で使用可能なコンテナー・サポートを使用すると、アプリケーションをホスト・システム上でローカルに実行することができます。
 
 
-### Bluemix プラグインの使用
+### IBM Cloud プラグインの使用
 {: #using-blumix}
 
 1. 現行プロジェクト・ディレクトリーでプロジェクトをビルドするには、以下のコマンドを入力します。

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-11-02"
 
 ---
 {:new_window: target="_blank"}
@@ -131,14 +131,14 @@ Open API 規格中唯一未完全支援的部分是檔案結構。此規格容�
 使用下列指令，以列出您可執行的動作。
 
 ```
-bluemix sdk
+bx sdk
 ```
 {: codeblock}
 
 使用下列指令，以列出現行 {{site.data.keyword.Bluemix_notm}} 空間中的執行中 Cloud Foundry 實例。
 
 ```
-bluemix sdk list
+bx sdk list
 ```
 {: codeblock}
 
@@ -150,21 +150,21 @@ bluemix sdk list
 使用下列指令，以檢視 API 的形式完整 URL。會列出 API 規格的形式完整路徑及 URI。您可以在瀏覽器中檢視原始規格、在 CLI 中直接使用它，或驗證已正確地設定 BFF `OPENAPI_SPEC` 環境變數。
 
 ```
-bluemix sdk list --url
+bx sdk list --url
 ```
 {: codeblock}
 
 使用下列指令，以驗證 `<AppName>` 的 Open API 定義檔來判斷是否可以使用它來產生 SDK。此指令會在您的現行空間中尋找 `<AppName>`，並在 `OPENAPI_SPEC` 環境變數中使用相對路徑來尋找進行驗證的規格。
 
 ```
-bluemix sdk validate <AppName>
+bx sdk validate <AppName>
 ```
 {: codeblock}
 
 使用下列指令，以產生適用於您所選擇之原生 `<Platform>` 的 SDK，並將壓縮檔放入現行工作目錄。
 
 ```
-bluemix sdk generate <AppName> <SDKName> --<Platform>
+bx sdk generate <AppName> <SDKName> --<Platform>
 ```
 {: codeblock}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-11-02"
 
 ---
 {:new_window: target="_blank"}
@@ -131,14 +131,14 @@ CLI を使用するには、CLI を[インストール](sdk_cli.html#installatio
 以下のコマンドを使用すると、実行できるアクションがリストされます。
 
 ```
-bluemix sdk
+bx sdk
 ```
 {: codeblock}
 
 以下のコマンドを使用して、現行の {{site.data.keyword.Bluemix_notm}} スペース内で実行中の Cloud Foundry インスタンスをリストします。
 
 ```
-bluemix sdk list
+bx sdk list
 ```
 {: codeblock}
 
@@ -150,21 +150,21 @@ bluemix sdk list
 以下のコマンドを使用して、API の完全形式の URL を表示します。API 仕様の完全形式の経路と URI がリストされます。そのロー仕様をブラウザーで表示したり、CLI に直接取り込んだり、BFF の `OPENAPI_SPEC` 環境変数が正しく設定されているかどうかを確認したりできます。
 
 ```
-bluemix sdk list --url
+bx sdk list --url
 ```
 {: codeblock}
 
 以下のコマンドを使用して、`<AppName>` の Open API 定義ファイルを検証し、それを使用して SDK を生成できるかどうかを判別します。このコマンドは、現行スペース内の `<AppName>` を検出し、`OPENAPI_SPEC` 環境変数内の相対パスを使用して、検証する仕様を見つけます。
 
 ```
-bluemix sdk validate <AppName>
+bx sdk validate <AppName>
 ```
 {: codeblock}
 
 以下のコマンドを使用して、選択したネイティブ `<Platform>` 用の SDK を生成し、圧縮ファイルを現行作業ディレクトリーに入れます。
 
 ```
-bluemix sdk generate <AppName> <SDKName> --<Platform>
+bx sdk generate <AppName> <SDKName> --<Platform>
 ```
 {: codeblock}
 

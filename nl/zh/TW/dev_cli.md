@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-06-13"
+lastupdated: "2017-11-02"
 
 ---
 {:new_window: target="_blank"}  
@@ -61,7 +61,7 @@ lastupdated: "2017-06-13"
 	**附註：**如果您的認證遭到拒絕，則可以使用「聯合 ID」。請遵循下列步驟，以使用「聯合 ID」來進行鑑別。
 	
 	<!-- 
-	POINT TO BLUEMIX CLI LOG IN DOCUMENTATION !!!
+	POINT TO IBM CLOUD CLI LOG IN DOCUMENTATION !!!
 	
 	This link does not work in production yet --> 
 	
@@ -84,7 +84,7 @@ lastupdated: "2017-06-13"
 1. 執行下列指令，以安裝 [{{site.data.keyword.dev_cli_short}} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in "外部鏈結圖示"){: new_window}：
  
 	```
-	bx plugin install dev -r Bluemix
+	bx plugin install dev
 	```
 	{: codeblock}
 

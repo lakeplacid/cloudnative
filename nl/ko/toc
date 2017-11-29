@@ -17,7 +17,7 @@
         services.md
 
     {: .topicgroup}
-    Bluemix CLI용 플러그인
+    IBM Cloud CLI용 플러그인
         dev_cli.md
             dev_cli_local_debug.md
         sdk_cli.md

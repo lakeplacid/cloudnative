@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-05-19"
+lastupdated: "2017-11-02"
 
 ---
 {:new_window: target="_blank"}
@@ -42,7 +42,7 @@ Vergewissern Sie sich, dass die folgenden Anforderungen erfüllt sind.
 2. [Installieren Sie das Plug-in ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in "Symbol für externen Link"). 
 
 	```
-	bx plugin install sdk-gen -r Bluemix
+	bx plugin install sdk-gen
 	```
 	{: codeblock}
 
@@ -56,7 +56,7 @@ Verwenden Sie die folgenden Befehle, um ein SDK zu generieren, die Open API-Defi
 ### SDK generieren
 {: #gen}
 
-Verwenden Sie `bluemix sdk generate [arguments...] [command options]`.
+Verwenden Sie `bx sdk generate [arguments...] [command options]`.
 
 
 #### Argumente
@@ -90,14 +90,14 @@ Verwenden Sie `bluemix sdk generate [arguments...] [command options]`.
 Zum Generieren eines SDK auf Basis einer Cloud Foundry-App, die unter {{site.data.keyword.Bluemix_notm}} ausgeführt wird, können Sie den Namen der App als Parameter für die CLI verwenden. Im folgenden Befehl wird der Name der App im Parameter `SDK_Name` benutzt.
 
 ```
-bluemix sdk generate [APP_NAME] [LOCATION] [PLATFORM]
+bx sdk generate [APP_NAME] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
 Zum Generieren eines SDK auf Basis einer URL zu einer Open API-Definitionsdatei oder einer lokalen JSON- oder Yaml-Datei verwenden Sie den folgenden Befehl.
 
 ```
-bluemix sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
+bx sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
@@ -105,7 +105,7 @@ bluemix sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
 ### Open API-Definitionen überprüfen
 {: #validating}
 
-Verwenden Sie `bluemix sdk validate [argument]`.
+Verwenden Sie `bx sdk validate [argument]`.
 
 
 #### Argumente
@@ -121,14 +121,14 @@ Verwenden Sie `bluemix sdk validate [argument]`.
 Zum Überprüfen der API-Spezifikation einer Cloud Foundry-App, die unter {{site.data.keyword.Bluemix_notm}} ausgeführt wird, können Sie den Namen der App als Parameter für die CLI verwenden.
 
 ```
-bluemix sdk validate [APP_NAME] [LOCATION]
+bx sdk validate [APP_NAME] [LOCATION]
 ```
 {: codeblock}
 
 Zum Überprüfen eines SDK auf Basis der URL zu einem Dokument mit API-Spezifikationen oder einer lokalen JSON- oder Yaml-Datei verwenden Sie den folgenden Befehl.
 
 ```
-bluemix sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
+bx sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ```
 {: codeblock}
 
@@ -137,7 +137,7 @@ bluemix sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ### Apps (Cloud Foundry) auflisten
 {: #list-apps}
 
-Verwenden Sie `bluemix sdk list [argument] [option]`, um Apps aufzulisten und API-Spezifikationen zu überprüfen. In der Umgebungsvariablen `OPENAPI_SPEC` muss der relative URL-Pfad angegeben werden, über den Ihre Spezifikation gehostet wird.
+Verwenden Sie `bx sdk list [argument] [option]`, um Apps aufzulisten und API-Spezifikationen zu überprüfen. In der Umgebungsvariablen `OPENAPI_SPEC` muss der relative URL-Pfad angegeben werden, über den Ihre Spezifikation gehostet wird.
 
 
 #### Argumente
@@ -158,27 +158,27 @@ Verwenden Sie `bluemix sdk list [argument] [option]`, um Apps aufzulisten und AP
 Verwenden Sie den folgenden Befehl, um Apps im aktuellen Bereich aufzulisten.
 
 ```
-bluemix sdk list
+bx sdk list
 ```
 {: codeblock}
 
 Verwenden Sie den folgenden Befehl, um Apps im aktuellen Bereich aufzulisten und die URL zur API-Spezifikation anzuzeigen.
 
 ```
-bluemix sdk list --url
+bx sdk list --url
 ```
 {: codeblock}
 
 Verwenden Sie den folgenden Befehl, um Apps in einem bestimmten Bereich aufzulisten.
 
 ```
-bluemix sdk list [SPACE_NAME]
+bx sdk list [SPACE_NAME]
 ```
 {: codeblock}
 
 Verwenden Sie den folgenden Befehl, um Apps in einem bestimmten Bereich aufzulisten und die URL der API-Spezifikation anzuzeigen.
 
 ```
-bluemix sdk list [SPACE_NAME] --url
+bx sdk list [SPACE_NAME] --url
 ```
 {: codeblock}

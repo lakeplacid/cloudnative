@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-11-02"
 
 ---
 {:new_window: target="_blank"}
@@ -131,14 +131,14 @@ OPENAPI_SPEC='/explorer/swagger.json'
 使用以下命令列出您可以执行的操作。
 
 ```
-bluemix sdk
+bx sdk
 ```
 {: codeblock}
 
 使用以下命令，列出当前 {{site.data.keyword.Bluemix_notm}} 空间中正在运行的 Cloud Foundry 实例。
 
 ```
-bluemix sdk list
+bx sdk list
 ```
 {: codeblock}
 
@@ -150,21 +150,21 @@ bluemix sdk list
 使用以下命令来查看 API 的完整 URL。列出 API 规范的完整路径和 URI。您可以在浏览器中查看原始规范，直接在 CLI 中使用，或者验证 BFF `OPENAPI_SPEC` 环境变量是否设置正确。
 
 ```
-bluemix sdk list --url
+bx sdk list --url
 ```
 {: codeblock}
 
 使用以下命令来验证 `<AppName>` 的开放 API 定义文件，以确定其是否可用于生成 SDK。该命令会在当前空间中查找 `<AppName>`，并在 `OPENAPI_SPEC` 环境变量中使用相对路径，查找要验证的规范。
 
 ```
-bluemix sdk validate <AppName>
+bx sdk validate <AppName>
 ```
 {: codeblock}
 
 使用以下命令，为您所选择的本机 `<Platform>` 生成 SDK，并将压缩文件置于当前工作目录中。
 
 ```
-bluemix sdk generate <AppName> <SDKName> --<Platform>
+bx sdk generate <AppName> <SDKName> --<Platform>
 ```
 {: codeblock}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-11-02"
 
 ---
 {:new_window: target="_blank"}
@@ -43,7 +43,7 @@ Für die Arbeit mit generiertem Code über die {{site.data.keyword.Bluemix_notm}
 	$ brew install Node5
 	```
 
-* [Bluemix CLI-Tools ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://clis.ng.bluemix.net/ui/home.html)
+* [IBM Cloud CLI-Tools ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://clis.ng.bluemix.net/ui/home.html)
 
    Befehlszeilentools für die Bereitstellung von Cloud Foundry-Laufzeiten über eine Befehlszeilenschnittstelle mit {{site.data.keyword.Bluemix_notm}}.  
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-05-19"
+lastupdated: "2017-11-02"
 
 ---
 {:new_window: target="_blank"}
@@ -42,7 +42,7 @@ REST API 定義必須有效，並且在即時伺服器端點上或您系統的�
 2. [安裝外掛程式 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in "外部鏈結圖示")。
 
 	```
-	bx plugin install sdk-gen -r Bluemix
+	bx plugin install sdk-gen
 	```
 	{: codeblock}
 
@@ -56,7 +56,7 @@ REST API 定義必須有效，並且在即時伺服器端點上或您系統的�
 ### 產生 SDK
 {: #gen}
 
-使用 `bluemix sdk generate [arguments...] [command options]`。
+使用 `bx sdk generate [arguments...] [command options]`。
 
 
 #### 引數
@@ -90,14 +90,14 @@ REST API 定義必須有效，並且在即時伺服器端點上或您系統的�
 若要從 {{site.data.keyword.Bluemix_notm}} 中執行的 Cloud Foundry 應用程式產生 SDK，您可以使用應用程式的名稱作為 CLI 的參數。下列指令使用應用程式的名稱作為 `SDK_Name`。
 
 ```
-bluemix sdk generate [APP_NAME] [LOCATION] [PLATFORM]
+bx sdk generate [APP_NAME] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
 若要從 Open API 定義檔或者本端 JSON 或 Yaml 檔案的 URL 產生 SDK，請使用下列指令。
 
 ```
-bluemix sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
+bx sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
@@ -105,7 +105,7 @@ bluemix sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
 ### 驗證 Open API 定義
 {: #validating}
 
-使用 `bluemix sdk validate [argument]`。
+使用 `bx sdk validate [argument]`。
 
 
 #### 引數
@@ -121,14 +121,14 @@ bluemix sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
 若要驗證 {{site.data.keyword.Bluemix_notm}} 中執行之 Cloud Foundry 應用程式的 API 規格，您可以使用應用程式的名稱作為 CLI 的參數。
 
 ```
-bluemix sdk validate [APP_NAME] [LOCATION]
+bx sdk validate [APP_NAME] [LOCATION]
 ```
 {: codeblock}
 
 若要從 API 規格文件或者本端 JSON 或 Yaml 檔案的 URL 驗證 SDK，請使用下列指令。
 
 ```
-bluemix sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
+bx sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ```
 {: codeblock}
 
@@ -137,7 +137,7 @@ bluemix sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ### 列出應用程式 (Cloud Foundry)
 {: #list-apps}
 
-使用 `bluemix sdk list [argument] [option]` 列出應用程式以及驗證 API 規格。您必須將 `OPENAPI_SPEC` 環境變數設為管理您規格的相對 URL 路徑。
+使用 `bx sdk list [argument] [option]` 列出應用程式以及驗證 API 規格。您必須將 `OPENAPI_SPEC` 環境變數設為管理您規格的相對 URL 路徑。
 
 
 #### 引數
@@ -158,27 +158,27 @@ bluemix sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 若要列出現行空間中的應用程式，請使用下列指令。
 
 ```
-bluemix sdk list
+bx sdk list
 ```
 {: codeblock}
 
 若要列出現行空間中的應用程式，並顯示 API 規格 URL，請使用下列指令。
 
 ```
-bluemix sdk list --url
+bx sdk list --url
 ```
 {: codeblock}
 
 若要列出特定空間中的應用程式，請使用下列指令。
 
 ```
-bluemix sdk list [SPACE_NAME]
+bx sdk list [SPACE_NAME]
 ```
 {: codeblock}
 
 若要列出特定空間中的應用程式，並顯示 API 規格 URL，請使用下列指令。
 
 ```
-bluemix sdk list [SPACE_NAME] --url
+bx sdk list [SPACE_NAME] --url
 ```
 {: codeblock}

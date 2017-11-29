@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-05-19"
+lastupdated: "2017-11-02"
 
 ---
 {:new_window: target="_blank"}
@@ -42,7 +42,7 @@ REST API 定義は、有効でなければならず、稼働中のサーバー�
 2. [プラグイン ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in "外部リンク・アイコン") をインストールします。
 
 	```
-	bx plugin install sdk-gen -r Bluemix
+	bx plugin install sdk-gen
 	```
 	{: codeblock}
 
@@ -56,7 +56,7 @@ REST API 定義は、有効でなければならず、稼働中のサーバー�
 ### SDK の生成
 {: #gen}
 
-`bluemix sdk generate [arguments...] [command options]` を使用します。
+`bx sdk generate [arguments...] [command options]` を使用します。
 
 
 #### 引数
@@ -90,14 +90,14 @@ REST API 定義は、有効でなければならず、稼働中のサーバー�
 {{site.data.keyword.Bluemix_notm}} で稼働中の Cloud Foundry アプリから SDK を生成するには、そのアプリの名前を CLI のパラメーターとして使用することができます。以下のコマンドは、アプリの名前を `SDK_Name` として使用しています。
 
 ```
-bluemix sdk generate [APP_NAME] [LOCATION] [PLATFORM]
+bx sdk generate [APP_NAME] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
 Open API 定義ファイルの URL、あるいはローカルの JSON ファイルまたは Yaml ファイルから SDK を生成するには、以下のコマンドを使用します。
 
 ```
-bluemix sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
+bx sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
@@ -105,7 +105,7 @@ bluemix sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
 ### Open API 定義の検証
 {: #validating}
 
-`bluemix sdk validate [argument]` を使用します。
+`bx sdk validate [argument]` を使用します。
 
 
 #### 引数
@@ -121,14 +121,14 @@ bluemix sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
 {{site.data.keyword.Bluemix_notm}} で稼働中の Cloud Foundry アプリの API 仕様を検証するには、そのアプリの名前を CLI のパラメーターとして使用することができます。
 
 ```
-bluemix sdk validate [APP_NAME] [LOCATION]
+bx sdk validate [APP_NAME] [LOCATION]
 ```
 {: codeblock}
 
 API 仕様文書の URL、あるいはローカルの JSON ファイルまたは Yaml ファイルから SDK を検証するには、以下のコマンドを使用します。
 
 ```
-bluemix sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
+bx sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ```
 {: codeblock}
 
@@ -137,7 +137,7 @@ bluemix sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ### アプリのリスト (Cloud Foundry)
 {: #list-apps}
 
-`bluemix sdk list [argument] [option]` を使用して、アプリをリストし、API 仕様を検証します。`OPENAPI_SPEC` 環境変数を、仕様をホストしている相対 URL パスに設定する必要があります。
+`bx sdk list [argument] [option]` を使用して、アプリをリストし、API 仕様を検証します。`OPENAPI_SPEC` 環境変数を、仕様をホストしている相対 URL パスに設定する必要があります。
 
 
 #### 引数
@@ -158,27 +158,27 @@ bluemix sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 現行スペース内のアプリをリストするには、以下のコマンドを使用します。
 
 ```
-bluemix sdk list
+bx sdk list
 ```
 {: codeblock}
 
 現行スペース内のアプリをリストし、API 仕様の URL を表示するには、以下のコマンドを使用します。
 
 ```
-bluemix sdk list --url
+bx sdk list --url
 ```
 {: codeblock}
 
 特定スペース内のアプリをリストするには、以下のコマンドを使用します。
 
 ```
-bluemix sdk list [SPACE_NAME]
+bx sdk list [SPACE_NAME]
 ```
 {: codeblock}
 
 特定スペース内のアプリをリストし、API 仕様の URL を表示するには、以下のコマンドを使用します。
 
 ```
-bluemix sdk list [SPACE_NAME] --url
+bx sdk list [SPACE_NAME] --url
 ```
 {: codeblock}

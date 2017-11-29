@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-11-02"
 
 ---
 {:new_window: target="_blank"}
@@ -131,14 +131,14 @@ Pour utiliser l'outil de ligne de commande, vous devez l'[installer](sdk_cli.htm
 Utilisez la commande suivante pour répertorier les actions que vous pouvez exécuter.
 
 ```
-bluemix sdk
+bx sdk
 ```
 {: codeblock}
 
 Utilisez la commande suivante pour répertorier les instances Cloud Foundry en cours d'exécution dans votre espace {{site.data.keyword.Bluemix_notm}} en cours :
 
 ```
-bluemix sdk list
+bx sdk list
 ```
 {: codeblock}
 
@@ -150,21 +150,21 @@ Chaque application est répertoriée et l'API est validée si la variable d'envi
 Utilisez la commande suivante pour afficher l'URL complète pour l'API. L'URI et la route complète de la spécification d'API est répertoriée. Vous pouvez afficher la spécification brute dans un navigateur, la consommer directement dans l'outil de ligne de commande ou vérifier que la variable BFF `OPENAPI_SPEC` est correctement définie.
 
 ```
-bluemix sdk list --url
+bx sdk list --url
 ```
 {: codeblock}
 
 Utilisez la commande suivante pour valider le fichier de définition Open API de l'application `<AppName>` afin de déterminer s'il peut être utilisé pour générer un SDK. La commande trouve l'application `<AppName>` dans votre espace en cours et utilise le chemin relatif dans la variable d'environnement `OPENAPI_SPEC` pour localiser la spécification en vue de sa validation. 
 
 ```
-bluemix sdk validate <AppName>
+bx sdk validate <AppName>
 ```
 {: codeblock}
 
 Utilisez la commande suivante afin de générer un SDK pour la plateforme native `<Platform>` de votre choix et placer un fichier compressé dans votre répertoire de travail en cours. 
 
 ```
-bluemix sdk generate <AppName> <SDKName> --<Platform>
+bx sdk generate <AppName> <SDKName> --<Platform>
 ```
 {: codeblock}
 

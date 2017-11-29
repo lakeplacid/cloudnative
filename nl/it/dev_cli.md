@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-06-13"
+lastupdated: "2017-11-02"
 
 ---
 {:new_window: target="_blank"}  
@@ -61,7 +61,7 @@ Devi ottenere alcuni prerequisiti che ti consentono di esplorare a fondo e utili
 	**Nota:** se le tue credenziali vengono rifiutate, potresti utilizzare un ID federato. Segui questa procedura per effettuare l'autenticazione utilizzando un ID federato.
 	
 	<!-- 
-	POINT TO BLUEMIX CLI LOG IN DOCUMENTATION !!!
+	POINT TO IBM CLOUD CLI LOG IN DOCUMENTATION !!!
 	
 	This link does not work in production yet --> 
 	
@@ -84,7 +84,7 @@ Devi ottenere alcuni prerequisiti che ti consentono di esplorare a fondo e utili
 1. Installa la [{{site.data.keyword.dev_cli_short}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in "Icona link esterno"){: new_window} eseguendo il seguente comando:
  
 	```
-	bx plugin install dev -r Bluemix
+	bx plugin install dev
 	```
 	{: codeblock}
 

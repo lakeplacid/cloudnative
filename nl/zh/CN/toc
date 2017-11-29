@@ -16,7 +16,7 @@
         services.md
 
     {: .topicgroup}
-    适用于 Bluemix CLI 的插件
+    适用于 IBM Cloud CLI 的插件
         dev_cli.md
             dev_cli_local_debug.md
         sdk_cli.md

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-07-19"
+lastupdated: "2017-11-02"
 
 ---
 {:new_window: target="_blank"}
@@ -135,7 +135,7 @@ download do seu archive de projeto.
 Será possível executar o aplicativo localmente em seu sistema host se você instalar as ferramentas de construção necessárias ou usando o suporte de contêiner disponível no {{site.data.keyword.dev_cli_notm}}.
 
 
-### Usando o plug-in do Bluemix
+### Usando o plug-in do IBM Cloud
 {: #using-blumix}
 
 1. Para construir o projeto no seu diretório de projeto atual, insira o comando a seguir:

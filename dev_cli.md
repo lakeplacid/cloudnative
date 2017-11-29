@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-08-31"
+lastupdated: "2017-11-02"
 
 ---
 {:new_window: target="_blank"}  
@@ -46,7 +46,7 @@ You must obtain a few prerequisites to fully explore and properly utilize the {{
 #### Installing
 {: #installation}
 
-To install the tool, you can run the relevant command to invoke our installer. This will install dependencies as well, such as the Bluemix CLI, Kubernetes, Helm, and Docker. To install these, use these installation steps:
+To install the tool, you can run the relevant command to invoke our installer. This will install dependencies as well, such as the IBM Cloud CLI, Kubernetes, Helm, and Docker. To install these, use these installation steps:
 
 **Mac and Linux:**  `curl -sL https://ibm.biz/idt-installer | bash`
 
@@ -79,7 +79,7 @@ Validate successful plug-in installation by running the following command:
 	**Note:** If your credentials are rejected, you might be using a Federated ID. Follow these steps to authenticate by using a Federated ID.
 	
 	<!-- 
-	POINT TO BLUEMIX CLI LOG IN DOCUMENTATION !!!
+	POINT TO IBM Cloud CLI LOG IN DOCUMENTATION !!!
 	
 	This link does not work in production yet --> 
 	
@@ -142,7 +142,7 @@ bx dev code <projectName>
 ### Console
 {: #console}
 
-Use the `console` command to open a web browser to your application's web console on Bluemix.  You can run the `bx dev console` command from inside your project's folder, and the CLI attempts to find a matching project on Bluemix that has the same name as the current directory. If the system is not able to find a matching name, it opens the Web and Mobile dashboard on Bluemix instead of the specific project.
+Use the `console` command to open a web browser to your application's web console on IBM Cloud.  You can run the `bx dev console` command from inside your project's folder, and the CLI attempts to find a matching project on the IBM Cloud that has the same project ID as the current directory. If the system is not able to find a matching name, it opens the Web and Mobile dashboard on IBM Cloud instead of the specific project.
 
 Optionally, you can provide a project name and the CLI will skip matching based on folder/application name.  In this case, the CLI opens the named project's console in a web browser.  
 
@@ -247,7 +247,7 @@ You must also define the location to a Helm chart with the `chart-path` configur
 
     deploy-target: "container"
 
-    deploy-image-target: "registry.<Bluemix Region>.bluemix.net/<Container Registry Namespace>/<App-Name>"
+    deploy-image-target: "registry.<IBM Cloud Region>.bluemix.net/<Container Registry Namespace>/<App-Name>"
 
     ibm-cluster: "mycluster"
     ```
@@ -618,17 +618,18 @@ The following parameters can be used with the `build|debug|run|test` commands or
 ## APPENDIX
 {: #appendix}
 
-All prerequisites will install for most users using the platform installers at the top of this page. If you need to manually install any components, here are the instructions:
+The following resources can be helpful when developing Cloud Native apps with the IBM Developer Tools CLI:
 
-For running and debugging applications locally, you must also install [Docker ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.docker.com/get-docker).
+**Main links**
+- [IBM Cloud Developer Tools Landing page](https://www.ibm.com/cloud/cli) - Main product page for IDT CLI
+- [IBM Developer Tools Installer](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools) - Public GitHub repo with detailed installation instructions
+- [IBM Cloud App Service](https://console.bluemix.net/developer/appservice) - IBM Cloud console page which is a companion to the IDT tools to create and manage cloud native apps
+- [IBM Cloud Tech's Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com) - Discuss IDT tools, get answers, suggest ideas, and more
+	- [Request team access](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
 
-For deploying an application as a container, you must also install install Kubernetes:
-* Mac users: `curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl`
+**Blogs and Tutorials**
+- [Deploying to IBM Cloud private with IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/)
+- [Enable existing projects for IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/)
+- [Deploying to Kubernetes on IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/)
 
-* Linux users: `curl --progress-bar -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl`
 
-* Windows users: `curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/windows/amd64/kubectl.exe`
-	
-To use the plugin, the Bluemix CLI must first be installed. You can find information to install the CLI here: https://console.bluemix.net/docs/cli/reference/bluemix_cli/index.html#getting-started
-
-To use the plugin itself, you must install it by running the following command: `bx plugin install dev -r Bluemix`

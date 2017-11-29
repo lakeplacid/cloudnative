@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-06-13"
+lastupdated: "2017-11-02"
 
 ---
 {:new_window: target="_blank"}  
@@ -61,7 +61,7 @@ lastupdated: "2017-06-13"
 	**注:** 資格情報が拒否された場合、フェデレーテッド ID を使用している可能性があります。フェデレーテッド ID を使用して認証するには、以下のステップに従ってください。
 	
 	<!-- 
-	POINT TO BLUEMIX CLI LOG IN DOCUMENTATION !!!
+	POINT TO IBM CLOUD CLI LOG IN DOCUMENTATION !!!
 	
 	This link does not work in production yet --> 
 	
@@ -84,7 +84,7 @@ lastupdated: "2017-06-13"
 1. 以下のコマンドを実行して、[{{site.data.keyword.dev_cli_short}} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in "外部リンク・アイコン"){: new_window} をインストールします。
  
 	```
-	bx plugin install dev -r Bluemix
+	bx plugin install dev
 	```
 	{: codeblock}
 
