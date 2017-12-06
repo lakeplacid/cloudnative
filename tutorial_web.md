@@ -34,11 +34,11 @@ Create a project in the {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_co
 
 3. Enter a unique hostname, such as your initials plus `-devhost`. For example:
 
-	```
-	abc-devhost
-	```
+  ```
+  abc-devhost
+  ```
 
-	This hostname will be used for your project's route. For ex: `abc-devhost.mybluemix.net`
+  This hostname will be used for your project's route. For ex: `abc-devhost.mybluemix.net`
 
 4. Select your language platform. For this tutorial, use `Node.js`.
 
@@ -112,35 +112,21 @@ Add your own code, build, and run the project. You can run the application local
 
 ### Using the {{site.data.keyword.dev_cli_short}}
 
-1. Install the node dependencies:
-
-  ```
-  npm install
-  ```
-  {: codeblock}
-
-2. Bundle your frontend code into a module:
-
-  ```
-  gulp
-  ```
-  {: codeblock}
-
-3. To build the project in your current project directory, enter the following command:
+1. To build the project in your current project directory, enter the following command:
 
   ```
   bx dev build
   ```
   {: codeblock}
 
-4. To run the project in your current project directory, enter the following command:
+2. To run the project in your current project directory, enter the following command:
 
   ```
   bx dev run
   ```
   {: codeblock}
 
-5. Open your browser to `http://localhost:3000` (your port number may be different depending on the chosen runtime).
+3. Open your browser to `http://localhost:3000` (your port number may be different depending on the chosen runtime).
 
 
 ## Deploy to the cloud
@@ -155,10 +141,10 @@ To deploy your project to Cloud Foundry, enter the following command:
 
 To deploy your project to a Kubernetes cluster, enter the following command:
 
-```
-bx dev deploy --target <container>
-```
-{: codeblock}
+  ```
+  bx dev deploy --target <container>
+  ```
+  {: codeblock}
 
 This step will deploy your application to the Cloud. Once the application is deployed, you should see a URL similar to `abc-devhost.mybluemix.net`. Visit this URL in your browser.
 
@@ -176,6 +162,56 @@ If you chose to create a DevOps toolchain, you may view your toolchain:
 	
 	4. View your delivery pipeline where you can kick off builds, manage deployment and view logs and history.
 
+## Run your project with Hot-Reload (NodeJS Only)
+{: #hot-reload}
+(Optional)
+
+Hot-reload is a popular development practice where the application runtime updates upon code change by triggering rebuild (when necessary) and restart automatically.
+
+1. Run hot-reload with container:
+
+  ```
+  bx dev shell run-dev
+  ```
+  {: codeblock}
+
+  Open project at `http://localohst:3000` in your browser.
+
+2. Run hot-reload with NPM script.
+
+	1. Run both client-side and server-side hot reload:
+	
+	  ```
+	  npm run dev
+	  ```
+	  {: codeblock}
+	  
+	  Open project at `http://localohst:3000` in your browser.
+
+	2. Run server-side hot reload:
+	
+	  ```
+	  npm run build
+	  ```
+	  {: codeblock}
+	  
+	  builds frontend code for server use, then
+	  
+	  ```
+	  npm run server-reload
+	  ```
+	  {: codeblock}
+	  
+	  Open project at `http://localohst:3000` in your browser.
+	
+	3. Run client-side hot reload:
+	
+	  ```
+	  npm run client-reload
+	  ```
+	  {: codeblock}
+	  
+	  Open project at `http://localohst:8080` in your browser. (Note: this does not use your backend server.)
 
 ## Run your project in Xcode (Swift Only)
 {: #Xcode}
@@ -184,11 +220,11 @@ If you chose to create a DevOps toolchain, you may view your toolchain:
 1. Create an Xcode project.
 
 	Before you can develop in Xcode, you need to use the Swift package manager to build an Xcode project.
-	
+
 	```
 	swift project generate-xcodeproj
 	```
-	{: codeblock}
+  	{: codeblock}
 
 2. Change your active target to the executable:
 

@@ -129,10 +129,10 @@ Add your own code, build, and run the project. You can run the application local
 
 3. You can access the application by using `curl` on your server:
 
-	```
-	curl http://localhost:9080	
-	```
-	{: codeblock}
+  ```
+  curl http://localhost:3000	
+  ```
+  {: codeblock}
 
 
 ## Deploy to the cloud
@@ -147,10 +147,10 @@ To deploy your project to Cloud Foundry, enter the following command:
 
 To deploy your project to a Kubernetes cluster, enter the following command:
 
-```
-bx dev deploy --target <container>
-```
-{: codeblock}
+  ```
+  bx dev deploy --target <container>
+  ```
+  {: codeblock}
 
 This step will deploy your application to the Cloud. Once the application is deployed, you should see a URL similar to `abc-devhost.mybluemix.net`. Visit this URL in your browser.
 
@@ -168,4 +168,26 @@ If you chose to create a DevOps toolchain, you may view your toolchain:
 	
 	4. View your delivery pipeline where you can kick off builds, manage deployment and view logs and history.
 
- 
+ ## Run your project with Hot-Reload (NodeJS Only)
+{: #hot-reload}
+(Optional)
+
+Hot-reload is a popular development practice where the application runtime updates upon code change by triggering rebuild (when necessary) and restart automatically.
+
+1. Run hot-reload with container:
+
+  ```
+  bx dev shell run-dev
+  ```
+  {: codeblock}
+
+  Open project at `http://localohst:3000` in your browser.
+
+2. Run hot-reload with NPM script.
+
+  ```
+  npm run dev
+  ```
+  {: codeblock}
+
+  Open project at `http://localohst:3000` in your browser.
