@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-11-02"
+lastupdated: "2017-12-08"
 
 ---
 {:new_window: target="_blank"}  
@@ -51,6 +51,8 @@ To install the tool, you can run the relevant command to invoke our installer. T
 **Mac and Linux:**  `curl -sL https://ibm.biz/idt-installer | bash`
 
 **Windows 10:**  `Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')`
+
+* **Note**: For Windows 10 installation of the {{site.data.keyword.dev_cli_short}}, you must use PowerShell and Run as Administrator. You must also accept the Execution Policy Change prompt.
 
 The [Appendix](#appendix) has the manual installation instructions for each component if you have need of them.
 
@@ -115,6 +117,8 @@ You can build your application by using the `build` command. The `test`, `debug`
 
 The `build-cmd-debug` configuration element is used to build the application for all use except for `run`. You build your application for debugging by specifying the command line option `--debug`.  The `build-cmd-run` configuration element is used when building the application for use with the `run` command.
 
+In order to build with multiple containers, either your project should contain a [Compose](https://docs.docker.com/compose/overview/) file, specified in the `cli-config.yml`, or you can use the `dockerfile-tools` command parameter to provide one. See the [Compose File](#compose-file) section in the Appendix for more information.
+
 Run the following command in your current project directory to build your application:  
 
 ```
@@ -142,7 +146,7 @@ bx dev code <projectName>
 ### Console
 {: #console}
 
-Use the `console` command to open a web browser to your application's web console on IBM Cloud.  You can run the `bx dev console` command from inside your project's folder, and the CLI attempts to find a matching project on the IBM Cloud that has the same project ID as the current directory. If the system is not able to find a matching name, it opens the Web and Mobile dashboard on IBM Cloud instead of the specific project.
+Use the `console` command to open a web browser to your application's web console on IBM Cloud.  You can run the `bx dev console` command from inside your project's folder, and the CLI attempts to find a matching project on the IBM Cloud that has the same project ID as the current directory. If the system is not able to find a matching name, it opens the Web Apps Projects page on IBM Cloud instead of the specific project.
 
 Optionally, you can provide a project name and the CLI will skip matching based on folder/application name.  In this case, the CLI opens the named project's console in a web browser.  
 
@@ -157,9 +161,9 @@ bx dev console [projectName]
 ### Create
 {: #create}
 
-Create a project, prompting for all information, including language, project name, and app pattern type. The project is created in the current directory. 
+Create a project, prompting for all information, including resource type, language, starter kit, and DevOps Toolchain options. The project is created in a folder in the current directory.
 
-To create a project in the current project directory and associate services with it, run the following command:
+To create a project in a folder in the current directory and associate services with it, run the following command:
 
 ```
 bx dev create
@@ -179,14 +183,16 @@ bx dev build --debug
 ```
 {: codeblock}
 
-Run the following command in your current project directory to debug your application:
+To begin, run the following command in your current project directory to debug your application:
 
 ```
 bx dev debug 
 ```
 {: codeblock}	
 
-To exit the debug session use `CTRL-C`.
+To debug, attach your debug tool to the specified port.
+
+To exit the debug session, use `CTRL-C`.
 
 
 ## Debug command parameters
@@ -238,9 +244,11 @@ You can deploy an application as a Cloud Foundry application or as a container.
 
 To deploy as a Cloud Foundry application to {{site.data.keyword.Bluemix}}, a `manifest.yml` file must be present in your project's root directory.
 
-To deploy an application as a container, you must locally install [Kubernetes](https://kubernetes.io/) and [Helm](https://github.com/kubernetes/helm). You can use the the [installation instructions](#installation) at the top of this page as your guide.
+To deploy an application as a container, you must locally install [Kubernetes](https://kubernetes.io/) and [Helm](https://github.com/kubernetes/helm). You can use the the [installation instructions](#installation) at the top of this page as your guide. Be sure that the Helm client version is not newer than than the Helm server version. You can find both of these by running `helm version`. We recommend using v2.4.2 for the client version.
 
-You must also define the location to a Helm chart with the `chart-path` configuration element and have configured the `deploy-target` element to `container`, and the `deploy-image-target` element in the cli-config.yml.  To deploy to {{site.data.keyword.Bluemix}} specifically, set the configuration element `ibm-cluster` to the name of the Kubernetes cluster you have created in {{site.data.keyword.Bluemix}} as described [here](https://console.bluemix.net/docs/containers/cs_tutorials.html#cs_tutorials).
+In the `cli-config.yml`, you can choose to define the location of a Helm chart in the `chart-path` property, set the `deploy-target` element to `container`, and configure the `deploy-image-target` as shown in the example below. The `deploy-image-target` element in the `cli-config.yml` is used instead of the `repository` and `tag` elements in the `chart/values.yml` file. To deploy to {{site.data.keyword.Bluemix}} specifically, set the configuration element `ibm-cluster` to the name of the Kubernetes cluster you have created in {{site.data.keyword.Bluemix}} as described [here](https://console.bluemix.net/docs/containers/cs_tutorials.html#cs_tutorials).
+
+For more information on provisioning, configuring, and deploying to a Kubernetes cluster, see the [Deploy a scalable web application on Kubernetes](https://console.bluemix.net/docs/tutorials/scalable-webapp-kubernetes.html#deploy-a-scalable-web-application-on-kubernetes) tutorial.
 
 ```
     chart-path: "chart/myapplication"
@@ -251,6 +259,8 @@ You must also define the location to a Helm chart with the `chart-path` configur
 
     ibm-cluster: "mycluster"
     ```
+    
+If you do not define these in the cli-config.yml, you then must deploy with the parameter `-t container` and you will be prompted for all of the other values.
 
 Run the following command in your current project directory to build your application:  
 
@@ -267,7 +277,7 @@ bx dev deploy
 {: codeblock}
 
 
-## Parameters for deploy
+## Deploy command parameters
 {: #deploy-parameters}
 
 The following parameters can be used with the `deploy` command or by updating the project's `cli-config.yml` file directly. There are [additional parameters](#command-parameters) shared with other commands.
@@ -330,7 +340,7 @@ Language options include:
 
 Files created using the `bx dev enable` command that have naming conflicts with existing files in the project folder are saved with a `.merge` file extension.  
 
-## Parameters for enable
+## Enable command parameters
 {: #enable-parameters}
 
 The following parameters can be used with the `enable` command or by updating the project's `cli-config.yml` file directly. There are [additional parameters](#command-parameters) shared with other commands.
@@ -393,6 +403,8 @@ bx dev edit
 
 You can run your application through the `run` command. A build must first be completed against the project by using the `build` command. When you invoke the `run` command, the run container is started and exposes the ports as defined by the `container-port-map` parameter. The `run-cmd` parameter can be used to invoke the application if the run container Dockerfile does not contain an entry point to complete this step. 
 
+In order to run with multiple containers, either your project should  contain a [Compose](https://docs.docker.com/compose/overview/) file, specified in the `cli-config.yml`, or you can use the `dockerfile-run` command parameter to provide one. See the [Compose File](#compose-file) section in the Appendix for more information.
+
 First, compile your project:
 
 ```
@@ -410,7 +422,7 @@ bx dev run
 To exit the session use `CTRL-C`.
 
 
-## Run Parameters
+## Run command parameters
 {: #run-parameters}
 
 The following parameters are exclusive to the `run` command and
@@ -439,7 +451,10 @@ There are [additional parameters](#command-parameters) shared with other command
 {: #dockerfile-run}
 
 * Dockerfile for the run container.
+* If you intend to run with multiple containers, this should be a Compose file.
+* To use multiple compose files, surround a comma-delimited list of the file names with double quotes.
 * Usage: `bx dev run --dockerfile-run [/path/to/Dockerfile]`
+* Usage: `bx dev run --dockerfile-run "/path/to/compose/file, /path/to/another/compose/file, ..."`
 
 ### `image-name-run`
 {: #image-name-run}
@@ -453,6 +468,47 @@ There are [additional parameters](#command-parameters) shared with other command
 * Parameter that is used to run code in the run container. Use this parameter if your image starts your application.
 * Usage: `bx dev run --run-cmd [/the/run/command]`
 	
+
+### Shell
+{: #shell}
+
+You can open the shell inside the run or tools container with the `shell` command.
+
+By simply running this command
+
+```
+bx dev shell
+```
+
+the {{site.data.keyword.dev_cli_short}} will open an interactive shell into the application's docker container. The default target container for the shell command is defined by the `container-shell-target` value in the `cli-config.yml` file, where the valid values are `run` or `tools`. If this value is not defined or an invalid value is specified, then the `shell` command will target the `tools` container by default.
+
+Alternatively, you can decide to pass either `run` or `tools` as an argument to the command and that container will be brought up and the shell will be opened for that container. Similarly, you can use the `container-name` parameter to pass the name of the container into which you wish to shell. However, this flag should be reserved for when no containers are running. The `run` and `tools` arguments are more flexible and allow you to switch between containers when one is currently running. For example, if the tools container is running and you execute `bx dev shell run`, the `tools` container will be stopped and the `run` container will be started, and vice versa. 
+
+If the target `run` or `tools` container is not already running when you execute the `shell` command, then the target container will be started. However, the default `Cmd` or `Entrypoint` in the Dockerfile will be overridden to launch directly into the shell instead of starting the server process. This allows you to start the `run` or `tools` container, and manually start the server  with your own arbitrary or custom commands.
+
+
+You can also specify the shell executable you wish to open by using the `container-shell` parameter. By default, `/bin/sh` is used. If you'd prefer to use the bash shell, then specify the `container-shell` value to be `/bin/bash`; however, keep in mind that bash is not automatically available across all linux variants.
+
+Any additional arguments you pass to the command beyond the flags will be parsed as the command to be run when the shell is opened. If you provide a command to be run, the shell inside the container will exit upon running the command and return to your terminal.
+
+For example, you can run the Linux `ls` command inside of the tools container shell by invoking `bx dev shell tools ls`.   You can also specify additional flags to be passed into the shell command execution by wrapping the arguments in quotes, such as `bx dev shell "ls -la"`.
+
+## Shell command parameters
+{: #shell-parameters}
+
+### `container-name`
+{: #container-name}
+	
+* Name of the container into which you wish to shell.
+* Usage: `bx dev shell --container-name [<container-name>]`
+
+### `container-shell`
+{: #container-shell}
+	
+* Specifies which shell to run inside the container (default is /bin/sh)
+* Usage: `bx dev shell --container-shell [path/to/shell]`
+
+
 ### Status
 {: #status}
 
@@ -483,7 +539,7 @@ bx dev stop
 
 To stop a container that is not defined in the `cli-config.yml` file, you can specify an extra command line parameter to override it.  If no containers are specified in the `cli-config.yml` file or on the command line, the stop command simply returns.
 
-## Stop Parameters
+## Stop command parameters
 {: #stop-parameters}
 
 The following parameters are used for the `stop` command. There are [additional parameters](#command-parameters) shared with other commands.
@@ -522,7 +578,7 @@ bx dev test
 {: codeblock}
 
 
-[Test command parameters]
+## Test command parameters
 {: #test-parameters}
 
 The following parameter is exclusive to the `test` command.  There are [additional parameters](#command-parameters) shared with other commands.
@@ -532,6 +588,43 @@ The following parameter is exclusive to the `test` command.  There are [addition
 
 * Parameter that is used to specify a command to test code in the tools container.
 * Usage: `bx dev test --test-cmd /the/test/command`
+
+
+### View
+{: #view}
+
+You can view the URL to which your application is deployed through the `view` command. Run this command in the root directory of the application you wish to view. The `view` command will also open the URL in your default browser.
+
+For applications deployed to Cloud Foundry, the URL consists of the application's hostname and the application's domain. 
+
+For applications deployed to Kubernetes, the URL consists of the IP address of the node to which it is deployed and the public port. If the command determines that the app was deployed to Kubernetes, the CLI tool will prompt for confirmation. If you specify that the application was not actually deployed to Kubernetes, then the Cloud Foundry URL is shown. If you expected the command to show the URL for a Kubernetes-deployed application and it did not, then either ensure that the `cli-config.yml` contains an entry for `chart-path` or supply it via command line as shown [here](#chart-path).
+
+Run the following command to view your application:
+
+```
+bx dev view
+```
+{: codeblock}
+
+## View command parameters
+{: #view-parameters}
+
+The following parameters are exclusive to the `view` command.
+
+### `no-open`
+{: #no-open}
+
+* Parameter that is used to specify not to open the browser.
+* Usage: `bx dev view --no-open`
+
+
+### `web-app-root`
+{: #web-app-root}
+
+* Root of the project to append to the Kubernetes app URL
+* Usage: `bx dev view --web-app-root [root]`
+
+
 
 ## Parameters for build, debug, run, and test
 {: #command-parameters}
@@ -574,7 +667,7 @@ The following parameters can be used with the `build|debug|run|test` commands or
 {: #container-port-map}
 
 * Port mappings for the container. The first value is the port to use in the host OS, the second is the port in the container [host-port:container-port].
-* Usage: `bx dev <build|debug|run|test> --container-port-map [8090:8090,9090,9090]`
+* Usage: `bx dev <build|debug|run|test> --container-port-map [8090:8090,9090:9090]`
 
 ### `dockerfile-tools`
 {: #dockerfile-tools}
@@ -592,6 +685,7 @@ The following parameters can be used with the `build|debug|run|test` commands or
 {: #container-mounts-run}
 
 * Use this option to define mounts between the host system and the run container.
+* The `host-path-run` and `container-path-run` values are inserted at the beginning of this list.
 * As a best practice and to prevent unexpected results, you should build and run using the same mount settings.
 * Usage: `bx dev <build|run|test> --container-mounts-run [/relative/path/to/host/dir:/absolute/path/to/container/dir, etc.]`
 
@@ -599,6 +693,7 @@ The following parameters can be used with the `build|debug|run|test` commands or
 {: #container-mounts-tools}
 
 * Use this option to define mounts between the host system and the tools container.
+* The `host-path-tools` and `container-path-tools` values are inserted at the beginning this list.
 * As a best practice and to prevent unexpected results, you should build and debug using the same mount settings.
 * Usage: `bx dev <build|debug|test> --container-mounts-tools [/relative/path/to/host/dir:/absolute/path/to/container/dir, etc.]`
 
@@ -621,15 +716,62 @@ The following parameters can be used with the `build|debug|run|test` commands or
 The following resources can be helpful when developing Cloud Native apps with the IBM Developer Tools CLI:
 
 **Main links**
-- [IBM Cloud Developer Tools Landing page](https://www.ibm.com/cloud/cli) - Main product page for IDT CLI
-- [IBM Developer Tools Installer](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools) - Public GitHub repo with detailed installation instructions
-- [IBM Cloud App Service](https://console.bluemix.net/developer/appservice) - IBM Cloud console page which is a companion to the IDT tools to create and manage cloud native apps
-- [IBM Cloud Tech's Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com) - Discuss IDT tools, get answers, suggest ideas, and more
-	- [Request team access](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
+ - [IBM Cloud Developer Tools Landing page](https://www.ibm.com/cloud/cli) - Main product page for IDT CLI
+ - [IBM Developer Tools Installer](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools) - Public GitHub repo with detailed installation instructions
+ - [IBM Cloud App Service](https://console.bluemix.net/developer/appservice) - IBM Cloud console page which is a companion to the IDT tools to create and manage cloud native apps
+ - [IBM Cloud Tech's Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com) - Discuss IDT tools, get answers, suggest ideas, and more
+ 	- [Request team access](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
 
 **Blogs and Tutorials**
-- [Deploying to IBM Cloud private with IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/)
-- [Enable existing projects for IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/)
-- [Deploying to Kubernetes on IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/)
+ - [Deploying to IBM Cloud private with IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-ibm-cloud-private-ibm-cloud-developer-tools-cli/)
+ - [Enable existing projects for IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/enable-existing-projects-ibm-cloud-ibm-cloud-developer-tools-cli/)
+ - [Deploying to Kubernetes on IBM Cloud with the IBM Cloud Developer Tools CLI](https://www.ibm.com/blogs/bluemix/2017/09/deploying-kubernetes-ibm-cloud-ibm-cloud-developer-tools-cli/)
 
+**For more assistance, see the troubleshooting page [here](https://console.bluemix.net/docs/cloudnative/troubleshoot.html#ts)**
 
+### Compose File
+{: #compose-file}
+
+The [Compose](https://docs.docker.com/compose/overview/) file defines information for running multi-container applications.
+
+You should specify the version of Compose file used to be 2.0 or later as such:
+`version: '2'`
+
+Services also need to be defined. Here is an example from a Node project:
+```
+services:
+  web:
+    build: 
+    	context: <path-to-Dockerfile>
+	dockerfile: <name-of-Dockerfile>
+    tty: true
+    command: npm run start-dev
+    image: <image-name>
+    container_name: <container-name>
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    links:
+      - mongo
+    environment:
+      MONGO_URL: "mongo"
+      MONGO_DB_NAME: "comments"
+      NODE_ENV: "development"
+      PORT: 3000
+  mongo:
+    image: mongo
+```
+
+`web` and `mongo` are the specified services and each of them has configurations, which are defined in the Docker-Compose [documentation](https://docs.docker.com/compose/compose-file/compose-file-v2/).
+
+The most relevant configurations are listed below:
+
+* build: The context and dockerfile attributes are unnecessary here as they are the default values, but can be overwritten in this format. The context attribute defines the path to the name of the Dockerfile specified in the dockerfile attribute.
+
+* tty: This attribute allows the containers to stay running and not immediately exit. This is required for Docker-Compose support.
+
+* command: This attribute specifies the command to be executed inside the containers.
+
+* image and container_name: These specify the names of the image and containers, respectively.
