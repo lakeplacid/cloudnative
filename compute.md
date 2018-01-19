@@ -1,10 +1,10 @@
 ---
-
 copyright:
-  years: 2017
-lastupdated: "2017-11-02"
+  years: 2017, 2018
+lastupdated: "2018-01-19"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -126,7 +126,7 @@ As you are developing your BFF, the API specification could change. To support t
 * Regenerate the whole project into a new GitHub branch and merge the changes into your development branch.
 * Regenerate the SDK directly by using the command-line (CLI) tool and update only the SDK part of the mobile project.
 
-To use the CLI, you must [install](sdk_cli.html#installation) it.
+To use the CLI, you must [install](sdk/index.html#installation) it.
 
 Use the following command to list the actions that you can perform.
 

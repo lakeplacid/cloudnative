@@ -1,10 +1,10 @@
 ---
-
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-09-19"
+  years: 2017, 2018
+lastupdated: "2018-01-19"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -12,10 +12,10 @@ lastupdated: "2017-09-19"
 {:pre: .pre}
 {:note:.deprecated}
 
-# Building cloud native projects
+# Building Cloud Native Projects
 {: #web-mobile}
 
-You can manage cloud native apps through the concept of {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}} *Projects*. You can create a project by using the [{{site.data.keyword.dev_console}}](devex.html) or the [{{site.data.keyword.dev_cli_notm}}](dev_cli.html) for the {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} CLI. The {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}} brings the most common service capabilities that are required for a cloud native application developer into a single, connected experience that has been optimized for the developer.
+You can manage cloud native apps through the concept of {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}} *Projects*. You can create a project by using the [{{site.data.keyword.dev_console}}](devex.html) or the [{{site.data.keyword.dev_cli_notm}}](idt/index.html) for the {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} CLI. The {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}} brings the most common service capabilities that are required for a cloud native application developer into a single, connected experience that has been optimized for the developer.
 
 The {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}} enables a cloud native application developer to create a project from a variety of starter kits, create and connect key {{site.data.keyword.Bluemix_notm}} optimized services to your project, and quickly download working code with SDKs. The SDKs are fully integrated with capability credentials or dependencies that enable you to have it running in minutes. When your application is running and you have set up and configured capabilities, you can return to your project to monitor and manage engagement with your application users. You can also configure and manage your services through the {{site.data.keyword.dev_console}}.
 
