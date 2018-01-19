@@ -165,3 +165,27 @@ If you chose to create a DevOps toolchain, you may view your toolchain:
 	4. View your delivery pipeline where you can kick off builds, manage deployment and view logs and history.
 
 
+## Run your project with Hot-Reload (NodeJS Only)
+{: #hot-reload}
+(Optional)
+
+Hot-reload is a popular development practice where the application runtime updates upon code change by triggering rebuild (when necessary) and restart automatically.
+
+1. Run hot-reload with container:
+
+  ```
+  bx dev shell run-dev
+  ```
+  {: codeblock}
+
+  Open project at `http://localohst:3000` in your browser.
+
+2. Run hot-reload with NPM script.
+
+  ```
+  npm run dev
+  ```
+  {: codeblock}
+
+  Open project at `http://localohst:3000` in your browser.
+
