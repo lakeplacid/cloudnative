@@ -1,20 +1,20 @@
 ---
-
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-10-02"
+  years: 2017, 2018
+lastupdated: "2018-01-19"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Web Basic Starter
+# Custom Starter
 {: #tutorial}
 
-The following end-to-end tutorial walks you through the steps to create a project from a Web Basic Starter. Use these starters to set up a simple web server for Swift, Node, Java, or Python with a choice of web frameworks. Steps include installing prerequisite tools, building and running the project locally and deploying to the cloud.
+The following end-to-end tutorial walks you through the steps to create a custom application using services and runtime of your choice. Steps include installing prerequisite tools, building and running the project locally and deploying to the cloud.
 
 
 ## Complete the prerequisites
@@ -28,21 +28,23 @@ Ensure that you install the [prerequisite developer tools ![External link icon](
 
 Create a project in the {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}}:
 
-1. From the [**Starter Kits** ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) page in the {{site.data.keyword.dev_console}}, select a Starter Kit based on your chosen language. For example, for a Node.js application, go to **Express.js Basic** and click **Select Starter Kit**.
+1. From the [**Starter Kits** ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) page in the {{site.data.keyword.dev_console}}, select **Create Project** to create a custom application.
 
-2. Enter your project name. For this tutorial, use `WebBasicProject`.   
+2. Enter your project name. For this tutorial, use `CustomProject`.   
 
 3. Enter a unique hostname, such as your initials plus `-devhost`. For example:
 
-  ```
-  abc-devhost
-  ```
+	```
+	abc-devhost
+	```
 
-  This hostname will be used for your project's route. For ex: `abc-devhost.mybluemix.net`
+	This hostname will be used for your project's route. For ex: `abc-devhost.mybluemix.net`
 
 4. Select your language platform. For this tutorial, use `Node.js`.
 
-5. Click **Create Project**.
+5. (Optional) You have the option to start the scaffolding of your backend from an OpenAPI document. This is very practical and useful for a backend developer who already has their client and backend integration contract defined in a Swagger document. File types of **.yaml** and **.json** are supported. Click **Add file** to upload your document.
+
+6. Click **Create Project**.
 
 
 ## Optional: Add services
@@ -126,7 +128,7 @@ Add your own code, build, and run the project. You can run the application local
   ```
   {: codeblock}
 
-3. Open your browser to `http://localhost:3000` (your port number may be different depending on the chosen runtime).
+5. Open your browser to `http://localhost:3000` (your port number may be different depending on the chosen runtime).
 
 
 ## Deploy to the cloud
@@ -141,10 +143,10 @@ To deploy your project to Cloud Foundry, enter the following command:
 
 To deploy your project to a Kubernetes cluster, enter the following command:
 
-  ```
-  bx dev deploy --target <container>
-  ```
-  {: codeblock}
+```
+bx dev deploy --target <container>
+```
+{: codeblock}
 
 This step will deploy your application to the Cloud. Once the application is deployed, you should see a URL similar to `abc-devhost.mybluemix.net`. Visit this URL in your browser.
 
@@ -179,58 +181,10 @@ Hot-reload is a popular development practice where the application runtime updat
 
 2. Run hot-reload with NPM script.
 
-	1. Run both client-side and server-side hot reload:
-	
-	  ```
-	  npm run dev
-	  ```
-	  {: codeblock}
-	  
-	  Open project at `http://localohst:3000` in your browser.
+  ```
+  npm run dev
+  ```
+  {: codeblock}
 
-	2. Run server-side hot reload:
-	
-	  ```
-	  npm run build
-	  ```
-	  {: codeblock}
-	  
-	  builds frontend code for server use, then
-	  
-	  ```
-	  npm run server-reload
-	  ```
-	  {: codeblock}
-	  
-	  Open project at `http://localohst:3000` in your browser.
-	
-	3. Run client-side hot reload:
-	
-	  ```
-	  npm run client-reload
-	  ```
-	  {: codeblock}
-	  
-	  Open project at `http://localohst:8080` in your browser. (Note: this does not use your backend server.)
-
-## Run your project in Xcode (Swift Only)
-{: #Xcode}
-(Optional)
-
-1. Create an Xcode project.
-
-	Before you can develop in Xcode, you need to use the Swift package manager to build an Xcode project.
-
-	```
-	swift project generate-xcodeproj
-	```
-  	{: codeblock}
-
-2. Change your active target to the executable:
-
-	Next, open your project in Xcode and make sure that your active target is the executable. You can hold down the option key and click the drop-down menu to select the desired active executable.
-
-3. Press **run**.
-
-4. Open your browser to `http://localhost:8080`.
+  Open project at `http://localohst:3000` in your browser.
 
