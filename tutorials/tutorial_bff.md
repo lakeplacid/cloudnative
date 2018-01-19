@@ -1,20 +1,20 @@
 ---
-
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-10-02"
+  years: 2017, 2018
+lastupdated: "2018-01-19"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Microservice Basic Starter
+# Backend for Frontend Basic Starter
 {: #tutorial}
 
-The following end-to-end tutorial walks you through the steps to create a project from a Microservice Basic Starter. Use these starters to build a microservice backend for Node, Java, or Python with a choice of web frameworks. Steps include installing prerequisite tools, building and running the project locally and deploying to the cloud.
+The following end-to-end tutorial walks you through the steps to create a project from a Backend for Frontend Basic Starter. Use these starters to build backend-for-frontend APIs in Node.js, Java, or Swift using a variety of frameworks: Express.js, MicroProfile/ Java EE, Kitura or Spring. Steps include installing prerequisite tools, building and running the project locally and deploying to the cloud.
 
 
 ## Complete the prerequisites
@@ -23,14 +23,14 @@ The following end-to-end tutorial walks you through the steps to create a projec
 Ensure that you install the [prerequisite developer tools ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools){: new_window}.
 
 
-## Create a project using the {{site.data.keyword.dev_console}}
+## Create a project by using the {{site.data.keyword.dev_console}}
 {: #create-devex}
 
-Create a project in the {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}}:
+Create a project in the {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}}.
 
-1. From the [**Starter Kits** ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) page in the {{site.data.keyword.dev_console}}, select a Starter Kit based on your chosen language. For example, for a Node.js application, go to **Express.js Microservice** and click **Select Starter Kit**.
+1. From the [**Starter Kits** ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) page in the {{site.data.keyword.dev_console}}, select a Starter Kit based on your chosen language. For example, for a Node.js application, go to **Express.js Backend** and click **Select Starter Kit**.
 
-2. Enter your project name. For this tutorial, use `MicroserviceProject`.   
+2. Enter your project name. For this tutorial, use `ExpressBackend`.   
 
 3. Enter a unique hostname, such as your initials plus `-devhost`. For example:
 
@@ -67,7 +67,6 @@ Continuous delivery is enabled for some applications. You may want to enable con
 1. Select your project in the **Projects** page. 
 
 2. Click **Create Toolchain**.
-
 
 3. Select a deployment method. You may choose to either:
 
@@ -127,12 +126,26 @@ Add your own code, build, and run the project. You can run the application local
   ```
   {: codeblock}
 
-3. You can access the application by using `curl` on your server:
+3. You can run curl on your server with:
+  
+   ```
+   curl http://localhost:3000
+   ```
+   {: codeblock}
 
-	```
-	curl http://localhost:9080	
-	```
-	{: codeblock}
+4. You can view the API document on your server at: 
+
+   ```
+   http://localhost:3000/swagger/api
+   ```
+   {: codeblock}
+
+5. You can explore the API on your server at: 
+
+   ```
+   http://localhost:3000/explorer
+   ```
+   {: codeblock}
 
 
 ## Deploy to the cloud
@@ -168,4 +181,4 @@ If you chose to create a DevOps toolchain, you may view your toolchain:
 	
 	4. View your delivery pipeline where you can kick off builds, manage deployment and view logs and history.
 
- 
+

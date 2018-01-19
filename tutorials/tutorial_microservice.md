@@ -1,20 +1,20 @@
 ---
-
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-10-02"
+  years: 2017, 2018
+lastupdated: "2018-01-19"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Web Basic Starter
+# Microservice Basic Starter
 {: #tutorial}
 
-The following end-to-end tutorial walks you through the steps to create a project from a Web Basic Starter. Use these starters to set up a simple web server for Swift, Node, Java, or Python with a choice of web frameworks. Steps include installing prerequisite tools, building and running the project locally and deploying to the cloud.
+The following end-to-end tutorial walks you through the steps to create a project from a Microservice Basic Starter. Use these starters to build a microservice backend for Node, Java, or Python with a choice of web frameworks. Steps include installing prerequisite tools, building and running the project locally and deploying to the cloud.
 
 
 ## Complete the prerequisites
@@ -28,9 +28,9 @@ Ensure that you install the [prerequisite developer tools ![External link icon](
 
 Create a project in the {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}}:
 
-1. From the [**Starter Kits** ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) page in the {{site.data.keyword.dev_console}}, select a Starter Kit based on your chosen language. For example, for a Node.js application, go to **Express.js Basic** and click **Select Starter Kit**.
+1. From the [**Starter Kits** ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) page in the {{site.data.keyword.dev_console}}, select a Starter Kit based on your chosen language. For example, for a Node.js application, go to **Express.js Microservice** and click **Select Starter Kit**.
 
-2. Enter your project name. For this tutorial, use `WebBasicProject`.   
+2. Enter your project name. For this tutorial, use `MicroserviceProject`.   
 
 3. Enter a unique hostname, such as your initials plus `-devhost`. For example:
 
@@ -67,6 +67,7 @@ Continuous delivery is enabled for some applications. You may want to enable con
 1. Select your project in the **Projects** page. 
 
 2. Click **Create Toolchain**.
+
 
 3. Select a deployment method. You may choose to either:
 
@@ -112,35 +113,26 @@ Add your own code, build, and run the project. You can run the application local
 
 ### Using the {{site.data.keyword.dev_cli_short}}
 
-1. Install the node dependencies:
-
-  ```
-  npm install
-  ```
-  {: codeblock}
-
-2. Bundle your frontend code into a module:
-
-  ```
-  gulp
-  ```
-  {: codeblock}
-
-3. To build the project in your current project directory, enter the following command:
+1. To build the project in your current project directory, enter the following command:
 
   ```
   bx dev build
   ```
   {: codeblock}
 
-4. To run the project in your current project directory, enter the following command:
+2. To run the project in your current project directory, enter the following command:
 
   ```
   bx dev run
   ```
   {: codeblock}
 
-5. Open your browser to `http://localhost:3000` (your port number may be different depending on the chosen runtime).
+3. You can access the application by using `curl` on your server:
+
+	```
+	curl http://localhost:9080	
+	```
+	{: codeblock}
 
 
 ## Deploy to the cloud
@@ -176,25 +168,4 @@ If you chose to create a DevOps toolchain, you may view your toolchain:
 	
 	4. View your delivery pipeline where you can kick off builds, manage deployment and view logs and history.
 
-
-## Run your project in Xcode (Swift Only)
-{: #Xcode}
-(Optional)
-
-1. Create an Xcode project.
-
-	Before you can develop in Xcode, you need to use the Swift package manager to build an Xcode project.
-	
-	```
-	swift project generate-xcodeproj
-	```
-	{: codeblock}
-
-2. Change your active target to the executable:
-
-	Next, open your project in Xcode and make sure that your active target is the executable. You can hold down the option key and click the drop-down menu to select the desired active executable.
-
-3. Press **run**.
-
-4. Open your browser to `http://localhost:8080`.
-
+ 

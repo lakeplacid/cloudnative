@@ -1,10 +1,10 @@
 ---
-
 copyright:
-  years: 2017
-lastupdated: "2017-06-12"
+  years: 2017, 2018
+lastupdated: "2018-01-19"
 
 ---
+
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -227,6 +227,83 @@ This error occurs when the `appmetrics` module is installed on a different archi
 {: #node-resolution}
 
 Delete `node_modules` folder and run `bx dev run` again.
+
+
+### Failure to deploy to Bluemix
+
+You might attempt to deploy to Bluemix with the {{site.data.keyword.dev_cli_short}} and you see that it does not deploy to Bluemix but there is no error.
+
+
+#### Cause
+
+This could be that you are not logged in to your account. 
+
+#### Resolution
+
+Log in and try again.
+
+```
+bx login
+```
+
+
+### Failure to deploy to Kubernetes on Bluemix
+
+You may see this failure after the initial prompt for your cluster name:
+
+```
+FAILED
+Failed to execute the action:  exit status 1:
+
+FAILED
+Failed to configure deployment with cluster '<cluster-name>' due to: exit status 1
+```
+
+
+#### Cause
+
+Most likely this is due to an invalid cluster name and can be confirmed by running the same command with `--trace` and you may see this in the error output:
+
+```
+Failing with error:  {"incidentID":"<id-number>","code":"E0008","description":"The specified cluster could not be found.","recoveryCLI":"Run 'bx cs clusters' to list all clusters you have access to.","type":"Provisioning"}
+```
+
+
+#### Resolution
+
+Be sure that you are using the correct cluster and that you have configured your cluster for deployment by running
+
+```
+bx cs cluster-config <cluster-name>
+```
+
+
+### Failure to deploy to Kubernetes on Bluemix
+
+You may see this failure after the prompt for the deploy image target:
+
+```
+FAILED
+Failed to execute the action:  exit status 1:denied: requested access to the resource is denied
+
+
+FAILED
+Failed to push the Run image tagged 'registry.ng.bluemix.net/<namespace>/<project-name>:0.0.1' to the Docker registry due to: exit status 1
+```
+
+
+#### Cause
+
+Most likely, this is due to an invalid deploy image target. More specifically, it could be an invalid namespace, the middle value in the deploy image target
+
+
+#### Resolution
+
+Be sure that the namespace in the deploy image target matches one of the namespaces found from running
+
+```
+bx cr namespaces
+```
 
 
 <!--
