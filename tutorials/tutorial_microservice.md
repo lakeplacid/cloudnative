@@ -168,7 +168,8 @@ If you chose to create a DevOps toolchain, you may view your toolchain:
 	
 	4. View your delivery pipeline where you can kick off builds, manage deployment and view logs and history.
 
- ## Run your project with Hot-Reload (NodeJS Only)
+
+## Run your project with Hot-Reload (NodeJS Only)
 {: #hot-reload}
 (Optional)
 
@@ -191,3 +192,4 @@ Hot-reload is a popular development practice where the application runtime updat
   {: codeblock}
 
   Open project at `http://localohst:3000` in your browser.
+

@@ -1,10 +1,10 @@
 ---
-
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-09-29"
+  years: 2017, 2018
+lastupdated: "2018-01-19"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -23,7 +23,7 @@ To download the project code, select the `Download Code` button for the project 
 ## Prerequisite Developer Tools
 {: #prereq-dev-tools}
 
-Use the [{{site.data.keyword.dev_cli_short}}](dev_cli.html#add-cli) to get started working with generated code from the {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}}.
+Use the [{{site.data.keyword.dev_cli_short}}](idt/index.html#add-cli) to get started working with generated code from the {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}}.
 
 
 <!-- ### General
@@ -50,11 +50,11 @@ Use the [{{site.data.keyword.dev_cli_short}}](dev_cli.html#add-cli) to get start
 
    Command line tools to deploy Cloud Foundry runtimes from a command line interface with {{site.data.keyword.Bluemix_notm}}.  
 
-* [{{site.data.keyword.dev_cli_notm}} ![External link icon](../icons/launch-glyph.svg "External link icon")](dev_cli.html)
+* [{{site.data.keyword.dev_cli_notm}} ![External link icon](../icons/launch-glyph.svg "External link icon")](idt/index.html)
 
 	{{site.data.keyword.Bluemix_notm}} CLI plug-in to create, run, test, and deploy web and mobile projects.
 
-* [SDK Generator plug-in ![External link icon](../icons/launch-glyph.svg "External link icon")](sdk_cli.html)
+* [SDK Generator plug-in ![External link icon](../icons/launch-glyph.svg "External link icon")](sdk/index.html)
 
 	{{site.data.keyword.Bluemix_notm}} CLI plug-in to generate SDKs from your [Open API Specification ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.openapis.org/) compliant REST API definition.
 

@@ -1,14 +1,34 @@
 ---
-
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-04-25"
+  years: 2017, 2018
+lastupdated: "2018-01-19"
 
 ---
+
 # SDKs
 {: #sdk}
 
 To add {{site.data.keyword.Bluemix}} Web and Mobile services SDKs to your app, choose the SDKs that you want to use and configure your dependency manager to pull the SDKs into your app.
+
+
+## Server SDKs
+{: #server_sdk}
+
+If you have a Java, NodeJS, or Swift server application, you can use the following SDKs to communicate with the respective services.
+
+
+### {{site.data.keyword.appid_short}} Server SDKs
+{: #appid_sdk}
+
+- [{{site.data.keyword.appid_short}} Node.js Server SDK ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-cloud-security/appid-serversdk-nodejs)
+- [{{site.data.keyword.appid_short}} Swift Server SDK ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-cloud-security/appid-serversdk-swift)
+
+### {{site.data.keyword.mobilepushshort}} Server SDKs
+{: #push_sdk}
+
+- [{{site.data.keyword.mobilepushshort}} Node.js Server SDK ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-nodejs)
+- [{{site.data.keyword.mobilepushshort}} Java Server SDK ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-java)
+- [{{site.data.keyword.mobilepushshort}} Swift Server SDK ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-swift)
 
 
 ## Client SDKs
@@ -42,21 +62,3 @@ You can use the following SDKs in your mobile application to leverage the respec
 - [{{site.data.keyword.mobilepushshort}} plugin ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)
 
 
-## Server SDKs
-{: #server_sdk}
-
-If you have a Java, NodeJS, or Swift server application, you can use the following SDKs to communicate with the respective services.
-
-
-### {{site.data.keyword.appid_short}} Server SDKs
-{: #appid_sdk}
-
-- [{{site.data.keyword.appid_short}} Node.js Server SDK ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-cloud-security/appid-serversdk-nodejs)
-- [{{site.data.keyword.appid_short}} Swift Server SDK ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-cloud-security/appid-serversdk-swift)
-
-### {{site.data.keyword.mobilepushshort}} Server SDKs
-{: #push_sdk}
-
-- [{{site.data.keyword.mobilepushshort}} Node.js Server SDK ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-nodejs)
-- [{{site.data.keyword.mobilepushshort}} Java Server SDK ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-java)
-- [{{site.data.keyword.mobilepushshort}} Swift Server SDK ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-swift)
