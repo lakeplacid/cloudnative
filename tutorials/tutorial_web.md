@@ -190,7 +190,7 @@ Hot-reload is a popular development practice where the application runtime updat
   ```
   {: codeblock}
 
-  Open project at `http://localohst:3000` in your browser.
+  Open project at `http://localhost:3000` in your browser.
 
 2. Run hot-reload with NPM script.
 
@@ -201,7 +201,7 @@ Hot-reload is a popular development practice where the application runtime updat
 	  ```
 	  {: codeblock}
 	  
-	  Open project at `http://localohst:3000` in your browser.
+	  Open project at `http://localhost:3000` in your browser.
 
 	2. Run server-side hot reload:
 	
@@ -217,7 +217,7 @@ Hot-reload is a popular development practice where the application runtime updat
 	  ```
 	  {: codeblock}
 	  
-	  Open project at `http://localohst:3000` in your browser.
+	  Open project at `http://localhost:3000` in your browser.
 	
 	3. Run client-side hot reload:
 	
@@ -226,7 +226,7 @@ Hot-reload is a popular development practice where the application runtime updat
 	  ```
 	  {: codeblock}
 	  
-	  Open project at `http://localohst:8080` in your browser. (Note: this does not use your backend server.)
+	  Open project at `http://localhost:8080` in your browser. (Note: this does not use your backend server.)
 
 
 ## Run your project in Xcode (Swift Only)
