@@ -39,22 +39,25 @@ To install the tool, you can run the relevant command to invoke our installer. T
 
 **Mac and Linux:**<br>
 
-	```
-	curl -sL https://ibm.biz/idt-installer | bash
-	```
-
+```
+curl -sL https://ibm.biz/idt-installer | bash
+```
+{: codeblock}
 
 **Windows 10:**<br>
 
-	```
-	Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
-	```
+```
+Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')
+```
+{: codeblock}
 
 Validate successful plug-in installation by running the following command:  
 
-	```
-	bx dev
-	```
+```
+bx dev
+```
+{: codeblock}
+
 
 #### Configure Your Environment
 {: #configure-environment}
