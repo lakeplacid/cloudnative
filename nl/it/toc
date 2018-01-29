@@ -8,8 +8,13 @@ Creazione dei progetti nativi cloud
     {: .navgroup id="learn"}
     index.md
 
+    idt/index.md
+    idt/vscode.md
+    idt/jetbrains.md
+
     {: .topicgroup}
-    Introduzione
+    Getting started
+        idt/getting_started.md
         devex.md
         what_is_new.md
         compute.md
@@ -18,27 +23,39 @@ Creazione dei progetti nativi cloud
 
     {: .topicgroup}
     Plug-in per la CLI IBM Cloud
-        dev_cli.md
-            dev_cli_local_debug.md
-        sdk_cli.md
+        idt/index.md
+            idt/local_debug.md
+        sdk/index.md
+            sdk/contribute.md
 
     {: .topicgroup}
     Esercitazioni
-        tutorial_web.md
-        tutorial_mobile.md
-        tutorial_bff.md
-        tutorial_microservice.md
+        tutorials/tutorial_web.md
+        tutorials/tutorial_bff.md
+        tutorials/tutorial_microservice.md
+        tutorials/tutorial_custom.md
+        tutorials/tutorial_mobile.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
+    idt/commands.md
     sdk.md
         sdk_BMSClient.md
         sdk_network_request.md
+
+    {: .topicgroup}
+    Project contents
+        projects/java_project_contents.md
+        projects/swift_project_contents.md
+        projects/node_project_contents.md
+        projects/python_project_contents.md
+        projects/compose_file.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     troubleshoot.md
+    [IBM Cloud Slack #developer-tools](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
     [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
-    [Come ottenere supporto](../support/index.html#getting-help)
-    [Come contattare il supporto](../support/index.html#contacting-support)
+    [Getting help](../support/index.html#getting-help)
+    [Contacting support](../support/index.html#contacting-support)
     {: .navgroup-end}
