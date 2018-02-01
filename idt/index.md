@@ -1,7 +1,9 @@
 ---
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-01-19"
+
+  years: 2018
+
+lastupdated: "2018-01-29"
 
 ---
 
@@ -31,6 +33,8 @@ You must obtain a few prerequisites to fully explore and properly utilize the {{
 
 Note: If you are using Microsoft Windows&trade;, you must use Windows 10 or later.
 
+Note: You must use the stable channel for Docker, with a minimum version of 1.13.1
+
 
 ### Installing
 {: #installation}
@@ -43,6 +47,7 @@ To install the tool, you can run the relevant command to invoke our installer. T
 curl -sL https://ibm.biz/idt-installer | bash
 ```
 {: codeblock}
+
 
 **Windows 10:**<br>
 
@@ -57,7 +62,6 @@ Validate successful plug-in installation by running the following command:
 bx dev
 ```
 {: codeblock}
-
 
 #### Configure Your Environment
 {: #configure-environment}
