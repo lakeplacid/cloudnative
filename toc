@@ -7,9 +7,9 @@ Building cloud native projects
 
     {: .navgroup id="learn"}
     index.md
-    idt/index.md
-    idt/vscode.md
-    idt/jetbrains.md
+        idt/index.md
+        idt/vscode.md
+        idt/jetbrains.md
 
     {: .topicgroup}
     Getting started
