@@ -74,7 +74,6 @@ Cloud-native patterns are proven designs that help ensure a consistent, scalable
 Web projects add the ability to serve web content such as HTML, JavaScript, and stylesheets to the web server. There are several Web App starter kits that you can leverage such as:
 
 * Basic: serves a static `index.html` file, default and empty stylesheet, and JavaScript file.
-* Webpack: creates a project where the ECMAScript 6 (ES6) source files are in `src/client` and are compiled with WebPack to make them minified and converted for use in the browser.
 * React: a rich framework to build user interfaces. The source files are in `src/client/app`, and will be compiled with WebPack and served in the public directory.
 
 
