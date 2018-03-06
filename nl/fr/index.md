@@ -92,8 +92,7 @@ Les projets Web donnent la possibilité de servir du contenu Web (HTML, JavaScri
 Les modules de démarrage Web suivants sont disponibles :
 
 * Basic Web : sert un fichier `index.html` statique, une feuille de style vide et par défaut et un fichier JavaScript.
-* Webpack : crée un projet dans lequel les fichiers source ES6 (ECMAScript 6) se trouvent dans `src/client` et sont compilés avec WebPack, pour en retirer les caractères non essentiels, puis convertis pour utilisation dans le navigateur.
-* Webpack + React : infrastructure riche pour générer des interfaces utilisateur. Les fichiers source, qui se trouvent dans `src/client/app`, seront compilés avec WebPack et servis dans l'annuaire public.
+* React : infrastructure riche pour générer des interfaces utilisateur. Les fichiers source, qui se trouvent dans `src/client/app`, seront compilés avec WebPack et servis dans l'annuaire public.
 
 
 ### Application mobile

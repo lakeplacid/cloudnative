@@ -88,8 +88,7 @@ Web 项目添加了新功能，可为 Web 服务器处理诸如 HTML、JavaScrip
 提供了以下 Web 入门模板：
 
 * 基本 Web：处理静态 `index.html` 文件、缺省和空样式表以及 JavaScript 文件。
-* Webpack：创建项目，在此项目中，ECMAScript 6 (ES6) 源文件位于 `src/client` 中且使用 WebPack 进行编译以实现合并压缩和转换，以便在浏览器中使用。
-* Webpack + React：用于构建用户接口的富框架。源文件位于 `src/client/app` 中，且使用 WebPack 进行编译并在公共目录中处理。
+* React：用于构建用户接口的富框架。源文件位于 `src/client/app` 中，且使用 WebPack 进行编译并在公共目录中处理。
 
 
 ### 移动应用程序

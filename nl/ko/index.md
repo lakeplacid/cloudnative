@@ -87,9 +87,8 @@ The Mobile dashboard provides an integrated experience on {{site.data.keyword.Bl
 
 다음 웹 스타터가 사용 가능합니다. 
 
-* 기본 웹: 정적 `index.html` 파일, 기본 스타일시트(비어 있음) 및 JavaScript 파일을 제공합니다. 
-* Webpack: ES6(ECMAScript 6) 소스 파일이 `src/client`에 있으며 이러한 파일을 브라우저에서 사용할 수 있도록 축소하고 변환하기 위해 WebPack을 사용하여 컴파일하는 프로젝트를 작성합니다. 
-* Webpack + React: 사용자 인터페이스 빌드에 사용되는 리치 프레임워크입니다. 소스 파일은 `src/client/app`에 있으며 WebPack을 사용해 컴파일되어 공용 디렉토리에서 제공됩니다. 
+* 기본 웹: 정적 `index.html` 파일, 기본 스타일시트(비어 있음) 및 JavaScript 파일을 제공합니다.
+* React: 사용자 인터페이스 빌드에 사용되는 리치 프레임워크입니다. 소스 파일은 `src/client/app`에 있으며 WebPack을 사용해 컴파일되어 공용 디렉토리에서 제공됩니다.
 
 
 ### 모바일 앱

@@ -88,8 +88,7 @@ Web 專案會將提供 Web 內容（例如 HTML、JavaScript 及樣式表）的�
 下列是可用的 Web 入門範本：
 
 * Basic Web：提供靜態 `index.html` 檔案、預設和空的樣式表，以及 JavaScript 檔案。
-* Webpack：建立專案，其中，ECMAScript 6 (ES6) 原始檔位於 `src/client` 且使用 WebPack 進行編譯，讓它們變小並轉換以在瀏覽器中使用。
-* Webpack + React：建置使用者介面的豐富架構。原始檔位於 `src/client/app`，並且將使用 WebPack 進行編譯並提供於公用目錄中。
+* React：建置使用者介面的豐富架構。原始檔位於 `src/client/app`，並且將使用 WebPack 進行編譯並提供於公用目錄中。
 
 
 ### 行動應用程式

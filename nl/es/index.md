@@ -88,8 +88,7 @@ Los proyectos web añaden la capacidad de prestar contenido web, como HTML, Java
 Están disponibles los siguientes iniciadores web:
 
 * Basic Web: proporciona un archivo `index.html` estático, una hoja de estilo predeterminada y vacía y un archivo JavaScript.
-* Webpack: crea un proyecto donde los archivos de origen de ECMAScript 6 (ES6) están en `src/client` y se compilan con WebPack para minificarlos y convertirlos para su uso en el navegador.
-* Webpack + React: una infraestructura completa para crear interfaces de usuario. Los archivos de origen están en `src/client/app` y se compilarán con WebPack y se proporcionarán en el directorio público.
+* React: una infraestructura completa para crear interfaces de usuario. Los archivos de origen están en `src/client/app` y se compilarán con WebPack y se proporcionarán en el directorio público.
 
 
 ### App móvil

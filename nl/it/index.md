@@ -88,8 +88,7 @@ I progetti web aggiungono la capacità di servire il contenuto web come HTML, Ja
 Sono disponibili i seguenti starter web:
 
 * Web di base: serve un file `index.html` statico, un foglio di calcolo vuoto e predefinito e un file JavaScript.
-* WebPack: crea un progetto in cui i file di origine ECMAScript 6 (ES6) si trovano in `src/client` e vengono compilati con WebPack per renderli più piccoli e convertiti per l'utilizzo nel browser.
-* Webpack + React: un framework avanzato per creare le interfacce utente. I file di origine sono in `src/client/app` e saranno compilati con WebPack e serviti nella directory pubblica.
+* React: un framework avanzato per creare le interfacce utente. I file di origine sono in `src/client/app` e saranno compilati con WebPack e serviti nella directory pubblica.
 
 
 ### Applicazione mobile

@@ -93,8 +93,7 @@ Os projetos da web incluem a capacidade de entregar conteúdo da web, como HTML,
 Os iniciadores da web a seguir estão disponíveis:
 
 * Basic Web: entrega um arquivo `index.html` estático, folha de estilo padrão e vazia, além do arquivo JavaScript.
-* Webpack: cria um projeto em que os arquivos de origem ECMAScript 6 (ES6) estão em `src/client` e são compilados com o WebPack para torná-los reduzidos e convertidos para uso no navegador.
-* Webpack + React: uma estrutura avançada para construir interfaces com o usuário. Os arquivos de origem estão em `src/client/app` e serão compilados com o WebPack e entregues no diretório público.
+* React: uma estrutura avançada para construir interfaces com o usuário. Os arquivos de origem estão em `src/client/app` e serão compilados com o WebPack e entregues no diretório público.
 
 
 ### Aplicativo Remoto

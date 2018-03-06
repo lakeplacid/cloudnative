@@ -88,8 +88,7 @@ Webprojekte ermöglichen das Bereitstellen von Inhalt in Form von HTML, JavaScri
 Die folgenden Web-Starter sind verfügbar:
 
 * Basic Web: Stellt die statische Datei `index.html`, ein Standard-Style-Sheet und ein leeres Style-Sheet und eine JavaScript-Datei bereit.
-* WebPack: Erstellt ein Projekt, in dem sich die ECMAScript 6-Quellendateien (ES6-Quellendateien) in `src/client` befinden und mit WebPack kompiliert werden, um sie zu verkleinern und für die Verwendung im Browser umzuwandeln.
-* WebPack + React: Eine umfassende Umgebung zum Erstellen von Benutzerschnittstellen. Die Quellendateien befinden sich in `src/client/app`, werden mit WebPack kompiliert und im öffentlichen Verzeichnis bereitgestellt.
+* React: Eine umfassende Umgebung zum Erstellen von Benutzerschnittstellen. Die Quellendateien befinden sich in `src/client/app`, werden mit WebPack kompiliert und im öffentlichen Verzeichnis bereitgestellt.
 
 
 ### Mobile App
