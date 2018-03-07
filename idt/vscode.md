@@ -1,10 +1,12 @@
 ---
+
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-01-19"
+
+  years: 2017
+
+lastupdated: "2017-06-29"
 
 ---
-
 
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
