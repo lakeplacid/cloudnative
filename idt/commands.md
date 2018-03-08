@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-01-29"
+years: 2017-2018
+last updated: "2018-03-02"
 
 ---
 
@@ -27,7 +27,7 @@ Use the following {{site.data.keyword.dev_cli_notm}} (bx dev) commands to create
 - [delete](#delete): Deletes a project from your space
 - [deploy](#deploy): Deploy an application to IBM Cloud
 - [enable](#enable): Add IBM Cloud files to an existing project
-- [get-credentials](get-credentials]): Gets credentials required by the project to enable use of bound services
+- [get-credentials](#get-credentials): Gets credentials required by the project to enable use of bound services
 - [help](#help): Help on IDT syntax and arguments
 - [list](#list): List all IBM Cloud projects in a space
 - [run](#run): Run your application in a local container
@@ -36,6 +36,7 @@ Use the following {{site.data.keyword.dev_cli_notm}} (bx dev) commands to create
 - [stop](#stop): Stop a container
 - [test](#test): Test your application in a local container
 - [view](#view): View the app's deployed URL for testing and viewing
+- [compound commands](#compound): Execute multiple commands in one command line statement
 
 
 
@@ -44,7 +45,7 @@ Use the following {{site.data.keyword.dev_cli_notm}} (bx dev) commands to create
 
 You can build your application by using the `build` command. The `test`, `debug`, and `run` commands expect to find a compiled project so you must first run a `build` operation beforehand.  
 
-The `build-cmd-debug` configuration element is used to build the application for all use except for `run`. You build your application for debugging by specifying the command line option `--debug`.  The `build-cmd-run` configuration element is used when building the application for use with the `run` command.
+The `build-cmd-debug` configuration element is used to build the application for all uses except for `run`. You build your application for debugging by specifying the command line option `--debug`.  The `build-cmd-run` configuration element is used when building the application for use with the `run` command.
 
 In order to build with multiple containers, either your project should contain a [Compose](https://docs.docker.com/compose/overview/) file, specified in the `cli-config.yml`, or you can use the `dockerfile-tools` command parameter to provide one. See the [Compose File](../projects/compose-file.html) section in the Appendix for more information.
 
@@ -92,7 +93,7 @@ bx dev console [projectName]
 
 Create a project, prompting for all information, including resource type, language, starter kit, and DevOps Toolchain options. The project is created in the current directory. 
 
-To create a project in the current directory and associate services with it, run the following command:
+To create a project in the current directory and to associate services with it, run the following command:
 
 ```
 bx dev create
@@ -103,7 +104,7 @@ bx dev create
 ## debug
 {: #debug}
 
-You can debug your application through the `debug` command. A build must first be completed against the project by using the build command with the `--debug` argument. When you invoke the `debug` command, a container is started which provides a debug port or ports as defined by the `container-port-map-debug` value in the cli-config.yml or specified on the command line. Connect your favorite debug tool to the port or ports, and you can debug your application as normal.
+You can debug your application through the `debug` command. A build must first be completed against the project by using the build command with the `--debug` argument. When you invoke the `debug` command, a container is started which provides a debug port or ports as defined by the `container-port-map-debug` value in the cli-config.yml or specified on the command line. Connect your favorite debugging tool to the port or ports, and you can debug your application as normal.
 
 First, compile your project:
 
@@ -173,7 +174,7 @@ You can deploy an application as a Cloud Foundry application or as a container.
 
 To deploy as a Cloud Foundry application to {{site.data.keyword.Bluemix}}, a `manifest.yml` file must be present in your project's root directory.
 
-To deploy an application as a container, you must locally install [Kubernetes](https://kubernetes.io/) and [Helm](https://github.com/kubernetes/helm). You can use the the [installation instructions](#installation) at the top of this page as your guide. Be sure that the Helm client version is not newer than than the Helm server version. You can find both of these by running `helm version`. We recommend using v2.4.2 for the client version.
+To deploy an application as a container, you must locally install [Kubernetes](https://kubernetes.io/) and [Helm](https://github.com/kubernetes/helm). You can use the [installation instructions](#installation) at the top of this page as your guide. Be sure that the Helm client version is not newer than the Helm server version. You can find both of these by running `helm version`. We recommend using v2.4.2 for the client version.
 
 In the `cli-config.yml`, you can choose to define the location of a Helm chart in the `chart-path` property, set the `deploy-target` element to `container`, and configure the `deploy-image-target` as shown in the example below. The `deploy-image-target` element in the `cli-config.yml` is used instead of the `repository` and `tag` elements in the `chart/values.yml` file. To deploy to {{site.data.keyword.Bluemix}} specifically, set the configuration element `ibm-cluster` to the name of the Kubernetes cluster you have created in {{site.data.keyword.Bluemix}} as described [here](https://console.bluemix.net/docs/containers/cs_tutorials.html#cs_tutorials).
 
@@ -226,7 +227,7 @@ The following parameters can be used with the `deploy` command or by updating th
 #### `deploy-image-target`
 {: #deploy-image-target}
 
-* Parameter used with a container deployment as the target image name for the deployment (e.g. to tag to a Docker registry).  The value must not include a version for example:  image-name:{version} as the version is automatically incremented and appended by `deploy`.
+* Parameter used with a container deployment as the target image name for the deployment (e.g. to tag to a Docker registry).  The value must not include a version, for example: image-name:{version} because the version is automatically incremented and appended by `deploy`.
 * Usage `bx dev deploy --deploy-image-target [image-name]`
 
 #### `ibm-cluster`
@@ -290,7 +291,7 @@ The following parameters can be used with the `enable` command or by updating th
 ## get-credentials
 {: #get-credentials}
 
-Gets credentials required by the project to enable use of bound services.
+Gets credentials required by the project to enable the use of bound services.
 
 
 ## help
@@ -337,7 +338,7 @@ bx dev edit
 
 You can run your application through the `run` command. A build must first be completed against the project by using the `build` command. When you invoke the `run` command, the run container is started and exposes the ports as defined by the `container-port-map` parameter. The `run-cmd` parameter can be used to invoke the application if the run container Dockerfile does not contain an entry point to complete this step. 
 
-In order to run with multiple containers, either your project should  contain a [Compose](https://docs.docker.com/compose/overview/) file, specified in the `cli-config.yml`, or you can use the `dockerfile-run` command parameter to provide one. See the [Compose File](../projects/compose-file.html) section in the Appendix for more information.
+In order to run with multiple containers, either your project should contain a [Compose](https://docs.docker.com/compose/overview/) file, specified in the `cli-config.yml`, or you can use the `dockerfile-run` command parameter to provide one. See the [Compose File](../projects/compose-file.html) section in the Appendix for more information.
 
 First, compile your project:
 
@@ -418,10 +419,10 @@ the {{site.data.keyword.dev_cli_short}} will open an interactive shell into the 
 
 Alternatively, you can decide to pass either `run` or `tools` as an argument to the command and that container will be brought up and the shell will be opened for that container. Similarly, you can use the `container-name` parameter to pass the name of the container into which you wish to shell. However, this flag should be reserved for when no containers are running. The `run` and `tools` arguments are more flexible and allow you to switch between containers when one is currently running. For example, if the tools container is running and you execute `bx dev shell run`, the `tools` container will be stopped and the `run` container will be started, and vice versa. 
 
-If the target `run` or `tools` container is not already running when you execute the `shell` command, then the target container will be started. However, the default `Cmd` or `Entrypoint` in the Dockerfile will be overridden to launch directly into the shell instead of starting the server process. This allows you to start the `run` or `tools` container, and manually start the server  with your own arbitrary or custom commands.
+If the target `run` or `tools` container is not already running when you execute the `shell` command, then the target container will be started. However, the default `Cmd` or `Entrypoint` in the Dockerfile will be overridden to launch directly into the shell instead of starting the server process. This allows you to start the `run` or `tools` container, and manually start the server with your own arbitrary or custom commands.
 
 
-You can also specify the shell executable you wish to open by using the `container-shell` parameter. By default, `/bin/sh` is used. If you'd prefer to use the bash shell, then specify the `container-shell` value to be `/bin/bash`; however, keep in mind that bash is not automatically available across all linux variants.
+You can also specify the shell executable you wish to open by using the `container-shell` parameter. By default, `/bin/sh` is used. If you'd prefer to use the bash shell, then specify the `container-shell` value to be `/bin/bash`; however, keep in mind that bash is not automatically available across all Linux variants.
 
 Any additional arguments you pass to the command beyond the flags will be parsed as the command to be run when the shell is opened. If you provide a command to be run, the shell inside the container will exit upon running the command and return to your terminal.
 
@@ -545,6 +546,12 @@ bx dev view
 
 The following parameters are exclusive to the `view` command.
 
+#### `deploy-target`
+
+* Parameter optionally used to indicate the type of deployment to bypass the prompt
+* Usage `bx dev view -t|--target buildpack|container`
+
+
 #### `no-open`
 {: #no-open}
 
@@ -558,6 +565,33 @@ The following parameters are exclusive to the `view` command.
 * Root of the project to append to the Kubernetes app URL
 * Usage: `bx dev view --web-app-root [root]`
 
+
+#### `ibm-cluster`
+{: #ibm-cluster}
+
+* Parameter optionally used to define the name of the Kubernetes cluster when targeting a container deployment 
+* Usage `bx dev view --ibm-cluster [cluster-name]`
+
+
+## compound commands
+{: #compound}
+
+You can run multiple commands in one command line statement by separating the IDT commands with the `/` delimeter. Additional command line flags can be specified after you specify the compound commands.  Below are several examples how you can use compound commands:
+
+```
+bx dev build/run
+bx dev build/deploy --trace -t buildpack
+bx dev build/debug --debug --trace
+bx dev build/deploy/view -t container --trace
+```
+{: codeblock}
+
+All flags must trail the final command and will be applied to all commands to which that flag is associated. In the example above, the `--trace` flag is applicable to all 3 commands, but the `-t` is only applicable to the final 2 commands, and so will not be applied to the `build` command. 
+
+These are the commands that may be used with this feature:
+`build, debug, deploy, get-credentials, run, stop, test, view`
+
+If one command fails for any reason, the subsequent commands will not be executed. If any commands follow `debug` or `run`, execution will only continue if `debug` or `run` is terminated by means other than killing the process from the current terminal window. `CTRL+C` will kill the process and not run the subsequent commands. For example, you can execute `bx dev stop` from another terminal window to stop the running container and continue execution to the next command.
 
 
 ## Parameters for build, debug, run, and test
