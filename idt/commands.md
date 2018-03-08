@@ -36,7 +36,7 @@ Use the following {{site.data.keyword.dev_cli_notm}} (bx dev) commands to create
 - [stop](#stop): Stop a container
 - [test](#test): Test your application in a local container
 - [view](#view): View the app's deployed URL for testing and viewing
-- [compound actions](#compound): Execute multiple actions in one command line statement
+- [compound commands](#compound): Execute multiple commands in one command line statement
 
 
 
@@ -573,10 +573,10 @@ The following parameters are exclusive to the `view` command.
 * Usage `bx dev view --ibm-cluster [cluster-name]`
 
 
-## compound actions
+## compound commands
 {: #compound}
 
-You can run multiple actions in one command line statement by separating the IDT commands with the `/` delimeter. Additional command line flags can be specified after you specify the compound actions.  Below are several examples how you can use compound actions:
+You can run multiple commands in one command line statement by separating the IDT commands with the `/` delimeter. Additional command line flags can be specified after you specify the compound commands.  Below are several examples how you can use compound commands:
 
 ```
 bx dev build/run
